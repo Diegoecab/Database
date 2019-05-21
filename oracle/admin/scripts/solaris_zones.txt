@@ -1,0 +1,11 @@
+--Listar las zonas
+
+zoneadm list -vi
+---------------------------------
+--Iniciar zona
+
+zoneadm -z nombre_zona boot
+---------------------------------
+--Bajar zona
+
+zoneadm -z nombre_zona halt

@@ -1,0 +1,136 @@
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace traceonly stats
+SP2-0158: opción SET desconocida "stats"
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace traceonly statistics
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set timing on
+24/05/2011 12:37:04 | VENTAS@INTDWOP > SELECT "A1"."VEND", "A1"."EMP", "A1"."MBASE_B", "A1"."TIPOMOV",
+  2         "A1"."MBASE_B", "A1"."TIPOMOV", "A1"."BRUTOG", "A1"."TIPOMOV",
+  3         "A1"."BRUTOG", "A1"."TIPOMOV", "A1"."SUC", "A1"."FECHA",
+  4         "A1"."TIPOMOV", "A1"."EMP", "A1"."NUMCOMP", "A1"."TIPOMOV",
+  5         "A1"."RENGLON", "A1"."EMP", "A1"."EMP", "A1"."VEND", "A2"."EMPNRO",
+  6         "A2"."NUMCOMP", "A2"."TIPOMOV", "A2"."RENART", "A2"."CODADM"
+  7    FROM "VENTAS"."COMCBTE" "A1", "VENTAS"."COMPMOV" "A2"
+  8   WHERE ("A2"."TIPOMOV" = 2 OR "A2"."TIPOMOV" = 9)
+  9     AND "A1"."RENGLON" = "A2"."RENART"
+ 10     AND "A1"."TIPOMOV" = "A2"."TIPOMOV"
+ 11     AND "A1"."NUMCOMP" = "A2"."NUMCOMP"
+ 12     AND "A1"."EMP" = "A2"."EMPNRO"
+ 13     AND ("A1"."TIPOMOV" = 2 OR "A1"."TIPOMOV" = 9)
+ 14     AND TRUNC ("A1"."FECHA") = TRUNC (TO_DATE ('20/05/2011','DD/MM/YYYY'));
+
+28047 filas seleccionadas.
+
+Transcurrido: 00:05:09.41
+
+Estadísticas
+==========================================================                                                                                            
+          1  recursive calls                                                                                                                          
+          0  db block gets                                                                                                                            
+     773191  consistent gets                                                                                                                          
+     730397  physical reads                                                                                                                           
+          0  redo size                                                                                                                                
+    1218723  bytes sent via SQL*Net to client                                                                                                         
+      13322  bytes received via SQL*Net from client                                                                                                   
+       1871  SQL*Net roundtrips to/from client                                                                                                        
+          0  sorts (memory)                                                                                                                           
+          0  sorts (disk)                                                                                                                             
+      28047  rows processed                                                                                                                           
+
+24/05/2011 12:37:04 | VENTAS@INTDWOP > prompt flush shared pool y buffer cache
+flush shared pool y buffer cache
+24/05/2011 12:37:04 | VENTAS@INTDWOP > prompt acepto SQL Profile
+acepto SQL Profile
+24/05/2011 12:37:04 | VENTAS@INTDWOP > prompt ejecuto nuevamente
+ejecuto nuevamente
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace on
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace off
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace on
+24/05/2011 12:37:04 | VENTAS@INTDWOP > SELECT "A1"."VEND", "A1"."EMP", "A1"."MBASE_B", "A1"."TIPOMOV",
+  2         "A1"."MBASE_B", "A1"."TIPOMOV", "A1"."BRUTOG", "A1"."TIPOMOV",
+  3         "A1"."BRUTOG", "A1"."TIPOMOV", "A1"."SUC", "A1"."FECHA",
+  4         "A1"."TIPOMOV", "A1"."EMP", "A1"."NUMCOMP", "A1"."TIPOMOV",
+  5         "A1"."RENGLON", "A1"."EMP", "A1"."EMP", "A1"."VEND", "A2"."EMPNRO",
+  6         "A2"."NUMCOMP", "A2"."TIPOMOV", "A2"."RENART", "A2"."CODADM"
+  7    FROM "VENTAS"."COMCBTE" "A1", "VENTAS"."COMPMOV" "A2"
+  8   WHERE ("A2"."TIPOMOV" = 2 OR "A2"."TIPOMOV" = 9)
+  9     AND "A1"."RENGLON" = "A2"."RENART"
+ 10     AND "A1"."TIPOMOV" = "A2"."TIPOMOV"
+ 11     AND "A1"."NUMCOMP" = "A2"."NUMCOMP"
+ 12     AND "A1"."EMP" = "A2"."EMPNRO"
+ 13     AND ("A1"."TIPOMOV" = 2 OR "A1"."TIPOMOV" = 9)
+ 14     AND TRUNC ("A1"."FECHA") = TRUNC (TO_DATE ('20/05/2011', 'DD/MM/YY
+ 15  
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set autotrace traceonly
+24/05/2011 12:37:04 | VENTAS@INTDWOP > SELECT "A1"."VEND", "A1"."EMP", "A1"."MBASE_B", "A1"."TIPOMOV",
+  2         "A1"."MBASE_B", "A1"."TIPOMOV", "A1"."BRUTOG", "A1"."TIPOMOV",
+  3         "A1"."BRUTOG", "A1"."TIPOMOV", "A1"."SUC", "A1"."FECHA",
+  4         "A1"."TIPOMOV", "A1"."EMP", "A1"."NUMCOMP", "A1"."TIPOMOV",
+  5         "A1"."RENGLON", "A1"."EMP", "A1"."EMP", "A1"."VEND", "A2"."EMPNRO",
+  6         "A2"."NUMCOMP", "A2"."TIPOMOV", "A2"."RENART", "A2"."CODADM"
+  7    FROM "VENTAS"."COMCBTE" "A1", "VENTAS"."COMPMOV" "A2"
+  8   WHERE ("A2"."TIPOMOV" = 2 OR "A2"."TIPOMOV" = 9)
+  9     AND "A1"."RENGLON" = "A2"."RENART"
+ 10     AND "A1"."TIPOMOV" = "A2"."TIPOMOV"
+ 11     AND "A1"."NUMCOMP" = "A2"."NUMCOMP"
+ 12     AND "A1"."EMP" = "A2"."EMPNRO"
+ 13     AND ("A1"."TIPOMOV" = 2 OR "A1"."TIPOMOV" = 9)
+ 14     AND TRUNC ("A1"."FECHA") = TRUNC
+ 15  
+24/05/2011 12:37:04 | VENTAS@INTDWOP > set timing on
+24/05/2011 12:37:04 | VENTAS@INTDWOP > SELECT "A1"."VEND", "A1"."EMP", "A1"."MBASE_B", "A1"."TIPOMOV",
+  2         "A1"."MBASE_B", "A1"."TIPOMOV", "A1"."BRUTOG", "A1"."TIPOMOV",
+  3         "A1"."BRUTOG", "A1"."TIPOMOV", "A1"."SUC", "A1"."FECHA",
+  4         "A1"."TIPOMOV", "A1"."EMP", "A1"."NUMCOMP", "A1"."TIPOMOV",
+  5         "A1"."RENGLON", "A1"."EMP", "A1"."EMP", "A1"."VEND", "A2"."EMPNRO",
+  6         "A2"."NUMCOMP", "A2"."TIPOMOV", "A2"."RENART", "A2"."CODADM"
+  7    FROM "VENTAS"."COMCBTE" "A1", "VENTAS"."COMPMOV" "A2"
+  8   WHERE ("A2"."TIPOMOV" = 2 OR "A2"."TIPOMOV" = 9)
+  9     AND "A1"."RENGLON" = "A2"."RENART"
+ 10     AND "A1"."TIPOMOV" = "A2"."TIPOMOV"
+ 11     AND "A1"."NUMCOMP" = "A2"."NUMCOMP"
+ 12     AND "A1"."EMP" = "A2"."EMPNRO"
+ 13     AND ("A1"."TIPOMOV" = 2 OR "A1"."TIPOMOV" = 9)
+ 14     AND TRUNC ("A1"."FECHA") = TRUNC (TO_DATE ('20/05/2011', 'DD/MM/YYYY'));
+
+28047 filas seleccionadas.
+
+Transcurrido: 00:05:41.96
+
+Plan de Ejecución
+==========================================================                                                                                            
+Plan hash value: 533978847                                                                                                                            
+                                                                                                                                                      
+--------------------------------------------------------------------------------------                                                                
+| Id  | Operation          | Name    | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |                                                                
+--------------------------------------------------------------------------------------                                                                
+|   0 | SELECT STATEMENT   |         |   484K|    27M|       |   321K  (3)| 01:15:03 |                                                                
+|*  1 |  HASH JOIN         |         |   484K|    27M|    26M|   321K  (3)| 01:15:03 |                                                                
+|*  2 |   TABLE ACCESS FULL| COMCBTE |   544K|    20M|       |   172K  (3)| 00:40:20 |                                                                
+|*  3 |   TABLE ACCESS FULL| COMPMOV |    52M|  1056M|       | 75968   (3)| 00:17:44 |                                                                
+--------------------------------------------------------------------------------------                                                                
+                                                                                                                                                      
+Predicate Information (identified by operation id):                                                                                                   
+---------------------------------------------------                                                                                                   
+                                                                                                                                                      
+   1 - access("A1"."RENGLON"="A2"."RENART" AND "A1"."TIPOMOV"="A2"."TIPOMOV"                                                                          
+              AND "A1"."NUMCOMP"="A2"."NUMCOMP" AND "A1"."EMP"="A2"."EMPNRO")                                                                         
+   2 - filter(TRUNC(INTERNAL_FUNCTION("A1"."FECHA"))=TO_DATE(' 2011-05-20                                                                             
+              00:00:00', 'syyyy-mm-dd hh24:mi:ss') AND ("A1"."TIPOMOV"=2 OR                                                                           
+              "A1"."TIPOMOV"=9))                                                                                                                      
+   3 - filter("A2"."TIPOMOV"=2 OR "A2"."TIPOMOV"=9)                                                                                                   
+
+
+Estadísticas
+==========================================================                                                                                            
+          1  recursive calls                                                                                                                          
+          0  db block gets                                                                                                                            
+     773191  consistent gets                                                                                                                          
+     771259  physical reads                                                                                                                           
+          0  redo size                                                                                                                                
+    1218923  bytes sent via SQL*Net to client                                                                                                         
+      13322  bytes received via SQL*Net from client                                                                                                   
+       1871  SQL*Net roundtrips to/from client                                                                                                        
+          0  sorts (memory)                                                                                                                           
+          0  sorts (disk)                                                                                                                             
+      28047  rows processed                                                                                                                           
+
+24/05/2011 12:37:04 | VENTAS@INTDWOP > spool off

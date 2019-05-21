@@ -1,0 +1,10 @@
+1_ Detectar SQL a analizar, sql_id. Se puede 
+	utilizar v$sess_time_model y ver las consultas que mas tardan y generan I/Os
+	utilizar v$sql_x para filtar los sqls que hacen referencia a algun objeto en particular
+	utilizar current_Sql para determinar las ejecuciones activas
+	utilizar reporte awr para ver sqls mas pesados
+	utilizar v$sess_io para ver las sesiones que mas IOs consumen
+2_Crear tarea. ejecutar dbms_sqltune.create_tuning_task.sql donde va a pedir en primer lugar el SQL_ID y varios datos mas
+3_Ejecutar tarea, indicando el nombre de la tarea creada en el punto anterior
+4_Ver estado de la ejecución
+5_Ejecutar reporte

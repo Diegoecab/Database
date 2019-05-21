@@ -1,0 +1,9 @@
+startup upgrade
+catupgrd.sql
+utlu102s.sql --(Info)
+shutdown immediate
+startup
+olstrig.sql -- (re-create DML triggers on tables with Oracle Label Security policies)
+utlrp.sql
+SELECT count(*) FROM dba_objects WHERE status='INVALID';
+SELECT distinct object_name FROM dba_objects WHERE status='INVALID';

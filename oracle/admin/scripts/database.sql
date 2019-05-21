@@ -1,0 +1,1 @@
+@print_table "select * from v$database"

@@ -1,0 +1,22 @@
+Opciones adicionales de Oracle EE
+
+Oracle Partitioning Option
+Oracle Real Application Cluster
+Oracle OLAP (Oracle On-Line Analytical Processing)
+Oracle Data Mining
+Oracle advanced Security 
+Oracle Change Management Pack 
+Oracle Label Security
+
+Oracle Management Packs 
+ Oracle Change Management Pack
+ Oracle Configuration Management Pack
+ Diagnostics Pack
+	AWR - Automatic Workload Repository 
+	ADDM - Automatic Database Diagnostic Monitor 
+
+ Tuning Pack
+	SQL Tuning Advisor
+	Automatic SQL Tuning Advisor
+	SQL Tuning Sets
+	SQL Access Advisor

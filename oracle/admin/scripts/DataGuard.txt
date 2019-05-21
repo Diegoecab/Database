@@ -1,0 +1,252 @@
+
+Ver que se levante automaticamente el listener DB y agente en oraidx2a
+--Verificar que la base este en force Logging:
+select force_logging from v$database;
+--En caso de ser necesario, habilitar force logging
+ALTER DATABASE FORCE LOGGING; 
+
+/*
+Redo log files STB
+Doc Oracle:
+1. To check the number of SRL,
+(maximum number of logfiles for each thread + 1) * maximum number of threads
+2. The SRL size equal to ORL size.
+
+calculo:
+2 * thread (1 por redo logfile) -> + 1 = 2*1+1=3
+3 * 1 = 3 -> 3 standBy redo log groups de 50M
+*/
+
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 9 
+('/oradata/GARDBOP/redo1/GARDBOP2/redostb09_1.log' , '/oradata/GARDBOP/redo2/GARDBOP2/redostb09_2.log') size 50M;
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 10
+('/oradata/GARDBOP/redo1/GARDBOP2/redostb10_1.log' , '/oradata/GARDBOP/redo2/GARDBOP2/redostb10_2.log') size 50M;
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 11 
+('/oradata/GARDBOP/redo1/GARDBOP2/redostb11_1.log' , '/oradata/GARDBOP/redo2/GARDBOP2/redostb11_2.log') size 50M;
+
+SELECT GROUP#,ThREAD#,SEQUENCE#,ARCHIVED,STATUS FROM V$STANDBY_LOG;
+
+alter system set LOG_ARCHIVE_CONFIG='DG_CONFIG=(GARDBOP,GARDBOP2)';
+
+alter system set LOG_ARCHIVE_DEST_1='LOCATION=/oradata/GARDBOP/archive VALID_FOR=(ALL_LOGFILES,ALL_ROLES) DB_UNIQUE_NAME=GARDBOP';
+
+alter system set FAL_SERVER=GARDBOP2;
+
+alter system set FAL_CLIENT=GARDBOP;
+
+--(Lo siguiente con script /home/oracle/bin/ctlfile_pfile_stb.sh
+
+--Ejecutar con rman backup script rman_backup_stb.sh GARDBOP WEEKLY ARCH "/u01/oracle/product/db10gr2"
+
+--Ejecutar copia de spfile a pfile:
+
+create pfile='/worka2/backup/oraidx1a/GARDBOP/controlfile/initGARDBOP2.ora' from spfile;
+
+--Copiar backups de RMAN de la primaria a la stb (Tarda aprox 10 MIN), Ejecutar script /home/oracle/bin/cp_backup_rman_stb.sh
+
+scp /worka2/backup/oraidx1a/GARDBOP/backupset/* oracle@oraidx2a:/worka2/backup/oraidx1a/GARDBOP/backupset
+scp /worka2/backup/oraidx1a/GARDBOP/archivelog/* oracle@oraidx2a:/worka2/backup/oraidx1a/GARDBOP/archivelog
+scp /worka2/backup/oraidx1a/GARDBOP/controlfile/* oracle@oraidx2a:/worka2/backup/oraidx1a/GARDBOP/controlfile
+
+--Editar archivo pfile GARDBOP2 copiado desde la base PRIMARY y agregar/modificar:
+db_name=GARDBOP
+--db_unique_name=GARDBOP2
+log_archive_config='DG_CONFIG=(GARDBOP,GARDBOP2)'
+--(Mod) log_archive_dest_1='LOCATION=/oradata/GARDBOP/archive VALID_FOR=(ALL_LOGFILES,ALL_ROLES) DB_UNIQUE_NAME=GARDBOP2'
+--(Mod) log_archive_dest_2='SERVICE=GARDBOP LGWR ASYNC VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=GARDBOP'
+--(YA VIENE POR DEFECTO ASI) log_archive_dest_state_1=ENABLE
+REMOTE_LOGIN_PASSWORDFILE=EXCLUSIVE
+--standby_archive_dest='/oradata/GARDBOP/archive/GARDBOP2'
+--standby_file_management=AUTO
+--Modif fal_client=GARDBOP2
+--Modif fal_server=GARDBOP
+*.db_file_name_convert='/oradata/GARDBOP/data1','/oradata/GARDBOP2/data1','/oradata/GARDBOP/data2','/oradata/GARDBOP2/data2'
+*.log_file_name_convert='/oradata/GARDBOP/redo1','/oradata/GARDBOP2/redo1','/oradata/GARDBOP/redo2','/oradata/GARDBOP2/redo2'
+
+Archivo de password
+export ORACLE_SID=GARDBOP2
+orapwd file='$ORACLE_HOME/dbs/orapwGARDBOP2' password=sysgardbop1127 entries=10;
+
+create spfile from pfile;
+
+
+--Ejecutar en la primaria:
+
+alter system archive log current; 
+
+
+#########
+--lo que viene ejecutar con sh duplicate_db.sh > /home/oracle/log/duplicate_db.log 2> /home/oracle/log/duplicate_db.err & --(Aprox 15 Min)
+
+
+startup nomount;
+
+rman en la stby
+
+rman target sys/sysgardbop1127@GARDBOP auxiliary /
+
+duplicate target database for standby dorecover;
+
+select name,db_unique_name,database_role from v$database;
+
+--alter database recover managed standby database disconnect; --Aplica archives y no real time
+
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE USING CURRENT LOGFILE DISCONNECT;
+
+--En la standBy
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 9 
+('/oradata/GARDBOP2/redo1/redostb09_1.log' , '/oradata/GARDBOP2/redo2/redostb09_2.log') size 50M;
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 10
+('/oradata/GARDBOP2/redo1/redostb10_1.log' , '/oradata/GARDBOP2/redo2/redostb10_2.log') size 50M;
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 11 
+('/oradata/GARDBOP2/redo1/redostb11_1.log' , '/oradata/GARDBOP2/redo2/redostb11_2.log') size 50M;
+
+#########
+
+--En la primaria
+
+alter system set LOG_ARCHIVE_DEST_2='SERVICE=GARDBOP2 LGWR ASYNC VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=GARDBOP2';
+
+alter system set LOG_ARCHIVE_DEST_2='SERVICE=GARDBOP2 LGWR ASYNC=40960 VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=GARDBOP2'; --(20M)
+
+alter system set log_archive_dest_state_2=enable;
+
+--En el alert log se puede ver:
+
+LNS1 started with pid=24, OS id=26832
+Fri Sep 24 10:00:19 2010
+Thread 1 advanced to log sequence 2353 (LGWR switch)
+  Current log# 2 seq# 2353 mem# 0: /oradata/GARDBOP/redo1/redo02_1.log
+  Current log# 2 seq# 2353 mem# 1: /oradata/GARDBOP/redo2/redo02_2.log
+Fri Sep 24 10:00:19 2010
+******************************************************************
+LGWR: Setting 'active' archival for destination LOG_ARCHIVE_DEST_2
+******************************************************************
+
+
+
+--Verificar en StandBy: (APPLIED tiene que dar YES)
+SELECT SEQUENCE#,APPLIED FROM V$ARCHIVED_LOG ORDER BY SEQUENCE#; 
+
+alter session set nls_date_format='DD/MM/YYYY HH24:MI:SS';
+select sequence#, first_time, next_time, applied from v$archived_log order by sequence#;
+
+--En la primaria
+select sequence#, first_time, next_time, applied from v$archived_log where dest_id = 2
+order by sequence#;
+
+--En la primaria ejecutar
+ALTER SYSTEM SWITCH LOGFILE;
+
+--Verificar nuevamente la vista archived_log en la standBy
+
+SELECT SEQUENCE#, FIRST_TIME, NEXT_TIME, APPLIED FROM V$ARCHIVED_LOG ORDER BY SEQUENCE#;
+
+
+--
+
+--Pausa de aplicacion de dataguard
+--Primaria
+alter system set log_archive_dest_state_2=defer;
+
+alter system set LOG_ARCHIVE_DEST_2='';
+
+--StandBy
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE CANCEL;
+
+
+--Reanudar aplicacion de data
+--StandBy
+--alter database recover managed standby database disconnect; --Esto es para aplicar por redo logs
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE USING CURRENT LOGFILE DISCONNECT; --Para aplicar "Online"
+--Primaria
+alter system set LOG_ARCHIVE_DEST_2='SERVICE=GARDBOP2 LGWR ASYNC VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=GARDBOP2';
+alter system set log_archive_dest_state_2=enable;
+
+
+
+--Bajar standBy
+alter database recover managed standby database cancel;
+shutdown immediate;
+
+--Abrir solo lectura standBy
+alter database recover managed standby database cancel;
+ALTER DATABASE OPEN;
+
+
+--Para volver a la aplicacion de cambios
+
+1_Terminate all active user sessions on the standby database.
+2_Restart Redo Apply. To start Redo Apply, issue the following statement:
+
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE DISCONNECT FROM SESSION;
+
+To enable real-time apply, include the USING CURRENT LOGFILE clause:
+
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE USING CURRENT LOGFILE;
+
+ALTER DATABASE RECOVER MANAGED STANDBY DATABASE USING CURRENT LOGFILE DISCONNECT;
+
+
+-------------------
+
+
+DataGuard Broker
+
+
+--En la primaria
+alter system set dg_broker_start=true;
+alter system set dg_broker_start=true scope=spfile;
+alter system set local_listener='(ADDRESS = (PROTOCOL=TCP)(HOST=oraidx1a)(PORT=1700))' scope=spfile;
+
+--En la Stb
+
+alter system set dg_broker_start=true;
+alter system set dg_broker_start=true scope=spfile;
+alter system set local_listener='(ADDRESS = (PROTOCOL=TCP)(HOST=oraidx2a)(PORT=1701))' scope=spfile;
+
+
+--Primaria, conectar  a base
+
+dgmgrl sys/sysgardbop1127
+
+--Crear broker configuration
+
+CREATE CONFIGURATION 'DG_GARDB' AS PRIMARY DATABASE IS 'GARDBOP' CONNECT IDENTIFIER IS GARDBOP.garba.com.ar;
+
+--Configuration "DG_GARDB" created with primary database "GARDBOP"
+
+--Agregar 1 stb
+
+ADD DATABASE 'GARDBOP2' AS CONNECT IDENTIFIER IS GARDBOP2.garba.com.ar MAINTAINED AS PHYSICAL;
+--Database "GARDBOP2" added
+
+
+--Mostrar configuracion
+SHOW CONFIGURATION;
+
+--Mostrar propiedades de una base
+SHOW DATABASE VERBOSE 'GARDBOP';
+
+SHOW DATABASE VERBOSE 'GARDBOP2';
+
+--Habilitar configuracion
+ENABLE CONFIGURATION;
+
+--Habilitar base de datos
+ENABLE DATABASE 'GARDBOP';
+ENABLE DATABASE 'GARDBOP2';
+
+
+--SHOW DATABASE 'GARDBOP2' 'InconsistentLogXptProps';
+
+--Apply Lag (seconds) Numero de segundos que la base stb esta "atras" de la base primaria
+
+--Transport Lag (seconds) Numero aprox de seg que los datos de redo log no se encuentran disponibles en la base stb. 
+Esto se puede deber a q el redo log aun no se ha enviado o que exista un evento de espera.
+
+SHOW DATABASE 'GARDBOP' 'LogXptStatus'
+
+SHOW DATABASE 'GARDBOP2' 'InconsistentLogXptProps';
+
+SHOW DATABASE 'GARDBOP2' 'StatusReport';

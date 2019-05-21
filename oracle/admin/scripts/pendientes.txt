@@ -1,0 +1,180 @@
+Revisar script de export para q elimine archivos GARDBOP
+
+todos los usuarios de db_links tienen q seer _link
+
+archivos exports en oraidx1a. Permiso para comprimir o borrar desde cierres
+
+Mejorar script depura_aud.sh (oraidx1a)
+
+Script backup oraidx1a. Archivos a cinta
+
+todos los exports con expdp
+
+Sacar mail ARap de grid control
+
+SR Bug INTDWOP
+
+Pampero si la base sigue arriba shutdown abort
+
+gestrop tarda en cualquier consulta
+
+Indices sin usar
+
+control de base desaci, mismos q desa/test ebs 12
+
+Verificar proceso keep log de bases desarrollo
+
+Agregar rdo logs mas grandes en EXTTROP (de 100Mb)
+
+performance en GESTAR Produccion
+
+Ver objetos en TBS USERS GARDBOP
+
+Estadísticas dbms_stats en bases
+
+automatic tuning
+
+sql que ejecute "search sql" del grid control
+
+SARGPDE undo
+
+shrink de tablas BAMGP
+
+backup de BAMGPDE
+
+GARDWOP auditoria de conexión
+
+Armar listado de tareas para copiar datafiles
+
+generacion de archives para bases grandes
+
+Usuarios dblink con profile apps_profile (o db_link profile)
+
+Create Report Definition en el Grid Control
+
+Ver estadísticas en SARGPOP
+
+Oracle Collection Manager en las bases
+
+Parallel en el warehouse
+GARDW: Los indices de las tablas q tienen degree default deben estar en default
+Probar velocidad discos en oradbp1a vs dbsrv
+
+Considerar poner las tablas en nologging para utilizar menos redo, cuando se realiza insert append into select
+
+swap en servidores!
+
+Poner la base GARDWP en PARALELO previamente poner todas las tablas en NOPARALLEL para que utilice el paralelismo solo los ETLS. (ENABLE PARALLEL DML + HINTS)
+
+stress test en bases de desarrollo
+
+Los tablespaces de ORCL estan todos en autoextend
+
+Tabla WWDOC_DOCUMENT$ de ORCL, con objeto lob. Ver espacio, peso de la tabla y mejor opción para el lob
+
+Parches Oracle
+
+Tuning Base de datos
+
+Actualizar ORACLE_HOME en bases.sh
+
+Solo queda la base BPMGPDE de desarrollo en archivelog. Luego vemos si podemos ponerlo en noarchivelog
+
+pacheco. Backups y migracion
+ 
+Ver LTOM, OSWAtcher, TRCANLZR Para ningun caso requiere licencia
+
+PGA de exttrop
+
+CHECK_STALE_STATS
+
+tarda GESTROP cuando se realiza tbs (por ejemplo)
+
+Estadísticas
+
+ORCL PGA
+
+apps_profile en INTDW
+
+Ver paquete dbms_server_alert
+
+Uso del tbs UNDO (@dba_undo_extents)
+
+Ver de integrar los controles de base con nagios
+
+Usuario para NAGIOS
+
+lockeos en orcl
+
+actualizar doc con dblinks
+
+Ver doc de estadisticas
+
+Prueba reinicio base de datos -> tildado de servidor
+
+Check de alert log con external table-> http://www.adp-gmbh.ch/ora/admin/scripts/read_alert_log.html
+
+athos -> clonar -> bug de discoverer -> problema con lockeos
+
+Alertas en base de datos con control.sql (ver soap y bases de aplicaciones)
+
+Reiniciar BPM desarrollo para q no este en archivelog
+
+gartrop2a ARCHIVELOG
+
+ORACLE_HOME en bases.sh 
+
+al alert agregar check de ejecucion de estadisticas
+
+Sacar alerta de /oradata/GARDWOP/data1 - File System de oradbp1a
+
+Armar doc con politica de backup
+
+Estadisticas bases EBS 12
+
+Gestar Performance
+
+Sar Performance
+
+Diagrama de esquemas - aplicaciones por base (Por ej hay una nuva en INTDW)
+
+Esta dando este error en el script scp_financieras.sh que esta corneado en athos, y se comunica con oradbp1a.
+
+soarep WARNING Valor par?metro control_file_record_keep_time <> 15: 7 ...x
+
+Migracion de seven, jira, y no se q mas
+
+Check diario de ejecución de estadísticas, check stale.
+
+Tablespaces de bases SOA 11 test y desa (estan en autoextend)
+
+Ver porque tarda tanto consultas en GESTAR
+
+Nuevas controles y alertas - Necesitamos realizar varios verificaciones más como cantidad de sesiones, cursores abiertos,  estadísticas desactualizadas y varios de performance (dictionary cache hit ratio, library cache hit ratio, buffer hit ratio, etc.).
+
+Performance de Grid Control
+
+Auditar
+
+Actualizar backups excel (SOA ejemplo)
+
+En pampero desa: [Wed Oct 12 09:50:48 2011] [error] [client 127.0.0.1] File does not exist: /erpp2/erppcomn/portal/ERPP2_pampero/oprocmgr-service [Wed Oct 12 09:50:48 2011] [error] [client 127.0.0.1] File does not exist: /erpp2/erppcomn/portal/ERPP2_pampero/dms1/Spy
+
+Gestar: Cambios
+
+GARTROP: Cambios
+
+SOA 11: Depuración, mover tabla a otro TBS
+
+athos - la base no es compatible c vista v$backup_set_detail - control de base
+
+Controles obsoletos digitalfueguina
+
+error proceso cron athos
+
+Migrac GESTAR
+
+Migrac EXTTROP
+
+Documentar horario exacto de toma de estadisticas en las diferentes bases (y el tipo de toma)
+

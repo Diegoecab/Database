@@ -1,0 +1,16 @@
+SQL> alter system set user_dump_dest="c:\temp";
+
+System altered.
+
+SQL> alter session set
+  2  tracefile_identifier ="pruebatest";
+
+Session altered.
+
+SQL> alter session set events '10046 trace name context forever, level 8';
+
+Session altered.
+
+SQL> alter session set events '10046 trace name context off';
+
+Session altered.

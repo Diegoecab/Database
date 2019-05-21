@@ -1,0 +1,5 @@
+# listar
+/usr/openv/netbackup/bin/bplist -B -R -C latfctdb001u -S crebm1900 -s 05/01/2014 -e 06/01/2014 /optware/oracle/grid/11.2.0.3
+
+# backupear
+/usr/openv/netbackup/bin/bprestore -B -L /tmp/restore_progress_villa.log -C latfctdb001u -S crebm1900 -s 05/01/2014 -e 06/01/2014 /optware/oracle/grid/11.2.0.3

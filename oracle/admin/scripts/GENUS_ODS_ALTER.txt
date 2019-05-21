@@ -1,0 +1,13 @@
+
+Session altered.
+
+
+Session altered.
+
+
+1 row created.
+
+
+Commit complete.
+
+Please send GENUS_ODS_ALTER.LOG to analia.aguirre@citi.com

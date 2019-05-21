@@ -1,0 +1,16 @@
+
+declare
+job_num number;
+nlsvar varchar2(4000);
+envvar raw(32);
+begin
+select nls_env,misc_env into nlsvar,envvar from dba_jobs where rownum<2 and nls_env is not null and misc_env is not null ;
+select max(job)+1 into job_num from dba_jobs;
+sys.dbms_ijob.submit(job=>job_num,luser=>'TEST',puser=>'TEST',cuser=>'TEST',what=>'insert into tst values(1);' ,next_date=>sysdate+1/(24*60), interval=>'trunc(sysdate,''MI'')+1/48', broken=>FALSE,nlsenv=>nlsvar,env=>envvar);
+dbms_output.put_line(job_num);
+end;
+/
+commit;
+
+
+dbms_ijob.remove(job_number??);

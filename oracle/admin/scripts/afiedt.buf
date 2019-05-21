@@ -1,0 +1,10 @@
+select date_from+(level-1)/48   as GenerateTimeBy30min
+from (select from_dt as date_from
+    ,to_dt           as date_to
+    ,to_dt-from_dt+1 as days_between
+    ,48             as intervalPicked
+from (select '10-SEP-18' as from_dt
+           , '11-SEP-18'-1/86400 as to_dt
+      from dual))
+connect by (level-1) <= days_between*intervalPicked
+/

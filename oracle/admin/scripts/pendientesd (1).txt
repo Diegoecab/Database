@@ -1,0 +1,122 @@
+-- Profiles (Normalizar Parametros)
+
+DBSRV - Carga de CPU
+
+Objetos Lobs en TBS de datos!! Ej GESTAR :
+exttrqa:
+	"GESTAR"."SYS_ATTACHMENTS"                  4.480 GB    5707 rows
+
+----
+
+--
+TBS c 25%
+
+--
+_ La manera de determinar cuales son los procesos que se quedan en espera por carga de CPU
+
+DRP
+
+--
+
+ASM!
+
+RAC HPUX
+
+--
+
+Prueba d2 - p2
+
+--
+
+Actualizar Doc de DRP - Espacio Necesario (Redo Logs Switchs) !!! Mandar Mail a Ale
+
+--
+GARDWDE: Restaría que apunte a porthos y que se vea la configuración de discoverer.
+--
+
+Estado de Auditar - Ver con Ale
+--
+BAM!
+--
+DRP - GARDB!
+--
+Parametros DB
+--
+
+DRP ASM
+
+Seven GARDWDE A EXTTRDE  (Ver espacio) (Tener en cuenta mover seven_link) Morana para q reapunte aplicacion
+
+GARDWOP A EXTTROP
+
+BPM de d1/p1 a d2/p2
+
+--
+
+WFC_TX Mail a Ruben
+
+--
+
+Informe migracion gardw
+
+--
+
+GARTROP Performance - Ver Mail
+
+--
+
+Migracion GARDW
+
+-- 
+
+Segment Advisor!!
+
+Auditar RE: Auditar - Mejoras de performance - Ok para implementar en Prod
+
+RE: GARBARRHH - Migración Q realicen las pruebas
+
+Listado Tareas BPM movimiento
+
+Problema con Discoverer
+
+Mail Implementacion KEEP en Prod
+
+--
+
+ORAVEN - de GARDB a GARTRQA -> necesitamos al menos 41 GB libres. Si hacemos un import se van a alertar los FS de GARTRQA
+
+Migracion GAR_DW
+
+GARBARRHH
+
+BAM a p2
+
+Async en servidores
+
+Rebuild indices GAR_DW
+
+SR - ASM
+
+Gestar a EXTTROP	-> Mande mail a Ale e Ile
+
+Auditar - Luego de aplicar cambios, migrar GESTAR
+
+Base sar producción bloque 16K
+
+Ver espacio necesario Migracion WareHouse
+
+Ver esquemas de backup -
+
+Revisar db_links publicos
+
+--
+
+GARTRDE mucho archive
+
+Llamar x Auditar
+
+ASM
+
+Puntos a ver en estos días
+
+Discoverer Metrics

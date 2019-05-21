@@ -1,0 +1,30 @@
+Recovery Window
+
+	RETENTION POLICY
+
+Copias de seguridad con RMAN  necesarias  para recuperar la base a un punto en el tiempo. 
+
+
+En el backup full se eliminan backups completados con mas de 6 días
+
+DELETE NOPROMPT BACKUP COMPLETED BEFORE 'SYSDATE-6' DEVICE TYPE DISK;
+
+
+
+Incremental Backups
+
+level 1 incremental backup can be either of the following types:
+
+    A differential backup, which backs up all blocks changed after the most recent incremental backup at level 1 or 0
+
+    A cumulative backup, which backs up all blocks changed after the most recent incremental backup at level 0
+
+
+Incremental backups are differential by default.
+
+
+EXPIRED vs OBSOLETE
+
+OBSOLETE: Cuanto no se necesita el backup, teniendo en cuenta la ventana de recuperación 
+EXPIRED:  Cuando luego de un crosscheck, no se encuentra el archivo
+

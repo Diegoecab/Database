@@ -1,0 +1,141 @@
+SQL> 
+SQL> ALTER TABLE RD_ACCT_MOVEMENTS_SHADOW DISABLE CONSTRAINT FK_ABD_AM1 CASCADE;
+
+Table altered.
+
+Elapsed: 00:00:00.63
+SQL> 
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'20000000','GU ','2071769464','900000','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.44
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'20000000','GU ','0000001007','900001','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'20000000','GU ','2071769464','900002','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.39
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'20000000','GU ','0000001007','900003','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'20000000','GU ','2071840064','900004','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'20000000','GU ','0000001007','900005','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'20000000','GU ','2071840064','900006','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'20000000','GU ','0000001007','900007','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'20000000','GU ','2071849464','900008','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.40
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'20000000','GU ','0000001007','900009','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.41
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'20000000','GU ','2071849464','900010','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.43
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'20000000','GU ','0000001007','900011','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'20000000','GU ','2072120065','900012','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'20000000','GU ','0000001007','900013','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','004445','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'20000000','GU ','2072120065','900014','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0044452018','000001','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'20000000','GU ','0000001007','900015','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','004571','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'26300000','GU ','0000001007','900016','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','000001','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'26300000','GU ','0000001007','900017','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','004571','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'26300000','GU ','0000001007','900018','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','000001','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'26300000','GU ','0000001007','900019','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','004571','04-SEP-2014','000','GTM','GTQ','C','0','21504',sysdate,'26300000','GU ','2070360010','900020','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','000001','04-SEP-2014','000','GTM','GTQ','D','0','21504',sysdate,'26300000','GU ','0000001007','900021','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','004571','04-SEP-2014','000','GTM','GTQ','D','0','21505',sysdate,'26300000','GU ','2070360010','900022','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> INSERT INTO GTBC_DW.RD_ACCT_MOVEMENTS_SHADOW (Account_Number, Base_Number, Book_Date, Branch, Country_Code, Currency_Swift_Code, Debit_Credit_Indicator, Fcy_Amount, Gl_Code, Last_Processing_Date, Lcy_Amount, Legal_Vehicle, Related_Reference,	Serial_Number, Source_Identifier,  Value_Date) VALUES('0045712005','000001','04-SEP-2014','000','GTM','GTQ','C','0','21505',sysdate,'26300000','GU ','0000001007','900023','BASIC_COSMOS','04-SEP-2014');
+
+1 row created.
+
+Elapsed: 00:00:00.38
+SQL> 
+SQL> ALTER TABLE RD_ACCT_MOVEMENTS_SHADOW MODIFY CONSTRAINT FK_ABD_AM1 ENABLE novalidate;
+
+Table altered.
+
+Elapsed: 00:00:00.43
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+Elapsed: 00:00:00.39
+SQL> 
+SQL> spool off

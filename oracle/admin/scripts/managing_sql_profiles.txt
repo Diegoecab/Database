@@ -1,0 +1,42 @@
+Managing SQL Profiles
+To manage SQL profiles a user needs the following privileges:
+
+    CONN sys/password AS SYSDBA
+    GRANT CREATE ANY SQL PROFILE TO scott;
+    GRANT DROP ANY SQL PROFILE TO scott;
+    GRANT ALTER ANY SQL PROFILE TO scott;
+    CONN scott/tiger
+
+If the recommendations of the SQL tuning advisor include a suggested profile you can choose to accept it using the ACCEPT_SQL_PROFILE procedure:
+
+    SET SERVEROUTPUT ON
+    DECLARE
+      l_sql_tune_task_id  VARCHAR2(20);
+    BEGIN
+      l_sql_tune_task_id := DBMS_SQLTUNE.accept_sql_profile (
+                              task_name => 'emp_dept_tuning_task',
+                              name      => 'emp_dept_profile');
+      DBMS_OUTPUT.put_line('l_sql_tune_task_id: ' || l_sql_tune_task_id);
+    END;
+    /
+
+The NAME parameter is used to specify a name for the profile. If it is not specified a system generated name will be used.
+
+The STATUS, NAME, DESCRIPTION, and CATEGORY attributes of an SQL profile can be altered using the ALTER_SQL_PROFILE procedure:
+
+    BEGIN
+      DBMS_SQLTUNE.alter_sql_profile (
+        name            => 'emp_dept_profile',
+        attribute_name  => 'STATUS',
+        value           => 'DISABLED');
+    END;
+    /
+
+Existing SQL profiles can be dropped using the DROP_SQL_PROFILE procedure:
+
+    BEGIN
+      DBMS_SQLTUNE.drop_sql_profile (
+        name   => 'emp_dept_profile',
+        ignore => TRUE);
+    END;
+    /

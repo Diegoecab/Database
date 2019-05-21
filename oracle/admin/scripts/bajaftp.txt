@@ -1,0 +1,16 @@
+softur
+windows2k3!
+binary
+
+get /softur1.rar   C:\TRAFFIC\baseftp\softur1.rar
+
+get /reports.rar   C:\TRAFFIC\baseftp\reports.rar
+pause
+get /informes.rar  C:\TRAFFIC\baseftp\informes.rar 
+
+get /repclie.rar   C:\TRAFFIC\baseftp\repclie.rar 
+
+C:\traffic\proyecto 
+
+
+Bye

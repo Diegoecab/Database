@@ -1,0 +1,16 @@
+Export de GARDWP
+
+ls -lart expdp_gardw_gardwr2_*.log
+
+GAR_DW y GAR_DWR2
+
+viejo 3 Julio 16:00 a 21:02
+
+viejo 5 julio 16:00 a 19:37
+
+viejo 7 julio 16:00 a 20:40
+
+viejo 10 jul  16:00 a 19:28
+
+nuevo 12 jul  16:00 a 18:27
+

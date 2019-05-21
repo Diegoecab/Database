@@ -1,0 +1,3 @@
+$ cat zipfiles.* > zipfiles-full.zip
+$ zip -F zipfiles-full.zip
+$ unzip zipfiles-full.zip

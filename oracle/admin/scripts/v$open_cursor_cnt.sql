@@ -1,0 +1,1 @@
+select * from (select count(*),sql_id from gv$open_cursor group by sql_id,sid,inst_id order by 1 desc) where rownum <= 10;

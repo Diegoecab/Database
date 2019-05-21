@@ -1,0 +1,28 @@
+SQL> 
+SQL> alter session set current_schema=USFC_DW;
+
+Session altered.
+
+Elapsed: 00:00:00.36
+SQL> 
+SQL> UPDATE  USFC_DW.DW_ACCOUNT_MOVEMENTS m
+  2  SET RELATED_CONTRACT_ACCOUNT = TRUNC(ADDITIONAL_TEXT)
+  3  WHERE TRUNC(last_processing_date) = '25-JUL-2014'
+  4  AND BRANCH ='LAC'
+  5  AND  transaction_reference LIKE '%TR%'
+  6  AND TRUNC(ADDITIONAL_TEXT) IN (
+  7  SELECT CONTRACT_NUMBER
+  8  FROM USFC_DW.rd_contract_cex);
+
+96 rows updated.
+
+Elapsed: 00:00:03.44
+SQL> 
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+Elapsed: 00:00:00.32
+SQL> 
+SQL> SPOOL OFF

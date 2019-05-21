@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+	<title>How to enable/disable  async I/O for oracle on HP-UX &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8220; | Oracle Notes</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all posts" href="http://www.almohem.com/oracle/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all comments" href="http://www.almohem.com/oracle/comments/feed/" />
+	<link rel="pingback" href="http://www.almohem.com/oracle/xmlrpc.php" />
+
+	<!-- style START -->
+	<!-- default style -->
+	<style type="text/css" media="screen">@import url( http://www.almohem.com/oracle/wp-content/themes/inove/style.css );</style>
+	<!-- for translations -->
+		<!--[if IE]>
+		<link rel="stylesheet" href="http://www.almohem.com/oracle/wp-content/themes/inove/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!-- style END -->
+
+	<!-- script START -->
+	<script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/themes/inove/js/base.js"></script>
+	<script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/themes/inove/js/menu.js"></script>
+	<!-- script END -->
+
+	                        <style type="text/css" media="screen" >
+                                .socialwrap li.icon_text a img, .socialwrap li.iconOnly a img, .followwrap li.icon_text a img, .followwrap li.iconOnly a img{border-width:0 !important;background-color:none;}#follow.right {width:32px;position:fixed; right:0; top:100px;background-color:#878787;padding:10px 0;font-family:impact,charcoal,arial, helvetica,sans-serif;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;border:2px solid #fff;border-right-width:0}#follow.right ul {padding:0; margin:0; list-style-type:none !important;font-size:24px;color:black;}
+#follow.right ul li {padding-bottom:10px;list-style-type:none !important;padding-left:4px;padding-right:4px}
+#follow img{border:none;}#follow.right ul li.follow {margin:0 4px;}
+#follow.right ul li.follow img {border-width:0;display:block;overflow:hidden; background:transparent url(http://www.almohem.com/oracle/wp-content/plugins/share-and-follow/images/impact/follow-right.png) no-repeat -0px 0px;height:79px;width:20px;}
+#follow.right ul li a {display:block;}
+#follow.right ul li.follow span, #follow ul li a span {display:none}.share {margin:0 3px 3px 0;}
+.phat span {display:inline;}
+ul.row li {float:left;list-style-type:none;}
+li.iconOnly a span.head {display:none}
+#follow.left ul.size16 li.follow{margin:0px auto !important}
+li.icon_text a {padding-left:0;margin-right:3px}
+li.text_only a {background-image:none !important;padding-left:0;}
+li.text_only a img {display:none;}
+li.icon_text a span{background-image:none !important;padding-left:0 !important; }
+li.iconOnly a span.head {display:none}
+ul.socialwrap li {margin:0 3px 3px 0 !important;}
+ul.socialwrap li a {text-decoration:none;}ul.row li {float:left;line-height:auto !important;}
+ul.row li a img {padding:0}.size16 li a,.size24 li a,.size32 li a, .size48 li a, .size60 li a {display:block}ul.socialwrap {list-style-type:none !important;margin:0; padding:0;text-indent:0 !important;}
+ul.socialwrap li {list-style-type:none !important;background-image:none;padding:0;list-style-image:none !important;}
+ul.followwrap {list-style-type:none !important;margin:0; padding:0}
+ul.followwrap li {margin-right:3px;margin-bottom:3px;list-style-type:none !important;}
+#follow.right ul.followwrap li, #follow.left ul.followwrap li {margin-right:0px;margin-bottom:0px;}
+.shareinpost {clear:both;padding-top:0px}.shareinpost ul.socialwrap {list-style-type:none !important;margin:0 !important; padding:0 !important}
+.shareinpost ul.socialwrap li {padding-left:0 !important;background-image:none !important;margin-left:0 !important;list-style-type:none !important;text-indent:0 !important}
+.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img{border-width:0}ul.followrap li {list-style-type:none;list-style-image:none !important;}
+div.clean {clear:left;}
+div.display_none {display:none;}
+                        </style>
+                                                <style type="text/css" media="print" >
+                                body {background: white;font-size: 12pt;color:black;}
+ * {background-image:none;}
+ #wrapper, #content {width: auto;margin: 0 5%;padding: 0;border: 0;float: none !important;color: black;background: transparent none;}
+ a { text-decoration : underline; color : #0000ff; }
+#menu, #navigation, #navi, .menu {display:none}
+                        </style>
+                        <link rel="image_src" href="http://www.gravatar.com/avatar/8340664f3bf8da9adb5bb71610972738?default=&amp;size=110.jpg" /> 
+<link rel="alternate" type="application/rss+xml" title="Oracle Notes &raquo; How to enable/disable  async I/O for oracle on HP-UX &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8220; Comments Feed" href="http://www.almohem.com/oracle/dba/how-to-enabledisable-async-io-for-oracle-on-hp-ux-ioctl-async_config-error-errno-1/feed/" />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://www.almohem.com/oracle/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gdsr_style_main-css'  href='http://www.almohem.com/oracle/wp-content/plugins/gd-star-rating/css/gdsr.css.php?t=1294906594&#038;s=a05i05m20k20c05r05%23121620243046%23121620243240%23s1pchristmas%23s1pcrystal%23s1pdarkness%23s1poxygen%23s1goxygen_gif%23s1pplain%23s1ppumpkin%23s1psoft%23s1pstarrating%23s1pstarscape%23t1pclassical%23t1pstarrating%23t1gstarrating_gif%23lsgflower&#038;o=off&#038;ver=1.9.7' type='text/css' media='all' />
+<link rel='stylesheet' id='gdsr_style_xtra-css'  href='http://www.almohem.com/oracle/wp-content/gd-star-rating/css/rating.css?ver=1.9.7' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.almohem.com/oracle/wp-content/plugins/contact-form-7/styles.css?ver=2.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.almohem.com/oracle/wp-content/themes/inove/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-includes/js/jquery/jquery.js?ver=1.4.4'></script>
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-content/plugins/gd-star-rating/js/gdsr.js?ver=1.9.7'></script>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.almohem.com/oracle/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Oracle Notes' href='http://www.almohem.com/oracle/' />
+<link rel='start' title='Introduction To ASM' href='http://www.almohem.com/oracle/asm/introduction-to-asm/' />
+<link rel='prev' title='drop tablespace including contents hangs' href='http://www.almohem.com/oracle/dba/drop-tablespace-including-contents-hangs/' />
+<link rel='next' title='ORA-00258: manual archiving in NOARCHIVELOG mode must identify log' href='http://www.almohem.com/oracle/backup-and-recovery/ora-00258-manual-archiving-in-noarchivelog-mode-must-identify-log/' />
+<link rel='canonical' href='http://www.almohem.com/oracle/dba/how-to-enabledisable-async-io-for-oracle-on-hp-ux-ioctl-async_config-error-errno-1/' />
+<link rel='shortlink' href='http://wp.me/pQtQ4-6j' />
+<style type="text/css">.addtoany_subscribe img{border:0;}</style>
+<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+
+<!-- All in One SEO Pack 1.6.13.2 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<meta name="description" content="IF you get the error  Ioctl ASYNC_CONFIG error, errno = 1  in tracefile. : The Ioctl ASYNC_CONFIG error, errno = 1 Error means that the asynchronus IO" />
+<!-- /all in one seo pack -->
+<script type="text/javascript">
+//<![CDATA[
+var _wpcf7 = { cached: 1 };
+//]]>
+</script>
+<div style="background-color:white;text-align:center;color:black;font-size:110%;display:none;">
+أخبار تحدث علي مدار الساعة من كل المواقع الاخبارية الرئيسية
+<h1 style="background-color:white;text-align:center;color:black"><a href=http://www.almohem.com>http://www.almohem.com </a></h1>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var gdsr_cnst_nonce = "152549356f";
+var gdsr_cnst_ajax = "http://www.almohem.com/oracle/wp-content/plugins/gd-star-rating/ajax.php";
+var gdsr_cnst_button = 1;
+var gdsr_cnst_cache = 0;
+// ]]>
+</script>
+<!--[if IE]><style type="text/css">.ratemulti .starsbar .gdcurrent { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); }</style><![endif]-->
+
+<!-- platinum seo pack 1.3.7 -->
+<meta name="robots" content="index,follow,noodp,noydir" />
+<meta name="description" content="IF you get the error  Ioctl ASYNC_CONFIG error, errno = 1  in tracefile. : The Ioctl ASYNC_CONFIG error, errno = 1 Error means that the asynchronus IO" />
+<link rel="canonical" href="http://www.almohem.com/oracle/dba/how-to-enabledisable-async-io-for-oracle-on-hp-ux-ioctl-async_config-error-errno-1/" />
+<!-- /platinum one seo pack -->
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://www.almohem.com/oracle/wp-content/plugins/site-table-of-contents/stoc.css" />
+
+<!-- wp_auction start -->
+<link type="text/css" rel="stylesheet" href="http://www.almohem.com/oracle/wp-includes/js/thickbox/thickbox.css" />
+
+<link type="text/css" rel="stylesheet" href="http://www.almohem.com/oracle/wp-content/plugins/wp-auctions/styles/default/color.css" />
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-content/plugins/contact-form-7/jquery.form.js?ver=2.52'></script>
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-content/plugins/contact-form-7/scripts.js?ver=2.4.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {
+	next: "Next &gt;",
+	prev: "&lt; Prev",
+	image: "Image",
+	of: "of",
+	close: "Close",
+	noiframes: "This feature requires inline frames. You have iframes disabled or your browser does not support them."
+};
+try{convertEntities(thickboxL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-includes/js/thickbox/thickbox.js?ver=3.1-20100407'></script>
+<script type='text/javascript' src='http://www.almohem.com/oracle/wp-content/plugins/wp-auctions/wp_auctionsjs.php?ver=3.1.1'></script>
+      
+  
+<!-- wp_auction end -->
+
+
+<link rel="stylesheet" href="http://www.almohem.com/oracle/wp-content/plugins/wp-synhighlight/themes/default/wp-synhighlighter.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/plugins/wp-synhighlight/themes/default/wp-synhighlighter.js"></script>
+<link type="text/css" rel="stylesheet" href="http://www.almohem.com/oracle/wp-content/plugins/about-me/stylesheet.css" />
+</head>
+
+
+<body>
+<!-- wrap START -->
+<div id="wrap">
+
+<!-- container START -->
+<div id="container"  >
+
+<!-- header START -->
+<head>
+<script type="text/javascript">
+
+  (function() {
+    var lc_params = '';
+    var lc_lang = 'en';
+    var lc_skill = '0';
+
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    var lc_src = ('https:' == document.location.protocol ? 'https://' : 'http://');
+        lc_src += 'chat.livechatinc.net/licence/1038252/script.cgi?lang='+lc_lang+unescape('%26')+'groups='+lc_skill;
+        lc_src += ((lc_params == '') ? '' : unescape('%26')+'params='+encodeURIComponent(encodeURIComponent(lc_params))); lc.src = lc_src;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+
+</script>
+
+<meta name="google-site-verification" content="PBJ_TjVvF0IxTblo_4YCsaJ7GZnfFlvH7AFUJtEyVlE" />
+</head>
+<div id="header">
+
+	<!-- banner START -->
+			<div class="banner">
+			Oracle DBA notes and Tips
+<meta name="google-site-verification" content="PBJ_TjVvF0IxTblo_4YCsaJ7GZnfFlvH7AFUJtEyVlE" />		</div>
+		<!-- banner END -->
+
+	<div id="caption">
+		<h1 id="title"><a href="http://www.almohem.com/oracle/">Oracle Notes</a></h1>
+		<div id="tagline">Practical Tips and Notes for Orace Database Administrators</div>
+	</div>
+
+	<div class="fixed"></div>
+</div>
+<!-- header END -->
+
+<!-- navigation START -->
+<div id="navigation">
+	<!-- menus START -->
+	<ul id="menus">
+		<li class="page_item"><a class="home" title="Home" href="http://www.almohem.com/oracle/">Home</a></li>
+			<li class="cat-item cat-item-1"><a href="http://www.almohem.com/oracle/category/asm/" title="View all posts filed under ASM">ASM</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.almohem.com/oracle/category/backup-and-recovery/" title="View all posts filed under Backup and Recovery">Backup and Recovery</a>
+<ul class='children'>
+	<li class="cat-item cat-item-30"><a href="http://www.almohem.com/oracle/category/backup-and-recovery/flash-recovery-area-backup-and-recovery/" title="View all posts filed under Flash Recovery Area">Flash Recovery Area</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://www.almohem.com/oracle/category/backup-and-recovery/rman-backup-and-recovery/" title="View all posts filed under RMAN">RMAN</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-123"><a href="http://www.almohem.com/oracle/category/bussiness-skills/" title="View all posts filed under Bussiness skills">Bussiness skills</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.almohem.com/oracle/category/dba/" title="View all posts filed under DBA">DBA</a>
+<ul class='children'>
+	<li class="cat-item cat-item-36"><a href="http://www.almohem.com/oracle/category/dba/database-jobs/" title="View all posts filed under Database Jobs">Database Jobs</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="http://www.almohem.com/oracle/category/dba/enterprise-manager/" title="View all posts filed under Enterprise Manager">Enterprise Manager</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-46"><a href="http://www.almohem.com/oracle/category/dba/enterprise-manager/db-conrol/" title="View all posts filed under Db Conrol">Db Conrol</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48"><a href="http://www.almohem.com/oracle/category/dba/rollback/" title="View all posts filed under Rollback">Rollback</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-143"><a href="http://www.almohem.com/oracle/category/dbconsole/" title="View all posts filed under DBconsole">DBconsole</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.almohem.com/oracle/category/dictionary/" title="View all posts filed under Dictionary">Dictionary</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://www.almohem.com/oracle/category/dml/" title="View all posts filed under DML">DML</a>
+</li>
+	<li class="cat-item cat-item-94"><a href="http://www.almohem.com/oracle/category/oracle-vm/" title="View all posts filed under Oracle VM">Oracle VM</a>
+</li>
+	<li class="cat-item cat-item-171"><a href="http://www.almohem.com/oracle/category/partitioned-table/" title="View all posts filed under partitioned table">partitioned table</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.almohem.com/oracle/category/perfromance/" title="View all posts filed under Perfromance">Perfromance</a>
+<ul class='children'>
+	<li class="cat-item cat-item-45"><a href="http://www.almohem.com/oracle/category/perfromance/sql-tuning/" title="View all posts filed under SQL Tuning">SQL Tuning</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://www.almohem.com/oracle/category/rac/" title="View all posts filed under RAC">RAC</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.almohem.com/oracle/category/space-managment/" title="View all posts filed under Space Managment">Space Managment</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="http://www.almohem.com/oracle/category/streams/" title="View all posts filed under Streams">Streams</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="http://www.almohem.com/oracle/category/tns/" title="View all posts filed under TNS">TNS</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://www.almohem.com/oracle/category/unix-dba-skills/" title="View all posts filed under Unix-DBA-Skills">Unix-DBA-Skills</a>
+</li>
+		<li><a class="lastmenu" href="javascript:void(0);"></a></li>
+	</ul>
+	<!-- menus END -->
+
+	<!-- searchbox START -->
+	<div id="searchbox">
+					<form action="http://www.almohem.com/oracle" method="get">
+				<div class="content">
+					<input type="text" class="textfield" name="s" size="24" value="" />
+					<input type="submit" class="button" value="" />
+				</div>
+			</form>
+			</div>
+<script type="text/javascript">
+//<![CDATA[
+	var searchbox = MGJS.$("searchbox");
+	var searchtxt = MGJS.getElementsByClassName("textfield", "input", searchbox)[0];
+	var searchbtn = MGJS.getElementsByClassName("button", "input", searchbox)[0];
+	var tiptext = "Type text to search here...";
+	if(searchtxt.value == "" || searchtxt.value == tiptext) {
+		searchtxt.className += " searchtip";
+		searchtxt.value = tiptext;
+	}
+	searchtxt.onfocus = function(e) {
+		if(searchtxt.value == tiptext) {
+			searchtxt.value = "";
+			searchtxt.className = searchtxt.className.replace(" searchtip", "");
+		}
+	}
+	searchtxt.onblur = function(e) {
+		if(searchtxt.value == "") {
+			searchtxt.className += " searchtip";
+			searchtxt.value = tiptext;
+		}
+	}
+	searchbtn.onclick = function(e) {
+		if(searchtxt.value == "" || searchtxt.value == tiptext) {
+			return false;
+		}
+	}
+//]]>
+</script>
+	<!-- searchbox END -->
+
+	<div class="fixed"></div>
+</div>
+<!-- navigation END -->
+
+<!-- content START -->
+<div id="content">
+
+	<!-- main START -->
+	<div id="main">
+
+<div style="background-color:wheat;text-align:center;color:black;font-size:110%;">
+
+أخبار تحدث علي مدار الساعة من كل المواقع الاخبارية الرئيسية
+<h3 style="background-color:#ccffcc;text-align:center;color:black"><a href=http://www.almohem.com>http://www.almohem.com </a></h3>
+</div>
+
+	<div id="postpath">
+		<a title="Go to homepage" href="http://www.almohem.com/oracle/">Home</a>
+		 &gt; <a href="http://www.almohem.com/oracle/category/dba/" title="View all posts in DBA" rel="category tag">DBA</a>		 &gt; How to enable/disable  async I/O for oracle on HP-UX &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8220;	</div>
+
+	<div class="post" id="post-391">
+		<h2>How to enable/disable  async I/O for oracle on HP-UX &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8220;</h2>
+		<div class="info">
+			<span class="date">May 18th, 2010</span>
+			<span class="author"><a href="http://www.almohem.com/oracle/author/admin/" title="Posts by admin">admin</a></span>										<span class="addcomment"><a href="#respond">Leave a comment</a></span>
+				<span class="comments"><a href="#comments">Go to comments</a></span>
+						<div class="fixed"></div>
+		</div>
+		<div class="content">
+			<p>Reading time: 2 &#8211; 2 minutes</p>
+<p>IF you get the error  &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8221;  in tracefile. :<br />
+<span style="color: #993300;">The  &#8220;Ioctl ASYNC_CONFIG error, errno = 1&#8243;  Error  means that the asynchronus IO is not configured correctly on the HP-UX  Platform.</span></p>
+<p><span style="text-decoration: underline;"><strong><span style="color: #003300;">To Disable async IO at oracle level ( To avoid this error ) :</span></strong></span><br />
+++  Since we have a problem with async I/O, we have  used synchronous I/O to perform the expdp by doing following changes in  init.ora.<br />
+disk_asynch_io=FALSE<br />
+filesystemio_options=none</p>
+<p><span style="text-decoration: underline;"><strong>To Enable async IO at HP-UX and Oracle level ( To avoid this error ) :</strong></span><br />
+1- $ ls  -l  /dev/async<br />
+The  /dev/async device should have the following  permissions:<br />
+# chown oracle:dba /dev/async<br />
+# chmod 660  /dev/async</p>
+<p>2- AIO ,  will not work for Oracle, unless the dba  group has the MLOCK privilege.<br />
+So we need to check the following :</p>
+<p>a-  To check if the dba group has the MLOCK privilege, execute:<br />
+#  /usr/bin/getprivgrp dba</p>
+<p>b- If the dba group does not have the  MLOCK privilege then  set it for group dba<br />
+% /usr/sbin/setprivgrp dba  MLOCK</p>
+<p>c- Note, the next reboot will clear this privilege. To  automate this at startup,</p>
+<p>create /etc/privgroup with the entry<br />
+dba  MLOCK</p>
+<p>This can be tested with<br />
+# /usr/sbin/setprivgrp -f  /etc/privgroup</p>
+<p>3- For more information about HP-UX AIO  configurations , Please check the following note :<br />
+Note 139272.1  Ext/Pub HP-UX Asynchronous i/o</p>
+<p>4- After verifying and correcting  all the AIO configurations , Then please set in your parameter file :<br />
+disk_async_io  = true<br />
+filesystemio_options=setall</p>
+<p>5- shutdown the instance</p>
+<p>6-  startup the instance</p>
+<p>7- <span style="color: #ff0000;">Done</span>!</p>
+<div style="display: none">VN:F [1.9.7_1111]</div><div class="ratingblock "><div class="ratingheader "></div><div class="ratingstars "><div id="article_rater_391" class="ratepost gdsr-oxygen gdsr-size-24"><div class="starsbar gdsr-size-24"><div class="gdouter gdheight"><div id="gdr_vote_a391" style="width: 0px;" class="gdinner gdheight"></div><div id="gdr_stars_a391" class="gdsr_rating_as"><a id="gdsrX391X5X0XaXarticle_rater_391Xarticle_loader_391X10X24" title="5 / 5" class="s5" rel="nofollow"></a><a id="gdsrX391X4X0XaXarticle_rater_391Xarticle_loader_391X10X24" title="4 / 5" class="s4" rel="nofollow"></a><a id="gdsrX391X3X0XaXarticle_rater_391Xarticle_loader_391X10X24" title="3 / 5" class="s3" rel="nofollow"></a><a id="gdsrX391X2X0XaXarticle_rater_391Xarticle_loader_391X10X24" title="2 / 5" class="s2" rel="nofollow"></a><a id="gdsrX391X1X0XaXarticle_rater_391Xarticle_loader_391X10X24" title="1 / 5" class="s1" rel="nofollow"></a></div></div></div></div><div id="article_loader_391" style="display: none; width: 120px " class="ratingloaderarticle"><div class="loader flower " style="height: 24px"><div class="loaderinner" style="padding-top: 2px">please wait...</div></div></div></div><div class="ratingtext "><div id="gdr_text_a391">Rating: 0.0/<strong>5</strong> (0 votes cast)</div></div></div><div style="display: none">VN:F [1.9.7_1111]</div><div class="thumblock "><div id="gdsr_thumb_391_a_up" class="gdt-size-20 gdthumb gdup"><a id="gdsrX391XupXaX25X20XY" class="gdt-starrating" rel="nofollow"></a></div><div id="gdsr_thumb_391_a_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div class="loader flower thumb" style="width: 20px; height: 20px;"></div></div><div id="gdsr_thumb_391_a_dw" class="gdt-size-20 gdthumb gddw"><a id="gdsrX391XdwXaX25X20XY" class="gdt-starrating" rel="nofollow"></a></div><div id="gdsr_thumb_391_a_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div class="loader flower thumb" style="width: 20px; height: 20px;"></div></div><div class="ratingtext "><div id="gdsr_thumb_text_391_a" class="gdt-size-20 gdthumbtext">Rating: <strong>0</strong> (from 0 votes)</div></div><div class="raterclear"></div></div><script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/plugins/top-10/top-10-addcount.js.php?top_ten_id=391"></script><script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/plugins/top-10/top-10-counter.js.php?top_ten_id=391"></script><div class="addtoany_share_save_container"><div class="a2a_kit addtoany_list"><a class="a2a_dd addtoany_share_save" href="http://www.addtoany.com/share_save"><img src="http://www.almohem.com/oracle/wp-content/plugins/add-to-any/share_save_171_16.png" width="171" height="16" alt="Share"/></a></div>
+<script type="text/javascript"><!--
+var a2a_config = a2a_config || {};
+a2a_config.linkname="How to enable/disable  async I/O for oracle on HP-UX &#8220;Ioctl ASYNC_CONFIG error, errno = 1 &#8220;";
+a2a_config.linkurl="http://www.almohem.com/oracle/dba/how-to-enabledisable-async-io-for-oracle-on-hp-ux-ioctl-async_config-error-errno-1/";
+//--></script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+
+</div>			<div class="fixed"></div>
+		</div>
+		<div class="under">
+			<span class="categories">Categories: </span><span><a href="http://www.almohem.com/oracle/category/dba/" title="View all posts in DBA" rel="category tag">DBA</a></span>			<span class="tags">Tags: </span><span><a href="http://www.almohem.com/oracle/tag/async-io/" rel="tag">async I/O</a></span>		</div>
+	</div>
+
+	<!-- related posts START -->
+	<div id="related_posts"><h2  class="related_post_title">Possibly Related Posts :</h2><ul class="related_post"><li>No Related Post</li></ul></div><div class="fixed"></div>	<!-- related posts END -->
+
+	<script type="text/javascript" src="http://www.almohem.com/oracle/wp-content/themes/inove/js/comment.js"></script>
+
+
+
+<div id="comments">
+
+<div id="cmtswitcher">
+			<a id="commenttab" class="curtab" href="javascript:void(0);" onclick="MGJS.switchTab('thecomments,commentnavi', 'thetrackbacks', 'commenttab', 'curtab', 'trackbacktab', 'tab');">Comments (0)</a>
+		<a id="trackbacktab" class="tab" href="javascript:void(0);" onclick="MGJS.switchTab('thetrackbacks', 'thecomments,commentnavi', 'trackbacktab', 'curtab', 'commenttab', 'tab');">Trackbacks (0)</a>
+				<span class="addcomment"><a href="#respond">Leave a comment</a></span>
+				<span class="addtrackback"><a href="http://www.almohem.com/oracle/dba/how-to-enabledisable-async-io-for-oracle-on-hp-ux-ioctl-async_config-error-errno-1/trackback/">Trackback</a></span>
+		<div class="fixed"></div>
+</div>
+
+<div id="commentlist">
+	<!-- comments START -->
+	<ol id="thecomments">
+			<li class="messagebox">
+			No comments yet.		</li>
+		</ol>
+	<!-- comments END -->
+
+
+	<!-- trackbacks START -->
+			<ol id="thetrackbacks">
+							<li class="messagebox">
+					No trackbacks yet.				</li>
+
+					</ol>
+		<div class="fixed"></div>
+	<!-- trackbacks END -->
+</div>
+
+</div>
+
+	<form action="http://www.almohem.com/oracle/wp-comments-post.php" method="post" id="commentform">
+	<div id="respond">
+
+					
+			<div id="author_info">
+				<div class="row">
+					<input type="text" name="author" id="author" class="textfield" value="" size="24" tabindex="1" />
+					<label for="author" class="small">Name </label>
+				</div>
+				<div class="row">
+					<input type="text" name="email" id="email" class="textfield" value="" size="24" tabindex="2" />
+					<label for="email" class="small">E-Mail (will not be published) </label>
+				</div>
+				<div class="row">
+					<input type="text" name="url" id="url" class="textfield" value="" size="24" tabindex="3" />
+					<label for="url" class="small">Website</label>
+				</div>
+			</div>
+
+			
+		
+		<!-- comment input -->
+		<div class="row">
+			<textarea name="comment" id="comment" tabindex="4" rows="8" cols="50"></textarea>
+		</div>
+
+		<!-- comment submit and rss -->
+		<div id="submitbox">
+			<a class="feed" href="http://www.almohem.com/oracle/comments/feed/">Subscribe to comments feed</a>
+			<div class="submitbutton">
+				<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="Submit Comment" />
+			</div>
+						<input type="hidden" name="comment_post_ID" value="391" />
+			<div class="fixed"></div>
+		</div>
+
+	</div>
+	<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="cd75d70d57" /></p>	</form>
+
+			<script type="text/javascript">MGJS.loadCommentShortcut();</script>
+	
+
+	<div id="postnavi">
+		<span class="prev"><a href="http://www.almohem.com/oracle/backup-and-recovery/ora-00258-manual-archiving-in-noarchivelog-mode-must-identify-log/" rel="next">ORA-00258: manual archiving in NOARCHIVELOG mode must identify log</a></span>
+		<span class="next"><a href="http://www.almohem.com/oracle/dba/drop-tablespace-including-contents-hangs/" rel="prev">drop tablespace including contents hangs</a></span>
+		<div class="fixed"></div>
+	</div>
+
+
+	</div>
+	<!-- main END -->
+
+	<div id="LiveChat_1291763744"><a href="http://www.livechatinc.com/?partner=lc_1038252">Live help software</a></div>
+
+<script type="text/javascript">
+  var __lc_buttons = __lc_buttons || [];
+  __lc_buttons.push({
+    elementId: 'LiveChat_1291763744',
+    language: 'en',
+    skill: '0',
+    autologin: true,
+    name: 'DBA',
+    type: 'text',
+    labels: {
+      online: 'LiveChat%20now',
+      offline: 'Leave%20a%20message'
+    }
+  });
+
+</script>
+
+<!-- sidebar START -->
+<div id="sidebar">
+
+<!-- sidebar north START -->
+<div id="northsidebar" class="sidebar">
+
+	<!-- feeds -->
+	<div class="widget widget_feeds">
+		<div class="content">
+			<div id="subscribe">
+				<a rel="external nofollow" id="feedrss" title="Subscribe to this blog..." href="http://www.almohem.com/oracle/feed/"><abbr title="Really Simple Syndication">RSS</abbr></a>
+									<ul id="feed_readers">
+						<li id="google_reader"><a rel="external nofollow" class="reader" title="Subscribe with Google" href="http://fusion.google.com/add?feedurl=http://www.almohem.com/oracle/feed/"><span>Google</span></a></li>
+						<li id="youdao_reader"><a rel="external nofollow" class="reader" title="Subscribe with Youdao" href="http://reader.youdao.com/#url=http://www.almohem.com/oracle/feed/"><span>Youdao</span></a></li>
+						<li id="xianguo_reader"><a rel="external nofollow" class="reader" title="Subscribe with Xian Guo" href="http://www.xianguo.com/subscribe.php?url=http://www.almohem.com/oracle/feed/"><span>Xian Guo</span></a></li>
+						<li id="zhuaxia_reader"><a rel="external nofollow" class="reader" title="Subscribe with Zhua Xia" href="http://www.zhuaxia.com/add_channel.php?url=http://www.almohem.com/oracle/feed/"><span>Zhua Xia</span></a></li>
+						<li id="yahoo_reader"><a rel="external nofollow" class="reader" title="Subscribe with My Yahoo!"	href="http://add.my.yahoo.com/rss?url=http://www.almohem.com/oracle/feed/"><span>My Yahoo!</span></a></li>
+						<li id="newsgator_reader"><a rel="external nofollow" class="reader" title="Subscribe with newsgator"	href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://www.almohem.com/oracle/feed/"><span>newsgator</span></a></li>
+						<li id="bloglines_reader"><a rel="external nofollow" class="reader" title="Subscribe with Bloglines"	href="http://www.bloglines.com/sub/http://www.almohem.com/oracle/feed/"><span>Bloglines</span></a></li>
+						<li id="inezha_reader"><a rel="external nofollow" class="reader" title="Subscribe with iNezha"	href="http://inezha.com/add?url=http://www.almohem.com/oracle/feed/"><span>iNezha</span></a></li>
+					</ul>
+							</div>
+							<a rel="external nofollow" id="feedemail" title="Subscribe to this blog via email..." href="admin@almohem.com">Email feed</a>
+							<a id="followme" title="Follow me!" href="http://twitter.com/ahmedhanyfawzy@almohem.com/">Twitter</a>
+						<div class="fixed"></div>
+		</div>
+	</div>
+
+	<!-- showcase -->
+	
+<div id="search-3" class="widget widget_search"><h3>Search website , example : How to get sql text from spid ?</h3><form role="search" method="get" id="searchform" action="http://www.almohem.com/oracle/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form></div><div id="meta-3" class="widget widget_meta"><h3>Log in </h3>			<ul>
+						<li><a rel="nofollow" href="http://www.almohem.com/oracle/wp-login.php">Log in</a></li>
+			<li><a href="http://www.almohem.com/oracle/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.almohem.com/oracle/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div><div id="follow-widget-3" class="widget follow_links"><h3>Follow this website</h3><ul class="followwrap size16 down"><li class="icon_text"><a rel="nofollow me" target="_blank"  style="background: transparent url(http://www.almohem.com/oracle/wp-content/plugins/share-and-follow/default/16/rss.png) no-repeat top left;padding-left:20px;line-height:20px;" class="rss" href="http://www.almohem.com/oracle/feed/rss/" title="RSS feed"><span class="head">RSS feed</span></a></li></ul></div><div id="add_to_any_subscribe_widget-3" class="widget widget_add_to_any_subscribe_widget">
+        <a class="a2a_dd addtoany_subscribe" href="http://www.addtoany.com/subscribe?linkname=Oracle%20Notes&amp;linkurl=http%3A%2F%2Fwww.almohem.com%2Foracle%2Ffeed%2F"><img src="http://www.almohem.com/oracle/wp-content/plugins/add-to-any-subscribe/subscribe_120_16.png" width="120" height="16" alt="Subscribe"/></a>
+        
+<script type="text/javascript">//<![CDATA[
+var a2a_config = a2a_config || {};
+a2a_config.linkname="Oracle Notes";
+a2a_config.linkurl="http://www.almohem.com/oracle/feed/";
+a2a_config.show_title=1;
+//]]></script><script type="text/javascript" src="http://static.addtoany.com/menu/feed.js"></script>
+
+</div><div id="pages-3" class="widget widget_pages"><h3>Site Map</h3>		<ul>
+			<li class="page_item page-item-2"><a href="http://www.almohem.com/oracle/about/" title="About">About</a></li>
+<li class="page_item page-item-1235"><a href="http://www.almohem.com/oracle/site-map/" title="Site Map">Site Map</a></li>
+		</ul>
+		</div></div>
+<!-- sidebar north END -->
+
+<div id="centersidebar">
+
+	<!-- sidebar east START -->
+	<div id="eastsidebar" class="sidebar">
+	
+		<!-- categories -->
+		<div class="widget widget_categories">
+			<h3>Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-1"><a href="http://www.almohem.com/oracle/category/asm/" title="View all posts filed under ASM">ASM</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.almohem.com/oracle/category/backup-and-recovery/" title="View all posts filed under Backup and Recovery">Backup and Recovery</a>
+</li>
+	<li class="cat-item cat-item-123"><a href="http://www.almohem.com/oracle/category/bussiness-skills/" title="View all posts filed under Bussiness skills">Bussiness skills</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.almohem.com/oracle/category/dba/" title="View all posts filed under DBA">DBA</a>
+</li>
+	<li class="cat-item cat-item-143"><a href="http://www.almohem.com/oracle/category/dbconsole/" title="View all posts filed under DBconsole">DBconsole</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.almohem.com/oracle/category/dictionary/" title="View all posts filed under Dictionary">Dictionary</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://www.almohem.com/oracle/category/dml/" title="View all posts filed under DML">DML</a>
+</li>
+	<li class="cat-item cat-item-94"><a href="http://www.almohem.com/oracle/category/oracle-vm/" title="View all posts filed under Oracle VM">Oracle VM</a>
+</li>
+	<li class="cat-item cat-item-171"><a href="http://www.almohem.com/oracle/category/partitioned-table/" title="View all posts filed under partitioned table">partitioned table</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.almohem.com/oracle/category/perfromance/" title="View all posts filed under Perfromance">Perfromance</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://www.almohem.com/oracle/category/rac/" title="View all posts filed under RAC">RAC</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.almohem.com/oracle/category/space-managment/" title="View all posts filed under Space Managment">Space Managment</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="http://www.almohem.com/oracle/category/streams/" title="View all posts filed under Streams">Streams</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="http://www.almohem.com/oracle/category/tns/" title="View all posts filed under TNS">TNS</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://www.almohem.com/oracle/category/unix-dba-skills/" title="View all posts filed under Unix-DBA-Skills">Unix-DBA-Skills</a>
+</li>
+			</ul>
+		</div>
+
+		</div>
+	<!-- sidebar east END -->
+
+	<!-- sidebar west START -->
+	<div id="westsidebar" class="sidebar">
+	
+		<!-- blogroll -->
+		<div class="widget widget_links">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://wordpress.org/development/">Development Blog</a></li>
+<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+<li><a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a></li>
+<li><a href="http://wordpress.org/support/">Support Forum</a></li>
+<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+			</ul>
+		</div>
+
+		</div>
+	<!-- sidebar west END -->
+	<div class="fixed"></div>
+</div>
+
+<!-- sidebar south START -->
+<div id="southsidebar" class="sidebar">
+
+	<!-- archives -->
+	<div class="widget">
+		<h3>Archives</h3>
+					<ul>
+					<li><a href='http://www.almohem.com/oracle/2011/02/' title='February 2011'>February 2011</a></li>
+	<li><a href='http://www.almohem.com/oracle/2011/01/' title='January 2011'>January 2011</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/12/' title='December 2010'>December 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/11/' title='November 2010'>November 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/10/' title='October 2010'>October 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/09/' title='September 2010'>September 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/08/' title='August 2010'>August 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/07/' title='July 2010'>July 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/06/' title='June 2010'>June 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/05/' title='May 2010'>May 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/04/' title='April 2010'>April 2010</a></li>
+	<li><a href='http://www.almohem.com/oracle/2010/03/' title='March 2010'>March 2010</a></li>
+			</ul>
+			</div>
+
+	<!-- meta -->
+	<div class="widget">
+		<h3>Meta</h3>
+		<ul>
+						<li><a rel="nofollow" href="http://www.almohem.com/oracle/wp-login.php">Log in</a></li>
+		</ul>
+	</div>
+
+</div>
+<!-- sidebar south END -->
+
+</div>
+<!-- sidebar END -->
+	<div class="fixed"></div>
+</div>
+<!-- content END -->
+
+<!-- footer START -->
+<div id="footer">
+	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">Top</a>
+	<a id="powered" href="http://wordpress.org/">WordPress</a>
+	<div id="copyright">
+		Copyright &copy; 2010-2011 Oracle Notes	</div>
+	<div id="themeinfo">
+		Theme by <a href="http://www.neoease.com/">NeoEase</a>. Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS 3</a>.	</div>
+</div>
+<!-- footer END -->
+
+</div>
+<!-- container END -->
+</div>
+<!-- wrap END -->
+
+<div id="follow" class="right"><ul class="tab down"><li class="follow"><img src="http://www.almohem.com/oracle/wp-content/plugins/share-and-follow/images/blank.gif"  alt="follow:"/><span>follow:</span></li><li class="iconOnly"><a rel="nofollow me" target="_blank" href="http://www.almohem.com/oracle/feed/rss/" title="RSS" ><img src="http://www.almohem.com/oracle/wp-content/plugins/share-and-follow/images/blank.gif" height="24"  width="24" style="background: transparent url(http://www.almohem.com/oracle/wp-content/plugins/share-and-follow/default/24/sprite-24.png) no-repeat;padding:0;margin:0;height:24px;width:24px;background-position:-1100px 0px"  alt="RSS"/> <span class="head">RSS</span></a></li></ul></div>6 visitors online now<br />6 guests, 0 bots, 0 members<br />Max visitors today: 19 at 03:24 pm EET<br />This month: 27 at 04-10-2011 11:29 am EET<br />This year: 27 at 04-10-2011 11:29 am EET<br />All time: 27 at 04-10-2011 11:29 am EET<br /><div style="background-color:white;text-align:center;color:black;font-size:110%;display:none;">
+
+أخبار تحدث علي مدار الساعة من كل المواقع الاخبارية الرئيسية
+<h3 style="background-color:white;text-align:center;color:black"><a href=http://www.almohem.com>http://www.almohem.com </a></h3>
+</div>
+
+<!-- tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-10141104-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- begin visitor maps  -->
+<script type="text/javascript">
+//<![CDATA[
+function wo_map_console(url) {
+  window.open(url,"wo_map_console","height=650,width=800,toolbar=no,statusbar=no,scrollbars=yes").focus();
+}
+//]]>
+</script>
+<!-- end visitor maps -->
+<!--stats_footer_test--><script src="http://stats.wordpress.com/e-201116.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'12507760',v:'ext',post:'391'});
+var load_cmc = function(){linktracker_init(12507760,391,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+<meta name="google-site-verification" content="PBJ_TjVvF0IxTblo_4YCsaJ7GZnfFlvH7AFUJtEyVlE" />
+</body>
+</html>
+
+
+<!-- Dynamic page generated in 0.694 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-04-19 21:42:12 -->

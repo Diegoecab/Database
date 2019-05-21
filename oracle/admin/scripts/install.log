@@ -1,0 +1,65 @@
+#######################################
+Installation of DHTML Menu Provider
+#######################################
+
+************************************
+Creating DHTML Menu Provider Package
+************************************
+
+Paquete creado.
+
+No hay errores.
+
+************************************
+Creating DHTML Menu Portlet Package
+************************************
+
+Paquete creado.
+
+No hay errores.
+
+*****************************************
+Creating DHTML Menu Provider Package Body
+*****************************************
+
+Cuerpo del paquete creado.
+
+No hay errores.
+
+****************************************
+Creating DHTML Menu Portlet Package Body
+****************************************
+
+Cuerpo del paquete creado.
+
+No hay errores.
+
+****************************************
+Creating DHTML Menu Tree components
+****************************************
+
+Paquete creado.
+
+No hay errores.
+
+Cuerpo del paquete creado.
+
+No hay errores.
+
+Concesión terminada correctamente.
+
+
+****************************************
+Registering the DHTML Menu Provider
+****************************************
+
+Please enter the Portal Schema name :
+Introduzca un valor para portal_schema: portal
+
+DHTML Menu Provider successfully registered                                     
+
+Procedimiento PL/SQL terminado correctamente.
+
+
+Confirmación terminada.
+
