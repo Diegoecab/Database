@@ -1,0 +1,129 @@
+ID 45635.1
+
+1. Oracle and RAID Levels.
+--------------------------
+
+This section is a discussion of the various RAID levels, their 
+advantages and disadvantages, and their use with Oracle.
+
+
+   1.1 RAID Levels.
+
+
+     1.1.1 RAID 0: Striping with No Parity.
+
+     RAID 0 offers striping only.  It is not redundant which means 
+     it has no protection against drive failure.  It is simply a 
+     collection of drives in a stripe configuration.
+
+     During an I/O, a single drive gets chunk-size bytes of I/O 
+     before the I/O continues onto the next drive in the set.  For 
+     I/Os that fit in a single chunk, performance is the same as a 
+     single disk drive.  For I/Os that span more than one chunk, 
+     there may be a slight performance improvement since disks are 
+     able to do a little work in parallel.
+
+     RAID 0 is useful in reducing disk hot spots for Oracle data files.  
+     It is generally not recommended for other Oracle files.
+
+
+     1.1.2 RAID 1:  Shadowing.
+
+     RAID 1 provides redundancy by duplicating an entire disk drive 
+     onto another.  It provides complete protection against single 
+     drive failures.  It is also the most expensive form of RAID,
+     since it maintains entire copies of disk drives (sometimes  
+     multiple copies.)
+
+     During a read, any of the drives in the shadow set can be used.  
+     During a write, all drives are eventually updated with the new data.
+
+     When all drives are functioning, reads complete slightly faster 
+     than a single disk read since the controller routes the read to 
+     a free (not busy) disk.  Writes take slightly longer than a single 
+     disk write.  Performance characteristics are not effected much 
+     during a single drive failure.  In the worst case, performance 
+     is equivalent to a single disk.
+
+     RAID 1 is generally useful to Oracle if the $ cost is acceptable.  
+     RAID 1 can be used for any Oracle file.  It is especially useful 
+     for Oracle redo log files and control files; Oracle only has to 
+     issue one redo log I/O, which saves code path and context switching.  
+     The DBA/system administrator must use the RAID controller utilities
+     to keep up with failed disks since the shadowing of the file is
+     hidden from Oracle.
+
+
+     1.1.3 RAID 0+1:  Striping and Shadowing.
+
+     RAID 0+1 is often considered as a separate solution that offers 
+     the reduced hot spot and performance benefits of striping (RAID 0) 
+     and the redundancy of shadowing (RAID 1).  It is just as costly 
+     as RAID 1.
+
+     While RAID 0+1 can be used with Oracle data files, it should not 
+     be used with redo log files.
+
+
+     1.1.4 RAID 3:  Striping with Static Parity.
+
+     RAID 3 attempts to give performance and redundancy of RAID 0+1 
+     without the high cost associated with RAID 1's 1-for-1 drive 
+     redundancy.  A number of drives are grouped together in a RAID 0 
+     stripe set.  An additional drive is used to keep parity information 
+     for the stripe set.
+
+     During normal operation, RAID 3 gives performance similar to 
+     RAID 0.  Reads are striped.  Writes require two I/Os; one for 
+     the data drive, and one for the parity.  In the event of a single 
+     disk failure, the set continues to function but at reduced performance.  
+     Disk blocks from the missing disk are reconstructed by reading all 
+     remaining drives in the set and the parity drive.  RAID vendors 
+     typically include cache on-board the RAID controller to increase 
+     performance.  Note that the parity disk in RAID 3 can be a performance 
+     bottleneck, which is why most RAID vendors go with RAID 5.
+
+     RAID 3 is useful for Oracle data files, but not for redo log files.
+
+
+     1.1.5 RAID 5:  Striping with Rotating Parity.
+
+     RAID 5 has similar performance and redundancy characteristics 
+     as RAID 3, but the parity information is spread across all drives 
+     which eliminates the parity drive as a bottleneck.
+
+     RAID 5 is useful for Oracle data files, but not for redo log files.
+
+
+   1.2 Summary:  Oracle and RAID Levels.
+
+   Here is a summary of the various RAID levels and their use with Oracle.  
+   The numbers in parentheses refer to the notes following the table.
+
+                                                                     
+     RAID  Type of RAID    Control     Database      Redo Log   Archive Log
+                            File         File          File        File
+     ----  ------------    -------     --------      --------   -----------                                                                  
+      0    Striping         Avoid         OK          Avoid       Avoid
+                                                                     
+      1    Shadowing      Recommended     OK        Recommended  Recommended
+                                                                     
+     0+1   Striping +         OK      Recommended     Avoid       Avoid
+           Shadowing                      (1)
+                                                                     
+      3    Striping with      OK          OK          Avoid       Avoid
+           Static Parity
+                                                                     
+      5    Striping with      OK       Recommended    Avoid       Avoid
+           Rotating Parity                (2)
+
+   Notes:
+
+   (1) RAID 0+1 is recommended for database files because this avoids    
+       hot spots and gives the best possible performance during a disk 
+       failure.  The disadvantage of RAID 0+1 is that it is a costly
+       configuration.
+
+   (2) RAID 5 is recommended for database files if RAID 0+1 is too 
+       expensive.
+

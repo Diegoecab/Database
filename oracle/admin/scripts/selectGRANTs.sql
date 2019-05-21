@@ -1,0 +1,6 @@
+/*Select de grants dados a un objeto en particular*/
+SELECT   /*+ RULE */
+         PRIVILEGE, GRANTEE, GRANTABLE, GRANTOR, COLUMN_NAME
+    FROM SYS.DBA_COL_PRIVS
+   WHERE TABLE_NAME = :TNAME AND OWNER = :LOWNER
+ORDER BY GRANTEE

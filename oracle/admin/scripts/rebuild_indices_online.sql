@@ -1,0 +1,3 @@
+/* Rebuild de indice en forma online*/
+
+ALTER INDEX INDICE REBUILD ONLINE TABLESPACE NOMBRE_TABLESPACE;

@@ -1,0 +1,23 @@
+SQL> @nexus.txt
+SP2-0310: no se ha podido abrir el archivo "nexus.txt"
+SQL> @c:\nexus.txt
+   )
+   *
+ERROR en línea 6:
+ORA-00933: SQL command not properly ended 
+
+
+Transcurrido: 00:00:00.01
+                bl.fec_hora_vig_hasta = {ts '9999-12-31 23:59:59'} and
+                                        *
+ERROR en línea 6:
+ORA-00911: invalid character 
+
+
+Transcurrido: 00:00:00.03
+SQL> rollback;
+
+Rollback terminado.
+
+Transcurrido: 00:00:00.00
+SQL> exit

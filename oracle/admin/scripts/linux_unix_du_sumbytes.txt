@@ -1,0 +1,5 @@
+ls -l $1 | awk 'BEGIN { FS=" "; sm=0; } { sm = sm + $5 } END { print "Total bytes : "sm; }'
+
+this will take care of what you have asked...
+if $1 contains value, then it will calculate for givent directory
+if $0 contains nothing, then it will calculate for current directory

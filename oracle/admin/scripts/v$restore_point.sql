@@ -1,0 +1,1 @@
+select * from V$RESTORE_POINT;

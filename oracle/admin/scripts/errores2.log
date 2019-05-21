@@ -1,0 +1,62 @@
+SYSTEM:INTDWOP > show errors TRIGGER SERV.REGCEL_INS_TRG
+Errores para TRIGGER SERV.REGCEL_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+168/1    PL/SQL: SQL Statement ignored
+176/6    PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER SERV.CTATEL_INS_TRG
+Errores para TRIGGER SERV.CTATEL_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+58/5     PL/SQL: SQL Statement ignored
+66/6     PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER SERV.CTAMCOM_INS_TRG
+Errores para TRIGGER SERV.CTAMCOM_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+53/5     PL/SQL: SQL Statement ignored
+61/6     PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER SERV.CTADAT_INS_TRG
+Errores para TRIGGER SERV.CTADAT_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+153/5    PL/SQL: SQL Statement ignored
+161/6    PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER VENTAS.ORDENES_INS_TRG
+Errores para TRIGGER VENTAS.ORDENES_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+71/5     PL/SQL: SQL Statement ignored
+79/6     PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER VENTAS.MOVIM_INS_TRG
+Errores para TRIGGER VENTAS.MOVIM_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+156/5    PL/SQL: SQL Statement ignored
+164/6    PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > 
+SYSTEM:INTDWOP > show errors TRIGGER VENTAS.CABORD_INS_TRG
+Errores para TRIGGER VENTAS.CABORD_INS_TRG:
+
+LINE/COL ERROR
+-------- -----------------------------------------------------------------
+70/5     PL/SQL: SQL Statement ignored
+78/6     PL/SQL: ORA-02289: sequence does not exist
+SYSTEM:INTDWOP > spool off

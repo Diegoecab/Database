@@ -1,0 +1,257 @@
+-- Profiles (Normalizar Parametros)
+
+DBSRV - Carga de CPU
+
+Objetos Lobs en TBS de datos!! Ej GESTAR :
+exttrqa:
+	"GESTAR"."SYS_ATTACHMENTS"                  4.480 GB    5707 rows
+
+----
+
+--
+TBS c 25%
+
+--
+_ La manera de determinar cuales son los procesos que se quedan en espera por carga de CPU
+
+DRP
+
+--
+
+ASM!
+
+RAC HPUX
+
+--
+
+Prueba d2 - p2
+
+--
+
+Actualizar Doc de DRP - Espacio Necesario (Redo Logs Switchs) !!! Mandar Mail a Ale
+
+--
+GARDWDE: Restaría que apunte a porthos y que se vea la configuración de discoverer.
+--
+
+Estado de Auditar - Ver con Ale
+--
+BAM!
+--
+DRP - GARDB!
+--
+Parametros DB
+--
+
+DRP ASM
+
+Seven GARDWDE A EXTTRDE  (Ver espacio) (Tener en cuenta mover seven_link) Morana para q reapunte aplicacion
+
+GARDWOP A EXTTROP
+
+BPM de d1/p1 a d2/p2
+
+--
+
+WFC_TX Mail a Ruben
+
+--
+
+Informe migracion gardw
+
+--
+
+GARTROP Performance - Ver Mail
+
+--
+
+Migracion GARDW
+
+-- 
+
+Segment Advisor!!
+
+Auditar RE: Auditar - Mejoras de performance - Ok para implementar en Prod
+
+RE: GARBARRHH - Migración Q realicen las pruebas
+
+Listado Tareas BPM movimiento
+
+Problema con Discoverer
+
+Mail Implementacion KEEP en Prod
+
+--
+
+ORAVEN - de GARDB a GARTRQA -> necesitamos al menos 41 GB libres. Si hacemos un import se van a alertar los FS de GARTRQA
+
+Migracion GAR_DW
+
+BAM a p2
+
+Async en servidores
+
+Rebuild indices GAR_DW
+
+
+Gestar a EXTTROP	-> Mande mail a Ale e Ile
+
+Auditar - Luego de aplicar cambios, migrar GESTAR
+
+Base sar producción bloque 16K	
+
+Ver espacio necesario Migracion WareHouse
+
+Ver esquemas de backup -
+
+Revisar db_links publicos
+
+ASM
+Parametrizacion GARDWOP
+
+Auditoria - Ej. Roles DBA 
+
+
+
+
+) Para determinar si un indice necesita ser recreado analizaremos su estructura.
+
+sql> ANALYZE INDEX ID_DATO_IDX VALIDATE STRUCTURE;
+sql> SELECT PCT_USED FROM INDEX_STATS WHERE NAME=’ID_DATO_IDX’;
+
+PCT_USED
+————
+90
+
+Si con el tiempo vemos que este porcentaje se degrada podremos pensar en recrear el indice.
+
+
+/*
+
+FlashBack Database!!!
+
+*/
+
+Requerimientos de instalación Oracle en HP-UX
+(No olvidar los requerimientos para el SO de Auditoria) (No olvidate CPU 2008)
+
+Informe Auditar - Cambios
+
+athos - Tema de Disco - FS
+
+Centralizar  TNS_ADMIN
+
+Ver las opciones que vamos a utilizar en GARDB como ser FLASHBACK DATABASE
+
+Normalizar configuracion  TNSNAMES
+
+Beehive renovar certificado
+
+Consulta en GARDB!! Ver con Angeles los posibles datos que ingresan
+
+Listeners!!!
+
+DB Links
+
+Ver las opciones que vamos a utilizar en GARDB como ser FLASHBACK DATABASE
+
+Cambiar passw oraven/oraven!
+
+Informe Auditar - Cambios
+
+Lita sobre DB Links
+
+AWR! reporte ASM
+
+Igualar parametros GARDBOP con GARDB!"!!
+
+PRBIDX - Config de seguridad
+
+Ver directorios en GARDBOP
+
+PRBIDX - Error
+
+repositorio de grid control
+
+Restriccion IP listener
+
+Start Automatico GARDBOP
+
+Directorio Backup GARDBOP
+
+Script automatico recreacion de dblinks
+
+Mail preparar server p1 y p2
+
+Informe Auditar
+
+Log Keep
+
+DBLink desde GARDWDE
+
+Verificar que si no se hizo bien el expdp se mande mail!
+
+cierres_10_idx1a
+
+--CONFIGURE RETENTION POLICY TO REDUNDANCY 2;
+CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 7 DAYS;
+CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE TYPE DISK TO '/worka2/backup/oraidx1a/GARDBOP/controlfile/controlF%F';
+
+Ver error en export GARDB -----------------------------
+
+RMAN GARDBOP allocate channel *2 22 min , 1 canal 36 min
+
+Poner blackout antes de eliminar GARDBOP2
+
+Ver mapa de aplicaciones
+
+Al margen se puede agregar una acción en cada caso, por ejemplo si se genera un “Warning” se puede ejecutar automáticamente un comando en el SO por lo cual a nivel base de datos vamos a armar un script que nos envié el resultado de una consulta  en las bases del p2 justo al momento de la alerta. Los datos que necesitaríamos son la cantidad de sesiones en la base, sesiones activas, top sessions, etc.
+
+Tasa de escritura en Base de datos
+
+Repositorio RMAN - Estadísticas de las bases -
+
+v$process en control
+
+Blackout de bases DP
+
+Oracle Advanced Security Encryption
+
+emctl stop (procesos zombies)
+
+srvorap1a/b
+
+Backup de SAR - Error al bajar base
+
+Mail de Juanca
+
+p1a /p2a - storage
+
+Export de SAR
+
+Script para dar de baja usuario en VPD - Martín Ploets
+
+Crear base SOAGPOP vacia con los tbs de soarepp
+
+GESTAR - Performance
+
+Pruebas en el p1a
+
+gardw - reporte performance
+
+falla de export en GARDB
+
+Base 
+
+Mails en los servidores
+
+Actualizar testdb con export de gardb
+
+Excel con cambios de gestar, aplicar cambios de performance
+
+Pruebas de mails directo a dbas
+
+--Mail c backup de crontab - Revisar q sea distinto
+
+
+

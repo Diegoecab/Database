@@ -1,0 +1,40 @@
+declare
+   cursor orlc is
+      select lf.member, l.bytes
+      from v$log l, v$logfile lf
+      where l.group# = lf.group# and
+         lf.type = 'ONLINE'
+      order by l.thread#, l.sequence#;
+ 
+   type numTab_t is table of number index by binary_integer;
+   type charTab_t is table of varchar2(1024) index by binary_integer;
+   byteslist numTab_t; namelist charTab_t;
+ 
+   procedure migrateorlfile(name IN varchar2, bytes IN number) is
+         retry number;
+         stmt varchar2(1024);
+         als varchar2(1024) := 'alter system switch logfile';
+      begin
+         select count(*) into retry from v$logfile;
+         stmt := 'alter database add logfile size ' || bytes;
+         execute immediate stmt;
+         stmt := 'alter database drop logfile ''' || name || '''';
+         for i in 1..retry loop
+            begin execute immediate stmt;
+            exit;
+            exception
+               when others then
+                if i > retry then raise;
+                end if;
+             execute immediate als;
+           end;
+         end loop;
+      end;
+      begin
+      open orlc;
+      fetch orlc bulk collect into namelist, byteslist;
+      close orlc;
+      for i in 1..namelist.count loop migrateorlfile(namelist(i), byteslist(i));
+      end loop;
+end;
+/

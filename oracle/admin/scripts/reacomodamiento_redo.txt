@@ -1,0 +1,61 @@
+
+GARTRDE:
+
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo1/redo1_1.log' TO GROUP 1;
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo2/redo1_2.log' TO GROUP 1;
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo1/redo2_1.log' TO GROUP 2;
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo2/redo2_2.log' TO GROUP 2;
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo1/redo3_1.log' TO GROUP 3;
+ALTER DATABASE ADD LOGFILE MEMBER '/oradata/GARTRDE/redo2/redo3_2.log' TO GROUP 3;
+
+ALTER DATABASE DROP LOGFILE MEMBER '/oradata/GARTRDE/redo/redo01.log';
+ALTER DATABASE DROP LOGFILE MEMBER '/oradata/GARTRDE/redo/redo02.log';
+ALTER DATABASE DROP LOGFILE MEMBER '/oradata/GARTRDE/redo/redo03.log';
+
+ALTER SYSTEM SET control_files='/oradata/GARTRDE/data1/control01.ctl','/oradata/GARTRDE/data2/control02.ctl','/oradata/GARTRDE/data1/control03.ctl' scope=spfile;
+
+mv /oradata/GARTRDE/redo/control03.ctl /oradata/GARTRDE/data1/control03.ctl
+
+
+GARTRQA:
+
+ALTER DATABASE 
+  RENAME FILE '/oradata/GARTRQA/redo/redo01.log', '/oradata/GARTRQA/redo/redo02.log', '/oradata/GARTRQA/redo/redo03.log'
+           TO '/oradata/GARTRQA/redo1/redo1_1.log', '/oradata/GARTRQA/redo1/redo2_1.log','/oradata/GARTRQA/redo1/redo3_1.log';
+
+mv /oradata/GARTRQA/redo/redo01.log /oradata/GARTRQA/redo1/redo1_1.log
+mv /oradata/GARTRQA/redo/redo02.log /oradata/GARTRQA/redo1/redo2_1.log
+mv /oradata/GARTRQA/redo/redo03.log /oradata/GARTRQA/redo1/redo3_1.log
+
+
+ALTER SYSTEM SET control_files='/oradata/GARTRQA/data1/control01.ctl','/oradata/GARTRQA/data2/control02.ctl','/oradata/GARTRQA/data1/control03.ctl' SCOPE=SPFILE;
+
+mv /oradata/GARTRQA/redo/control03.ctl /oradata/GARTRQA/data1/control03.ctl
+
+
+
+EXTTRDE
+
+ALTER SYSTEM SET control_files='/oradata/EXTTRDE/data1/control01.ctl','/oradata/EXTTRDE/data2/control02.ctl','/oradata/EXTTRDE/data1/control03.ctl' scope=spfile;
+
+mv /oradata/EXTTRDE/redo/control03.ctl /oradata/EXTTRDE/data1/control03.ctl
+
+mv /oradata/EXTTRDE/redo/redo01.log /oradata/EXTTRDE/redo1/redo1_1.log
+mv /oradata/EXTTRDE/redo/redo02.log /oradata/EXTTRDE/redo1/redo2_1.log
+mv /oradata/EXTTRDE/redo/redo03.log /oradata/EXTTRDE/redo1/redo3_1.log 
+
+
+
+ALTER DATABASE 
+  RENAME FILE '/oradata/EXTTRDE/redo/redo01.log', '/oradata/EXTTRDE/redo/redo02.log', '/oradata/EXTTRDE/redo/redo03.log'
+           TO '/oradata/EXTTRDE/redo1/redo1_1.log', '/oradata/EXTTRDE/redo1/redo2_1.log','/oradata/EXTTRDE/redo1/redo3_1.log';
+		   
+
+ALTER DATABASE
+  ADD LOGFILE ('/oracle/dbs/log1c.rdo', '/oracle/dbs/log2c.rdo') SIZE 500K;
+
+ALTER DATABASE 
+  ADD LOGFILE GROUP 10 ('/oracle/dbs/log1c.rdo', '/oracle/dbs/log2c.rdo')
+      SIZE 500K;
+  
+  

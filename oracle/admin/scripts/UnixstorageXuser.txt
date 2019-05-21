@@ -1,0 +1,39 @@
+Primero corres este find
+nohup find / -user <FID> -type f -exec ls -l {} \; 2>/dev/null > storage.dat &
+nohup find / -user <FID> -type f -exec ls -l {} \; 2>/dev/null > ~/storage.dat &
+
+
+Este script es el que procesa el .dat y te da el uso en disco
+
+sum.awk 
+
+if [ $# -ne 1 ]; then
+  echo "Syntax: $0 <catalog_list_file>"
+  exit 1
+fi
+
+cat  $1 | cut -c34-45 | awk '
+BEGIN {
+  tot_bytes=0;
+}
+{
+  if (index($0,"[A-z]") > 0)
+    printf("BAD data\n");
+
+  tot_bytes+=$0;
+}
+END {
+  printf("\nTotal bytes:  %d\n",tot_bytes);
+  printf("\nTotal Mbytes: %.2f\n",tot_bytes/1024/1024);
+  printf("\nTotal Gbytes: %.2f\n",tot_bytes/1024/1024/1024);
+}'
+
+
+Correrias entonces
+
+./sum.awk storage.dat
+
+Se entiende?
+
+El find puede tardar una banda!!
+

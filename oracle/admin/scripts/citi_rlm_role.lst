@@ -1,0 +1,646 @@
+SQL> DROP ROLE citi_rlm_role;
+DROP ROLE citi_rlm_role
+          *
+ERROR at line 1:
+ORA-01919: role 'CITI_RLM_ROLE' does not exist 
+
+
+SQL> CREATE ROLE citi_rlm_role NOT IDENTIFIED;
+
+Role created.
+
+SQL> #
+SQL> GRANT ADMINISTER ANY SQL TUNING SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ADMINISTER SQL TUNING SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ADVISOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALL ON AWRRPT_INSTANCE_LIST_TYPE TO citi_rlm_role;
+GRANT ALL ON AWRRPT_INSTANCE_LIST_TYPE TO citi_rlm_role
+             *
+ERROR at line 1:
+ORA-01929: no privileges to GRANT 
+
+
+SQL> GRANT ALTER ANY CLUSTER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY DIMENSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY EVALUATION CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY INDEX TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY INDEXTYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY LIBRARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY MATERIALIZED VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY OUTLINE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY RULE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY RULE SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY SEQUENCE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY SQL PROFILE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY TRIGGER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER ANY TYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ALTER SESSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ANALYZE ANY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ANALYZE ANY DICTIONARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT BACKUP ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT COMMENT ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY CLUSTER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY DIMENSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY EVALUATION CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY INDEX TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY INDEXTYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY JOB TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY LIBRARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY MATERIALIZED VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY OPERATOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY OUTLINE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY RULE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY RULE SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY SEQUENCE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY SQL PROFILE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY SYNONYM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY TRIGGER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY TYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE ANY VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE CLUSTER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE DATABASE LINK TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE DIMENSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE EVALUATION CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE INDEXTYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE JOB TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE LIBRARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE MATERIALIZED VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE OPERATOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE PUBLIC SYNONYM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE RULE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE RULE SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE SEQUENCE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE SESSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE SYNONYM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE TRIGGER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE TYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT CREATE VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DEBUG ANY PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DEBUG CONNECT SESSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DELETE ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DEQUEUE ANY QUEUE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY CLUSTER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY DIMENSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY EVALUATION CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY INDEX TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY INDEXTYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY LIBRARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY MATERIALIZED VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY OPERATOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY OUTLINE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY RULE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY RULE SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY SEQUENCE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY SQL PROFILE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY SYNONYM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY TRIGGER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY TYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP ANY VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT DROP PUBLIC SYNONYM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT ENQUEUE ANY QUEUE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY CLASS TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY EVALUATION CONTEXT TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY INDEXTYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY LIBRARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY OPERATOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY PROCEDURE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY PROGRAM TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY RULE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY RULE SET TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ANY TYPE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE_CATALOG_ROLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT FLASHBACK ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT FORCE ANY TRANSACTION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT FORCE TRANSACTION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT GATHER_SYSTEM_STATISTICS TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT GLOBAL QUERY REWRITE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT GRANT ANY OBJECT PRIVILEGE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT INSERT ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT LOCK ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT MANAGE ANY QUEUE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT MANAGE SCHEDULER TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT MERGE ANY VIEW TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT OEM_ADVISOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT OEM_MONITOR TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT QUERY REWRITE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT RESTRICTED SESSION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT RESUMABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SCHEDULER_ADMIN TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SELECT ANY DICTIONARY TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SELECT ANY SEQUENCE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SELECT ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SELECT ANY TRANSACTION TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT SELECT_CATALOG_ROLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> GRANT EXECUTE ON SYS.DBMS_FEATURE_USAGE_REPORT TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_FEATURE_USAGE_REPORT TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_MONITOR TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_MONITOR TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_RESUMABLE TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_RESUMABLE TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_SERVER_ALERT TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_SERVER_ALERT TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_SERVER_TRACE TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_SERVER_TRACE TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_SERVICE TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_SERVICE TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_STATS TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_STATS TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_STORAGE_MAP TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_STORAGE_MAP TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_UADV_ARR TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_UADV_ARR TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_UNDO_ADV TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_UNDO_ADV TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.DBMS_WORKLOAD_REPOSITORY TO citi_rlm_role;
+GRANT EXECUTE ON SYS.DBMS_WORKLOAD_REPOSITORY TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.LOAD_UNDO_STAT TO citi_rlm_role;
+GRANT EXECUTE ON SYS.LOAD_UNDO_STAT TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.OUTLN_EDIT_PKG TO citi_rlm_role;
+GRANT EXECUTE ON SYS.OUTLN_EDIT_PKG TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.OUTLN_PKG TO citi_rlm_role;
+GRANT EXECUTE ON SYS.OUTLN_PKG TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT EXECUTE ON SYS.RESET_UNDO_STAT TO citi_rlm_role;
+GRANT EXECUTE ON SYS.RESET_UNDO_STAT TO citi_rlm_role
+                     *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> GRANT UPDATE ANY TABLE TO citi_rlm_role;
+
+Grant succeeded.
+
+SQL> #
+SQL> REVOKE citi_dba_app FROM rlm_autoinstall;
+
+Revoke succeeded.
+
+SQL> GRANT citi_rlm_role TO rlm_autoinstall;
+
+Grant succeeded.
+
+SQL> #
+SQL> SELECT * FROM dba_sys_privs WHERE grantee = 'RLM_AUTOINSTALL';
+
+no rows selected
+
+SQL> SELECT * FROM dba_role_privs WHERE grantee = 'RLM_AUTOINSTALL';
+
+GRANTEE                        GRANTED_ROLE                   ADM DEF           
+------------------------------ ------------------------------ --- ---           
+RLM_AUTOINSTALL                CITI_RLM_ROLE                  NO  YES           
+
+SQL> #
+SQL> SPOOL OFF

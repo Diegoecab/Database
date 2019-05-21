@@ -1,0 +1,115 @@
+Generate Random Data, Using bind variables to improve performance
+create table salary_rates
+(
+dept char(1),
+rate number(2,1)
+);
+
+alter table salary_rates cache;
+
+create table emp
+(
+id number,
+dept char,
+salary number
+);
+
+create unique index emp_id_idx on emp(id);
+
+create sequence emp_id;
+
+
+CREATE OR REPLACE TRIGGER emp_trg
+BEFORE INSERT ON emp
+FOR EACH ROW
+WHEN (new.id IS NULL)
+BEGIN
+SELECT emp_id.NEXTVAL INTO :new.id FROM dual;
+END;
+/
+
+--------Salary rates Loading data------------------------
+
+insert into salary_rates values( 'A',0.1);
+insert into salary_rates values( 'B',0.2);
+insert into salary_rates values( 'C',0.3);
+insert into salary_rates values( 'D',0.4);
+commit;
+--------Salary rates Loading data ------------------------
+
+------------------------- Generate random depts -------------------------
+CREATE OR REPLACE FUNCTION GET_RANDOM_DPT RETURN CHAR
+IS
+X NUMBER;
+RTV CHAR;
+BEGIN
+X:=ROUND(dbms_random.value(1, 5));
+
+IF (X=1) THEN
+RTV := 'A';
+ELSIF (X=2) THEN
+RTV := 'B';
+ELSIF (X=3) THEN
+RTV := 'C';
+ELSE
+RTV := 'D';
+END IF;
+
+RETURN RTV;
+END;
+/
+------------------------- Generate random depts -------------------------
+
+create or replace procedure gen_data ( emp_population number)
+is
+begin
+FOR i IN 1 .. emp_population loop
+insert into emp(dept,salary) values(GET_RANDOM_DPT,ROUND(dbms_random.value(1,1000000)));
+commit;
+END LOOP;
+end;
+/
+-----------------------------------------------------------------------------------------------------------
+
+/* Scenario : Update employee salary , ONLY those employees current salary is less than 3000 according the employee's department increase rates.
+------------------------------------------------------------------------------------------------------
+update 1
+Elapsed: 00:00:01.70
+
+
+CREATE OR REPLACE PROCEDURE UPDATE1
+AS
+rate_ number;
+begin
+---open c_emp;
+for i IN ( select id,dept,salary from emp) loop
+if (i.salary < 3000 ) then
+select rate into rate_ from salary_rates where dept=i.dept;
+update emp set salary=(salary * rate_/100)+salary where id=i.id;
+commit;
+else
+null;
+end if;
+end loop;
+END UPDATE1;
+
+
+
+CREATE OR REPLACE PROCEDURE UPDATE2
+AS
+rate_ number;
+type rc is ref cursor;
+q rc;
+begin
+for i IN ( select id,dept,salary from emp) loop
+if (i.salary < 3007 ) then
+open q for ' select rate from salary_rates where dept= :y ' using i.dept;
+fetch q into rate_;
+execute immediate ( ' update emp set salary=(salary * :r / 100) + salary where id= :x') using rate_,i.id;
+commit;
+else
+null;
+end if;
+end loop;
+END UPDATE2;
+Elapsed: 00:00:01.32 

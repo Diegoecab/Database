@@ -1,0 +1,8 @@
+tkprof tracefile outputfile explain=system/systemd2  table=system.plan_table SYS=Y
+
+tkprof explain=system/mandioca table=system.plan_table SYS=YES waits=yes sort=exeela
+
+explain=gar_dw/coneccion1 table=system.plan_table SYS=NO waits=yes sort=fchela
+
+
+sort=fchela,exeela,prsela

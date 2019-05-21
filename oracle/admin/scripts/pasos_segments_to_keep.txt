@@ -1,0 +1,98 @@
+/* Previo con sys:
+GRANT SELECT ON DBA_OBJECTS TO DBAS WITH GRANT OPTION 
+GRANT SELECT ON DBA_SEGMENTS TO DBAS WITH GRANT OPTION
+*/
+
+CREATE OR REPLACE VIEW DBAS.OBJ_CANT_BLOQ
+AS
+   SELECT   O.OWNER OWNER, O.OBJECT_NAME OBJECT_NAME,
+            O.SUBOBJECT_NAME SUBOBJECT_NAME, O.OBJECT_TYPE OBJECT_TYPE,
+            COUNT (DISTINCT FILE# || BLOCK#) NUM_BLOCKS
+       FROM DBA_OBJECTS O, V$BH BH
+      WHERE O.DATA_OBJECT_ID = BH.OBJD
+        AND O.OWNER NOT IN ('SYS', 'SYSTEM')
+        AND BH.STATUS != 'free'
+   GROUP BY O.OWNER, O.OBJECT_NAME, O.SUBOBJECT_NAME, O.OBJECT_TYPE
+   ORDER BY COUNT (DISTINCT FILE# || BLOCK#) DESC;
+
+CREATE OR REPLACE VIEW DBAS.OBJETOS_TO_KEEP
+AS
+   SELECT   S.SEGMENT_TYPE, OBJ_CANT_BLOQ.OWNER, S.SEGMENT_NAME
+       FROM OBJ_CANT_BLOQ, DBA_SEGMENTS S
+      WHERE S.SEGMENT_NAME = OBJ_CANT_BLOQ.OBJECT_NAME
+        AND S.OWNER = OBJ_CANT_BLOQ.OWNER
+        AND S.SEGMENT_TYPE = OBJ_CANT_BLOQ.OBJECT_TYPE
+        AND NVL (S.PARTITION_NAME, '-') =
+                                       NVL (OBJ_CANT_BLOQ.SUBOBJECT_NAME, '-')
+        AND BUFFER_POOL <> 'KEEP'
+        AND OBJECT_TYPE IN ('TABLE', 'INDEX')
+   GROUP BY S.SEGMENT_TYPE, OBJ_CANT_BLOQ.OWNER, S.SEGMENT_NAME
+     HAVING (SUM (NUM_BLOCKS) / GREATEST (SUM (BLOCKS), .001)) * 100 > 80;
+
+CREATE TABLE DBAS.LOG_KEEP (FECHA DATE,STRNG VARCHAR2(4000));
+
+
+CREATE OR REPLACE TRIGGER DBAS.FECHA_EXEC
+   BEFORE INSERT
+   ON DBAS.LOG_KEEP
+   REFERENCING NEW AS NEW OLD AS OLD
+   FOR EACH ROW
+BEGIN
+   :NEW.FECHA := SYSDATE;
+EXCEPTION
+   WHEN OTHERS
+   THEN
+      RAISE;
+END FECH_EXEC;
+/
+
+
+CREATE TABLE DBAS.SEGMENTS_TO_KEEP as select owner,segment_type,segment_name,bytes mb from dba_segments where 1=2;
+
+alter table DBAS.SEGMENTS_TO_KEEP add (FECHA DATE);
+
+CREATE OR REPLACE TRIGGER DBAS.FECHA_KEEP_TABLE
+   BEFORE INSERT
+   ON DBAS.SEGMENTS_TO_KEEP
+   REFERENCING NEW AS NEW OLD AS OLD
+   FOR EACH ROW
+BEGIN
+   :NEW.FECHA := SYSDATE;
+EXCEPTION
+   WHEN OTHERS
+   THEN
+      RAISE;
+END FECHA_KEEP_TABLE;
+/
+
+Job cada 2 horas (con usuario DBAS):
+
+DECLARE
+  X NUMBER;
+BEGIN
+  SYS.DBMS_JOB.SUBMIT
+    ( job       => X 
+     ,what      => 'INSERT INTO DBAS.SEGMENTS_TO_KEEP SELECT OWNER,SEGMENT_TYPE,SEGMENT_NAME,MB,(select sysdate from dual) from (
+SELECT   a.*, ROUND (SUM (BYTES / 1024 / 1024), 1) mb
+    FROM dbas.objetos_to_keep a JOIN dba_segments b
+         ON b.owner = a.owner
+       AND b.segment_name = a.segment_name
+       AND b.segment_type = a.segment_type
+GROUP BY a.owner, a.segment_type, a.segment_name
+ORDER BY MB);
+commit;'
+     ,next_date => to_date('03/06/2011 10:04:50','dd/mm/yyyy hh24:mi:ss')
+     ,interval  => 'SYSDATE+120/1440 '
+     ,no_parse  => TRUE
+    );
+  SYS.DBMS_OUTPUT.PUT_LINE('Job Number is: ' || to_char(x));
+END;
+/
+
+commit;
+
+
+scripts 
+segments_to_keep: ver candidatos a levantar a keep
+segments_keep: ver cuales son los segmentos que estan en keep (parametros, buffer_hit, etc)
+segments_to_keep_sql.sql: extraer ddl para levantar los objetos a keep

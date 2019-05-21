@@ -1,0 +1,7 @@
+EXEC DBMS_STATS.delete_database_stats; 
+EXEC DBMS_STATS.delete_schema_stats('ESQUEMA'); 
+EXEC DBMS_STATS.delete_table_stats('ESQUEMA', 'TABLA'); 
+EXEC DBMS_STATS.delete_table_stats('ESQUEMA', 'TABLA'); 
+EXEC DBMS_STATS.delete_index_stats('ESQUEMA', 'INDICE'); 
+Usando CASCADE=> TRUE después de la tabla se hace también para índices. 
+EXEC DBMS_STATS.DELETE_TABLE_STATS('ESQUEMA', 'TABLA',CASCADE_INDEXES=>TRUE);

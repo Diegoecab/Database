@@ -1,0 +1,72 @@
+CAMBIO DEL PARAMETRO NLS_CHARACTERS.
+
+1) Conectarse a la Base de Datos como sysdba
+2) Consulta del parametro Actual
+3) Bajar la Base de Datos
+4) Montar la Base de Datos
+5) Habilitar sesion restringida
+6) Oracle no debería procesar o iniciar sesiones en este momento
+7) Abrir la Base de Datos
+8) Modificar el CHARSET
+9) Bajar la Base
+10) Subir la Base
+
+C:>sqlplus /nolog
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Dom Jul 23 17:46:12 2006
+
+Copyright (c) 1982, 2005, Oracle. All rights reserved.
+
+SQL> connect /as sysdba
+Conectado.
+SQL> select value from nls_database_parameters where parameter = 'NLS_CHARACTERS
+ET';
+
+VALUE
+----------------------------------------
+WE8MSWIN1252
+
+SQL> shutdown immediate;
+Base de datos cerrada.
+Base de datos desmontada.
+Instancia ORACLE cerrada.
+SQL> startup mount;
+Instancia ORACLE iniciada.
+
+Total System Global Area 188743680 bytes
+Fixed Size 1286460 bytes
+Variable Size 83889860 bytes
+Database Buffers 100663296 bytes
+Redo Buffers 2904064 bytes
+Base de datos montada.
+SQL> alter system enable restricted session;
+
+Sistema modificado.
+
+SQL> alter system set job_queue_processes=0;
+
+Sistema modificado.
+
+SQL> alter database open;
+
+Base de datos modificada.
+
+SQL> alter database character set WE8ISO8859P1;
+
+SQL> shutdown immediate;
+Base de datos cerrada.
+Base de datos desmontada.
+Instancia ORACLE cerrada.
+SQL> startup;
+Instancia ORACLE iniciada.
+
+Total System Global Area 188743680 bytes
+Fixed Size 1286460 bytes
+Variable Size 83889860 bytes
+Database Buffers 100663296 bytes
+Redo Buffers 2904064 bytes
+Base de datos montada.
+Base de datos abierta.
+SQL>
+
+El valor del NLS_CHARACTERSET definida en las bases de Ryaco es WE8ISO8859P1

@@ -1,0 +1,61 @@
+
+                       SGA/Shared Pool Breakdown                      
+                                                                      
+ *** If database started recently, this data is not as useful ***     
+                                                                      
+Database Started:  Jan/09/2012 21:00:27                               
+Instance Name/No:     cdwpro-1                                        
+                                                                      
+Breakdown of SGA           10233.88M                                  
+   Shared Pool Size          : 5552.1M (54%)  Reserved 55.51M (1%)    
+   Large Pool                       : 80M (1%)                        
+   Java Pool                        : 112M (1%)                       
+   Buffer Cache                     : 4384M (43%)                     
+   Streams Pool                     : 90.25M (1%)                     
+   Other Areas in SGA               : 16M (0%)                        
+                                                                      
+ *** High level breakdown of memory ***                               
+                                                                      
+     sharable                      :  3116.41M                        
+     persistent                    :  1631.31M                        
+     runtime                       :  1483.87M                        
+                                                                      
+SQL Memory Usage (total)                     : 6231.6M (112%)         
+                                                                      
+ *** No guidelines on SQL in Library Cache, but if ***                
+ *** pinning a lot of code--may need larger Shared Pool ***           
+                                                                      
+# of SQL statements                : 79372                            
+# of pinned SQL statements         : 158                              
+# of programmatic constructs       : 273146                           
+# of pinned programmatic construct : 876                              
+                                                                      
+Efficiency Analysis:                                                  
+ *** High versions (100s) could be bug ***                            
+                                                                      
+  Max Child Cursors Found                              : 409          
+  Programmatic construct memory size (Kept)            : 21M          
+  Pinned SQL statements memory size (active sessions)  : 4.93M        
+                                                                      
+ *** LC at 50% or 60% of Shared Pool not uncommon ***                 
+                                                                      
+  Estimated Total Library Cache Memory Usage  : 3273M (59%)           
+  Other Shared Pool Memory                    : 2279.1M               
+  Shared Pool Free Memory Chunks              : 337.37M (6%)          
+                                                                      
+ ****Ideal percentages for 1 time executions is 20% or lower****      
+                                                                      
+  # of objects executed only 1 time           : 57976 (73%)           
+  Memory for 1 time executions:               : 2739.63M (44%)        
+                                                                      
+  ***If these chunks are growing, SGA_TARGET may be too low***        
+                                                                      
+  Current KGH: NO ACCESS Allocations:  0M (0%)                        
+                                                                      
+ ***0 misses is ideal, but if growing value points to memory issues***
+                                                                      
+  # Of Misses for memory                      : 0                     
+  Size of last miss                           : 0                     
+  # Of Misses for Reserved Area               : 0                     
+  Size of last miss Reserved Area             : 0                     
+                                                                      

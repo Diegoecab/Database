@@ -1,0 +1,102 @@
+
+Component                 Explicit Setting     Current Size         Min Size         Max Size     Granule Size
+========================= ================ ================ ================ ================ ================
+shared pool                  5,821,693,952    5,821,693,952    5,821,693,952    5,821,693,952       16,777,216
+large pool                               0       83,886,080       83,886,080      268,435,456       16,777,216
+java pool                                0      117,440,512      117,440,512      117,440,512       16,777,216
+streams pool                    83,886,080       83,886,080       83,886,080       83,886,080       16,777,216
+DEFAULT buffer cache         2,264,924,160    2,449,473,536    1,073,741,824    2,449,473,536       16,777,216
+KEEP buffer cache                        0                0                0                0       16,777,216
+RECYCLE buffer cache                     0                0                0                0       16,777,216
+DEFAULT 2K buffer cache                  0                0                0                0       16,777,216
+DEFAULT 4K buffer cache                  0                0                0                0       16,777,216
+DEFAULT 8K buffer cache                  0                0                0                0       16,777,216
+DEFAULT 16K buffer cache     2,147,483,648    2,147,483,648    2,147,483,648    2,147,483,648       16,777,216
+DEFAULT 32K buffer cache                 0                0                0                0       16,777,216
+ASM Buffer Cache             1,073,741,824                0                0                0       16,777,216
+                                           ----------------
+sum                                          10,703,863,808
+
+13 rows selected.
+
+
+                          Operation       Operation
+Component                 Type            Mode            Timestamp
+========================= =============== =============== =========================
+shared pool               SHRINK          DEFERRED        01/16/2012 08:54:02
+large pool                SHRINK          DEFERRED        01/16/2012 08:54:01
+java pool                 STATIC
+streams pool              STATIC
+DEFAULT buffer cache      GROW            DEFERRED        01/16/2012 08:54:02
+KEEP buffer cache         STATIC
+RECYCLE buffer cache      STATIC
+DEFAULT 2K buffer cache   STATIC
+DEFAULT 4K buffer cache   STATIC
+DEFAULT 8K buffer cache   STATIC
+DEFAULT 16K buffer cache  INITIALIZING
+DEFAULT 32K buffer cache  STATIC
+ASM Buffer Cache          STATIC
+
+13 rows selected.
+
+
+Component                 Parameter                          Initial            Final Status     Changed At
+========================= ========================= ================ ================ ========== ===================
+shared pool               shared_pool_size                         0    5,821,693,952 COMPLETE   01/09/2012 21:00:43
+large pool                large_pool_size                          0      268,435,456 COMPLETE   01/09/2012 21:00:43
+DEFAULT 16K buffer cache  db_16k_cache_size            2,147,483,648    2,147,483,648 COMPLETE   01/09/2012 21:00:43
+ASM Buffer Cache          db_cache_size                            0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT 32K buffer cache  db_32k_cache_size                        0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT 16K buffer cache  db_16k_cache_size                        0    2,147,483,648 COMPLETE   01/09/2012 21:00:43
+java pool                 java_pool_size                           0      117,440,512 COMPLETE   01/09/2012 21:00:43
+streams pool              streams_pool_size                        0       83,886,080 COMPLETE   01/09/2012 21:00:43
+DEFAULT buffer cache      db_cache_size                            0    1,073,741,824 COMPLETE   01/09/2012 21:00:43
+KEEP buffer cache         db_keep_cache_size                       0                0 COMPLETE   01/09/2012 21:00:43
+RECYCLE buffer cache      db_recycle_cache_size                    0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT 2K buffer cache   db_2k_cache_size                         0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT 4K buffer cache   db_4k_cache_size                         0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT 8K buffer cache   db_8k_cache_size                         0                0 COMPLETE   01/09/2012 21:00:43
+DEFAULT buffer cache      db_cache_size                2,264,924,160    2,449,473,536 COMPLETE   01/16/2012 08:54:01
+large pool                large_pool_size                268,435,456       83,886,080 COMPLETE   01/16/2012 08:54:01
+shared pool               shared_pool_size             5,821,693,952    5,821,693,952 ERROR      01/16/2012 08:54:02
+DEFAULT buffer cache      db_cache_size                2,449,473,536    2,449,473,536 ERROR      01/16/2012 08:54:02
+DEFAULT buffer cache      db_cache_size                            0    2,264,924,160 INACTIVE   01/16/2012 08:52:12
+
+19 rows selected.
+
+
+Component                           Lowest   MBytes          Highest   MBytes
+========================= ================ ======== ================ ========
+DEFAULT 2K buffer cache                  0        0                0        0
+DEFAULT 4K buffer cache                  0        0                0        0
+shared pool                  5,821,693,952    5,552    5,821,693,952    5,552
+DEFAULT 8K buffer cache                  0        0                0        0
+DEFAULT buffer cache         1,073,741,824    1,024    2,449,473,536    2,336
+DEFAULT 16K buffer cache     2,147,483,648    2,048    2,147,483,648    2,048
+ASM Buffer Cache                         0        0                0        0
+streams pool                    83,886,080       80       83,886,080       80
+KEEP buffer cache                        0        0                0        0
+large pool                      83,886,080       80      268,435,456      256
+java pool                      117,440,512      112      117,440,512      112
+DEFAULT 32K buffer cache                 0        0                0        0
+RECYCLE buffer cache                     0        0                0        0
+
+13 rows selected.
+
+
+Name                                          BYTES Auto
+======================================== ========== ====
+Fixed SGA Size                              2103008 No
+Redo Buffers                               14671872 No
+Buffer Cache Size                        4596957184 Yes
+Shared Pool Size                         5821693952 Yes
+Large Pool Size                            83886080 Yes
+Java Pool Size                            117440512 Yes
+Streams Pool Size                          83886080 Yes
+Granule Size                               16777216 No
+Maximum SGA Size                         1.2885E+10 No
+Startup overhead in Shared Pool           218103808 No
+Free SGA Memory Available                2164260864
+
+11 rows selected.
+

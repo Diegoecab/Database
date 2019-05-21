@@ -1,0 +1,1091 @@
+REM Source de Macro para excel. Utilizado para consultas a base de datos a traves de OO4O
+REM ======================================================================
+REM oo4o_excel_source.sql		Version 1.1	11 Marzo 2010
+REM
+REM Autor: 
+REM Diego Cabrera
+REM 
+REM Proposito:
+REM
+REM Dependencias:
+REM	Oracle Objects for OLE
+REM
+REM Notas:
+REM	Para Oracle version 7.3, 8.0, 8.1, 9.0, 9.2, 10.1 y 10.2 solamente
+REM
+REM Precauciones:
+REM	
+REM ======================================================================
+REM
+
+Sub ConsultaTBS()
+'Variables
+
+Dim OraSession As Object
+Dim OraDatabase As Object
+Dim TbsDynaset As Object
+Dim sqlp1 As String
+Dim sqlp2 As String
+
+Dim flds() As Object
+Dim fldcount As Integer
+Dim fldcountAnt As Integer
+fldcountAnt = 0
+
+
+sqlp1 = " SELECT a.host_name,instance_name,tablespace_name,path,round(bytes/1024/1024,0),round(bytes/1024/1024/1024,1),round(alloc/1024),b.used,b.pct_used,auto FROM ( " & _
+" SELECT b.host_name,b.instance_name,a.* " & _
+"   FROM (SELECT * FROM (SELECT   tablespace_name, SUBSTR (file_name, 1, 22) PATH,SUM (BYTES) bytes " & _
+  "                   FROM dba_data_files GROUP BY tablespace_name, ROLLUP (SUBSTR (file_name, 1, 22)) " & _
+    "             ORDER BY tablespace_name, PATH) " & _
+     "     WHERE PATH IS NOT NULL) a JOIN v$instance b on 1=1) a JOIN ( select name, round(alloc) alloc, " & _
+"         round(free) free, " & _
+"         round(alloc - free) used, " & _
+"         100 - round((max-(alloc - free))/max*100) pct_used,        " & _
+"         decode(auto,dfs,'   ',0,'   ',' X') Ctl, " & _
+"         max Max_Size, " & _
+"         maxf Max_Size_file,         " & _
+"         round(decode(max,0,0,(alloc/max)*100)) pct_max_alloc, " & _
+" auto from ( " & _
+" select nvl(b.tablespace_name, nvl(a.tablespace_name,'UNKNOW')) name, " & _
+"        alloc, " & _
+"        nvl(free,0) free, " & _
+"        auto, " & _
+"        dfs, " & _
+"       nvl(max,0) + nvl(maxn,0) max, " & _
+"       nvl(maxf,0) maxf " & _
+"from ( select round(sum(bytes)/1024/1024) free, " & _
+"              tablespace_name " & _
+"       from  sys.dba_free_space "
+
+sqlp2 = "       group by tablespace_name ) a, " & _
+"     ( select sum(bytes)/1024/1024 alloc, " & _
+"              sum(maxbytes)/1024/1024 max, " & _
+"              max(maxbytes)/1024/1024 maxf, " & _
+"              (select sum(bytes)/1024/1024 from dba_data_Files df3 where df3.tablespace_name = df1.tablespace_name and df3.AUTOEXTENSIBLE = 'NO') maxn, " & _
+"              tablespace_name,                             " & _
+"              (select count(*) from dba_data_files df2 where df2.tablespace_name = df1.tablespace_name and df2.AUTOEXTENSIBLE = 'YES') auto, " & _
+"              count(*) dfs " & _
+"       from sys.dba_data_files df1 " & _
+"       group by tablespace_name " & _
+"       union all " & _
+"       select sum(bytes)/1024/1024 alloc, " & _
+"              sum(maxbytes)/1024/1024 max, " & _
+"             max(maxbytes)/1024/1024 maxf, " & _
+"              (select sum(bytes)/1024/1024 from dba_temp_Files df3 where df3.tablespace_name = tablespace_name and df3.AUTOEXTENSIBLE = 'NO') maxn, " & _
+"              tablespace_name,               " & _
+"              (select count(*) from dba_temp_files df2 where df2.tablespace_name = tablespace_name and df2.AUTOEXTENSIBLE = 'YES') auto, " & _
+"              count(*) dfs " & _
+"       from sys.dba_temp_files " & _
+"       group by tablespace_name )b  " & _
+"where a.tablespace_name (+) = b.tablespace_name " & _
+"order by 1 " & _
+") " & _
+") b on b.name=a.tablespace_name order by tablespace_name,path"
+
+
+
+
+
+ Set OraSession = CreateObject("OracleInProcServer.XOraSession")
+ 
+ 
+ ''''''''''''''' SARGPDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("SARGPDE", "system/systemd1", 0&)
+ 
+ 
+ Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+ 
+ 'Sacar los filtros
+    Selection.AutoFilter Field:=8
+    Selection.AutoFilter Field:=7
+    Selection.AutoFilter Field:=6
+    Selection.AutoFilter Field:=5
+    Selection.AutoFilter Field:=4
+    Selection.AutoFilter Field:=3
+    Selection.AutoFilter Field:=2
+    Selection.AutoFilter Field:=1
+    Selection.AutoFilter Field:=9
+    Selection.AutoFilter Field:=10
+    Selection.AutoFilter Field:=11
+    Selection.AutoFilter Field:=12
+ 
+ Range("A6:J400").Select
+ Selection.ClearContents
+ 
+ fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + 4, Colnum + 1) = flds(Colnum).Value
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+ fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GARDWDE
+ 
+Set OraDatabase = OraSession.OpenDatabase("GARDWDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ 
+ '''' INTDWDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("INTDWDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+
+ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+
+
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+  
+ '''' BPMGPDE
+
+ 
+ Set OraDatabase = OraSession.OpenDatabase("BPMGPDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ 
+ '''' EXTTRDE
+
+ 
+ Set OraDatabase = OraSession.OpenDatabase("EXTTRDE", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ '''' GARTRDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTRDE", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+ '''' GARTRQA
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTRQA", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+'''' EXTTRQA
+
+Set OraDatabase = OraSession.OpenDatabase("EXTTRQA", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' INTDWOP
+
+Set OraDatabase = OraSession.OpenDatabase("INTDWOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'''' SARGPOP
+
+Set OraDatabase = OraSession.OpenDatabase("SARGPOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' BPMGPOP
+
+Set OraDatabase = OraSession.OpenDatabase("BPMGPOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GESTROP
+
+Set OraDatabase = OraSession.OpenDatabase("GESTROP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GARDWOP
+
+Set OraDatabase = OraSession.OpenDatabase("GARDWOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+ '''' GARTROP
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTROP", "system/systemp2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' EXTTROP
+
+Set OraDatabase = OraSession.OpenDatabase("EXTTROP", "system/systemp2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+sqlp1 = " SELECT a.host_name,instance_name,tablespace_name,path,round(bytes/1024/1024,0),round(bytes/1024/1024/1024,1),round(alloc/1024),b.used,b.pct_used,auto FROM ( " & _
+" SELECT b.host_name,b.instance_name,a.* " & _
+"   FROM (SELECT * FROM (SELECT   tablespace_name, SUBSTR (file_name, 1, 18) PATH,SUM (BYTES) bytes " & _
+  "                   FROM dba_data_files GROUP BY tablespace_name, ROLLUP (SUBSTR (file_name, 1, 18)) " & _
+    "             ORDER BY tablespace_name, PATH) " & _
+     "     WHERE PATH IS NOT NULL) a JOIN v$instance b on 1=1) a JOIN ( select name, round(alloc) alloc, " & _
+"         round(free) free, " & _
+"         round(alloc - free) used, " & _
+"         100 - round((max-(alloc - free))/max*100) pct_used,        " & _
+"         decode(auto,dfs,'   ',0,'   ',' X') Ctl, " & _
+"         max Max_Size, " & _
+"         maxf Max_Size_file,         " & _
+"         round(decode(max,0,0,(alloc/max)*100)) pct_max_alloc, " & _
+" auto from ( " & _
+" select nvl(b.tablespace_name, nvl(a.tablespace_name,'UNKNOW')) name, " & _
+"        alloc, " & _
+"        nvl(free,0) free, " & _
+"        auto, " & _
+"        dfs, " & _
+"       nvl(max,0) + nvl(maxn,0) max, " & _
+"       nvl(maxf,0) maxf " & _
+"from ( select round(sum(bytes)/1024/1024) free, " & _
+"              tablespace_name " & _
+"       from  sys.dba_free_space "
+
+sqlp2 = "       group by tablespace_name ) a, " & _
+"     ( select sum(bytes)/1024/1024 alloc, " & _
+"              sum(maxbytes)/1024/1024 max, " & _
+"              max(maxbytes)/1024/1024 maxf, " & _
+"              (select sum(bytes)/1024/1024 from dba_data_Files df3 where df3.tablespace_name = df1.tablespace_name and df3.AUTOEXTENSIBLE = 'NO') maxn, " & _
+"              tablespace_name,                             " & _
+"              (select count(*) from dba_data_files df2 where df2.tablespace_name = df1.tablespace_name and df2.AUTOEXTENSIBLE = 'YES') auto, " & _
+"              count(*) dfs " & _
+"       from sys.dba_data_files df1 " & _
+"       group by tablespace_name " & _
+"       union all " & _
+"       select sum(bytes)/1024/1024 alloc, " & _
+"              sum(maxbytes)/1024/1024 max, " & _
+"             max(maxbytes)/1024/1024 maxf, " & _
+"              (select sum(bytes)/1024/1024 from dba_temp_Files df3 where df3.tablespace_name = tablespace_name and df3.AUTOEXTENSIBLE = 'NO') maxn, " & _
+"              tablespace_name,               " & _
+"              (select count(*) from dba_temp_files df2 where df2.tablespace_name = tablespace_name and df2.AUTOEXTENSIBLE = 'YES') auto, " & _
+"              count(*) dfs " & _
+"       from sys.dba_temp_files " & _
+"       group by tablespace_name )b  " & _
+"where a.tablespace_name (+) = b.tablespace_name " & _
+"order by 1 " & _
+") " & _
+") b on b.name=a.tablespace_name order by tablespace_name,path"
+
+
+'''' GARDB
+
+Set OraDatabase = OraSession.OpenDatabase("gardb", "system/mandioca", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'''' gardw
+
+Set OraDatabase = OraSession.OpenDatabase("gardw", "system/mandioca", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'Filtrar datos con mas de 85% de espacio ocupado
+Selection.AutoFilter Field:=9, Criteria1:=">85", Operator:=xlAnd
+
+Range("A6:A6").Select
+ 
+End Sub
+
+Sub ClearData()
+'Sacar los filtros
+    Selection.AutoFilter Field:=8
+    Selection.AutoFilter Field:=7
+    Selection.AutoFilter Field:=6
+    Selection.AutoFilter Field:=5
+    Selection.AutoFilter Field:=4
+    Selection.AutoFilter Field:=3
+    Selection.AutoFilter Field:=2
+    Selection.AutoFilter Field:=1
+    Selection.AutoFilter Field:=9
+    Selection.AutoFilter Field:=10
+    Selection.AutoFilter Field:=11
+    Selection.AutoFilter Field:=12
+    
+ Range("A6:J400").Select
+ Selection.ClearContents
+ Range("A6:A6").Select
+End Sub
+
+Sub ConsultaDatafile()
+'Variables
+
+Dim OraSession As Object
+Dim OraDatabase As Object
+Dim TbsDynaset As Object
+Dim sqlp1 As String
+Dim sqlp2 As String
+Dim sqlp3 As String
+Dim sqlp4 As String
+
+Dim flds() As Object
+Dim fldcount As Integer
+Dim fldcountAnt As Integer
+fldcountAnt = 0
+
+
+sqlp1 = " select c.host_name,c.instance_name,a.*,b.pct_used pct_used_tbs from ( " & _
+" select df.tablespace_name " & _
+" ,      df.file_name " & _
+" ,      round(df.bytes/1024/1024/1024,1)                        total_size " & _
+" ,       df.MAXBYTES/1024/1024/1024                    max_gb " & _
+" ,      round(nvl(fr.bytes/1024/1024/1024,0))                 free_space " & _
+" ,      round(((df.bytes-nvl(fr.bytes,0))/df.bytes)*100) pct_used_datafile " & _
+" ,       round((df.bytes- nvl(fr.bytes,0))/1024/1024/1024,1)            used_gb " & _
+" from   (select sum(bytes) bytes " & _
+"         ,      file_id " & _
+"         from   dba_free_space " & _
+"         group by file_id)     fr " & _
+" ,       dba_data_files        df " & _
+" where df.file_id = fr.file_id(+) " & _
+" and df.autoextensible='YES' " & _
+" order by 1, df.file_id) a join "
+
+sqlp2 = " ( " & _
+" select round(pct_used) pct_used, tablespace_name from ( " & _
+" select ( " & _
+"        (kbytes_alloc-nvl(kbytes_free,0))/  " & _
+"                           kbytes_alloc)*100 pct_used, " & _
+"                           a.tablespace_name " & _
+" from ( select sum(bytes)/1024 Kbytes_free, " & _
+"               tablespace_name " & _
+"        from  sys.dba_free_space  " & _
+"        group by tablespace_name ) a, " & _
+"      ( select sum(bytes)/1024 Kbytes_alloc, " & _
+"               tablespace_name  " & _
+"        from sys.dba_data_files  " & _
+"        group by tablespace_name)b " & _
+" where a.tablespace_name (+) = b.tablespace_name) " & _
+" ) b on b.tablespace_name=a.tablespace_name " & _
+" join " & _
+" v$instance c on 1=1 order by a.tablespace_name"
+
+Set OraSession = CreateObject("OracleInProcServer.XOraSession")
+ 
+ 
+ ''''''''''''''' SARGPDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("SARGPDE", "system/systemd1", 0&)
+ 
+ 
+ Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+ 
+ 'Sacar los filtros
+    Selection.AutoFilter Field:=10
+    Selection.AutoFilter Field:=9
+    Selection.AutoFilter Field:=8
+    Selection.AutoFilter Field:=7
+    Selection.AutoFilter Field:=6
+    Selection.AutoFilter Field:=5
+    Selection.AutoFilter Field:=4
+    Selection.AutoFilter Field:=3
+    Selection.AutoFilter Field:=2
+    Selection.AutoFilter Field:=1
+ 
+ Range("A6:J1000").Select
+ Selection.ClearContents
+ 
+ fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + 4, Colnum + 1) = flds(Colnum).Value
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+ fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GARDWDE
+ 
+Set OraDatabase = OraSession.OpenDatabase("GARDWDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ 
+ '''' INTDWDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("INTDWDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+
+ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+ Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+
+
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+  
+ '''' BPMGPDE
+
+ 
+ Set OraDatabase = OraSession.OpenDatabase("BPMGPDE", "system/systemd1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ 
+ '''' EXTTRDE
+
+ 
+ Set OraDatabase = OraSession.OpenDatabase("EXTTRDE", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+ '''' GARTRDE
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTRDE", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+ '''' GARTRQA
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTRQA", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+ 
+'''' EXTTRQA
+
+Set OraDatabase = OraSession.OpenDatabase("EXTTRQA", "system/systemd2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' INTDWOP
+
+Set OraDatabase = OraSession.OpenDatabase("INTDWOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'''' SARGPOP
+
+Set OraDatabase = OraSession.OpenDatabase("SARGPOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' BPMGPOP
+
+Set OraDatabase = OraSession.OpenDatabase("BPMGPOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GESTROP
+
+Set OraDatabase = OraSession.OpenDatabase("GESTROP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' GARDWOP
+
+Set OraDatabase = OraSession.OpenDatabase("GARDWOP", "system/systemp1", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+ '''' GARTROP
+ 
+ Set OraDatabase = OraSession.OpenDatabase("GARTROP", "system/systemp2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+'''' EXTTROP
+
+Set OraDatabase = OraSession.OpenDatabase("EXTTROP", "system/systemp2", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'''' GARDB
+
+Set OraDatabase = OraSession.OpenDatabase("gardb", "system/mandioca", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'''' gardw
+
+Set OraDatabase = OraSession.OpenDatabase("gardw", "system/mandioca", 0&)
+
+Set TbsDynaset = OraDatabase.CreateDynaset(sqlp1 & sqlp2, 0&)
+
+fldcount = TbsDynaset.Fields.Count
+ ReDim flds(0 To fldcount - 1)
+ For Colnum = 0 To fldcount - 1
+  Set flds(Colnum) = TbsDynaset.Fields(Colnum)
+Next
+
+'Mostrar datos
+ For Rownum = 2 To TbsDynaset.RecordCount + 1
+  For Colnum = 0 To fldcount - 1
+   ActiveSheet.Cells(Rownum + fldcountAnt, Colnum + 1) = flds(Colnum).Value
+   
+  Next
+  TbsDynaset.DbMoveNext
+ Next
+ 
+fldcountAnt = fldcountAnt + TbsDynaset.RecordCount
+
+
+'Filtrar datos con mas de 85% de espacio ocupado
+'Selection.AutoFilter Field:=8, Criteria1:=">85", Operator:=xlAnd
+
+'Range("A6:A6").Select
+End Sub
+
+
+Sub ClearDatafile()
+
+'Sacar los filtros
+    Selection.AutoFilter Field:=10
+    Selection.AutoFilter Field:=9
+    Selection.AutoFilter Field:=8
+    Selection.AutoFilter Field:=7
+    Selection.AutoFilter Field:=6
+    Selection.AutoFilter Field:=5
+    Selection.AutoFilter Field:=4
+    Selection.AutoFilter Field:=3
+    Selection.AutoFilter Field:=2
+    Selection.AutoFilter Field:=1
+    
+ Range("A6:J1000").Select
+ Selection.ClearContents
+ Range("A6:A6").Select
+
+
+End Sub
+
+
+

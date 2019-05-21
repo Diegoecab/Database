@@ -1,0 +1,6 @@
+select USER_NAME, count(*), trunc(insert_time,'dd-mon-yy hh24')
+                                  *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+

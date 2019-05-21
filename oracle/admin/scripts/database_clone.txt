@@ -1,0 +1,24 @@
+ALTER DATABASE BACKUP CONTROLFILE TRACE AS 'C:\...';
+
+Modificar controlfile trace
+
+Resetlogs
+
+set database
+
+Alter database open resetlogs
+
+
+Agregar sid
+
+Nombre de Base menor a 8 carac
+
+
+
+
+Copiar modificar PFILE
+
+
+Agregar carpetas necesarias
+
+

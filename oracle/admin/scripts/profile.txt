@@ -1,0 +1,15 @@
+umask 022
+ORACLE_BASE=/u01/app/oracle; export ORACLE_BASE
+ORACLE_HOME=/u01/app/oracle/product/10.1.0/db_1; export ORACLE_HOME
+ORACLE_SID=test; export ORACLE_SID
+ORACLE_TERM=xterm; export ORACLE_TERM
+ORACLE_OWNER=oracle; export ORACLE_OWNER
+#TNS_ADMIN=/home/oracle/config/10.1.0 export TNS_ADMIN
+NLS_LANG=SPANISH_SPAIN.WE8ISO8859P1; export NLS_LANG
+#ORA_NLS10=${ORACLE_HOME}/db_1/nls/data; export ORA_NLS10
+CLASSPATH=${CLASSPATH}:${ORACLE_HOME}/jdbc/lib/classes12.zip
+LD_LIBRARY_PATH=${ORACLE_HOME}/lib; export LD_LIBRARY_PATH
+DISABLE_HUGETLBFS=1; export DISABLE_HUGETLBFS
+TEMP=/tmp; export TEMP
+TMPDIR=/tmp; export TMP
+PATH=$PATH:/u01/app/oracle/product/10.1.0/db_1/bin; export PATH

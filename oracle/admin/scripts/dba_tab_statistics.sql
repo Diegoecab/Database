@@ -1,0 +1,1 @@
+select owner, object_type, table_name, partition_name, partition_position,

@@ -1,0 +1,7 @@
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/sbin}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/plugins/oracle.sysman.xa.discovery.plugin_12.1.0.6.0}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/plugins/oracle.sysman.db.discovery.plugin_12.1.0.6.0}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/plugins/oracle.sysman.emas.discovery.plugin_12.1.0.6.0}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/plugins/oracle.sysman.oh.discovery.plugin_12.1.0.4.0}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/plugins/oracle.sysman.oh.agent.plugin_12.1.0.4.0}" -deinstall -waitForCompletion -removeallfiles -local
+$ORACLE_HOME/oui/bin/runInstaller -silent "REMOVE_HOMES={/optware/oracle/12.1.0.4/agent/core/12.1.0.4.0}" -deinstall -waitForCompletion -removeallfiles -local

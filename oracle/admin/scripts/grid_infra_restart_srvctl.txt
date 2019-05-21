@@ -1,0 +1,71 @@
+oracle@db001u:/optware/grid/11.2.0.4/network > srvctl config asm                
+ASM home: /optware/grid/11.2.0.4
+ASM listener: LISTENER_ASM
+Spfile: +aietlu_data01/asm/ASMPARAMETERFILE/REGISTRY.253.804983019
+ASM diskgroup discovery string: /dev/asm*
+
+
+
+oracle@db001u:/optware/grid/11.2.0.4/network > srvctl config listener                  
+Name: LISTENER
+Home: /optware/grid/11.2.0.4
+End points: TCP:1524
+Name: LISTENER_ASM
+Home: /optware/grid/11.2.0.4
+End points: TCP:2350
+Name: LSNRFCT
+Home: /optware/grid/11.2.0.4
+End points: TCP:2351
+oracle@db001u:/optware/grid/11.2.0.4/network > 
+
+
+oracle@db001u:/optware/grid/11.2.0.4/network > srvctl add listener -p TCP:1524
+
+
+
+
+srvctl modify asm -l LSNRASM
+
+
+
+http://docs.oracle.com/cd/E11882_01/rac.112/e41960/srvctladmin.htm#RACAD5011
+srvctl add database -d db_unique_name -o oracle_home
+     [-x node_name] [-m domain_name] [-p spfile]
+     [-c  {RACONENODE | RAC | SINGLE} [-e server_list] [-i instance_name] [-w timeout]]
+     [-r {PRIMARY | PHYSICAL_STANDBY | LOGICAL_STANDBY | SNAPSHOT_STANDBY}]
+     [-s start_options] [-t stop_options] [-n db_name -j "acfs_path_list"]
+     [-y {AUTOMATIC | MANUAL | NORESTART}] [-g server_pool_list] [-a disk_group_list]
+	 
+	 
+AMSCA DELETE ASM INSTANCE
+http://docs.oracle.com/cd/E11882_01/server.112/e18951/asmca.htm#OSTMG94325
+
+	 asmca -silent -deleteASM -sysAsmPassword Dontforgetaboutme09
+	 
+	 
+srvctl config database -d dbrepoc
+
+Database unique name: dbrepoc
+Database name: 
+Oracle home: /optware/oracle/database/11.2.0.3
+Oracle user: oracle
+Spfile: /optware/oracle/database/11.2.0.3/dbs/spfiledbrepoc.ora
+Domain: 
+Start options: mount
+Stop options: immediate
+Database role: PHYSICAL_STANDBY
+Management policy: AUTOMATIC
+Database instance: dbrepoc
+Disk Groups: DBREPO_DATA01
+Services: prod
+
+
+
+oracle@db001c:/tmp > srvctl config asm
+ASM home: /optware/grid/11.2.0.4
+ASM listener was not found
+PRCA-1032 : ASM listener LISTENER does not exist
+Spfile: +DATA_ASM/asm/asmparameterfile/registry.253.852736457
+ASM diskgroup discovery string: /dev/asm*
+oracle@db001c:/tmp > 
+
