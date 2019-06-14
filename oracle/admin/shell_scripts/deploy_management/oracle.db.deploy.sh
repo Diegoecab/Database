@@ -1,5 +1,4 @@
 #!/usr/bin/sh
-#/sbin/sh
 #################################################################################
 # AUTHOR : DIEGO E CABRERA                                                      #
 # CREATED: 14/06/2019                                                           #
@@ -23,23 +22,30 @@ fn_backup()
   
 if [ ${#} -lt 1  ]; then
  echo "Not enough parameters"
+ fn_log "fn_backup" "1" "Not enough parameters"
  return 1;
 fi;
 
 typeset VERSION_ID_NAME="${1}";
+fn_log "fn_backup" "0" "Starting backup for version ID $VERSION_ID_NAME"
 
-exit_string=`$ORACLE_HOME/bin/expdp  ${ORAUSER} dumpfile=exp_$VERSION_ID_NAME.dmp compression=all logfile=exp_$VERSION_ID_NAME.log directory=$EXPDP_DIR content=METADATA_ONLY schemas=$SCHEMAS`
+exit_string=`$ORACLE_HOME/bin/expdp  ${ORAUSER} dumpfile=exp_$VERSION_ID_NAME.dmp compression=all logfile=$EXPDP_DIR:exp_$DT_$VERSION_ID_NAME.log directory=$EXPDP_DIR content=METADATA_ONLY schemas=$SCHEMAS`
 
 if [ $(echo "${exit_string}" | grep -c 'ORA-') -gt 0 ] || [ $(echo "${exit_string}" | echo ${exit_string} | grep -Ec 'SP2-[0-9]+[0-9]+[0-9]+[0-9]+') -gt 0 ]; then
-     fn_log "main" "1" "Error - fn_run";
-	 fn_log "main" "1" "Error: ${exit_string}" ;
- fi
+     fn_log "fn_backup" "1" "Error in datapump export";
+	 fn_log "fn_backup" "1" "Datapump logfile: $EXPDP_DIR:exp_$DT_$VERSION_ID_NAME.log"
+fi
 }
+
+
+#------------------------------------------------------------------------------#
+# fn_file_management(): This function will extract a gz file and find the folders with the pattern specified in the $VERSIONID_PATTERN variable#						
+#------------------------------------------------------------------------------#
 
 
 fn_file_management()
 {
-# PARAMETERS: $1: package name.zip
+# PARAMETERS: $1: package name.gz
   
 if [ ${#} -lt 1  ]; then
  echo "Not enough parameters"
@@ -49,22 +55,28 @@ fi;
 typeset ZIPPED_FILE="${1}";
 ZIPPED_FILE_NAME=`${ZIPPED_FILE} | sed s/".gz"/""/g`  
 
-fn_log "main" "0" "Decompressing file $ZIPPED_FILE"
+fn_log "fn_file_management" "0" "Decompressing file $ZIPPED_FILE"
 gunzip $ZIPPED_FILE
 ex_code=$?
 if [ $ex_code -gt 0 ] ; then
-	fn_log "main" "1" "Error executing gunzip $ZIPPED_FILE. Exit code: $ex_code";
+	fn_log "fn_file_management" "1" "Error executing gunzip $ZIPPED_FILE. Exit code: $ex_code";
 else
-fn_log "main" "0" "File $ZIPPED_FILE decompressed successfully"
+fn_log "fn_file_management" "0" "File $ZIPPED_FILE decompressed successfully"
 all_files=`ls -larRt $ZIPPED_FILE_NAME`
-fn_log "main" "0" "Decompressed files; "
-fn_log "main" "0" "$all_files"
+fn_log "fn_file_management" "0" "Decompressed files; "
+fn_log "fn_file_management" "0" "$all_files"
 fi
 
-if [ $(echo "${exit_string}" | grep -c 'ORA-') -gt 0 ] || [ $(echo "${exit_string}" | echo ${exit_string} | grep -Ec 'SP2-[0-9]+[0-9]+[0-9]+[0-9]+') -gt 0 ]; then
-     fn_log "main" "1" "Error - fn_run";
-	 fn_log "main" "1" "Error: ${exit_string}" ;
- fi
+VERSIONS_TB_IMPLEMENTED=$(find . -type d 2>/dev/null | grep -P $VERSIONID_PATTERN*)
+export VERSIONS_TB_IMPLEMENTED
+
+if [ -z "$VERSIONS_TB_IMPLEMENTED" ]; then
+	fn_log "fn_file_management" "1" "There is no folder with version ID in the compressed file";
+else
+fn_log "fn_file_management" "0" "Versions to be implemented: $VERSIONS_TB_IMPLEMENTED"
+fi
+
+
 }
 
 
@@ -132,9 +144,26 @@ DEFAULT_LOG=${APPL_LOG}/${SCRIPT_NAME}.log                         				# Define 
 
 fn_log "main" "0" "Begin Script"
 fn_file_management()
-fn_backup()
-fn_deploy()
-fn_notification()
+
+select VERSIONID_FOLDER in "${VERSIONS_TB_IMPLEMENTED[@]}"
+do
+    if ! [ "$VERSIONID_FOLDER" ]
+    then
+        echo "No folder was specified"
+        continue
+    else
+    	echo "Starting backup before apply the version $VERSIONID"
+   		LOG_DIR=$LOG_DIR/$VERSIONID
+		LOGFILE=${LOG_DIR}/oracle.db.deploy.$DT.log
+		fn_backup()
+		fn_deploy()
+		fn_notification()
+	fi
+    break
+done
+
+
+
 fn_log "main" "0" "End Script"
 
 ################################################################################
