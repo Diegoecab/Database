@@ -134,9 +134,21 @@ if [ ${#} -lt 1  ]; then
 fi;
 APPL_PATH=/oracle/scripts/
 APPL_LOG=$APPL_PATH/logs
+APPL_CFG_DIR=$APPL_PATH/cfg
 SCRIPT_NAME=`basename ${PROGRAM} | sed s/".sh"/""/g`               						# Define script name removing it's extension
 DEFAULT_ERROR_LOG=${APPL_LOG}/${SCRIPT_NAME}.err                         				# Define standart error log for this script
 DEFAULT_LOG=${APPL_LOG}/${SCRIPT_NAME}.log                         				# Define standart output log for this script
+
+cfg_file=${APPL_CFG_DIR}/oracle.db.deploy.cfg                           	# Load config variables
+if [ -x ${cfg_file} ]
+then
+        . ${cfg_file}
+else
+	(
+	echo "The Configuration file was not found. Execution Aborted."
+	) >> ${DEFAULT_ERROR_LOG} 2>&1
+	exit 1;
+fi
 
 ################################################################################ 
 #                            Core Application	                               #
@@ -161,7 +173,6 @@ do
 	fi
     break
 done
-
 
 
 fn_log "main" "0" "End Script"
