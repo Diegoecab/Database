@@ -1,0 +1,1 @@
+COPY C:\oracle\ora92\bin  /Y C:\oracle\disco3\bin

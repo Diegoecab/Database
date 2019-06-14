@@ -1,0 +1,25 @@
+run {
+crosscheck backup;	
+delete noprompt obsolete;	
+delete noprompt expired backup;
+sql 'alter system archive log current';	}
+
+run {	
+     backup current controlfile format='D:\oracle\DBA\RMAN\CONTROLFILE%f.rman';
+     backup as compressed backupset incremental level = 1 database format 'D:\oracle\DBA\RMAN\DBA%u_%d_%s_%t_incremental.rman';
+#      include current controlfile plus archivelog
+     }
+
+run {	
+     crosscheck backup;
+     crosscheck archivelog all;	
+     # Validando los logs archivados ...	
+     change archivelog all validate;	
+     #Backup de Archives
+     sql 'alter system archive log current';	
+     backup archivelog all delete input TAG=archivelogs format 'D:\oracle\DBA\RMAN\DBA_%e_ARCHIVES_INC.rman';
+     # Archivos que necesitan Backup:	
+     report need backup;
+    }
+	
+exit	

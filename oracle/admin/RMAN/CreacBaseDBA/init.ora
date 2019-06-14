@@ -1,0 +1,83 @@
+##############################################################################
+# Copyright (c) 1991, 2001, 2002 by Oracle Corporation
+##############################################################################
+ 
+###########################################
+# Cache and I/O
+###########################################
+db_block_size=8192
+db_file_multiblock_read_count=16
+ 
+###########################################
+# Job Queues
+###########################################
+job_queue_processes=10
+ 
+###########################################
+# File Configuration
+###########################################
+control_files=("D:\oracle\DBA\DataFiles\dba\control01.ctl", "D:\oracle\DBA\DataFiles\dba\control02.ctl", "D:\oracle\DBA\DataFiles\dba\control03.ctl")
+db_recovery_file_dest=D:\oracle\DBA\flash_recovery_area
+db_recovery_file_dest_size=2147483648
+ 
+###########################################
+# Cursors and Library Cache
+###########################################
+open_cursors=300
+ 
+###########################################
+# Diagnostics and Statistics
+###########################################
+background_dump_dest=C:\oracle\database\10g/admin/dba/bdump
+core_dump_dest=C:\oracle\database\10g/admin/dba/cdump
+user_dump_dest=C:\oracle\database\10g/admin/dba/udump
+ 
+###########################################
+# Database Identification
+###########################################
+db_domain=""
+db_name=dba
+ 
+###########################################
+# SGA Memory
+###########################################
+sga_target=609222656
+ 
+###########################################
+# NLS
+###########################################
+nls_language="SPANISH"
+nls_territory="SPAIN"
+ 
+###########################################
+# Processes and Sessions
+###########################################
+processes=150
+ 
+###########################################
+# System Managed Undo and Rollback Segments
+###########################################
+undo_management=AUTO
+undo_tablespace=UNDOTBS1
+ 
+###########################################
+# Security and Auditing
+###########################################
+audit_file_dest=C:\oracle\database\10g/admin/dba/adump
+remote_login_passwordfile=EXCLUSIVE
+ 
+###########################################
+# Shared Server
+###########################################
+dispatchers="(PROTOCOL=TCP) (SERVICE=dbaXDB)"
+ 
+###########################################
+# Miscellaneous
+###########################################
+compatible=10.2.0.1.0
+ 
+###########################################
+# Sort, Hash Joins, Bitmap Indexes
+###########################################
+pga_aggregate_target=202375168
+ 
