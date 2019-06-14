@@ -1,0 +1,13 @@
+Crosscheck
+
+crosscheck backup;
+crosscheck archivelog all;
+
+
+report need backup;
+
+show all;
+
+report obsolete;
+
+alter system set log_archive_dest_1='LOCATION=/export/home/oracle/Backups/archive_logs/parche/ MANDATORY' scope=spfile;

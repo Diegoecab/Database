@@ -1,0 +1,92 @@
+rem -----------------------------------------------------------------------
+rem Filename: rmanlist24.sql
+rem Backups completados de las últimas 24H
+rem -----------------------------------------------------------------------
+tti "RMAN Backups for last 24-hours"
+col type format a4
+col handle format a35 trunc
+col file# format 9999
+col duration format a9
+
+SELECT   DECODE (backup_type,
+    'L', 'ARCH',
+    'D', 'DB',
+    'I', 'INC',
+    'Unknown type=' || backup_type
+    ) TYPE,
+    TO_CHAR (a.start_time, 'DDMON HH24:MI') start_time,
+    TO_CHAR (a.elapsed_seconds / 60, '99.9') || ' Min' DURATION,
+    SUBSTR (handle, -35) handle, NVL (d.file#, l.sequence#) file#,
+    NVL (d.blocks, l.blocks) blocks
+    FROM SYS.v_$backup_set a,
+        SYS.v_$backup_piece b,
+        SYS.v_$backup_datafile d,
+        SYS.v_$backup_redolog l
+WHERE a.start_time BETWEEN SYSDATE - 100 AND SYSDATE
+    AND a.set_stamp = b.set_stamp
+    AND a.set_stamp = d.set_stamp(+)
+    AND a.set_stamp = l.set_stamp(+)
+ORDER BY start_time, file#;
+
+
+
+rem -----------------------------------------------------------------------
+rem Filename: rmanstat24.sql
+rem Backups de datafiles y archivelogs de las últimas 24H.
+rem -----------------------------------------------------------------------
+prompt "RMAN Status for past 24-hours"
+ 
+SELECT dbfiles || ' from ' || numfiles "Datafiles backed up",
+	cfiles "Control Files backed up", spfiles "SPFiles backed up"
+FROM (SELECT COUNT (*) numfiles
+	FROM SYS.v_$datafile),
+	(SELECT COUNT (*) dbfiles
+		FROM SYS.v_$backup_datafile a, SYS.v_$datafile b
+		WHERE a.file# = b.file# AND a.completion_time > SYSDATE - 1),
+	(SELECT COUNT (*) cfiles
+		FROM SYS.v_$backup_datafile
+		WHERE file# = 0 AND completion_time > SYSDATE - 1),
+	(SELECT COUNT (*) spfiles
+		FROM SYS.v_$backup_spfile
+		WHERE completion_time > SYSDATE - 1)
+ 
+/
+ 
+-- Archlog Files de las últimas 24H
+ 
+SELECT backedup || ' from ' || archived "Archlog files backed up",
+	ondisk "Archlog files still on disk"
+FROM (SELECT COUNT (*) archived
+	FROM SYS.v_$archived_log
+	WHERE completion_time > SYSDATE - 1),
+	(SELECT COUNT (*) backedup
+		FROM SYS.v_$archived_log
+		WHERE backup_count > 0 AND completion_time > SYSDATE - 1),
+	(SELECT COUNT (*) ondisk
+		FROM SYS.v_$archived_log
+		WHERE archived = 'YES' AND deleted = 'NO')
+ 
+/
+ 
+-- RMAN en marcha:
+SELECT to_char(start_time,'DD-MON-YY HH24:MI') "BACKUP STARTED",
+sofar, totalwork,
+elapsed_seconds/60 "ELAPSE (Min)",
+round(sofar/totalwork*100,2) "Complete%"
+FROM sys.v_$session_longops
+WHERE compnam = 'dbms_backup_restore'
+/
+
+
+rem -----------------------------------------------------------------------
+rem rman_run.sql
+rem Monitoriza el estado del Backup mientras esté en marcha
+rem -----------------------------------------------------------------------
+prompt Estado del Backup de RMAN:
+ 
+SELECT TO_CHAR (start_time, 'DD-MON-YY HH24:MI') "BACKUP STARTED", sofar,
+	totalwork, elapsed_seconds / 60 "ELAPSE (Min)",
+	ROUND (sofar / totalwork * 100, 2) "Complete%"
+FROM SYS.v_$session_longops
+WHERE compnam = 'dbms_backup_restore'
+/

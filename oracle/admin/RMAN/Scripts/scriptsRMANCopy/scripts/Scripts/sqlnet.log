@@ -1,0 +1,114 @@
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 11-NOV-2009 17:05:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 14-NOV-2009 18:05:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 17-NOV-2009 19:05:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 20-NOV-2009 20:05:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 23-NOV-2009 21:05:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclecm)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=cm)(CID=(PROGRAM=C:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=SRV-MELIA-CM3)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 25-NOV-2009 16:05:04
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:error del adaptador de protocolo
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Error del adaptador de protocolo
+    nt secondary err code: 2
+    nt OS err code: 0

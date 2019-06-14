@@ -1,0 +1,13 @@
+run {	
+     backup incremental level = 1 database format 'D:\oracle\DBA\RMAN\CM%u_%d_%s_%t_incremental.rman';}
+run {	
+     # Validando los logs archivados ...	
+     change archivelog all validate;	
+     crosscheck backup;	
+     report obsolete;
+     delete noprompt obsolete;	
+     sql 'alter system archive log current';	
+     # Archivos que necesitan Backup:	
+     report need backup;	
+    }	
+exit	

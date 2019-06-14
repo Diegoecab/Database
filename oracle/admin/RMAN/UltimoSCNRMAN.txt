@@ -1,0 +1,5 @@
+RMAN> list backup of archivelog all;
+
+del cual tomo el último BS_Key habilitado antes de ejecutar el
+
+RMAN> list backupset nnn;

@@ -1,0 +1,1 @@
+xcopy /D \\192.168.200.5\g$\cm\ARCHIVES\* c:\cm\ARCHIVES\ >>c:\cm\scripts\logs\copia_archives.log

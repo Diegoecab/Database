@@ -1,0 +1,128 @@
+
+Recovery Manager : Release 10.2.0.4.0 - Production on Dom Nov 22 03:24:42 2009
+
+Copyright (c) 1982, 2007, Oracle.  All rights reserved.
+
+conectado a la base de datos destino: CM (DBID=578583834)
+
+RMAN> copy datafile 'G:\CM\SYSTEM\SYSTEM01.ORA' to 'G:\CMCopy\SYSTEM01.ORA';
+2> copy datafile 'G:\CM\UNDO\UNDOTBS01.ORA' to 'G:\CMCopy\UNDOTBS01.ORA';
+3> copy datafile 'G:\CM\SYSAUX\SYSAUX01.DBF' to 'G:\CMCopy\SYSAUX01.DBF';
+4> copy datafile 'G:\CM\DADOS\DADOS01.ORA' to 'G:\CMCopy\DADOS01.ORA';
+5> copy datafile 'G:\CM\SYSAUX\STATSPACK02.ORA' to 'G:\CMCopy\STATSPACK02.ORA';
+6> copy datafile 'G:\CM\DADOS\DADOS02.ORA' to 'G:\CMCopy\DADOS02.ORA';
+7> copy datafile 'G:\CM\SYSAUX\STATSPACK01.ORA' to 'G:\CMCopy\STATSPACK01.ORA';
+8> copy datafile 'G:\CM\INDICES\INDX1601.ORA' to 'G:\CMCopy\INDX1601.ORA';
+9> copy datafile 'G:\CM\INDICES\INDX1602.ORA' to 'G:\CMCopy\INDX1602.ORA';
+10> exit
+Iniciando backup en 22-NOV-09
+se utiliza el archivo de control de la base de datos destino en lugar del catálogo de recuperación
+canal asignado: ORA_DISK_1
+canal ORA_DISK_1: sid=992 devtype=DISK
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00001 nombre=G:\CM\SYSTEM\SYSTEM01.ORA
+nombre de archivo de salida=G:\CMCOPY\SYSTEM01.ORA etiqueta=TAG20091122T032444 recid=60 marca=703567499
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:25
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-02 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00002 nombre=G:\CM\UNDO\UNDOTBS01.ORA
+nombre de archivo de salida=G:\CMCOPY\UNDOTBS01.ORA etiqueta=TAG20091122T032512 recid=61 marca=703567518
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:07
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-03 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00003 nombre=G:\CM\SYSAUX\SYSAUX01.DBF
+nombre de archivo de salida=G:\CMCOPY\SYSAUX01.DBF etiqueta=TAG20091122T032522 recid=62 marca=703567553
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:35
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-04 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00004 nombre=G:\CM\DADOS\DADOS01.ORA
+nombre de archivo de salida=G:\CMCOPY\DADOS01.ORA etiqueta=TAG20091122T032600 recid=63 marca=703567601
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:45
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-05 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00005 nombre=G:\CM\SYSAUX\STATSPACK02.ORA
+nombre de archivo de salida=G:\CMCOPY\STATSPACK02.ORA etiqueta=TAG20091122T032649 recid=64 marca=703567647
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:45
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-06 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00006 nombre=G:\CM\DADOS\DADOS02.ORA
+nombre de archivo de salida=G:\CMCOPY\DADOS02.ORA etiqueta=TAG20091122T032737 recid=65 marca=703567673
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:25
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-07 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00008 nombre=G:\CM\SYSAUX\STATSPACK01.ORA
+nombre de archivo de salida=G:\CMCOPY\STATSPACK01.ORA etiqueta=TAG20091122T032805 recid=66 marca=703567727
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:45
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-08 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00009 nombre=G:\CM\INDICES\INDX1601.ORA
+nombre de archivo de salida=G:\CMCOPY\INDX1601.ORA etiqueta=TAG20091122T032853 recid=67 marca=703567761
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:35
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-09 comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Iniciando backup en 22-NOV-09
+usando el canal ORA_DISK_1
+canal ORA_DISK_1: iniciando copia de archivo de datos
+archivo de datos de entrada fno=00010 nombre=G:\CM\INDICES\INDX1602.ORA
+nombre de archivo de salida=G:\CMCOPY\INDX1602.ORA etiqueta=TAG20091122T032931 recid=68 marca=703567778
+canal ORA_DISK_1: copia de archivo de datos terminada, tiempo transcurrido: 00:00:07
+backup terminado en 22-NOV-09
+
+Iniciando Control File and SPFILE Autobackup en 22-NOV-09
+manejador de parte=C:\BACKUPCM\RMAN\CMCONTROLFILEC-578583834-20091122-0A comentario=NONE
+Control File and SPFILE Autobackup terminado en 22-NOV-09
+
+Recovery Manager terminado.

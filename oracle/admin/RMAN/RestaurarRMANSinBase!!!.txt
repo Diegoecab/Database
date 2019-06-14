@@ -1,0 +1,61 @@
+export ORACLE_SID=DBA
+vi /etc/oratab
+DBA:/opt/oracle/product/10gR2:Y
+Copiar PFILE de Original y modificarlo
+orapwd file=/opt/oracle/product/10gR2/dbs/ORAPWDDBA.ora password=dba entries=10;
+Copio Aplico Parche
+Copio los archivos Bakcups de RMAN
+mv INITdba.ora /opt/oracle/product/10gR2/dbs/
+startup nomount force;
+RMAN> set DBID=1125614828;
+RESTORE CONTROLFILE FROM '/home/oracle/RMAN/CMCONTROLFILEC-1125614828-20081219-01';
+(El controlFile lo restaura bien porq lo restaura al directorio q se especifica en el INITBase.ora)
+alter database mount;
+CATALOG START WITH '/home/oracle/RMAN';
+
+run
+{
+set newname for datafile 	1	to	'/opt/oracle/oradata/DBA/SYSTEM01.DBF'	;
+set newname for datafile 	2	to	'/opt/oracle/oradata/DBA/UNDOTBS01.DBF'	;
+set newname for datafile 	3	to	'/opt/oracle/oradata/DBA/SYSAUX01.DBF'	;
+set newname for datafile 	4	to	'/opt/oracle/oradata/DBA/USERS01.DBF'	;
+set newname for datafile 	5	to	'/opt/oracle/oradata/DBA/EXAMPLE01.DBF'	;
+set newname for datafile 	6	to	'/opt/oracle/oradata/DBA/DBA01.DBF'	;
+set newname for datafile 	7	to	'/opt/oracle/oradata/DBA/DBA_LOBS01.DBF'	;
+set newname for datafile 	8	to	'/opt/oracle/oradata/DBA/DBA_LOBS02.DBF'	;
+set newname for datafile 	9	to	'/opt/oracle/oradata/DBA/DBA_LOBS03.DBF'	;
+set newname for datafile 	10	to	'/opt/oracle/oradata/DBA/DBA_LOBS04.DBF'	;
+set newname for datafile 	11	to	'/opt/oracle/oradata/DBA/STATSPACK01.DBF'	;
+set newname for datafile 	12	to	'/opt/oracle/oradata/DBA/STATSPACK02.DBF'	;
+set newname for datafile 	13	to	'/opt/oracle/oradata/DBA/STATSPACK03.DBF'	;
+set newname for datafile 	14	to	'/opt/oracle/oradata/DBA/HTMLDB01.DBF'	;
+set newname for datafile 	15	to	'/opt/oracle/oradata/DBA/HTMLDB02.DBF'	;
+set newname for datafile 	16	to	'/opt/oracle/oradata/DBA/HTMLDB03.DBF'	;
+set newname for datafile 	17	to	'/opt/oracle/oradata/DBA/DBA02.DBF'	;
+set newname for datafile 	18	to	'/opt/oracle/oradata/DBA/DBA03.DBF'	;
+set newname for datafile 	19	to	'/opt/oracle/oradata/DBA/DBA04.DBF'	;
+set newname for datafile 	20	to	'/opt/oracle/oradata/DBA/DBA05.DBF'	;
+set newname for datafile 	21	to	'/opt/oracle/oradata/DBA/DBA06.DBF'	;
+set newname for datafile 	22	to	'/opt/oracle/oradata/DBA/DBA07.DBF'	;
+set newname for datafile 	23	to	'/opt/oracle/oradata/DBA/DBA08.DBF'	;
+set newname for datafile 	24	to	'/opt/oracle/oradata/DBA/DBA09.DBF'	;
+set newname for datafile 	25	to	'/opt/oracle/oradata/DBA/DBA10.DBF'	;
+set newname for datafile 	26	to	'/opt/oracle/oradata/DBA/DBA11.DBF'	;
+set newname for datafile 	27	to	'/opt/oracle/oradata/DBA/DBA12.DBF'	;
+set newname for datafile 	28	to	'/opt/oracle/oradata/DBA/DBA13.DBF'	;
+set newname for datafile 	29	to	'/opt/oracle/oradata/DBA/DBA14.DBF'	;
+set newname for datafile 	30	to	'/opt/oracle/oradata/DBA/APEX02.DBF'	;
+set newname for datafile 	31	to	'/opt/oracle/oradata/DBA/APEX01.DBF'	;
+set newname for datafile 	32	to	'/opt/oracle/oradata/DBA/SYSTEM02.DBF'	;
+set newname for tempfile 	1	to	'/opt/oracle/oradata/DBA/TEMP01.DBF'	;
+RESTORE DATABASE;
+}
+sqlplus
+alter database backup controlfile to trace as '/home/oracle/controltrace.ctl';
+
+Modificar trace controlfile
+
+shutdown immediate
+
+sqlplus / as sysdba @/home/oracle/controltrace.ctl
+

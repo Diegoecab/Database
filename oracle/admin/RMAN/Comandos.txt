@@ -1,0 +1,1 @@
+SWITCH DATAFILE ALL;   # update control file with new filenames

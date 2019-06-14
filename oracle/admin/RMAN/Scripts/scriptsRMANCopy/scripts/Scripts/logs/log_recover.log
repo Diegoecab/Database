@@ -1,0 +1,53 @@
+ORA-00279: el cambio 170727966 generado en 11/11/2009 12:46:51 es necesario 
+para el thread 1 
+ORA-00289: sugerencia: C:\CM\ARCHIVES\ARC22243_0660753626.001 
+ORA-00280: el cambio 170727966 para el thread 1 está en la secuencia número 
+22243 
+
+
+ORA-00279: el cambio 170732989 generado en 11/11/2009 13:16:51 es necesario 
+para el thread 1 
+ORA-00289: sugerencia: C:\CM\ARCHIVES\ARC22244_0660753626.001 
+ORA-00280: el cambio 170732989 para el thread 1 está en la secuencia número 
+22244 
+ORA-00278: el archivo log 'C:\CM\ARCHIVES\ARC22243_0660753626.001' ya no es 
+necesario para esta recuperación 
+
+
+ORA-00279: el cambio 170736546 generado en 11/11/2009 13:46:51 es necesario 
+para el thread 1 
+ORA-00289: sugerencia: C:\CM\ARCHIVES\ARC22245_0660753626.001 
+ORA-00280: el cambio 170736546 para el thread 1 está en la secuencia número 
+22245 
+ORA-00278: el archivo log 'C:\CM\ARCHIVES\ARC22244_0660753626.001' ya no es 
+necesario para esta recuperación 
+
+
+ORA-00279: el cambio 170740495 generado en 11/11/2009 14:16:51 es necesario 
+para el thread 1 
+ORA-00289: sugerencia: C:\CM\ARCHIVES\ARC22246_0660753626.001 
+ORA-00280: el cambio 170740495 para el thread 1 está en la secuencia número 
+22246 
+ORA-00278: el archivo log 'C:\CM\ARCHIVES\ARC22245_0660753626.001' ya no es 
+necesario para esta recuperación 
+
+
+ORA-00279: el cambio 170745238 generado en 11/11/2009 14:46:51 es necesario 
+para el thread 1 
+ORA-00289: sugerencia: C:\CM\ARCHIVES\ARC22247_0660753626.001 
+ORA-00280: el cambio 170745238 para el thread 1 está en la secuencia número 
+22247 
+ORA-00278: el archivo log 'C:\CM\ARCHIVES\ARC22246_0660753626.001' ya no es 
+necesario para esta recuperación 
+
+
+ORA-00308: no se puede abrir el archive log 
+'C:\CM\ARCHIVES\ARC22247_0660753626.001' 
+ORA-27041: no se ha podido abrir el archivo 
+OSD-04002: no se ha podido abrir el archivo 
+O/S-Error: (OS 2) El sistema no puede hallar el archivo especificado. 
+
+
+
+Base de datos modificada.
+

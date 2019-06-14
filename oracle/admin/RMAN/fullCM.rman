@@ -1,0 +1,22 @@
+run {
+     CONFIGURE CONTROLFILE AUTOBACKUP OFF; 
+     sql 'alter system archive log current';	
+#   CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE TYPE DISK TO 'D:\oracle\DBA\RMAN\CMControlFile%F';
+     backup as compressed backupset incremental level=0 database TAG=Back_full include current controlfile format 'D:\oracle\DBA\RMAN\CM%u_%d_%s_%t_full.rman';}
+#   backup current controlfile format='D:\oracle\DBA\RMAN\CONTROLFILE%f.rman';}
+run {	
+     crosscheck backup;
+     crosscheck archivelog all;	
+     # Validando los logs archivados ...	
+     change archivelog all validate;	
+     # Elimino backups expirados / obsoletos	
+     report obsolete;
+     delete noprompt obsolete;	
+     delete noprompt expired backup;
+     #Backup de Archives
+     sql 'alter system archive log current';	
+     backup archivelog all delete input TAG=archivelogs format 'D:\oracle\DBA\RMAN\DBA_%e_ARCHIVES.rman';
+     # Archivos que necesitan Backup:	
+     report need backup;
+    }
+exit

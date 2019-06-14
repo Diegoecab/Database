@@ -1,0 +1,13 @@
+Una vez que tengo el backup con rman y el scn de antes de realizar el backup de los archives:
+Hay que eliminar todo de flash recovery area
+
+startup nomount force
+set DBID=1125614828
+restore controlfile from 'd:\oracle\dba\rman\control0.rman';
+alter database mount;
+catalog start with 'd:\oracle\dba\rman' noprompt;
+run {
+set until scn 32633883;
+restore database;
+recover database;
+alter database open resetlogs;}
