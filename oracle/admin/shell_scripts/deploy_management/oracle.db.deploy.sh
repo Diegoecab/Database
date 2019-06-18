@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/bash
 #################################################################################
 # AUTHOR : DIEGO E CABRERA                                                      #
 # CREATED: 14/06/2019                                                           #
@@ -48,8 +48,8 @@ fn_file_management()
 # PARAMETERS: $1: package name.gz
   
 if [ ${#} -lt 1  ]; then
- echo "Not enough parameters"
- return 1;
+ fn_log "fn_file_management" "1" "Not enough parameters";
+exit 1
 fi;
 
 typeset ZIPPED_FILE="${1}";
@@ -103,6 +103,28 @@ fn_log()
  typeset ERR_NUM="${2}";
  typeset LOG_STR="${3}";
  typeset MSG_LOG="${anio}/${mes}/${dia} ${hora} (${FUN_NAME}) Error Code: (${ERR_NUM}): ${LOG_STR}"
+
+if ! [ -d ${LOG_DIR} ]
+then
+mkdir -p $LOG_DIR
+if [ $? > 0 ]; then
+ date
+echo "Unable to create the logfile directory $LOG_DIR. Execution Aborted." | tee /dev/fd/3
+exit 1;
+ fi
+fi
+
+
+if ! [ -x ${LOGFILE} ]
+then
+touch ${LOGFILE} 
+ if [ $? > 0 ]; then
+ date
+ echo "Unable to create the logfile $LOGFILE. Execution Aborted." | tee /dev/fd/3
+ exit 1;
+ fi
+fi
+
  perl -e '
 
   use Time::Local;
@@ -111,73 +133,73 @@ fn_log()
   $logfile = $ARGV[0];
 
 
-  open(LOGFH, ">>$logfile") || die "Opening $logfile: $!";
+  open(LOGFH, ">>$logfile") || die "Error trying to Open $logfile: $!";
   print LOGFH "$str_line\n";
   close(LOGFH);
 
   ' "${LOGFILE}" "${MSG_LOG}"
-
+echo "${MSG_LOG}" 1>&3
  return 0;
 }
 
 #################################################################################
 #                                     Main                                      #
 #################################################################################
-
-(
 PROGRAM=${0}
 PARAMETERS=${*}
 if [ ${#} -lt 1  ]; then
      echo "Not enough parameters."
-	 echo "USAGE  : . oracle.db.deploy.sh <package_name>.gz"
-     return 1;
+     echo "USAGE  : . oracle.db.deploy.sh <package_name>.gz"
+     exit 1;
 fi;
 APPL_PATH=/oracle/scripts/
 APPL_LOG=$APPL_PATH/logs
-APPL_CFG_DIR=$APPL_PATH/cfg
-SCRIPT_NAME=`basename ${PROGRAM} | sed s/".sh"/""/g`               						# Define script name removing it's extension
-DEFAULT_ERROR_LOG=${APPL_LOG}/${SCRIPT_NAME}.err                         				# Define standart error log for this script
-DEFAULT_LOG=${APPL_LOG}/${SCRIPT_NAME}.log                         				# Define standart output log for this script
+APPL_CFG_DIR=$APPL_PATH
+SCRIPT_NAME=`basename ${PROGRAM} | sed s/".sh"/""/g`                                                            # Define script name removing it's extension
+DEFAULT_ERROR_LOG=${APPL_LOG}/${SCRIPT_NAME}.err                                                        # Define standart error log for this script
+DEFAULT_LOG=${APPL_LOG}/${SCRIPT_NAME}.log                                                      # Define standart output log for this script
+PACKAGE_NAME=${1}
 
-cfg_file=${APPL_CFG_DIR}/oracle.db.deploy.cfg                           	# Load config variables
+cfg_file=${APPL_CFG_DIR}/${SCRIPT_NAME}.cfg                                   # Load config variables
+
+exec 3>&1 1>>${DEFAULT_ERROR_LOG} 2>&1
+
 if [ -x ${cfg_file} ]
 then
         . ${cfg_file}
 else
-	(
-	echo "The Configuration file was not found. Execution Aborted."
-	) >> ${DEFAULT_ERROR_LOG} 2>&1
-	exit 1;
+date 
+echo "The Configuration file ${cfg_file} was not found. Execution Aborted." | tee /dev/fd/3
+exit 1;
 fi
 
+#(
 ################################################################################ 
 #                            Core Application	                               #
 ################################################################################
 
 fn_log "main" "0" "Begin Script"
-fn_file_management()
+fn_log "main" "0" "General logfile is ${DEFAULT_ERROR_LOG}"
+fn_file_management $PACKAGE_NAME
+#for VERSIONID_FOLDER in "${VERSIONS_TB_IMPLEMENTED[@]}"; do
+if ! [ "$VERSIONID_FOLDER" ]; then
+fn_log "main" "1" "No folder was specified"
+else
+fn_log "main" "0" "Starting backup before apply the version $VERSIONID"
+LOG_DIR=$LOG_DIR/$VERSIONID
+LOGFILE=${LOG_DIR}/oracle.db.deploy.$DT.log
+fi
 
-select VERSIONID_FOLDER in "${VERSIONS_TB_IMPLEMENTED[@]}"
-do
-    if ! [ "$VERSIONID_FOLDER" ]
-    then
-        echo "No folder was specified"
-        continue
-    else
-    	echo "Starting backup before apply the version $VERSIONID"
-   		LOG_DIR=$LOG_DIR/$VERSIONID
-		LOGFILE=${LOG_DIR}/oracle.db.deploy.$DT.log
-		fn_backup()
-		fn_deploy()
-		fn_notification()
-	fi
-    break
-done
+fn_log "main" "0" "Logfile for this execution: $LOGFILE"
+#fn_backup()
+#fn_deploy()
+#fn_notification()
+#done
 
 
 fn_log "main" "0" "End Script"
 
 ################################################################################
-) 2>> ${DEFAULT_ERROR_LOG}
+#) 2>> ${DEFAULT_ERROR_LOG}
 
 
