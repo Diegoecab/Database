@@ -44,6 +44,7 @@ select df.file_id
 ,	df.autoextensible auto
 ,increment_by
 ,	df.maxbytes/1024/1024 maxsize,
+vdf.status,
 vdf.creation_time
 from   dba_data_files        df
 ,	    v$datafile			  vdf

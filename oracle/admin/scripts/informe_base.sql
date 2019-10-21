@@ -14,7 +14,7 @@ btitle          off
 
 alter session set nls_date_format = 'DD-MON-YYYY HH24:MI:SS';
 
-spool c:\Informe_base.htm
+spool C:\dc\Informe_base.htm
 set define off
 
 prompt <HTML>
@@ -22,7 +22,7 @@ prompt <HEAD>
 prompt <META HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT">
 prompt <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 prompt </HEAD>
-prompt <BODY BGCOLOR="#C0C0C0">
+prompt <BODY>
 prompt <CENTER><FONT FACE="Arial" SIZE="1">
 prompt <TABLE WIDTH="100%">
 prompt <TR>

@@ -1,0 +1,1 @@
+crsctl config crs

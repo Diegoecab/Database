@@ -1,0 +1,188 @@
+management domain: exadbadm01
+user domain: exaadm01vm03.sop.datastar.com.ar
+
+
+
+
+#Siguientes pasos basados en doc https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmmn/managing-oracle-vm-domains.html#GUID-FFB55661-9EFE-4EC2-94D4-930CD6BE283A
+#Tengo que crear un nuevo FS para el soft de oracle db 18g
+
+#En management domain
+qemu-img create /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/db18.0.0.0.img 50G
+
+
+#In the user domain, determine an available disk name. 
+#lsblk -id
+
+[root@exaadm01vm03 ~]# lsblk -id
+NAME MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda    8:0    0  128M  0 disk
+sdb    8:16   0  128M  0 disk
+sdc    8:32   0  128M  0 disk
+sdd    8:48   0  128M  0 disk
+sde    8:64   0  128M  0 disk
+sdf    8:80   0  128M  0 disk
+sdg    8:96   0  128M  0 disk
+sdh    8:112  0  128M  0 disk
+xvda 202:0    0   25G  0 disk
+xvdb 202:16   0   50G  0 disk /u01/app/18.0.0.0/grid
+xvdc 202:32   0   50G  0 disk /u01/app/oracle/product/12.2.0.1/dbhome_1
+xvdd 202:48   0   62G  0 disk
+
+
+#In the management domain, attach the new disk image to the user domain in read/write mode. In the following example, the new disk image is presented in the user domain as device /dev/xvde.
+xm block-attach exaadm01vm03.sop.datastar.com.ar \
+file:/EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/db18.0.0.0.img /dev/xvde w
+
+
+
+[root@exaadm01vm03 ~]# lsblk -id
+NAME MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda    8:0    0  128M  0 disk
+sdb    8:16   0  128M  0 disk
+sdc    8:32   0  128M  0 disk
+sdd    8:48   0  128M  0 disk
+sde    8:64   0  128M  0 disk
+sdf    8:80   0  128M  0 disk
+sdg    8:96   0  128M  0 disk
+sdh    8:112  0  128M  0 disk
+xvda 202:0    0   25G  0 disk
+xvdb 202:16   0   50G  0 disk /u01/app/18.0.0.0/grid
+xvdc 202:32   0   50G  0 disk /u01/app/oracle/product/12.2.0.1/dbhome_1
+xvdd 202:48   0   62G  0 disk
+xvde 202:64   0   50G  0 disk
+[root@exaadm01vm03 ~]#
+
+
+
+
+In the user domain, partition the new disk device. In the following example, disk device /dev/xvde is partitioned.
+# parted /dev/xvde mklabel gpt
+# parted -s /dev/xvde mkpart primary 0 100%
+# parted -s /dev/xvde set 1 lvm on
+
+[root@exaadm01vm03 ~]# parted /dev/xvde mklabel gpt
+Information: You may need to update /etc/fstab.
+
+[root@exaadm01vm03 ~]# parted -s /dev/xvde mkpart primary 0 100%
+Warning: The resulting partition is not properly aligned for best performance.
+[root@exaadm01vm03 ~]# parted -s /dev/xvde set 1 lvm on
+
+
+In the user domain, create an LVM physical volume on the new disk partition. In the following example, an LVM physical volume is created on disk partition /dev/xvde1.
+# pvcreate /dev/xvde1
+
+[root@exaadm01vm03 ~]# pvcreate /dev/xvde1
+  Physical volume "/dev/xvde1" successfully created
+[root@exaadm01vm03 ~]#
+
+
+In the user domain, extend the volume group and verify the additional space in the volume group. In the following example, disk name xvde is now available in the user domain.
+# vgextend VGExaDb /dev/xvde1
+# vgdisplay -s
+
+[root@exaadm01vm03 ~]# vgdisplay
+  --- Volume group ---
+  VG Name               VGExaDb
+  System ID
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  9
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                6
+  Open LV               4
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               86.49 GiB
+  PE Size               4.00 MiB
+  Total PE              22142
+  Alloc PE / Size       21792 / 85.12 GiB
+  Free  PE / Size       350 / 1.37 GiB
+  VG UUID               CAyAQi-ryeP-9ivN-kXP3-eIer-X9BS-OkHqLK
+
+[root@exaadm01vm03 ~]# vgextend VGExaDb /dev/xvde1
+  Volume group "VGExaDb" successfully extended
+[root@exaadm01vm03 ~]# vgdisplay -s
+  "VGExaDb" 136.49 GiB [85.12 GiB used / 51.36 GiB free]
+[root@exaadm01vm03 ~]#
+
+
+In the management domain, make a backup of the user domain configuration file vm.cfg.
+# cp /EXAVMIMAGES/GuestImages/DomainName/vm.cfg   \
+     /EXAVMIMAGES/GuestImages/DomainName/vm.cfg.backup
+
+cp /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/vm.cfg \
+/EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/vm.250919.cfg
+
+
+
+In the management domain, obtain the UUID of the user domain using the following command:
+# grep ^uuid /EXAVMIMAGES/GuestImages/DomainName/vm.cfg
+grep ^uuid /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/vm.cfg
+
+[root@exadbadm01 exaadm01vm03.sop.datastar.com.ar]# grep ^uuid /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/vm.cfg
+uuid = 'b84463bfcc6e4c0f9d0aab2f00e51016'
+[root@exadbadm01 exaadm01vm03.sop.datastar.com.ar]#
+
+
+In the management domain, generate a UUID for the new disk image using the following command:
+# uuidgen | tr -d '-'
+
+[root@exadbadm01 exaadm01vm03.sop.datastar.com.ar]# uuidgen | tr -d '-'
+b756e510fac64f9b92a37b58d0695625
+[root@exadbadm01 exaadm01vm03.sop.datastar.com.ar]#
+
+
+In the management domain, create a symbolic link from /OVS/Repositories to the new disk image using the following command:
+# ln -s /EXAVMIMAGES/GuestImages/DomainName/newDiskImage.img    \
+ /OVS/Repositories/user_domain_uuid/VirtualDisks/new_disk_uuid.img
+
+# ln -s /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/db18.0.0.0.img    \
+ /OVS/Repositories/b84463bfcc6e4c0f9d0aab2f00e51016/VirtualDisks/b756e510fac64f9b92a37b58d0695625.img
+
+
+In the management domain, append an entry for the new disk to the disk parameter in the user domain configuration file vm.cfg. This makes the new disk image attach automatically to the user domain during the next startup. The new entry matches the following format:
+'file:/OVS/Repositories/user_domain_uuid/VirtualDisks/new_disk_uuid.img,disk_device,w'
+
+
+
+'file:/OVS/Repositories/b84463bfcc6e4c0f9d0aab2f00e51016/VirtualDisks/b756e510fac64f9b92a37b58d0695625.img,xvde,w'
+
+
+
+
+/u01/app/oracle/product/18.0.0.0/dbhome_1
+
+
+xm destroy exaadm01vm03.sop.datastar.com.ar
+
+
+xm create /EXAVMIMAGES/GuestImages/exaadm01vm03.sop.datastar.com.ar/vm.cfg
+
+
+
+/sbin/mkfs -t ext4 /dev/xvde1
+
+ mount /dev/xvde1 /u01/app/oracle/product/18.0.0.0/dbhome_1
+
+
+
+
+
+[root@exaadm01vm03 ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/VGExaDb-LVDbSys1
+                       24G   17G  5.7G  75% /
+tmpfs                  16G  724M   15G   5% /dev/shm
+/dev/xvda1            488M   32M  431M   7% /boot
+/dev/mapper/VGExaDb-LVDbOra1
+                       20G   16G  3.3G  83% /u01
+/dev/xvdb              50G   14G   34G  29% /u01/app/18.0.0.0/grid
+/dev/xvdc              50G   16G   32G  33% /u01/app/oracle/product/12.2.0.1/dbhome_1
+/dev/xvde1             50G   14G   34G  29% /u01/app/oracle/product/18.0.0.0/dbhome_1
+[root@exaadm01vm03 ~]#
+
+

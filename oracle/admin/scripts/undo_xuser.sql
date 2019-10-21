@@ -23,6 +23,7 @@ col username for a20
 col program for a40
 col name for a30
 col osuser for a15
+col sid for 99999999
 
 SELECT c.username, a.sid, c.program, b.name , a.value 
 FROM V$SESSTAT a, v$statname b, v$session c 

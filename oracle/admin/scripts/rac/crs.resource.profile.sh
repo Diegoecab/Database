@@ -1,0 +1,1 @@
+crsctl stat res ora.net1.network -p

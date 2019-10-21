@@ -1,1 +1,1 @@
-@print_table "select * from v$instance"
+@v$instance

@@ -13,6 +13,7 @@ clear col
 
 col end_interval_time for a25
 col sql_profile for a25
+col sql_text for a900
 
 accept sqlid prompt 'Enter value for sqlid: '
 accept sqltext prompt 'Enter value for sqltext: '
@@ -57,7 +58,7 @@ order by   stat.snap_id
 
 prompt group by day
 
-select to_date(to_char(ss.end_interval_time,'dd/mm/yyyy'),'dd/mm/yyyy'), count(*)
+select trunc(end_interval_time),stat.sql_id, max(EXECUTIONS_TOTAL), count(*)
     from   dba_hist_sqlstat stat, dba_hist_sqltext txt, dba_hist_snapshot ss
    where       stat.sql_id = txt.sql_id
            and stat.dbid = txt.dbid
@@ -67,10 +68,9 @@ select to_date(to_char(ss.end_interval_time,'dd/mm/yyyy'),'dd/mm/yyyy'), count(*
            and stat.snap_id = ss.snap_id
            and stat.dbid = (select dbid from v$database)
            and stat.instance_number = (select instance_number from v$instance)
-           and upper (stat.sql_id) = upper('%&sqlid%')
+           and upper (stat.sql_id) like upper('%&sqlid%')
 		   and upper (txt.sql_text) like upper ('%&sqltext%')
 		   and parsing_schema_name like upper ('%&parsing_schema_name%')
-	group by
-	to_date(to_char(ss.end_interval_time,'dd/mm/yyyy'),'dd/mm/yyyy')
-	order by  1 desc
+	group by trunc(end_interval_time), stat.sql_id
+	order by  1
 	/

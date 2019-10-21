@@ -25,7 +25,7 @@ col module for a80
 col username for a21
 
 
-set lines 400
+set lines 900
 set verify off
 
 break on report

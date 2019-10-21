@@ -1,0 +1,124 @@
+Disk Group            Sector   Block   Allocation
+Name                    Size    Size    Unit Size State       Type   Total Size (MB) Used Size (MB) Pct. Used
+-------------------- ------- ------- ------------ ----------- ------ --------------- -------------- ---------
+DATAC1                   512   4,096    4,194,304 MOUNTED     HIGH        12,976,384     10,286,024     79.27
+DBFSC1                   512   4,096    4,194,304 MOUNTED     NORMAL       2,064,384            848       .04
+RECOC1                   512   4,096    4,194,304 MOUNTED     NORMAL      21,233,664     11,003,860     51.82
+                                                                     --------------- --------------
+Grand Total:                                                              36,274,432     21,290,732
+
+CellCLI> list celldisk attributes name,freespace
+         CD_00_exa01celadm01     2.71783447265625T
+         CD_01_exa01celadm01     2.71783447265625T
+         CD_02_exa01celadm01     2.7508392333984375T
+         CD_03_exa01celadm01     2.7508392333984375T
+         CD_04_exa01celadm01     2.7508392333984375T
+         CD_05_exa01celadm01     2.7508392333984375T
+         CD_06_exa01celadm01     2.7508392333984375T
+         CD_07_exa01celadm01     2.7508392333984375T
+         CD_08_exa01celadm01     2.7508392333984375T
+         CD_09_exa01celadm01     2.7508392333984375T
+         CD_10_exa01celadm01     2.7508392333984375T
+         CD_11_exa01celadm01     2.7508392333984375T
+         FD_00_exa01celadm01     128M
+         FD_01_exa01celadm01     128M
+         FD_02_exa01celadm01     128M
+         FD_03_exa01celadm01     128M
+
+CellCLI> list griddisk attributes name,size where name like 'DATAC1.*'
+         DATAC1_CD_00_exa01celadm01      352G
+         DATAC1_CD_01_exa01celadm01      352G
+         DATAC1_CD_02_exa01celadm01      352G
+         DATAC1_CD_03_exa01celadm01      352G
+         DATAC1_CD_04_exa01celadm01      352G
+         DATAC1_CD_05_exa01celadm01      352G
+         DATAC1_CD_06_exa01celadm01      352G
+         DATAC1_CD_07_exa01celadm01      352G
+         DATAC1_CD_08_exa01celadm01      352G
+         DATAC1_CD_09_exa01celadm01      352G
+         DATAC1_CD_10_exa01celadm01      352G
+         DATAC1_CD_11_exa01celadm01      352G
+
+
+cellcli -e alter griddisk DATAC1_CD_00_exa01celadm01 \
+,DATAC1_CD_01_exa01celadm01 \
+,DATAC1_CD_02_exa01celadm01 \
+,DATAC1_CD_03_exa01celadm01 \
+,DATAC1_CD_04_exa01celadm01 \
+,DATAC1_CD_05_exa01celadm01 \
+,DATAC1_CD_06_exa01celadm01 \
+,DATAC1_CD_07_exa01celadm01 \
+,DATAC1_CD_08_exa01celadm01 \
+,DATAC1_CD_09_exa01celadm01 \
+,DATAC1_CD_10_exa01celadm01 \
+,DATAC1_CD_11_exa01celadm01 \
+size=400G;
+
+CellCLI> list griddisk attributes name,size where name like 'DATAC1.*'
+         DATAC1_CD_00_exa01celadm02      352G
+         DATAC1_CD_01_exa01celadm02      352G
+         DATAC1_CD_02_exa01celadm02      352G
+         DATAC1_CD_03_exa01celadm02      352G
+         DATAC1_CD_04_exa01celadm02      352G
+         DATAC1_CD_05_exa01celadm02      352G
+         DATAC1_CD_06_exa01celadm02      352G
+         DATAC1_CD_07_exa01celadm02      352G
+         DATAC1_CD_08_exa01celadm02      352G
+         DATAC1_CD_09_exa01celadm02      352G
+         DATAC1_CD_10_exa01celadm02      352G
+         DATAC1_CD_11_exa01celadm02      352G
+
+cellcli -e alter griddisk DATAC1_CD_00_exa01celadm02 \
+,DATAC1_CD_01_exa01celadm02 \
+,DATAC1_CD_02_exa01celadm02 \
+,DATAC1_CD_03_exa01celadm02 \
+,DATAC1_CD_04_exa01celadm02 \
+,DATAC1_CD_05_exa01celadm02 \
+,DATAC1_CD_06_exa01celadm02 \
+,DATAC1_CD_07_exa01celadm02 \
+,DATAC1_CD_08_exa01celadm02 \
+,DATAC1_CD_09_exa01celadm02 \
+,DATAC1_CD_10_exa01celadm02 \
+,DATAC1_CD_11_exa01celadm02 \
+size=400G;
+
+CellCLI> list griddisk attributes name,size where name like 'DATAC1.*'
+         DATAC1_CD_00_exa01celadm03      352G
+         DATAC1_CD_01_exa01celadm03      352G
+         DATAC1_CD_02_exa01celadm03      352G
+         DATAC1_CD_03_exa01celadm03      352G
+         DATAC1_CD_04_exa01celadm03      352G
+         DATAC1_CD_05_exa01celadm03      352G
+         DATAC1_CD_06_exa01celadm03      352G
+         DATAC1_CD_07_exa01celadm03      352G
+         DATAC1_CD_08_exa01celadm03      352G
+         DATAC1_CD_09_exa01celadm03      352G
+         DATAC1_CD_10_exa01celadm03      352G
+         DATAC1_CD_11_exa01celadm03      352G
+
+cellcli -e alter griddisk DATAC1_CD_00_exa01celadm03 \
+,DATAC1_CD_01_exa01celadm03 \
+,DATAC1_CD_02_exa01celadm03 \
+,DATAC1_CD_03_exa01celadm03 \
+,DATAC1_CD_04_exa01celadm03 \
+,DATAC1_CD_05_exa01celadm03 \
+,DATAC1_CD_06_exa01celadm03 \
+,DATAC1_CD_07_exa01celadm03 \
+,DATAC1_CD_08_exa01celadm03 \
+,DATAC1_CD_09_exa01celadm03 \
+,DATAC1_CD_10_exa01celadm03 \
+,DATAC1_CD_11_exa01celadm03 \
+size=400G;
+
+SQL> ALTER DISKGROUP DATAC1 RESIZE DISKS IN FAILGROUP EXA01CELADM01, EXA01CELADM02, EXA01CELADM03 REBALANCE POWER 64;
+
+Diskgroup altered.
+
+Disk Group            Sector   Block   Allocation
+Name                    Size    Size    Unit Size State       Type   Total Size (MB) Used Size (MB) Pct. Used
+-------------------- ------- ------- ------------ ----------- ------ --------------- -------------- ---------
+DATAC1                   512   4,096    4,194,304 MOUNTED     HIGH        14,745,856     10,286,024     69.76
+DBFSC1                   512   4,096    4,194,304 MOUNTED     NORMAL       2,064,384            848       .04
+RECOC1                   512   4,096    4,194,304 MOUNTED     NORMAL      21,233,664     11,011,040     51.86
+                                                                     --------------- --------------
+Grand Total:                                                              38,043,904     21,297,912
