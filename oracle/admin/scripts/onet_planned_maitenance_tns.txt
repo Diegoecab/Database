@@ -1,0 +1,15 @@
+#NOTE: Best practice for planned maintenance recommends a connect string or URL similar to the following:
+
+alias =(DESCRIPTION =
+(CONNECT_TIMEOUT=120)(RETRY_COUNT=30)(RETRY_DELAY=10) (TRANSPORT_CONNECT_TIMEOUT=3)
+(ADDRESS_LIST =
+  (LOAD_BALANCE=on)
+  (ADDRESS = (PROTOCOL = TCP)(HOST=primary-scan)(PORT=1521)))
+(ADDRESS_LIST =
+  (LOAD_BALANCE=on)
+  (ADDRESS = (PROTOCOL = TCP)(HOST=secondary-scan)(PORT=1521)))      
+(CONNECT_DATA=(SERVICE_NAME = gold-cloud)))
+
+#Any discussion of recommended TNS or “holding” connections implies the use of a connect string similar to the one mentioned here. 
+#This connect string will retry connections in the Oracle Net layer implicitly, until either the number of connection attempts (RETRY_COUNT) is met,
+# or the connection times out (CONNECT_TIMEOUT). Application timeout values need consider this.

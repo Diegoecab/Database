@@ -1,0 +1,1 @@
+crsctl greplace votedisk +ASMDISK2

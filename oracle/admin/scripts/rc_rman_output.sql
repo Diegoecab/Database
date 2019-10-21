@@ -1,0 +1,1 @@
+select * from rc_rman_output where session_key=27540361;

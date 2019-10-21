@@ -1,0 +1,125 @@
+Paso 1: Reviso la configuración actual del scan_listener como grid
+
+[grid@exa0301cluprd:~]$ srvctl config scan_listener
+SCAN Listener LISTENER_SCAN1 exists. Port: TCP:1528
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+SCAN Listener LISTENER_SCAN2 exists. Port: TCP:1528
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+SCAN Listener LISTENER_SCAN3 exists. Port: TCP:1528
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+
+Paso 2: Reviso el estado de la standby gdeprdsby2 como oracle
+
+$ dgmgrl /
+DGMGRL> show database gdeprdsby2
+
+Database - gdeprdsby2
+
+  Role:               PHYSICAL STANDBY
+  Intended State:     APPLY-ON
+  Transport Lag:      0 seconds (computed 0 seconds ago)
+  Apply Lag:          0 seconds (computed 0 seconds ago)
+  Average Apply Rate: 2.00 MByte/s
+  Real Time Query:    ON
+  Instance(s):
+    gdeprd1
+    gdeprd2 (apply instance)
+
+Database Status:
+SUCCESS
+
+Paso 3: Detengo la aplicación de redologs en la base gdeprdsby2
+
+DGMGRL> EDIT DATABASE 'gdeprdsby2' SET STATE='APPLY-OFF';
+
+Paso 4: Reviso el estado actual y confirmo seteo
+
+DGMGRL> show database gdeprdsby2;
+
+Database - gdeprdsby2
+
+  Role:               PHYSICAL STANDBY
+  Intended State:     APPLY-OFF
+  Transport Lag:      0 seconds (computed 0 seconds ago)
+  Apply Lag:          44 seconds (computed 0 seconds ago)
+  Average Apply Rate: (unknown)
+  Real Time Query:    OFF
+  Instance(s):
+    gdeprd1
+    gdeprd2 (apply instance)
+
+Database Status:
+SUCCESS
+
+Paso 5: Modifico puerto del recurso scan_listener como grid
+
+[grid@exa0301cluprd:~]$ srvctl modify scan_listener -endpoints 1521
+
+Paso 6: Modifico parámetro remote_listener con el nuevo puerto
+
+SQL> alter system set remote_listener =  'exa03-scan:1521' scope=both;
+
+Paso 7: Edito tnsnames.ora de exa0101cluprd, exa0102cluprd, exa0201cluprd, exa0202cluprd, exa0301cluprd, exa0302cluprd
+
+Paso 8: Reinicio recurso scan_listener
+
+[grid@exa0301cluprd:~]$ srvctl stop scan_listener
+[grid@exa0301cluprd:~]$ srvctl start scan_listener
+
+Paso 9: Reviso configuración recurso scan_listener
+
+[grid@exa0301cluprd:~]$ srvctl config scan_listener
+SCAN Listener LISTENER_SCAN1 exists. Port: TCP:1521
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+SCAN Listener LISTENER_SCAN2 exists. Port: TCP:1521
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+SCAN Listener LISTENER_SCAN3 exists. Port: TCP:1521
+Registration invited nodes:
+Registration invited subnets:
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes:
+SCAN Listener is individually disabled on nodes:
+
+Paso 10: Reinicio aplicación de redologs en gdeprdsby2
+
+$ dgmgrl /
+DGMGRL> EDIT DATABASE 'gdeprdsby2' SET STATE='APPLY-ON';
+
+Paso 11: Verifico estado de gdeprdsby2
+
+DGMGRL> show database gdeprdsby2;
+
+Database - gdeprdsby2
+
+  Role:               PHYSICAL STANDBY
+  Intended State:     APPLY-ON
+  Transport Lag:      0 seconds (computed 0 seconds ago)
+  Apply Lag:          0 seconds (computed 0 seconds ago)
+  Average Apply Rate: 84.75 MByte/s
+  Real Time Query:    ON
+  Instance(s):
+    gdeprd1
+    gdeprd2 (apply instance)
+
+Database Status:
+SUCCESS

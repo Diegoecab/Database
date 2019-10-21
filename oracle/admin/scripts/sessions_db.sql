@@ -17,7 +17,7 @@ REM
 REM ======================================================================
 REM
 set pagesize 10000
-set linesize 600
+set linesize 900
 set verify off
 
 clear col
@@ -26,7 +26,7 @@ col program for a50
 col username for a21
 col sid for 9999
 col last_act for 99999
-col logon_time  for a15
+col logon_time  for a25
 --col spid heading 'OsPid'
 --col pq_status heading 'Parallel|Query'
 --col min_inac heading 'Min|Inact'
@@ -44,7 +44,7 @@ PROMPT
 PROMPT Sesiones en la base de datos
 PROMPT
 
-select  lpad (nvl (sess.username, '[B.G. Process]'), 20) username, count ( * ) num_user_sess, nvl (act.count, 0) active#, nvl (inact.count, 0) inactive#
+select  lpad (nvl (sess.username, '[B.G. Process]'), 20) username, count ( * ) num_user_sess, nvl (act.count, 0) active#, nvl (inact.count, 0) inactive# 
 from   v$session sess,
 (select   count ( * ) count, nvl (username, '[B.G. Process]') username from   v$session where   status = 'ACTIVE' group by   username) act,
 (select   count ( * ) count, nvl (username, '[B.G. Process]') username from   v$session where   status = 'INACTIVE' group by   username) inact
@@ -56,15 +56,58 @@ order by 1;
 select sessions_current, sessions_highwater from v$license;
 
 
-select   s.username, module, machine, s.osuser, s.program, ownerid, sid, s.serial#, status, round (last_call_et / 60) min_act, to_char (logon_time, 'DD/MM HH24:MI:SS') logon_time,
-floor (last_call_et / 60) last_act, resource_consumer_group, pq_status, pdml_status, pddl_status, 'alter system kill session '''||sid||','||s.serial#||''' immediate;' kill_sess, p.spid, 'kill -9 '||p.spid kill_proc,
-client_identifier, action
-from   v$session s, v$process p
-where   s.paddr = p.addr 
-and s.username is not null 
-and s.username like upper('%&username%') 
-and sid like upper('%&sid%')
-and status like upper('&status%')
-order by 1, 2, 3, 7;
+--
+-- List all sessions for RAC.
+--
+ 
+ 
+ 
+SELECT NVL(s.username, '(oracle)') AS username,
+       s.inst_id,
+       s.sid,
+       s.serial#,
+       p.spid,
+       s.lockwait,
+       s.status,
+       s.module,
+       s.machine,
+       s.program,
+       TO_CHAR(s.logon_Time,'DD-MON-YYYY HH24:MI:SS') AS logon_time
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+and s.username is not null
+ORDER BY s.username, s.osuser
+/
+
+
+SELECT NVL(s.username, '[bkgrnd]') AS username,
+       s.inst_id, count(*)
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+GROUP BY NVL(s.username, '[bkgrnd]'), s.inst_id
+ORDER BY 1
+/
+
 
 prompt
+
+
+SELECT NVL(s.username, '(oracle)') AS username,status,
+       s.machine,
+service_name,
+       s.program
+, count(*)
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+and s.username is not null
+group by NVL(s.username, '(oracle)'), status,
+       s.machine,
+service_name,
+       s.program
+/

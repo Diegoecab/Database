@@ -1,0 +1,1 @@
+select * from rc_backup_set_details where db_key=2300449244 and start_time > trunc(sysdate-1) order by start_time;

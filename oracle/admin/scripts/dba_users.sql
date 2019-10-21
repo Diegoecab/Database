@@ -9,7 +9,7 @@ set pagesize 1000
 set verify off
 undefine all
 
-select user_id,username,password,account_status,lock_date,expiry_date,default_tablespace,created,profile from dba_users
+select user_id,username,password,account_status,lock_date,expiry_date,default_tablespace,created,profile,initial_rsrc_consumer_group from dba_users
 where username like upper('%&username%')
  order by 1;
 PROMPT

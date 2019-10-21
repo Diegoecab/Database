@@ -1,0 +1,32 @@
+Physical Disks -> Lun Disks (With system luns)-> Cell Disks -> Grid Disks -> ASM Disks
+ 
+ 
+#Physical Disks
+cellcli -e list physicaldisk
+#LUNs
+#The HardDisk LUNstarts from 0_slotnumber
+#The FlashDisk LUNstarts from 1_slotnumber
+cellcli –e list lun
+#To list LUN attributes
+cellcli -e list lun 0_0 detail 
+#Cell Disk
+cellcli -e list celldisk
+
+
+#Creating Cell Disk
+#This will create all cell disks including flash from LUN.
+
+cellcli -e create celldisk all
+
+#To create cell disk only on hard disk
+cellcli -e create celldisk hardisk
+
+
+#Grid Disk
+#Create griddisk
+cellcli -e create griddisk all prefix=DATA, size=500G
+#To list all grid disks use CellCLI command.
+cellcli -e list griddisk
+
+#To list grid disk to query name, size, offset
+cellcli -e list griddisk where celldisk=CD_00_x301celadm01 attributes name,size,offset

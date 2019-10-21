@@ -19,7 +19,7 @@ REM
 set pages 999
 set lines 120
 col owner format a30
-col name format a50
+col name format a30
 col type format a30
 col sharable_mem_kb format 999999999 head "Memory Used"
 col ttl format 999999999 head "Total Pinned Memory"
@@ -29,7 +29,6 @@ col ttl format 999999999 head "Total Pinned Memory"
 select owner, name, type, round(sharable_mem/1024) sharable_mem_kb
 from v$db_object_cache
 where  kept = 'YES'
-and (sharable_mem/1024) > 10
 order by sharable_mem desc;
 
 select round((sum(sharable_mem)/1024/1024),1) ttl from v$db_object_cache where kept='YES';

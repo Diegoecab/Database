@@ -1,15 +1,14 @@
 #!/bin/sh 
 
 #################################################################################
-# AUTOR: 	Diego Cabrera                                                   #
-# CREADO: 04/05/2010                                                          	#
-# SCRIPT: awr_rep.sh                                                    	#
-# DETALLES: 									#
-# UTILIZAR  : awr_rep.sh SID DIAS MAIL											#
+# AUTOR: 	Diego Cabrera                                                   	#
+# CREADO: 31/07/2019                                                          	#
+# SCRIPT: awr_rep.sh                                                    		#
+# DETALLES: 																	#
+# UTILIZAR  : awr_rep.sh SID DIAS 												#
 # PARAMETROS:                                                                  	#
 #   	SID	: Nombre de la instancia de base de datos                       	#
-#     	DIAS: Cantidad de dias             	#
-#		MAIL: cuenta de E-Mail destinatario 									#
+#     	DIAS: Cantidad de dias             										#
 #																				#
 #################################################################################
 
@@ -17,7 +16,6 @@
 
 ORACLE_SID=$1
 DIAS=$2
-MAIL=$3
 FECHA=`date +%y%m%d`
 HOST=`hostname`
 NOMBRE_BASE=$ORACLE_SID
@@ -62,12 +60,8 @@ define  db_name      = $ORACLE_SID;
 @@?/rdbms/admin/awrrpti
 EOF
 
-#Mail
-
-uuencode $LOGF $FECHA"_awr_"$HOST"_"$NOMBRE_BASE".html" | mailx -s "AWR Base $HOST - $NOMBRE_BASE " $MAIL
-
 #Elimina Archivos
-
+echo "Eliminando $DEFVARIA $LEJEC $VAWR $LOGF"
 rm $DEFVARIA $LEJEC $VAWR $LOGF
 
 #######################################################################

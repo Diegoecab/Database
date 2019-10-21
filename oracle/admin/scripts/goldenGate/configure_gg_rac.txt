@@ -1,0 +1,431 @@
+A. SOURCE Configuration (Cluster 1)
+
+1 Database configuration
+
+SQL> alter system set enable_goldengate_replication=true sid='*';
+
+
+Supplemental logging. Enable at the Database level and switch logfile. (This can be executed at table level)
+
+SQL>ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
+SQL>alter system switch logfile;
+
+
+
+
+SQL>create tablespace GG_TBS datafile size 100M autoextend on next 100M maxsize 30G;
+SQL>create user OGG_USER identified by DontforgetAboutme#$124 default tablespace GG_TBS;
+SQL>grant CONNECT, RESOURCE, DBA to OGG_USER;
+
+
+Set the STREAMS_POOL_SIZE initialization parameter for the database to the following value:
+(MAX_SGA_SIZE * # of integrated Extracts) + 25% head room
+For example, using the default values for the MAX_SGA_SIZE with two integrated Extracts:
+( 1GB * 2 ) * 1.25 = 2.50GB
+STREAMS_POOL_SIZE = 2560M
+
+
+
+3 Instalar goldengate sobre ACFS montando en las instancias del RAC
+
+
+GGSCI (exaadm02vm01.sop.datastar.com.ar as OGG_USER@dbm011) 32> info mgr
+
+Manager is running (IP port exaadm02vm01.sop.datastar.com.ar.7809, Process ID 199772).
+
+
+GGSCI (exaadm02vm01.sop.datastar.com.ar as OGG_USER@dbm011) 33>
+
+
+
+
+
+4 Step 4: Create Oracle Net Alias for Oracle GoldenGate Database Connections
+To simplify the database connectivity of the Oracle GoldenGate processes when switching between RAC nodes,
+create a TNS alias on all of the RAC nodes where Oracle GoldenGate may run.
+For example:
+
+dbm01_gg=
+ (DESCRIPTION =
+(SDU=2097152)
+ (ADDRESS =
+ (PROTOCOL=BEQ)
+ (PROGRAM=/u01/app/oracle/product/12.2.0.1/dbhome_1/bin/oracle)
+ (ARGV0=oracledbm01)
+ (ARGS='(DESCRIPTION= (SDU=2097152)(LOCAL=YES)(ADDRESS=(PROTOCOL=BEQ)))')
+(ENVS='ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome_1,ORACLE_SID=dbm01')
+ )
+ (CONNECT_DATA=(SID=dbm01))
+)
+
+
+create wallet
+add credentialstore
+ALTER CREDENTIALSTORE ADD USER OGG_USER@dbm01_gg, password DontforgetAboutme#$124, alias ggconn
+info credentialstore
+
+
+edit param ./GLOBALS
+GGSCHEMA OGG_USER
+ENABLEMONITORING
+CHECKPOINTTABLE OGG_USER.GGS_CHECKPOINT
+
+GGSCI (exaadm01vm01.sop.datastar.com.ar) 10> info all
+
+
+Object level supplemental logging
+
+At the GGSCI prompt add supplemental logging.
+
+dblogin useridalias ggconn
+
+GGSCI > dblogin useridalias ggconn
+GGSCI > ADD TRANDATA DCABRERA.*
+GGSCI > INFO TRANDATA DCABRERA.*
+
+4 Crear EXTRACTS
+
+Nota: Extract Configuration
+
+For an Oracle source database, you can run Extract in either classic capture or integrated capture mode.
+
+Oracle recommends using Oracle GoldenGate Release 12.2.0.1 or later with the integrated capture mode Extract to
+take advantage of the integration with the LogMiner server. Integrated capture enables seamless extraction of more
+data types than with classic mode Extract, such as compressed data (Basic, OLTP, and Exadata Hybrid Columnar
+Compression). There is no additional configuration required for Extract to read log files stored on Oracle ASM.
+RMAN’s fast recovery area policies ensure that archive logs cannot be removed until Extract no longer needs them.
+
+El modo de captura integrado soporta la integración de ambientes "Multitenant" de Oracle Database 12c. 
+Esto permite la minería sobre una o muchas bases de datos "Pluggable" y la replicación de datos hacia múltiples destinos. 
+Este modo proporciona ventajas respecto al modo de extracción clásico pues interactúa directamente con una base de datos de "LogMining" 
+que es la encargada de leer los "Online Redo Log Files" y capturar los cambios en un nuevo formato denominado 'Logical Change Records' (LCRs) 
+que son trasladados a los 'Trail Files' para el proceso de replicación.
+
+En caso de usar Classic Extract se verá el siguiente warning en el log de GoldenGate:
+
+2019-07-30T11:16:17.072-0300  WARNING OGG-25121  Oracle GoldenGate Capture for Oracle, extc1.prm:  Classic Extract should not be using an Exadata source.
+
+entrar a ggsci y editar parametros del extract extc1
+
+GGSCI (exaadm01vm01.sop.datastar.com.ar) 37> info extract extc1
+
+EXTRACT    EXTC1     Last Started 2019-08-28 16:04   Status ABENDED
+Checkpoint Lag       691:39:36 (updated 00:08:22 ago)
+Log Read Checkpoint  Oracle Integrated Redo Logs
+                     2019-07-30 20:24:38
+                     SCN 0.33158694 (33158694)
+
+
+
+edit param extc1
+
+	EXTRACT extc1
+	FORMATASCII
+	EXTTRAIL ./dirdat/e1
+	setenv (ORACLE_HOME="/u01/app/oracle/product/12.2.0.1/dbhome_1")
+	USERID OGG_USER@dbm01, password DontforgetAboutme#$124
+	TABLE dcabrera.*;
+
+
+DBLOGIN useridalias ggconn
+
+REGISTER EXTRACT EXTC1 with DATABASE
+ADD EXTRACT extc1, INTEGRATED TRANLOG, begin now
+
+
+
+
+
+
+5 add exttrail
+
+
+ADD EXTTRAIL ./dirdat/e1, EXTRACT extc1, megabytes 50
+
+(./dirprm/extc1.prm)
+6 Starting Extract
+start ext extc1
+
+
+./dirrpt/EXTC1.rpt
+
+
+
+2019-07-30T10:28:43.892-0300  INFO    OGG-01971  Oracle GoldenGate Capture for Oracle, extc1.prm:  The previous message, 'INFO OGG-03522', repeated 1 times.
+2019-07-30T10:28:43.892-0300  INFO    OGG-02089  Oracle GoldenGate Capture for Oracle, extc1.prm:  Source redo compatibility version is: 12.2.0.1.0.
+2019-07-30T10:28:43.892-0300  INFO    OGG-00546  Oracle GoldenGate Capture for Oracle, extc1.prm:  Default thread stack size: 10485760.
+2019-07-30T10:28:43.892-0300  INFO    OGG-01513  Oracle GoldenGate Capture for Oracle, extc1.prm:  Positioning to (Thread 1) Sequence 111, RBA 558940160, SCN 0.0 (0).
+2019-07-30T10:28:44.635-0300  INFO    OGG-01516  Oracle GoldenGate Capture for Oracle, extc1.prm:  Positioned to (Thread 1) Sequence 111, RBA 558940160, SCN 0.0 (0), 2019 M07 30 10:27:32.
+2019-07-30T10:28:44.636-0300  INFO    OGG-01513  Oracle GoldenGate Capture for Oracle, extc1.prm:  Positioning to (Thread 2) Sequence 73, RBA 17395712, SCN 0.0 (0).
+2019-07-30T10:28:45.346-0300  INFO    OGG-01516  Oracle GoldenGate Capture for Oracle, extc1.prm:  Positioned to (Thread 2) Sequence 73, RBA 17395712, SCN 0.0 (0), 2019 M07 30 10:27:32.
+2019-07-30T10:28:45.347-0300  INFO    OGG-00993  Oracle GoldenGate Capture for Oracle, extc1.prm:  EXTRACT EXTC1 started.
+2019-07-30T10:28:45.347-0300  INFO    OGG-01478  Oracle GoldenGate Capture for Oracle, extc1.prm:  Output file ./dirdat/e1 is using format TEXT.
+2019-07-30T10:28:45.347-0300  INFO    OGG-01517  Oracle GoldenGate Capture for Oracle, extc1.prm:  Position of first record processed for Thread 1, Sequence 111, RBA 558940176, SCN 0.32792487 (32792487), 2019 M07 30 10:27:32.
+2019-07-30T10:28:45.349-0300  INFO    OGG-01517  Oracle GoldenGate Capture for Oracle, extc1.prm:  Position of first record processed for Thread 2, Sequence 73, RBA 17395728, SCN 0.32792512 (32792512), 2019 M07 30 10:27:32.
+
+Cuando se realicen modificaciones, se veran reflejadas en el file dirdat/e1xxxxxxxxx:
+
+'test_79998',COL10,'test_79998'
+I,A,DCABRERA.TEST,NUM,'79999',COL2,'test_79999',COL3,'test_79999',COL4,'test_79999',COL5,'test_79999',COL6,'test_79999',COL7,'test_79999',COL8,'test_79999',COL9,'test_79999',COL10,'test_79999'
+I,A,DCABRERA.TEST,NUM,'80000',COL2,'test_80000',COL3,'test_80000',COL4,'test_80000',COL5,'test_80000',COL6,'test_80000',COL7,'test_80000',COL8,'test_80000',COL9,'test_80000',COL10,'test_80000'
+
+
+V,A,DCABRERA.TEST,NUM,'78048',COL2,'COL2'
+V,B,DCABRERA.TEST,NUM,'78049',COL2,'test_78049',COL3,'test_78049',COL4,'test_78049',COL5,'test_78049',COL6,'test_78049',COL7,'test_78049',COL8,'test_78049',COL9,'test_78049',COL10,'test_78049'
+
+
+
+7 Crear DATA PUMP
+
+
+EXTRACT pextc1
+RMTHOST exaadm01vm02, MGRPORT 7812, compress
+RMTTRAIL ./dirdat/t2
+setenv (ORACLE_HOME="/u01/app/oracle/product/12.2.0.1/dbhome_1")
+USERIDALIAS ggconn
+TABLE dcabrera.*;
+
+
+
+ADD EXTRACT pextc1, INTEGRATED TRANLOG, begin now
+
+DBLOGIN useridalias ggconn
+REGISTER EXTRACT pextc1 with DATABASE
+ADD RMTTRAIL ./dirdat/t2, EXTRACT PEXTC1
+
+start ext pextc1
+
+view param pextc1
+
+
+Inserto datos sobre test y verifico procesos extract:
+
+stats pextc1, total
+
+
+GGSCI (exaadm02vm01.sop.datastar.com.ar as OGG_USER@dbm011) 76> stats extc1, total
+
+Sending STATS request to EXTRACT EXTC1 ...
+
+Start of Statistics at 2019-07-30 16:03:19.
+
+Output to ./dirdat/e1:
+
+Extracting from DCABRERA.TEST to DCABRERA.TEST:
+
+*** Total statistics since 2019-07-30 12:54:36 ***
+        Total inserts                                  80000.00
+        Total updates                                  80000.00
+        Total deletes                                      0.00
+        Total discards                                     0.00
+        Total operations                              160000.00
+
+End of Statistics.
+
+
+
+
+B. Replicat (Cluster 2)
+
+
+
+
+SQL> alter system set enable_goldengate_replication=true sid='*';
+
+
+SQL>create tablespace GG_TBS datafile size 100M autoextend on next 100M maxsize 30G;
+SQL>create user OGG_USER identified by DontforgetAboutme#$124 default tablespace GG_TBS;
+SQL>grant CONNECT, RESOURCE, DBA to OGG_USER;
+
+
+Agregar alias dbm02_gg en tnsnames.ora del ORACLE_HOME del motor de base de datos en los nodos
+
+ggsci:
+
+
+create wallet
+add credentialstore
+ALTER CREDENTIALSTORE ADD USER OGG_USER@dbm02_gg, password DontforgetAboutme#$124, alias ggconn
+info credentialstore
+DBLOGIN useridalias ggconn
+
+
+edit param ./GLOBALS
+GGSCHEMA OGG_USER
+ENABLEMONITORING
+CHECKPOINTTABLE GGS_CHECKPOINT
+
+DBLOGIN useridalias ggconn
+add checkpointtable
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 2> add checkpointtable
+
+No checkpoint table specified. Using GLOBALS specification OGG_USER.GGS_CHECKPOINT...
+
+Successfully created checkpoint table OGG_USER.GGS_CHECKPOINT.
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 3>
+
+
+
+
+
+REPLICAT REPC2
+ASSUMETARGETDEFS
+USERIDALIAS ggconn
+MAP DCABRERA.TEST, TARGET DCABRERA2.TEST3;
+
+add replicat REPC2, exttrail ./dirdat/t2
+
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 8> start replicat REPC2
+
+
+Sending START request to MANAGER ...
+REPLICAT REPC2 starting
+
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 9> info all
+
+Program     Status      Group       Lag at Chkpt  Time Since Chkpt
+
+MANAGER     RUNNING
+JAGENT      STOPPED
+PMSRVR      STOPPED
+REPLICAT    RUNNING     REPC2       00:00:00      00:00:24
+
+
+
+
+SQL> select count(*) from DCABRERA2.TEST2;
+
+  COUNT(*)
+----------
+         0
+		 
+		 
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 12> stats repc2, total
+
+Sending STATS request to REPLICAT REPC2 ...
+
+Start of Statistics at 2019-07-30 16:27:16.
+
+Replicating from DCABRERA.TEST to DCABRERA2.TEST2:
+
+*** Total statistics since 2019-07-30 16:26:26 ***
+        Total inserts                                  80000.00
+        Total updates                                      0.00
+        Total deletes                                      0.00
+        Total discards                                     0.00
+        Total operations                               80000.00
+
+End of Statistics.
+
+
+GGSCI (exaadm01vm02.sop.datastar.com.ar as OGG_USER@dbm021) 13>
+
+SQL> select count(*) from DCABRERA2.TEST2;
+
+  COUNT(*)
+----------
+     80000
+
+SQL>
+
+
+C. Initial Load configurations
+
+1. Transportable Tablespace
+
+
+SQL> 
+create tablespace dcab3tbs datafile size 1024M autoextend on next 100M maxsize 30G;
+create user dcabrera3 identified by sdswert#1 default tablespace dcab3tbs;
+alter user dcabrera3 quota unlimited on dcab3tbs;
+
+create table dcabrera3.test as
+select num,col2,col3,col4,col5,col6,col7,col8,col9,col10 from(
+select level num ,'test_'||level col2, 'test_'||level col3, 'test_'||level col4, 'test_'||level col5
+, 'test_'||level col6, 'test_'||level col7, 'test_'||level col8, 'test_'||level col9, 'test_'||level col10
+ from dual
+     connect by level <= 3000000);
+
+
+alter table dcabrera3.test add primary key (num);
+
+
+ggsci >
+GGSCI > dblogin useridalias ggconn
+GGSCI > ADD TRANDATA dcabrera3.*
+GGSCI > INFO TRANDATA dcabrera3.*
+
+
+edit param ext2c1
+
+EXTRACT ext2c1
+EXTTRAIL ./dirdat/x2
+setenv (ORACLE_HOME="/u01/app/oracle/product/12.2.0.1/dbhome_1")
+useridalias ggconn
+TABLE dcabrera3.*;
+
+
+SQL> @current_scn
+SP2-0734: unknown command beginning "Ver SCN Ac..." - rest of line ignored.
+
+TIMESTAMP_TO_SCN(TO_TIMESTAMP(SYSDATE,'DD-MM-RRHH24:MI:SS'))
+------------------------------------------------------------
+                                                    33467278
+SQL> create directory rmantts as '/opt/acfs/goldengate/ttbs'
+
+[oracle@exaadm02vm01 ttbs]$ cat /tmp/auxinstparams.ora
+sga_target=624M
+[oracle@exaadm02vm01 ttbs]$
+
+
+rman target /
+SET AUXILIARY INSTANCE PARAMETER FILE TO '/tmp/auxinstparams.ora';
+
+transport tablespace dcab3tbs auxiliary destination '/opt/acfs/goldengate/ttbs/AUX' tablespace destination '/opt/acfs/goldengate/ttbs';
+
+---------------
+---------------
+contents of Memory Script:
+{
+# set requested point in time
+set until  scn 33799788;
+
+---------------
+---------------
+
+
+
+
+
+
+REGISTER EXTRACT ext2c1 with DATABASE
+ADD EXTRACT ext2c1, INTEGRATED TRANLOG, begin until scn 33799788
+
+
+add exttrail
+
+ADD EXTTRAIL ./dirdat/x2, EXTRACT ext2c1, megabytes 50
+
+6 Starting Extract
+start ext ext2c1
+
+
+D. Bidirectional replication
+
+
+
+
+
+Referencias 
+
+https://www.oracle.com/technetwork/database/features/availability/maa-goldengate-rac-2007111.pdf
+
+https://www.oracle.com/technetwork/database/availability/maa-gg-performance-1969630.pdf
+
+Choosing Capture and Apply Modes
+https://docs.oracle.com/goldengate/1212/gg-winux/GIORA/process_mode.htm#GIORA212

@@ -1,5 +1,5 @@
 /******************************************************************************** 
-  Nombre:      dcrease_data_files
+  Nombre:      decrease_data_files
   Descripcion: Metadata para decrementar el tamaño de los datafiles de un
                tablespace dado teniendo en cuenta los bloques continuos libres 
                en el final del datafile.

@@ -1,0 +1,16 @@
+export LANG=en_US.UTF8
+rm -rf /home/oracle/osw_archive/*
+##This would start the tool and collect data at 60 second intervals and log the last 10 hours of data to archive files, compress the files and set the archive directory to a non-default location.
+cd /home/oracle/oswbb; nohup  ./startOSWbb.sh 60 48 gzip /home/oracle/osw_archive &
+cd /home/oracle/oswbb; ./stopOSWbb.sh
+cd /home/oracle/oswbb; /home/oracle/oswbb/jre1.8.0_221/bin/java -jar oswbba.jar -i /home/oracle/osw_archive
+
+
+
+
+
+
+ARG1 = snapshot interval in seconds. 
+ARG2 = the number of hours of archive data to store. 
+ARG3 = (optional) the name of a compress utility to compress each file automatically after it is created. 
+ARG4 = (optional) an alternate (non default) location to store the archive directory.

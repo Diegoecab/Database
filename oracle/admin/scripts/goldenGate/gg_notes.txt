@@ -1,0 +1,3 @@
+enable supplemental logging - Revisar overload
+GG Veridata (licencia a parte)
+

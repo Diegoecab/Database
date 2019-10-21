@@ -1,0 +1,1 @@
+select * from RC_DATABASE;
