@@ -1,0 +1,7 @@
+userid="/ as sysdba"
+full=yes
+parallel=8
+directory=DPUMP
+dumpfile=exp_db_full.%U.dmp
+logfile=exp_db_full.%U.log
+compression=all

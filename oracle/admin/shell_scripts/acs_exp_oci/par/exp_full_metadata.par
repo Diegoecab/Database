@@ -1,0 +1,8 @@
+userid="/ as sysdba"
+content=METADATA_ONLY
+full=yes
+parallel=4
+directory=DPUMP
+dumpfile=exp_full_metadata.%U.dmp
+logfile=exp_full_metadata.%U.log
+REUSE_DUMPFILES=YES
