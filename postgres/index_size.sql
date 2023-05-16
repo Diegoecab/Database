@@ -1,0 +1,1 @@
+select pg_size_pretty(pg_indexes_size('pgbench_accounts'));
