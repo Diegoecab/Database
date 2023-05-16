@@ -1,0 +1,1 @@
+reindex index pgbench_branches_test_index;
