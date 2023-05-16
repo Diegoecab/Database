@@ -1,0 +1,1 @@
+select * from pg_stat_user_indexes where relname = 'pgbench_accounts' order by idx_scan desc;
