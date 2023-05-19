@@ -1,0 +1,1 @@
+SELECT aurora_version();

@@ -1,0 +1,1 @@
+SELECT sql_hash, plan_hash, status, enabled, stmt_name FROM apg_plan_mgmt.dba_plans; 
