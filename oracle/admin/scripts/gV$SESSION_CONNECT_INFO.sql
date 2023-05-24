@@ -1,0 +1,1 @@
+select * from gV$SESSION_CONNECT_INFO;

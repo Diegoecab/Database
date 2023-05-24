@@ -46,4 +46,4 @@ SELECT 'Avg Latch Hit (No Miss)',
 UNION ALL
 SELECT 'Avg Latch Hit (No Sleep)',
        ROUND ((SUM (GETS) - SUM (SLEEPS)) * 100 / SUM (GETS), 2)
-  FROM V$LATCH
+  FROM V$LATCH;

@@ -7,6 +7,9 @@ set trims on
 undefine all
 clear col
 col column_name for a30
+col constraint_name for a30 truncate
+col constraint_type for a20 truncate
+col r_owner for a20 truncate
 
 
 select owner,table_name,constraint_name,constraint_type,r_owner,r_constraint_name,status 

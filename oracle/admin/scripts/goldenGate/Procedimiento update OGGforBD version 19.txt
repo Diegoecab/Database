@@ -1,0 +1,211 @@
+Update Oracle OGGForBD  a version 19
+----------------------------------------------------------------------
+Este procedimiento se utiliza para actulizar SOLO  el producto de REPLICAT  OGGForBD.
+
+
+
+Ambiente : Produccion 
+Servidor: rdp3dbadm01	IP: 172.22.167.14
+Usuario : ggatek2v
+
+
+Path replicat actual: /u01/app/ggate_K2V/OGGForBD
+Version: 12.2.0.1.160823
+
+--Status de los procesos de replicat actuales:
+
+		GGSCI (rdp3dbadm01.dtvpan.com) 1> info all
+		
+		Program     Status      Group       Lag at Chkpt  Time Since Chkpt
+		
+		MANAGER     RUNNING
+		JAGENT      RUNNING
+		REPLICAT    RUNNING     RCADDRES    00:00:00      00:00:04
+		REPLICAT    RUNNING     RCAGRDET    00:00:00      00:00:04
+		REPLICAT    RUNNING     RCAGREEM    00:00:06      00:00:05
+		REPLICAT    RUNNING     RCCONTAC    00:00:00      00:00:00
+		REPLICAT    RUNNING     RCCRECAR    00:00:00      00:00:01
+		REPLICAT    RUNNING     RCCUSFIE    00:00:00      00:00:04
+		REPLICAT    RUNNING     RCCUSTOM    00:00:00      00:00:03
+		REPLICAT    RUNNING     RCDEVAGD    00:00:00      00:00:02
+		REPLICAT    RUNNING     RCFINACC    00:00:00      00:00:04
+		REPLICAT    RUNNING     RCINVOIC    00:00:00      00:00:07
+		REPLICAT    RUNNING     RCKEYWOR    00:00:00      00:00:10
+		REPLICAT    RUNNING     RCOFFER     00:00:00      00:00:01
+		REPLICAT    RUNNING     RCORDEVE    00:00:00      00:00:05
+		REPLICAT    RUNNING     RCSUHIST    00:00:00      00:00:00
+		REPLICAT    RUNNING     RCWORORD    00:00:00      00:00:01
+		REPLICAT    RUNNING     RCWOSERV    00:00:00      00:00:09
+
+
+
+--Paso 1 : Detener el proceso de EXTRACT
+
+		cd /u01/app/ggate_K2V/OGG
+		./ggsci
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> stop *
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> stop JAGENT
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> stop mgr
+
+
+
+--Paso 2 : Detener el proceso de REPLICAT y tomar el numero de RBA  actual de cada proceso (por si hay que setear el incio  en forma manual):
+
+		cd /u01/app/ggate_K2V/OGGForBD
+		./ggsci
+		GGSCI (rdp3dbadm01.dtvpan.com) 1> stop *
+		GGSCI (rdp3dbadm01.dtvpan.com) 1> info *
+
+
+Ejemplo del output  del comando info para un proceso detenido (debemos tener uno por cada uno de los procesos) :
+
+		GGSCI (rgmadbu1903) 3> info UYRADDR
+		
+		REPLICAT   UYRADDR   Last Started 2020-09-24 22:07   Status STOPPED
+		Checkpoint Lag       00:00:00 (updated 00:00:04 ago)
+		Log Read Checkpoint  File /u01/app/ggate_K2V_CS/OGGForBD/dirdat/uy000025			--> este valor representa el extseqno
+							2020-09-28 11:37:28.001029  RBA 1398552						--> este valor representa el extrba
+		
+
+
+
+--Paso 3 : Instalo el producto EXTRACT OGGForBD en version 19.
+
+		cd /u01/app/ggate_K2V/
+		mkdir /u01/app/ggate_K2V/OGGForBD19
+		
+		
+		cp /tmp/OGG_BigData_Linux_x64_19.1.0.0.1.zip  /u01/app/ggate_K2V/OGGForBD19/
+		cd /u01/app/ggate_K2V/OGGForBD19
+		unzip OGG_BigData_Linux_x64_19.1.0.0.1.zip
+
+Me quedan estos archivos:
+
+		[ggatek2vCS@rgmadbu1903 TEST]$ ls -ltr
+		total 405664
+		-rw-rw-r-- 1 ggatek2vCS ggatek2vCS 321597440 Sep 25  2019 OGG_BigData_Linux_x64_19.1.0.0.1.tar
+		-rw-rw-r-- 1 ggatek2vCS ggatek2vCS    339834 Oct  8  2019 OGG_BigData_19.1.0.0.1_Release_Notes.pdf
+		-rw-rw-r-- 1 ggatek2vCS ggatek2vCS      1371 Oct  8  2019 OGGBD-19.1.0.0-README.txt
+		-rw-r--r-- 1 ggatek2vCS ggatek2vCS  93032576 Sep 28 11:29 OGG_BigData_Linux_x64_19.1.0.0.1.zip
+		
+		tar -xvf OGG_BigData_Linux_x64_19.1.0.0.1.tar
+
+
+Pruebo el producto  si levanta ok:
+
+		./ggsci
+		
+		Oracle GoldenGate for Big Data
+		Version 19.1.0.0.1 (Build 003)
+		
+		Oracle GoldenGate Command Interpreter
+		Version 19.1.0.0.2 OGGCORE_OGGADP.19.1.0.0.2_PLATFORMS_190916.0039
+		Linux, x64, 64bit (optimized), Generic on Sep 16 2019 02:12:32
+		Operating system character set identified as UTF-8.
+		
+		Copyright (C) 1995, 2019, Oracle and/or its affiliates. All rights reserved.
+		
+
+
+
+
+
+--Paso 4 : Copio todos los archivos de configuracion necesarios desde el path 12  al path 19 :
+
+
+
+		cp -r  /u01/app/ggate_K2V/OGGForBD/avromdp			 /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/cassandradrv      /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirbdb            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirchk            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dircrd            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirdat            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirdef            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirdmp            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirout            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirpcs            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirprm            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirrpt            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirsql            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirtmp            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirwlt            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/dirwww            /u01/app/ggate_K2V/OGGForBD19/
+		cp -r  /u01/app/ggate_K2V/OGGForBD/GLOBALS           /u01/app/ggate_K2V/OGGForBD19/
+
+
+
+
+--PASO 5: Renombro el actual PATH de version 12 
+
+		mv /u01/app/ggate_K2V_CS/OGGForBD   /u01/app/ggate_K2V_CS/OGGForBD_BKP
+
+--PASO 6 : Renombre el PATH de version 19
+
+		mv /u01/app/ggate_K2V/OGGForBD19/   /u01/app/ggate_K2V/OGGForBD/
+
+
+--Luego de renombrar, ingreso a la consola de version 19 y deberia tener todos los procesos y el manager seteados tal cual en la version 12 (porque copie el directorio dirprm)
+
+		cd /u01/app/ggate_K2V/OGGForBD/
+		./ggsci
+		GGSCI (rdp3dbadm01.dtvpan.com) 1> info all
+
+***Tendria que tener tanto el manager , jagent y todos los procesos de replicat  bajos tal cual los deje en el paso 2. 
+
+Ejecuto el comando "info *"  para chequear que los REPLICAT  esten en el mismo archivo y mismo RBA que cuando los detuvimos 
+
+
+		GGSCI (rgmadbu1903) 3> info UYRADDR
+		
+		REPLICAT   UYRADDR   Last Started 2020-09-24 22:07   Status STOPPED
+		Checkpoint Lag       00:00:00 (updated 00:00:04 ago)
+		Log Read Checkpoint  File /u01/app/ggate_K2V_CS/OGGForBD/dirdat/uy000025			--> tiene que apuntar el mismo archivo del que tomamos evidencia en el paso 2
+							2020-09-28 11:37:28.001029  RBA 1398552						--> tiene que apuntar el mismo RBA del que tomamos evidencia en el paso 2
+		
+		
+**Si algun replicat no coincide con el archivo y rba , lo tengo que modificar a mano con este comando:
+
+		ggsci> alter replicat UYRADDR , extseqno 25 , extrba 1398552
+
+
+
+--PASO 7: Levanto todos los procesos del Replicat:
+
+		GGSCI (rdp3dbadm01.dtvpan.com) 1>start mgr 
+		GGSCI (rdp3dbadm01.dtvpan.com) 1>start jagent
+		GGSCI (rdp3dbadm01.dtvpan.com) 1>start *
+		
+
+Chequeo que los replicat queden todos running.
+
+
+--PASO 8: Levanto el proceso de EXTRACT nuevamente:
+
+		cd /u01/app/ggate_K2V/OGG
+		./ggsci
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> start  mgr
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> start  JAGENT
+		GGSCI (rdp3dbadm01.dtvpan.com) 2> start  *
+
+
+--PASO 9 : Punto de control. Valido con alguien de K2V si Cassandra comienza a recibir actualizaciones.
+
+
+
+--PASO 10: Rollback
+
+En caso de que tengamos que volver atras el cambio porque Cassandra no recibe novedades, debemos realizar los siguiente pasos:
+
+1-Detener EXTRACT
+2-Detener REPLICAT
+3-Renombrar OGG19 :  mv /u01/app/ggate_K2V/OGGForBD/  /u01/app/ggate_K2V/OGGForBD19/
+4-Renombra OGG12 :   mv /u01/app/ggate_K2V_CS/OGGForBD_BKP   /u01/app/ggate_K2V_CS/OGGForBD
+5-Copiar solo el directorio dirdat : cp -r /u01/app/ggate_K2V/OGGForBD19/dirdat /u01/app/ggate_K2V/OGGForBD/dirdat 
+6- Levantar EXTRACT
+7- Chequear con el comando "info *"  los archivos y RBA , deben estar igual a la evidencia del paso 2 inicial.
+8-Levanar REPLICAT
+
+
+
+
+

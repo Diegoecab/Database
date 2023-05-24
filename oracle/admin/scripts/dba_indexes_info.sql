@@ -26,7 +26,7 @@ case when nvl(i.clustering_factor,0) = 0                       then 'No Stats'
 i.avg_data_blocks_per_key, i.avg_leaf_blocks_per_key, segment_type,
 to_char(o.created,'MM/DD/YYYY HH24:MI:SSSSS') Created  
 from dba_indexes i, dba_objects o, dba_tables t, dba_segments s
-where o.owner like upper ('%&owner%') and o.object_name like upper ('%&index_name%')
+where o.owner like upper ('%&owner%') and o.object_name like upper ('%&index_name%') and upper(t.table_name)  like upper ('%&table_name%')
 and i.owner = o.owner
 and i.index_name = o.object_name
 and i.table_name = t.table_name

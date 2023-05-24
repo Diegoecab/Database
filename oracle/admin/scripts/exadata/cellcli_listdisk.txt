@@ -30,3 +30,6 @@ cellcli -e list griddisk
 
 #To list grid disk to query name, size, offset
 cellcli -e list griddisk where celldisk=CD_00_x301celadm01 attributes name,size,offset
+
+
+dcli -g $HOME/cell_group -l root "cellcli -e list celldisk attributes name, devicePartition, size"

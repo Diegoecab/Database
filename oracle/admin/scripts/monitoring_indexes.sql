@@ -1,3 +1,9 @@
+col "table_name" for a30
+col "index_name" for a30
+col "owner" for a30
+set lines 900
+set pages 100
+
 select * from (
 select 
    u.name "owner",
@@ -22,4 +28,4 @@ and
    u.name not in ('SYS','SYSTEM')
 and 
    i.obj# =ou.obj#(+)
-) where monitoring = 'yes';
+) where monitoring = 'yes' order by "table_name";

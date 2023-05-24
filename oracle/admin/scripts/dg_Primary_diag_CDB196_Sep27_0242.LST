@@ -1,0 +1,249 @@
+
+SYSTIMESTAMP
+---------------------------------------------------------------------------
+27-SEP-21 02.42.48.050284 PM -03:00
+
+1 row selected.
+
+
+Primary Site Details
+
+********************
+
+DB_UNIQUE_NAME  DB_ROLE          F_LOG                                   FLASHB_ON  LOG_MODE     OPEN_MODE            GUARD
+--------------- ---------------- --------------------------------------- ---------- ------------ -------------------- -------
+PROT_MODE
+--------------------
+PDCP            PRIMARY          YES                                     NO         ARCHIVELOG   READ WRITE           NONE
+MAXIMUM PERFORMANCE
+
+
+1 row selected.
+
+
+Primary Site last generated SCN
+
+*******************************
+
+DB_UNIQUE_NAME  SWITCHOVER_STATUS         CURRENT_SCN
+--------------- -------------------- ----------------
+PDCP            NOT ALLOWED                4458060225
+
+1 row selected.
+
+
+Standby Site last applied SCN
+
+*****************************
+
+no rows selected
+
+
+Incarnation Destination Configuration
+
+*************************************
+
+            INC#       RS_CHANGE# RESETLOGS_TIME       PRIOR_RS_CHANGE# STATUS  FB_OK
+---------------- ---------------- -------------------- ---------------- ------- --------------------------
+               1                1 07-JUL-2014 05:38:47                0 PARENT  NO
+               2          1594143 24-APR-2017 16:26:32                1 CURRENT NO
+               3       3444994550 20-APR-2021 17:05:26          1594143 ORPHAN  NO
+               4       3454518693 22-APR-2021 12:33:08          1594143 ORPHAN  NO
+               5       3487718731 29-APR-2021 11:51:53          1594143 ORPHAN  NO
+               6       3493867391 30-APR-2021 11:53:59          1594143 ORPHAN  NO
+               7       3518331526 05-MAY-2021 15:53:31          1594143 ORPHAN  NO
+               8       3576129496 14-MAY-2021 09:41:33          1594143 ORPHAN  NO
+
+8 rows selected.
+
+
+Archive Destination Configuration
+
+*********************************
+
+INSTANCE_NAME    HOST_NAME                      VERSION    ARCHIVE
+---------------- ------------------------------ ---------- -------
+PDCP             oraspdcpro01.iaas.ar.bsch      12.1.0.2.0 STARTED
+
+1 row selected.
+
+
+  DEST_ID DESTINATION                         STATUS    TARGET           ARCHIVER PROCESS REG TRANSMIT_MOD
+--------- ----------------------------------- --------- ---------------- -------- ------- --- ------------
+        1 USE_DB_RECOVERY_FILE_DEST           VALID     PRIMARY          ARCH     ARCH    NO  SYNCHRONOUS
+
+1 row selected.
+
+
+no rows selected
+
+
+Archive Destination Errors
+
+**************************
+
+  DEST_ID STATUS    ERROR
+--------- --------- -------------------------------------------------------
+        1 VALID
+
+1 row selected.
+
+
+no rows selected
+
+
+Data Guard Redo Log Configuration
+
+*********************************
+
+  STANDBY_GROUP#          THREAD#        SEQUENCE#            BYTES             USED ARC STATUS
+---------------- ---------------- ---------------- ---------------- ---------------- --- ----------
+              16                1                0        209715200                0 YES UNASSIGNED
+              17                1                0        209715200                0 YES UNASSIGNED
+              18                1                0        209715200                0 YES UNASSIGNED
+              19                1                0        209715200                0 YES UNASSIGNED
+              20                1                0        209715200                0 YES UNASSIGNED
+              21                1                0        209715200                0 YES UNASSIGNED
+              22                1                0        209715200                0 YES UNASSIGNED
+              23                1                0        209715200                0 YES UNASSIGNED
+              24                1                0        209715200                0 YES UNASSIGNED
+              25                1                0        209715200                0 YES UNASSIGNED
+              26                1                0        209715200                0 YES UNASSIGNED
+              27                1                0        209715200                0 YES UNASSIGNED
+              28                1                0        209715200                0 YES UNASSIGNED
+              29                1                0        209715200                0 YES UNASSIGNED
+              30                1                0        209715200                0 YES UNASSIGNED
+              31                1                0        209715200                0 YES UNASSIGNED
+
+16 rows selected.
+
+
+   ONLINE_GROUP#          THREAD#        SEQUENCE#            BYTES ARC STATUS
+---------------- ---------------- ---------------- ---------------- --- ----------------
+               1                1           106155        209715200 YES INACTIVE
+               2                1           106156        209715200 YES INACTIVE
+               3                1           106157        209715200 YES INACTIVE
+               4                1           106158        209715200 YES INACTIVE
+               5                1           106159        209715200 YES INACTIVE
+               6                1           106160        209715200 YES INACTIVE
+               7                1           106161        209715200 YES INACTIVE
+               8                1           106162        209715200 YES INACTIVE
+               9                1           106163        209715200 YES INACTIVE
+              10                1           106164        209715200 NO  CURRENT
+              11                1           106150        209715200 YES INACTIVE
+              12                1           106151        209715200 YES INACTIVE
+              13                1           106152        209715200 YES INACTIVE
+              14                1           106153        209715200 YES INACTIVE
+              15                1           106154        209715200 YES INACTIVE
+
+15 rows selected.
+
+
+Data Guard Related Parameters
+
+*****************************
+
+NAME                           VALUE
+------------------------------ ----------------------------------------------------------------------------------------------------
+archive_lag_target             0
+cluster_database               FALSE
+db_unique_name                 PDCP
+dg_broker_config_file1         /oracle/app/oracle/product/12c/dbs/dr1PDCP.dat
+dg_broker_config_file2         /oracle/app/oracle/product/12c/dbs/dr2PDCP.dat
+dg_broker_start                FALSE
+fal_client                     PDCP
+fal_server                     CDB196
+log_archive_config             DG_CONFIG=(cdb196,pdcp)
+log_archive_max_processes      10
+log_archive_trace              0
+redo_transport_user
+
+12 rows selected.
+
+
+Data Guard Redo Shipping Progress
+
+*********************************
+
+SYSTIMESTAMP
+---------------------------------------------------------------------------
+27-SEP-21 02.42.49.389349 PM -03:00
+
+1 row selected.
+
+
+PROCESS STATUS       CLIENT_P CLIENT_PID          THREAD#        SEQUENCE#           BLOCK#    ACTIVE_AGENTS     KNOWN_AGENTS
+------- ------------ -------- ---------- ---------------- ---------------- ---------------- ---------------- ----------------
+ARCH    CONNECTED    ARCH     42094                     0                0                0                0                0
+ARCH    CLOSING      ARCH     42086                     1            93753           333824                0                0
+ARCH    CLOSING      ARCH     42100                     1           106153           327680                0                0
+ARCH    CLOSING      ARCH     42102                     1           106154           327680                0                0
+ARCH    CLOSING      ARCH     42104                     1           106155           327680                0                0
+ARCH    CLOSING      ARCH     42106                     1           106156           327680                0                0
+ARCH    CLOSING      ARCH     42088                     1           106160           327680                0                0
+ARCH    CLOSING      ARCH     42090                     1           106161           327680                0                0
+ARCH    CLOSING      ARCH     42096                     1           106162           327680                0                0
+ARCH    CLOSING      ARCH     42098                     1           106163           327680                0                0
+
+10 rows selected.
+
+
+
+SYSTIMESTAMP
+---------------------------------------------------------------------------
+27-SEP-21 02.43.00.046054 PM -03:00
+
+1 row selected.
+
+
+PROCESS STATUS       CLIENT_P CLIENT_PID          THREAD#        SEQUENCE#           BLOCK#    ACTIVE_AGENTS     KNOWN_AGENTS
+------- ------------ -------- ---------- ---------------- ---------------- ---------------- ---------------- ----------------
+ARCH    CONNECTED    ARCH     42094                     0                0                0                0                0
+ARCH    CLOSING      ARCH     42086                     1            93753           333824                0                0
+ARCH    CLOSING      ARCH     42100                     1           106153           327680                0                0
+ARCH    CLOSING      ARCH     42102                     1           106154           327680                0                0
+ARCH    CLOSING      ARCH     42104                     1           106155           327680                0                0
+ARCH    CLOSING      ARCH     42106                     1           106156           327680                0                0
+ARCH    CLOSING      ARCH     42088                     1           106160           327680                0                0
+ARCH    CLOSING      ARCH     42090                     1           106161           327680                0                0
+ARCH    CLOSING      ARCH     42096                     1           106162           327680                0                0
+ARCH    CLOSING      ARCH     42098                     1           106163           327680                0                0
+
+10 rows selected.
+
+
+
+SYSTIMESTAMP
+---------------------------------------------------------------------------
+27-SEP-21 02.43.10.409688 PM -03:00
+
+1 row selected.
+
+
+PROCESS STATUS       CLIENT_P CLIENT_PID          THREAD#        SEQUENCE#           BLOCK#    ACTIVE_AGENTS     KNOWN_AGENTS
+------- ------------ -------- ---------- ---------------- ---------------- ---------------- ---------------- ----------------
+ARCH    CONNECTED    ARCH     42094                     0                0                0                0                0
+ARCH    CLOSING      ARCH     42086                     1            93753           333824                0                0
+ARCH    CLOSING      ARCH     42100                     1           106153           327680                0                0
+ARCH    CLOSING      ARCH     42102                     1           106154           327680                0                0
+ARCH    CLOSING      ARCH     42104                     1           106155           327680                0                0
+ARCH    CLOSING      ARCH     42106                     1           106156           327680                0                0
+ARCH    CLOSING      ARCH     42088                     1           106160           327680                0                0
+ARCH    CLOSING      ARCH     42090                     1           106161           327680                0                0
+ARCH    CLOSING      ARCH     42096                     1           106162           327680                0                0
+ARCH    CLOSING      ARCH     42098                     1           106163           327680                0                0
+
+10 rows selected.
+
+
+Data Guard Errors in the Last Hour
+
+**********************************
+
+TIMESTAMP            SEVERITY            ERROR_CODE MESSAGE
+-------------------- ------------- ---------------- --------------------------------------------------------------------------------
+27-SEP-2021 14:08:26 Control                      0 ARC5: Beginning to archive thread 1 sequence 106163 (4456990221-4457598816)
+27-SEP-2021 14:08:28 Control                      0 ARC5: Completed archiving thread 1 sequence 106163 (4456990221-4457598816)
+
+2 rows selected.
+

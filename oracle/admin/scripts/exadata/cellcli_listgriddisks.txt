@@ -1,0 +1,11 @@
+list griddisk where name like 'DATA_CD_.*' attributes name,asmDiskGroupName,asmDiskName, cellDisk,size
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name,asmDiskGroupName,asmDiskName, cellDisk,size"
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, status, size, availableTo, asmmodestatus where asmmodestatus like \'UNUSED\'"
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, status, size, availableTo, asmmodestatus where name like \'.*HP3\'"
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, status, size, availableTo, asmmodestatus where name like \'.*HP3.*\'"
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, status, size, availableTo, asmmodestatus where status != \'active\'"

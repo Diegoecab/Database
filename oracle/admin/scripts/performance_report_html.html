@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
+<meta name="generator" content="SQL*Plus 11.2.0">
+    <title>Database performance report for database shlakp1</title>    <style type="text/css">      body              {font:9pt Arial,Helvetica,sans-serif; color:black; background:White;}      p                 {font:11pt Arial,Helvetica,sans-serif; color:darkgreen; background:White;}      table,tr,td       {font:10pt Arial,Helvetica,sans-serif; color:Black; background:#FFFFFF; border-width: 1px; border-spacing: 0px; border-style: inset; border-collapse: collapse;  }      th                {font:bold 9pt Arial,Helvetica,sans-serif; color:#336699; background:#FFFFCC; border-width: 1px; border-spacing: 0px; border-style: inset; border-collapse: collapse; }      h1                {font:bold 12pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; border-bottom:0px solid #cccc99; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}      h2                {font:bold 10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White; margin-top:0pt; margin-bottom:0pt;}      a                 {font:9pt Arial,Helvetica,sans-serif; color:#663300; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.link            {font:9pt Arial,Helvetica,sans-serif; color:#663300; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLink          {font:9pt Arial,Helvetica,sans-serif; color:#663300; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkBlue      {font:9pt Arial,Helvetica,sans-serif; color:#0000ff; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkDarkBlue  {font:9pt Arial,Helvetica,sans-serif; color:#000099; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkRed       {font:9pt Arial,Helvetica,sans-serif; color:#ff0000; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkDarkRed   {font:9pt Arial,Helvetica,sans-serif; color:#990000; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkGreen     {font:9pt Arial,Helvetica,sans-serif; color:#00ff00; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}      a.noLinkDarkGreen {font:9pt Arial,Helvetica,sans-serif; color:#009900; text-decoration: none; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}    </style>
+</head>
+<body BGCOLOR="#C0C0C0">
+<font size=+2 color=darkgreen><b>Database performance report</b></font><p>
+<br>
+<p>Report generated on 07/02/2020 15:43:51</p>
+<br>
+<table WIDTH="100%" BORDER="1"><tr><th>Instance</th><th>Version</th><th>Host Name</th><th>Db ID</th><th>DB Name</th><th>scn</th><th>Open Mode</th><th>Force logging</th><th>Database Role</th><th>Log mode</th><th>Archivelog Compression</th><th>Is RAC?</th></tr>
+<tr>
+
+<td>shlakp1</td><td>12.1.0.2.0</td><td>rgbipdbpr2309</td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+
+<td>2286307683</td><td>SHLAKP</td><td>637540655788</td><td>READ WRITE</td><td>NO</td><td>PRIMARY</td><td>NOARCHIVELOG</td><td>DISABLED</td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+
+<td>TRUE</td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+</tr>
+</table>
+<p>
+Top activity by wait
+<p>
+<table border="1" width="90%" summary="Script output">
+<tr>
+<th scope="col">
+Sample
+<br>
+Time
+</th>
+<th scope="col">
+Other%
+</th>
+<th scope="col">
+Cluster%
+</th>
+<th scope="col">
+Queueing%
+</th>
+<th scope="col">
+Network%
+</th>
+<th scope="col">
+Adminis
+<br>
+trative%
+</th>
+<th scope="col">
+Confi
+<br>
+guration%
+</th>
+<th scope="col">
+Commit%
+</th>
+<th scope="col">
+Appli
+<br>
+cation%
+</th>
+<th scope="col">
+Concu
+<br>
+rrency%
+</th>
+<th scope="col">
+System 
+<br>
+IO%
+</th>
+<th scope="col">
+User
+<br>
+IO%
+</th>
+<th scope="col">
+Scheduler
+<br>
+IO%
+</th>
+<th scope="col">
+ CPU%
+</th>
+<th scope="col">
+Back
+<br>
+groundCPU%
+</th>
+<th scope="col">
+Max
+<br>
+Sessions
+<br>
+Count
+</th>
+<th scope="col">
+OTHER
+</th>
+<th scope="col">
+CLUST
+</th>
+<th scope="col">
+QUEUEING
+</th>
+<th scope="col">
+NETWORK
+</th>
+<th scope="col">
+ADMINISTRATIVE
+</th>
+<th scope="col">
+CONFIGURATION
+</th>
+<th scope="col">
+COMMIT
+</th>
+<th scope="col">
+APPLICATION
+</th>
+<th scope="col">
+CONCURRENCY
+</th>
+<th scope="col">
+SYSTEM_IO
+</th>
+<th scope="col">
+USER_IO
+</th>
+<th scope="col">
+SCHEDULER
+</th>
+<th scope="col">
+CPU
+</th>
+<th scope="col">
+BACKGROUND_CPU
+</th>
+</tr>
+<tr>
+<td>
+15:33 
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+       102
+</td>

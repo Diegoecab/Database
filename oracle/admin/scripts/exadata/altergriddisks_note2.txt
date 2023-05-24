@@ -1,0 +1,360 @@
+
+
+a ) borrar griddisk dbfs de discos 0 y 1
+ 1 . desde asm
+ 2 . rebalance
+ 3 . unused en griddisk
+ 4 . borrar griddisk
+
+
+ 5 . agrandar GD DBFS a 15,125Gb (el dbfs2)
+
+
+-borrar los UNUSED
+-validar 6 celdas tengas mismo freespace
+
+b) quitar griddisks RECO_HP3 y DATA_HP3 del DG ACFS_VMS_DATA en VM3 y reasignarlos a DATA_HP2
+
+
+1. --Eliminar discos 0 y 1 del DG. Hacer esto en las VMs 1 y 2 (3 no tiene DBFS DG montado):
+
+select 'alter diskgroup '||dG.name||' drop disk '|| dk.name||';'
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name like 'DBFS_%'
+and (path like '%CD_00_%' or path like '%CD_01_%')
+order by dk.name
+;
+
+
+
+
+
+SQL>
+select dg.name, dg.state, round(sum(d.total_mb)/1024) total_gb, count(*)
+from v$asm_disk d, v$asm_diskgroup dg
+where d.group_number = dg.group_number
+group by dg.name, dg.state;SQL>   2    3    4
+
+NAME                           STATE         TOTAL_GB   COUNT(*)
+------------------------------ ----------- ---------- ----------
+DATA_HC1                       MOUNTED          34920         36
+DATA_HP1                       MOUNTED          18504         72
+DBFS_HC1                       MOUNTED           1006         30
+DBFS_HP1                       MOUNTED           1008         72
+RECO_HC1                       MOUNTED           8192         36
+RECO_HP1                       MOUNTED            216         72
+
+6 rows selected.
+
+SQL>
+
+
+
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM01;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM02;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM03;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM04;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM05;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM06;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM01;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM02;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM03;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM04;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM05;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM06;
+
+2. alter diskgroup DBFS_HP2 resize all rebalance power 64;
+
+3. descde rdp6dbadm01 
+ver los griddisks en estado UNUSED:
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DBFS.*\'" | grep UNUSED
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DBFS.*\'" | grep UNUSED | awk '{print $2}'
+
+ver el espacio en los discos:
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list celldisk attributes name, size, freespace" | grep CD_
+
+4. borrar griddisks
+
+ALTER GRIDDISK  INACTIVE
+
+DROP GRIDDISK 
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm01"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm02"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm03"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm04"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm05"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm06"
+
+
+5. quitar griddisks RECO_HP3 y DATA_HP3 del DG ACFS_VMS_DATA en VM3 (todos deben estar en former o candidate)
+
+select 'alter diskgroup '||dG.name||' drop disk '|| dk.name||';'
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name = 'ACFS_VMS_DATA'
+and (path like '%RECO_HP3%' or path like '%DATA_HP3%')
+order by dk.name
+;
+
+select path, dg.name
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where  dg.group_number =dk.group_number (+)
+AND
+path like '%ACFS%'
+;
+
+
+6. Eliminar griddisks unused. Ver punto 4
+
+
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm01"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm02"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm03"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm04"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm05"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm06"
+
+
+
+7. aumentar espacio en GD de DATA_HP2
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm01 \
+    ,DATA_HP2_CD_01_rdp6celadm01 \
+    ,DATA_HP2_CD_02_rdp6celadm01 \
+    ,DATA_HP2_CD_03_rdp6celadm01 \
+    ,DATA_HP2_CD_04_rdp6celadm01 \
+    ,DATA_HP2_CD_05_rdp6celadm01 \
+    ,DATA_HP2_CD_06_rdp6celadm01 \
+    ,DATA_HP2_CD_07_rdp6celadm01 \
+    ,DATA_HP2_CD_08_rdp6celadm01 \
+    ,DATA_HP2_CD_09_rdp6celadm01 \
+    ,DATA_HP2_CD_10_rdp6celadm01 \
+    ,DATA_HP2_CD_11_rdp6celadm01 \
+    size=XXXG"
+	
+
+
+
+alter diskgroup DBFS_HP2 resize all rebalance power 64;
+
+
+
+--- Alter griddisks DBFS_HP2
+
+cellcli -e alter griddisk \
+ DBFS_HP2_CD_02_rdp6celadm01 \
+,DBFS_HP2_CD_03_rdp6celadm01 \
+,DBFS_HP2_CD_04_rdp6celadm01 \
+,DBFS_HP2_CD_05_rdp6celadm01 \
+,DBFS_HP2_CD_06_rdp6celadm01 \
+,DBFS_HP2_CD_07_rdp6celadm01 \
+,DBFS_HP2_CD_08_rdp6celadm01 \
+,DBFS_HP2_CD_09_rdp6celadm01 \
+,DBFS_HP2_CD_10_rdp6celadm01 \
+,DBFS_HP2_CD_11_rdp6celadm01 \
+size=15.125G;
+
+
+--Finalmente resizear GD de DATA_HP2
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DATA_HP2.*\'"
+213.5G
+245.687G
+
+52.187Gb libres
+
++32.187
+
+
+cellcli -e alter griddisk \
+DATA_HP2_CD_00_rdp6celadm06 \
+,DATA_HP2_CD_01_rdp6celadm06 \
+,DATA_HP2_CD_02_rdp6celadm06 \
+,DATA_HP2_CD_03_rdp6celadm06 \
+,DATA_HP2_CD_04_rdp6celadm06 \
+,DATA_HP2_CD_05_rdp6celadm06 \
+,DATA_HP2_CD_06_rdp6celadm06 \
+,DATA_HP2_CD_07_rdp6celadm06 \
+,DATA_HP2_CD_08_rdp6celadm06 \
+,DATA_HP2_CD_09_rdp6celadm06 \
+,DATA_HP2_CD_10_rdp6celadm06 \
+,DATA_HP2_CD_11_rdp6celadm06 \
+size=245.687G;
+
+
+alter diskgroup DATA_HP2 resize all rebalance power 64;
+
+
+Instances running on rdp6adm01vm02 : +ASM1, csibsr1, rgsbpr11, shengr11, SHESBP11, shhspr1, shitxr11, shsmsr11
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+            ACFS_VMS_DATA          NORMAL           22.86           12.23          53
+                 DATA_HC2          NORMAL            9.53            0.76           7
+                 DATA_HP2          NORMAL            8.64            1.02          11
+                 DBFS_HP2          NORMAL            0.44            0.43          97
+                 RECO_HC2          NORMAL            4.00            2.37          59
+                 RECO_HP2          NORMAL            0.11            0.03          27
+

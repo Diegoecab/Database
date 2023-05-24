@@ -47,7 +47,7 @@ FROM   DBA_HIST_SQLSTAT STAT, DBA_HIST_SQLTEXT TXT, DBA_HIST_SNAPSHOT SS
            AND SS.INSTANCE_NUMBER = STAT.INSTANCE_NUMBER
            AND STAT.SNAP_ID = SS.SNAP_ID
            AND STAT.DBID = (select dbid from v$database)
-           AND STAT.INSTANCE_NUMBER = (select instance_number from v$instance)    
+           --AND STAT.INSTANCE_NUMBER = (select instance_number from v$instance)    
            AND TRUNC(SS.END_INTERVAL_TIME) > TRUNC(SYSDATE -7)
  GROUP BY TO_DATE(TO_CHAR(SS.END_INTERVAL_TIME,'dd/mm/yyyy hh24'),'dd/mm/yyyy hh24'),to_char(substr(sql_text,1,120))
  HAVING (sum(sharable_mem)/1024/1024) > (select round(sum(bytes)/1024/1024,2) * .1 from v$sgastat where pool = 'shared pool')
