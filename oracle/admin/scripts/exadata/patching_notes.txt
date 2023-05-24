@@ -1,0 +1,18 @@
+patching de abajo a arriba :
+
+Caso de DB FISICOS:
+celdas
+--vm
+fisica
+grid
+rdbms
+Infiniband
+
+
+Caso de DB Virtuales:
+celdas
+vm
+grid
+rdbms
+java+oneoff
+Infiniband

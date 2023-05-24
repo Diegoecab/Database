@@ -7,17 +7,17 @@ PROMPT DOC> Script para ver los segmentos, el estado y usuarios usando de un tab
 PROMPT DOC> por default de la base de datos
 PROMPT
 
-column username format a10
+column username format a15
 col mb for 999999
 col sql_text for a50
 col sid for 9999
 
 set feedback off
 
-SELECT a.name,b.status , b.extents,d.username , d.sid , d.serial#, ( SELECT round(sum(bytes)/1024/1024)
+SELECT a.name,b.status , b.extents,d.username , d.sid , d.serial#, d.inst_id,( SELECT round(sum(bytes)/1024/1024)
 		  FROM dba_segments 
 		  WHERE tablespace_name = upper((select value from v$parameter where name ='undo_tablespace')) and segment_name=a.name) MB
-FROM   v$rollname a,v$rollstat b, v$transaction c , v$session d
+FROM   v$rollname a,v$rollstat b, v$transaction c , gv$session d
 WHERE  a.usn = b.usn
 AND    a.usn = c.xidusn
 AND    c.ses_addr = d.saddr
@@ -30,7 +30,7 @@ AND    a.name IN (
 PROMPT
 PROMPT Sesiones actuales con uso de undo + sql
 PROMPT
-/*
+
 SELECT DISTINCT h.session_id SID, s2.username,
                 (SELECT MAX (b.used_urec)
                    FROM v$session a, v$transaction b
@@ -49,7 +49,7 @@ SELECT DISTINCT h.session_id SID, s2.username,
                     GROUP BY a.SID)
             AND UPPER (s1.sql_text) NOT LIKE 'SELECT%'
        ORDER BY s1.last_load_time;
-*/	   
+	   
 @dba_undo_extents
 
 set feedback on

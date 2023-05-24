@@ -1,0 +1,2 @@
+mysql --host=localhost --user=myname --password=password mydb
+mysql -h localhost -u myname -ppassword mydb

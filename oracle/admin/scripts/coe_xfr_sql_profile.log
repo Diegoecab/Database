@@ -1,0 +1,183 @@
+SQL>REM
+SQL>REM $Header: 215187.1 coe_xfr_sql_profile.sql 11.4.1.4 2010/07/12 csierra $
+SQL>REM
+SQL>REM Copyright (c) 2000-2010, Oracle Corporation. All rights reserved.
+SQL>REM
+SQL>REM AUTHOR
+SQL>REM   carlos.sierra@oracle.com
+SQL>REM
+SQL>REM SCRIPT
+SQL>REM   coe_xfr_sql_profile.sql
+SQL>REM
+SQL>REM DESCRIPTION
+SQL>REM   This script generates another that contains the commands to
+SQL>REM   create a manual custom SQL Profile out of a known plan from
+SQL>REM   memory or AWR. The manual custom profile can be implemented
+SQL>REM   into the same SOURCE system where the plan was retrieved,
+SQL>REM   or into another similar TARGET system that has same schema
+SQL>REM   objects referenced by the SQL that generated the known plan.
+SQL>REM
+SQL>REM PRE-REQUISITES
+SQL>REM   1. Oracle Tuning Pack license.
+SQL>REM
+SQL>REM PARAMETERS
+SQL>REM   1. SQL_ID (required)
+SQL>REM   2. Plan Hash Value for which a manual custom SQL Profile is
+SQL>REM      needed (required). A list of known plans is presented.
+SQL>REM
+SQL>REM EXECUTION
+SQL>REM   1. Connect into SQL*Plus as SYSDBA or user with access to
+SQL>REM      data dictionary.
+SQL>REM   2. Execute script coe_xfr_sql_profile.sql passing SQL_ID and
+SQL>REM      plan hash value (parameters can be passed inline or until
+SQL>REM      requested).
+SQL>REM
+SQL>REM EXAMPLE
+SQL>REM   # sqlplus system
+SQL>REM   SQL> START coe_xfr_sql_profile.sql [SQL_ID] [PLAN_HASH_VALUE];
+SQL>REM   SQL> START coe_xfr_sql_profile.sql gnjy0mn4y9pbm 2055843663;
+SQL>REM   SQL> START coe_xfr_sql_profile.sql gnjy0mn4y9pbm;
+SQL>REM   SQL> START coe_xfr_sql_profile.sql;
+SQL>REM
+SQL>REM NOTES
+SQL>REM   1. For possible errors see coe_xfr_sql_profile.log
+SQL>REM   2. If SQLT is installed in SOURCE, you can use instead:
+SQL>REM      sqlt/utl/sqltprofile.sql
+SQL>REM   3. Be aware that using DBMS_SQLTUNE requires a license for
+SQL>REM      Oracle Tuning Pack.
+SQL>REM
+SQL>SET TERM ON ECHO OFF;
+
+Parameter 1:
+SQL_ID (required)
+
+Enter value for 1: djxz0dq464m6h
+
+
+PLAN_HASH_VALUE AVG_ET_SECS
+--------------- -----------
+     2088816245        .055
+     1128252349        .125
+      332314195        4.31
+     2756815677     364.709
+     2915884091     596.272
+
+Parameter 2:
+PLAN_HASH_VALUE (required)
+
+Enter value for 2: 2088816245
+
+Values passed:
+~~~~~~~~~~~~~
+SQL_ID         : "djxz0dq464m6h"
+PLAN_HASH_VALUE: "2088816245"
+
+SQL>WHENEVER SQLERROR EXIT SQL.SQLCODE;
+SQL>
+SQL>VAR sql_text CLOB;
+SQL>VAR other_xml CLOB;
+SQL>EXEC :sql_text := NULL;
+SQL>EXEC :other_xml := NULL;
+SQL>
+SQL>-- get sql_text from memory
+SQL>DECLARE
+  2    l_sql_text VARCHAR2(32767);
+  3  BEGIN -- 10g see bug 5017909
+  4    FOR i IN (SELECT DISTINCT piece, sql_text
+  5  		   FROM gv$sqltext_with_newlines
+  6  		  WHERE sql_id = TRIM('&&sql_id.')
+  7  		  ORDER BY 1, 2)
+  8    LOOP
+  9  	 IF :sql_text IS NULL THEN
+ 10  	   DBMS_LOB.CREATETEMPORARY(:sql_text, TRUE);
+ 11  	   DBMS_LOB.OPEN(:sql_text, DBMS_LOB.LOB_READWRITE);
+ 12  	 END IF;
+ 13  	 l_sql_text := REPLACE(i.sql_text, CHR(00), ' ');
+ 14  	 DBMS_LOB.WRITEAPPEND(:sql_text, LENGTH(l_sql_text), l_sql_text);
+ 15    END LOOP;
+ 16    IF :sql_text IS NOT NULL THEN
+ 17  	 DBMS_LOB.CLOSE(:sql_text);
+ 18    END IF;
+ 19  EXCEPTION
+ 20    WHEN OTHERS THEN
+ 21  	 DBMS_OUTPUT.PUT_LINE('getting sql_text from memory: '||SQLERRM);
+ 22  	 :sql_text := NULL;
+ 23  END;
+ 24  /
+SQL>
+SQL>-- get sql_text from awr
+SQL>BEGIN
+  2    IF :sql_text IS NULL OR NVL(DBMS_LOB.GETLENGTH(:sql_text), 0) = 0 THEN
+  3  	 SELECT REPLACE(sql_text, CHR(00), ' ')
+  4  	   INTO :sql_text
+  5  	   FROM dba_hist_sqltext
+  6  	  WHERE sql_id = TRIM('&&sql_id.')
+  7  	    AND sql_text IS NOT NULL
+  8  	    AND ROWNUM = 1;
+  9    END IF;
+ 10  EXCEPTION
+ 11    WHEN OTHERS THEN
+ 12  	 DBMS_OUTPUT.PUT_LINE('getting sql_text from awr: '||SQLERRM);
+ 13  	 :sql_text := NULL;
+ 14  END;
+ 15  /
+SQL>
+SQL>SELECT :sql_text FROM DUAL;
+
+:SQL_TEXT
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT NVL(SUM(D.REAL), 0) AS REAL_PONDERADO ,NVL(SUM(D.VALOR), 0) AS REAL_VALOR ,SUM(CASE WHEN D.PRORRATEO = 'S' THEN NVL(D.REAL, 0) ELSE 0 END) AS REAL_SUMA ,SUM(CASE WHEN D.PRORRATEO = 'N' THEN NVL(D.REAL, 0) ELSE 0 END) AS REAL_PROPIO FROM OFSA40.TPVI_DETALLE D WHERE D.MES BETWEEN :B4 AND :B3 AND D.TIPO_PREMIO = :B2 AND D.INDICADOR = :B1 AND EXISTS (SELECT 1 FROM OFSA40.PEA_SUC_REGION SR WHERE SR.SUC = D.SUCURSAL) AND EXISTS (SELECT 1 FROM OFSA40.PEA_PV04_DATOS PV WHERE PV.MES = TRUNC(:B3 , 'MM') AND PV.INDIC = :B1 AND PV.SUC = D.SUCURSAL AND PV.FINAL = :B5 )
+SQL>
+SQL>-- get other_xml from memory
+SQL>BEGIN
+  2    FOR i IN (SELECT other_xml
+  3  		   FROM gv$sql_plan
+  4  		  WHERE sql_id = TRIM('&&sql_id.')
+  5  		    AND plan_hash_value = TO_NUMBER(TRIM('&&plan_hash_value.'))
+  6  		    AND other_xml IS NOT NULL
+  7  		  ORDER BY
+  8  			child_number, id)
+  9    LOOP
+ 10  	 :other_xml := i.other_xml;
+ 11  	 EXIT; -- 1st
+ 12    END LOOP;
+ 13  EXCEPTION
+ 14    WHEN OTHERS THEN
+ 15  	 DBMS_OUTPUT.PUT_LINE('getting other_xml from memory: '||SQLERRM);
+ 16  	 :other_xml := NULL;
+ 17  END;
+ 18  /
+SQL>
+SQL>-- get other_xml from awr
+SQL>BEGIN
+  2    IF :other_xml IS NULL OR NVL(DBMS_LOB.GETLENGTH(:other_xml), 0) = 0 THEN
+  3  	 FOR i IN (SELECT other_xml
+  4  		     FROM dba_hist_sql_plan
+  5  		    WHERE sql_id = TRIM('&&sql_id.')
+  6  		      AND plan_hash_value = TO_NUMBER(TRIM('&&plan_hash_value.'))
+  7  		      AND other_xml IS NOT NULL
+  8  		    ORDER BY
+  9  			  id)
+ 10  	 LOOP
+ 11  	   :other_xml := i.other_xml;
+ 12  	   EXIT; -- 1st
+ 13  	 END LOOP;
+ 14    END IF;
+ 15  EXCEPTION
+ 16    WHEN OTHERS THEN
+ 17  	 DBMS_OUTPUT.PUT_LINE('getting other_xml from awr: '||SQLERRM);
+ 18  	 :other_xml := NULL;
+ 19  END;
+ 20  /
+SQL>
+SQL>SELECT :other_xml FROM DUAL;
+
+:OTHER_XML
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<other_xml><info type="db_version">12.1.0.2</info><info type="parse_schema"><![CDATA["OFSA40"]]></info><info type="dynamic_sampling" note="y">2</info><info type="plan_hash_full">252327998</info><info type="plan_hash">2088816245</info><info type="plan_hash_2">252327998</info><peeked_binds><bind nam=":B4" pos="1" dty="12" mxl="7">78790701010101</bind><bind nam=":B3" pos="2" dty="12" mxl="7">7879071f010101</bind><bind nam=":B2" pos="3" dty="1" csi="1" frm="1" mxl="32">535543</bind><bind nam=":B1" pos="4" dty="1" csi="1" frm="1" mxl="32">4e4f4d535543</bind><bind nam=":B3" pos="5" ppo="2" dty="12" mxl="7"/><bind nam=":B1" pos="6" ppo="4" dty="1" csi="1" frm="1" mxl="32"/><bind nam=":B5" pos="7" dty="1" csi="1" frm="1" mxl="32">4e</bind></peeked_binds><spd><cv>2</cv><cu>5</cu></spd><outline_data><hint><![CDATA[IGNORE_OPTIM_EMBEDDED_HINTS]]></hint><hint><![CDATA[OPTIMIZER_FEATURES_ENABLE('12.1.0.2')]]></hint><hint><![CDATA[DB_VERSION('12.1.0.2')]]></hint><hint><![CDATA[OPT_PARAM('_connect_by_use_union_all' 'false')]]></hint><hint><![CDATA[ALL_ROWS]]></hint><hint><![CDATA[OUTLINE_LEAF(@"SEL$CC7EC59E")]]></hint><hint><![CDATA[UNNEST(@"SEL$3")]]></hint><hint><![CDATA[UNNEST(@"SEL$2")]]></hint><hint><![CDATA[OUTLINE(@"SEL$1")]]></hint><hint><![CDATA[OUTLINE(@"SEL$3")]]></hint><hint><![CDATA[OUTLINE(@"SEL$2")]]></hint><hint><![CDATA[INDEX_RS_ASC(@"SEL$CC7EC59E" "D"@"SEL$1" ("TPVI_DETALLE"."INDICADOR" "TPVI_DETALLE"."TIPO_PREMIO" "TPVI_DETALLE"."MES"))]]></hint><hint><![CDATA[BATCH_TABLE_ACCESS_BY_ROWID(@"SEL$CC7EC59E" "D"@"SEL$1")]]></hint><hint><![CDATA[INDEX(@"SEL$CC7EC59E" "PV"@"SEL$3" ("PEA_PV04_DATOS"."MES" "PEA_PV04_DATOS"."INDIC" "PEA_PV04_DATOS"."REGION" "PEA_PV04_DATOS"."ZONA" "PEA_PV04_DATOS"."SUC" "PEA_PV04_DATOS"."FINAL"))]]></hint><hint><![CDATA[INDEX_FFS(@"SEL$CC7EC59E" "SR"@"SEL$2" ("PEA_SUC_REGION"."REGION" "PEA_SUC_REGION"."SUC"))]]></hint><hint><![CDATA[LEADING(@"SEL$CC7EC59E" "D"@"SEL$1" "PV"@"SEL$3" "SR"@"SEL$2")]]></hint><hint><![CDATA[USE_HASH(@"SEL$CC7EC5
+9E" "PV"@"SEL$3")]]></hint><hint><![CDATA[USE_HASH(@"SEL$CC7EC59E" "SR"@"SEL$2")]]></hint><hint><![CDATA[SWAP_JOIN_INPUTS(@"SEL$CC7EC59E" "PV"@"SEL$3")]]></hint><hint><![CDATA[SWAP_JOIN_INPUTS(@"SEL$CC7EC59E" "SR"@"SEL$2")]]></hint></outline_data></other_xml>
+
+SQL>
+SQL>-- generates script that creates sql profile in target system:
+SQL>SET ECHO OFF;
+coe_xfr_sql_profile_djxz0dq464m6h_2088816245.sql.

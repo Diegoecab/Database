@@ -1,10 +1,9 @@
-ALTER SESSION SET tracefile_identifier = TestDCN;
+ALTER SESSION SET tracefile_identifier = dcabrera;
 
 ALTER SESSION SET sql_trace = true;
 
-ALTER SYSTEM SET TIMED_STATISTICS = TRUE;
 
-select count(*) from system.test;
+SELECT count(*)FROM DTV_PROD_DATA.F_CHURN_PREPAGO;
 
 ALTER SESSION SET sql_trace=FALSE;
 

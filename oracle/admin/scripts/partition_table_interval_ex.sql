@@ -3,11 +3,14 @@
  
 
 create table part
-  (a date)PARTITION BY RANGE (a)
-    INTERVAL (NUMTODSINTERVAL(1,'*DAY*'))
-    (partition p1 values less than (TO_DATE('01-NOV-2007','DD-MON-YYYY'))
-  )
-  
+  (a date)
+  PARTITION BY RANGE (a)
+    INTERVAL(NUMTOYMINTERVAL(1, 'MONTH'))
+( 
+   PARTITION p2 VALUES LESS THAN (TO_DATE('1-7-2007', 'DD-MM-YYYY')),
+   PARTITION p3 VALUES LESS THAN (TO_DATE('1-8-2007', 'DD-MM-YYYY'))
+); 
+
   alter table mypart2 SET INTERVAL (NUMTOYMINTERVAL(1,'YEAR');
   
   alter table mypart2 SET INTERVAL (NUMTODSINTERVAL(10,'DAY');

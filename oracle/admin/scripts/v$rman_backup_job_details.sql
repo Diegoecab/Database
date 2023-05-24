@@ -14,5 +14,5 @@ to_char(END_TIME,'mm/dd/yy hh24:mi')   end_time,
 round(compression_ratio,2) compression_ratio,
 elapsed_seconds/3600                   hrs
 from V$RMAN_BACKUP_JOB_DETAILS
-where input_type like upper('%&input_type%')
-order by session_key;
+--where STATUS='RUNNING'
+order by START_TIME;

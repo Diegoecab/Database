@@ -1,0 +1,130 @@
+
+Oracle Memory Usage Report: PGA And UGA Memory Usage Per Session
+Enter value for the_host_name: 
+
+Host........:
+Enter value for the_name_of_the_instance: 
+
+Name........:
+Enter value for the_rdbms_version: 
+
+Version.....:
+select 'Startup Time: '||to_char(min(logon_time),'YYYY-MM-DD HH24:MI:SS') from curpgauga
+                                                                               *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Current Time: 2021.11.13-11:58:50
+
+Worst possible value of concurrent PGA + UGA memory usage per session:
+from     maxpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Worst possible total and average values of concurrent PGA + UGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||trunc(count(*)/2)||' sessions.' from maxpgauga
+                                                                                                                              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Approximate value of current PGA + UGA memory usage per session:
+from     curpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Current total and average values of concurrent PGA + UGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||trunc(count(*)/2)||' sessions.' from curpgauga
+                                                                                                                              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Maximum value of PGA memory usage per session:
+from     maxpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Worst possible total and average values of concurrent PGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||count(*)||' sessions.' from maxpgauga where name like 'session pga memory max%'
+                                                                                                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Maximum value of UGA memory usage per session:
+from     maxpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Worst possible total and average values of concurrent UGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||count(*)||' sessions.' from maxpgauga where name like 'session uga memory max%'
+                                                                                                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Current value of PGA memory usage per session:
+from     curpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Current total and average values of concurrent PGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||count(*)||' sessions.' from curpgauga where name like 'session pga memory%'
+                                                                                                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Current value of UGA memory usage per session:
+from     curpgauga
+         *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+
+Current total and average values of concurrent UGA memory usage:
+select sum(value)||' bytes (total) and ~'||trunc(avg(value))||' bytes (average), for ~'||count(*)||' sessions.' from curpgauga where name like 'session uga memory%'
+                                                                                                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Current SGA structure sizings:
+ORA-00942: table or view does not exist
+
+
+
+Some initialization parameter values at instance startup:
+from v$parameter
+     *
+ERROR at line 2:
+ORA-00942: table or view does not exist
+
+
+
+Current Time: 2021.11.13-11:58:51

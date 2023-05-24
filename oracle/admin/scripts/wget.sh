@@ -3,9 +3,15 @@
 #
 # Generated on Wed Sep 25 15:38:02 CDT 2019
 # Start of user configurable variables
-#
+# Download oracle software
+#wget.sh <download_link>
+#Ex:
+#wget.sh https://updates.oracle.com/Orion/Services/download/AHF-LINUX_v21.1.1.zip?aru=24200902&patch_file=AHF-LINUX_v21.1.1.zip
+
 LANG=C
 export LANG
+
+export DOWNLOAD_LINK=${1}
 
 #Trap to cleanup cookie file in case of unexpected exits.
 trap 'rm -f $COOKIE_FILE; exit 1' 1 2 3 6 
@@ -54,7 +60,7 @@ then
  echo "Please check logfile: $LOGFILE for more details." 
 else
  echo "Authentication is successful. Proceeding with downloads..." >> "$LOGFILE" 
- $WGET --load-cookies="$COOKIE_FILE" "https://edelivery.oracle.com/osdc/softwareDownload?fileName=V978971-01.zip&token=UzV5YWo4SWpFTDV3cTM1VmZKQ3lpUSE6OiFmaWxlSWQ9MTAxMTYxNTk1JmZpbGVTZXRDaWQ9ODc4Nzk5JnJlbGVhc2VDaWRzPTg1NjczMyZwbGF0Zm9ybUNpZHM9MzUmZG93bmxvYWRUeXBlPTk1NzYxJmFncmVlbWVudElkPTU4OTk0MjMmZW1haWxBZGRyZXNzPWRjYWJyZXJhQGRhdGFzdGFyLmNvbS5hciZ1c2VyTmFtZT1FUEQtRENBQlJFUkFAREFUQVNUQVIuQ09NLkFSJmlwQWRkcmVzcz0xOTAuMjEwLjIyOC4xMjEmdXNlckFnZW50PU1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83Ni4wLjM4MDkuMTAwIFNhZmFyaS81MzcuMzYmY291bnRyeUNvZGU9QVI" -O "$OUTPUT_DIR/V978971-01.zip" >> "$LOGFILE" 2>&1 
+ $WGET --load-cookies="$COOKIE_FILE" "$DOWNLOAD_LINK" >> "$LOGFILE" 2>&1 
 fi 
 
 # Cleanup

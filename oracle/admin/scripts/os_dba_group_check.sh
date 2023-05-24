@@ -1,0 +1,1 @@
+grep "define SS_" $ORACLE_HOME/rdbms/lib/config.c

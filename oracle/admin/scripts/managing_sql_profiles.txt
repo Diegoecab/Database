@@ -26,7 +26,7 @@ The STATUS, NAME, DESCRIPTION, and CATEGORY attributes of an SQL profile can be 
 
     BEGIN
       DBMS_SQLTUNE.alter_sql_profile (
-        name            => 'emp_dept_profile',
+        name            => 'coe_0jnx08gtg5w10_1587015956',
         attribute_name  => 'STATUS',
         value           => 'DISABLED');
     END;
@@ -36,7 +36,7 @@ Existing SQL profiles can be dropped using the DROP_SQL_PROFILE procedure:
 
     BEGIN
       DBMS_SQLTUNE.drop_sql_profile (
-        name   => 'emp_dept_profile',
-        ignore => TRUE);
+        name   => 'coe_ag6cpqtw938ng_1613663380',
+        ignore => FALSE);
     END;
     /

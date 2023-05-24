@@ -1,0 +1,1 @@
+split -d -l 500 index_constraint_script.sql index_constraint_script.sql

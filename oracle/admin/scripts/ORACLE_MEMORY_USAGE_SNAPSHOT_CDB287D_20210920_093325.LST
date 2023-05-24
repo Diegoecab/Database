@@ -1,0 +1,2611 @@
+
+Oracle Memory Usage Report: PGA And UGA Memory Usage Per Session
+
+Host........: dblxbusidesa07.ar.bsch
+
+Name........: CDB287D
+
+Version.....: 19.0.0.0.0
+
+Startup Time: 2021-07-26 20:13:55
+
+Current Time: 2021.09.20-09:33:25
+
+Worst possible value of concurrent PGA + UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+  89453704 2021-09-19 23:05:02
+
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+  87143464 2021-09-18 21:35:05
+
+669,48931
+ACOMDBD1
+  62558392 2021-09-20 09:00:44
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+  53370392 2021-07-26 20:13:57
+
+757,34898
+ACOMDBD1
+  51260784 2021-09-20 09:00:44
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+  24122736 2021-09-15 18:40:36
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+  21525232 2021-07-26 20:14:10
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+  19928712 2021-09-19 16:54:50
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+  16552976 2021-07-26 20:13:57
+
+431,27448
+DBSNMP
+  13170280 2021-09-20 09:32:41
+
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+  11399784 2021-07-26 20:14:20
+
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+  11036616 2021-07-26 20:14:49
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+  10436744 2021-07-26 20:14:25
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   9533192 2021-07-26 20:13:57
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   9467632 2021-07-26 20:24:31
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   9419248 2021-07-26 20:24:28
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   9402192 2021-07-26 20:24:46
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   9402168 2021-07-26 20:24:19
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   9336568 2021-07-26 20:24:58
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   9288152 2021-07-26 20:24:22
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   9271144 2021-07-26 20:24:25
+
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   9091496 2021-07-26 20:24:34
+
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   9025984 2021-07-26 20:13:57
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+   9010768 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   8960472 2021-07-26 20:14:12
+
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   8960448 2021-07-26 20:24:40
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   8943392 2021-07-26 20:14:21
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   8894936 2021-07-26 20:24:43
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   8894912 2021-07-26 20:24:52
+
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   8877880 2021-07-26 20:24:16
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   8877856 2021-07-26 20:24:55
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   8829376 2021-07-26 20:14:15
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   8812368 2021-07-26 20:24:49
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   8746832 2021-07-26 20:24:37
+
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+   7420944 2021-07-26 20:13:57
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   7362656 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+   6781920 2021-07-26 20:13:57
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+   6257632 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+   6118680 2021-07-26 20:13:57
+
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+   5873536 2021-07-26 20:13:57
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+   5825024 2021-07-26 20:13:57
+
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+   5139712 2021-07-26 20:13:57
+
+158,7777
+SYS
+   4422960 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+   3895880 2021-09-20 09:00:30
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+   3374776 2021-07-26 20:13:56
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+   3374768 2021-07-26 20:13:57
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+   3374768 2021-07-26 20:13:58
+
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+   3243696 2021-07-26 20:14:14
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+   3153160 2021-09-11 10:00:06
+
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+   2847472 2021-07-26 20:13:57
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+   2847472 2021-07-26 20:13:57
+
+506,7980
+ACOMDBD1
+   2650792 2021-09-20 09:17:10
+
+562,56844
+ACOMDBD1
+   2650792 2021-09-20 09:05:21
+
+719,20169
+ACOMDBD1
+   2650792 2021-09-20 09:15:22
+
+251,3115
+ACOMDBD1
+   2650792 2021-09-20 09:25:37
+
+24,40910
+ACOMDBD1
+   2650792 2021-09-20 09:32:07
+
+420,51980
+ACOMDBD1
+   2650792 2021-09-20 09:13:18
+
+651,50966
+ACOMDBD1
+   2650792 2021-09-20 09:24:21
+
+195,41323
+ACOMDBD1
+   2650792 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+   2650792 2021-09-20 09:22:48
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+404,17681
+ACOMDBD1
+   2650792 2021-09-20 09:21:58
+
+427,33030
+ACOMDBD1
+   2650792 2021-09-20 09:22:11
+
+109,41724
+ACOMDBD1
+   2650792 2021-09-20 09:23:54
+
+321,57815
+ACOMDBD1
+   2650792 2021-09-20 09:22:37
+
+325,45859
+ACOMDBD1
+   2650792 2021-09-20 09:25:37
+
+712,6014
+ACOMDBD1
+   2650792 2021-09-20 09:32:16
+
+753,29367
+ACOMDBD1
+   2650792 2021-09-20 09:16:16
+
+40,57096
+ACOMDBD1
+   2650792 2021-09-20 09:19:22
+
+244,32759
+ACOMDBD1
+   2650792 2021-09-20 09:10:50
+
+496,39495
+ACOMDBD1
+   2650792 2021-09-20 09:32:08
+
+601,34406
+ACOMDBD1
+   2650792 2021-09-20 09:23:41
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+   2388720 2021-07-26 20:14:24
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+   2260656 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+   2195120 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+   2195120 2021-07-26 20:13:57
+
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+   2146048 2021-07-26 20:13:55
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+   2146048 2021-07-26 20:13:55
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+   2129584 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+   2129584 2021-07-26 20:13:57
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+   2129584 2021-07-26 20:13:57
+
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+   2129584 2021-07-26 20:13:55
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+   2129584 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+   2129584 2021-07-26 20:13:56
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+   2129584 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+   2129584 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+   2129584 2021-07-26 20:13:56
+
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+   2077504 2021-08-19 10:45:25
+
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+   2077504 2021-08-19 10:45:25
+
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+   2061040 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   2061040 2021-07-26 20:13:57
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+   2061040 2021-07-26 20:14:10
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   2061040 2021-07-26 20:13:57
+
+
+Worst possible total and average values of concurrent PGA + UGA memory usage:
+
+842234864 bytes (total) and ~4577363 bytes (average), for ~92 sessions.
+
+Approximate value of current PGA + UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+  49586128 2021-09-11 10:00:06
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+  47292096 2021-09-15 18:40:36
+
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+  44998048 2021-09-18 21:35:05
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+  38330608 2021-09-19 16:54:50
+
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+  37216176 2021-09-19 23:05:02
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+  34028232 2021-07-26 20:13:57
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+  21459696 2021-07-26 20:14:10
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+  13407248 2021-07-26 20:13:57
+
+757,34898
+ACOMDBD1
+  12675496 2021-09-20 09:00:44
+
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+  10971104 2021-07-26 20:14:49
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+   8748624 2021-07-26 20:13:57
+
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+   7694632 2021-07-26 20:14:20
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+   6503440 2021-07-26 20:13:57
+
+431,27448
+DBSNMP
+   6320808 2021-09-20 09:32:41
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   6183152 2021-07-26 20:13:57
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   6106592 2021-07-26 20:24:19
+
+669,48931
+ACOMDBD1
+   6057728 2021-09-20 09:00:44
+
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+   5303672 2021-07-26 20:13:57
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   5009480 2021-07-26 20:24:28
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   4992400 2021-07-26 20:24:25
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   4941264 2021-07-26 20:24:37
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   4926920 2021-07-26 20:24:46
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   4926896 2021-07-26 20:13:57
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   4926896 2021-07-26 20:24:22
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   4878416 2021-07-26 20:24:34
+
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   4878392 2021-07-26 20:24:40
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   4861336 2021-07-26 20:14:21
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   4861336 2021-07-26 20:24:31
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   4861296 2021-07-26 20:24:58
+
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   4812904 2021-07-26 20:13:57
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   4812880 2021-07-26 20:24:43
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   4795848 2021-07-26 20:24:52
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   4747368 2021-07-26 20:14:15
+
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   4730336 2021-07-26 20:24:16
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   4730312 2021-07-26 20:24:49
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   4730312 2021-07-26 20:24:55
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+   4681928 2021-07-26 20:14:25
+
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   4681856 2021-07-26 20:14:12
+
+158,7777
+SYS
+   4357472 2021-07-26 20:13:57
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+   4357424 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+   4306232 2021-07-26 20:13:57
+
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+   4044184 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+   3830392 2021-09-20 09:00:30
+
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+   3824864 2021-07-26 20:13:57
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+   3727872 2021-07-26 20:13:57
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+   3374768 2021-07-26 20:13:57
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+   3374768 2021-07-26 20:13:58
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+   3309240 2021-07-26 20:13:56
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+   2981552 2021-07-26 20:14:14
+
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+   2781936 2021-07-26 20:13:57
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+   2781936 2021-07-26 20:13:57
+
+506,7980
+ACOMDBD1
+   2650760 2021-09-20 09:17:10
+
+562,56844
+ACOMDBD1
+   2650760 2021-09-20 09:05:21
+
+719,20169
+ACOMDBD1
+   2650760 2021-09-20 09:15:22
+
+251,3115
+ACOMDBD1
+   2650760 2021-09-20 09:25:37
+
+24,40910
+ACOMDBD1
+   2650760 2021-09-20 09:32:07
+
+420,51980
+ACOMDBD1
+   2650760 2021-09-20 09:13:18
+
+651,50966
+ACOMDBD1
+   2650760 2021-09-20 09:24:21
+
+195,41323
+ACOMDBD1
+   2650760 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+   2650760 2021-09-20 09:22:48
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+404,17681
+ACOMDBD1
+   2650760 2021-09-20 09:21:58
+
+427,33030
+ACOMDBD1
+   2650760 2021-09-20 09:22:11
+
+109,41724
+ACOMDBD1
+   2650760 2021-09-20 09:23:54
+
+321,57815
+ACOMDBD1
+   2650760 2021-09-20 09:22:37
+
+325,45859
+ACOMDBD1
+   2650760 2021-09-20 09:25:37
+
+712,6014
+ACOMDBD1
+   2650760 2021-09-20 09:32:16
+
+753,29367
+ACOMDBD1
+   2650760 2021-09-20 09:16:16
+
+40,57096
+ACOMDBD1
+   2650760 2021-09-20 09:19:22
+
+244,32759
+ACOMDBD1
+   2650760 2021-09-20 09:10:50
+
+496,39495
+ACOMDBD1
+   2650760 2021-09-20 09:32:08
+
+601,34406
+ACOMDBD1
+   2650760 2021-09-20 09:23:41
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+   2388720 2021-07-26 20:14:24
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+   2260656 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+   2195120 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+   2195120 2021-07-26 20:13:57
+
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+   2146048 2021-07-26 20:13:55
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+   2146048 2021-07-26 20:13:55
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+   2129584 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+   2129584 2021-07-26 20:13:57
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+   2129584 2021-07-26 20:13:57
+
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+   2129584 2021-07-26 20:13:55
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+   2129584 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+   2129584 2021-07-26 20:13:56
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+   2129584 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+   2129584 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+   2129584 2021-07-26 20:13:56
+
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+   2077504 2021-08-19 10:45:25
+
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+   2077504 2021-08-19 10:45:25
+
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+   2061040 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   2061040 2021-07-26 20:13:57
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+   2061040 2021-07-26 20:14:10
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   2061040 2021-07-26 20:13:57
+
+
+Current total and average values of concurrent PGA + UGA memory usage:
+
+604636832 bytes (total) and ~3286069 bytes (average), for ~92 sessions.
+
+Maximum value of PGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+  62496640 2021-09-18 21:35:05
+
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+  60744224 2021-09-19 23:05:02
+
+669,48931
+ACOMDBD1
+  56680992 2021-09-20 09:00:44
+
+757,34898
+ACOMDBD1
+  33677856 2021-09-20 09:00:44
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+  31518176 2021-07-26 20:13:57
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+  21160480 2021-07-26 20:14:10
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+  16188224 2021-07-26 20:13:57
+
+431,27448
+DBSNMP
+  10478112 2021-09-20 09:32:41
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+   8515040 2021-07-26 20:13:57
+
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+   7990752 2021-07-26 20:14:20
+
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+   7922208 2021-07-26 20:14:25
+
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+   7056192 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+   6611488 2021-07-26 20:14:49
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   6397824 2021-07-26 20:13:57
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   6349344 2021-07-26 20:24:28
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   6332288 2021-07-26 20:24:46
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   6332288 2021-07-26 20:24:31
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   6332288 2021-07-26 20:24:19
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   6266752 2021-07-26 20:24:25
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   6266752 2021-07-26 20:24:58
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   6218272 2021-07-26 20:24:22
+
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   5956128 2021-07-26 20:24:34
+
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   5890592 2021-07-26 20:13:57
+
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   5890592 2021-07-26 20:14:12
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   5890592 2021-07-26 20:24:40
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   5873536 2021-07-26 20:14:21
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   5825056 2021-07-26 20:24:43
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   5825056 2021-07-26 20:24:52
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   5808000 2021-07-26 20:24:49
+
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   5808000 2021-07-26 20:24:16
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   5808000 2021-07-26 20:24:55
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   5759520 2021-07-26 20:14:15
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   5742464 2021-07-26 20:24:37
+
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+   5508784 2021-07-26 20:13:57
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+   5460272 2021-07-26 20:13:57
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   5426192 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+   5369312 2021-07-26 20:13:57
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+   4845024 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+   4582880 2021-07-26 20:13:57
+
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+   3861984 2021-07-26 20:13:57
+
+158,7777
+SYS
+   3534304 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+   3269152 2021-09-20 09:00:30
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+   3010024 2021-07-26 20:13:56
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+   3010016 2021-07-26 20:13:58
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+   3010016 2021-07-26 20:13:57
+
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+   2878944 2021-07-26 20:14:14
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+   2482720 2021-07-26 20:13:57
+
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+   2482720 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+753,29367
+ACOMDBD1
+   2155040 2021-09-20 09:16:16
+
+719,20169
+ACOMDBD1
+   2155040 2021-09-20 09:15:22
+
+712,6014
+ACOMDBD1
+   2155040 2021-09-20 09:32:16
+
+651,50966
+ACOMDBD1
+   2155040 2021-09-20 09:24:21
+
+601,34406
+ACOMDBD1
+   2155040 2021-09-20 09:23:41
+
+562,56844
+ACOMDBD1
+   2155040 2021-09-20 09:05:21
+
+506,7980
+ACOMDBD1
+   2155040 2021-09-20 09:17:10
+
+496,39495
+ACOMDBD1
+   2155040 2021-09-20 09:32:08
+
+427,33030
+ACOMDBD1
+   2155040 2021-09-20 09:22:11
+
+420,51980
+ACOMDBD1
+   2155040 2021-09-20 09:13:18
+
+404,17681
+ACOMDBD1
+   2155040 2021-09-20 09:21:58
+
+325,45859
+ACOMDBD1
+   2155040 2021-09-20 09:25:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+321,57815
+ACOMDBD1
+   2155040 2021-09-20 09:22:37
+
+251,3115
+ACOMDBD1
+   2155040 2021-09-20 09:25:37
+
+244,32759
+ACOMDBD1
+   2155040 2021-09-20 09:10:50
+
+195,41323
+ACOMDBD1
+   2155040 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+   2155040 2021-09-20 09:22:48
+
+109,41724
+ACOMDBD1
+   2155040 2021-09-20 09:23:54
+
+40,57096
+ACOMDBD1
+   2155040 2021-09-20 09:19:22
+
+24,40910
+ACOMDBD1
+   2155040 2021-09-20 09:32:07
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+   2023968 2021-07-26 20:14:24
+
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+   1895904 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+   1830368 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+   1830368 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+   1781296 2021-07-26 20:13:55
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+   1781296 2021-07-26 20:13:55
+
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+   1764832 2021-07-26 20:13:57
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+   1764832 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+   1764832 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+   1764832 2021-07-26 20:13:56
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+   1764832 2021-07-26 20:13:57
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+   1764832 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+   1764832 2021-07-26 20:13:56
+
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+   1764832 2021-07-26 20:13:55
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+   1764832 2021-07-26 20:13:57
+
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+   1712752 2021-08-19 10:45:25
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+   1712752 2021-08-19 10:45:25
+
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+   1696288 2021-07-26 20:14:10
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+   1696288 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   1696288 2021-07-26 20:13:57
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   1696288 2021-07-26 20:13:57
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+         0 2021-09-19 16:54:50
+
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+         0 2021-09-11 10:00:06
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+         0 2021-09-15 18:40:36
+
+
+Worst possible total and average values of concurrent PGA memory usage:
+
+590684216 bytes (total) and ~6420480 bytes (average), for ~92 sessions.
+
+Maximum value of UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+  28709480 2021-09-19 23:05:02
+
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+  24646824 2021-09-18 21:35:05
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+  24122736 2021-09-15 18:40:36
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+  21852216 2021-07-26 20:13:57
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+  19928712 2021-09-19 16:54:50
+
+757,34898
+ACOMDBD1
+  17582928 2021-09-20 09:00:44
+
+669,48931
+ACOMDBD1
+   5877400 2021-09-20 09:00:44
+
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+   4425128 2021-07-26 20:14:49
+
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+   3409032 2021-07-26 20:14:20
+
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+   3153160 2021-09-11 10:00:06
+
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   3135392 2021-07-26 20:13:57
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   3135368 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   3135368 2021-07-26 20:24:34
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   3135344 2021-07-26 20:24:31
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   3069904 2021-07-26 20:24:46
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   3069904 2021-07-26 20:24:28
+
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   3069880 2021-07-26 20:24:16
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   3069880 2021-07-26 20:24:43
+
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   3069880 2021-07-26 20:14:12
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   3069880 2021-07-26 20:24:22
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   3069880 2021-07-26 20:24:19
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   3069856 2021-07-26 20:14:21
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   3069856 2021-07-26 20:14:15
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   3069856 2021-07-26 20:24:55
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   3069856 2021-07-26 20:24:40
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   3069856 2021-07-26 20:24:52
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   3069816 2021-07-26 20:24:58
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   3004392 2021-07-26 20:24:25
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   3004368 2021-07-26 20:24:49
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   3004368 2021-07-26 20:24:37
+
+431,27448
+DBSNMP
+   2692168 2021-09-20 09:32:41
+
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+   2514536 2021-07-26 20:14:25
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   1936464 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+   1535800 2021-07-26 20:13:57
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+   1412608 2021-07-26 20:13:57
+
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+   1412608 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+   1277728 2021-07-26 20:13:57
+
+158,7777
+SYS
+    888656 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+    626728 2021-09-20 09:00:30
+
+753,29367
+ACOMDBD1
+    495752 2021-09-20 09:16:16
+
+719,20169
+ACOMDBD1
+    495752 2021-09-20 09:15:22
+
+712,6014
+ACOMDBD1
+    495752 2021-09-20 09:32:16
+
+651,50966
+ACOMDBD1
+    495752 2021-09-20 09:24:21
+
+601,34406
+ACOMDBD1
+    495752 2021-09-20 09:23:41
+
+562,56844
+ACOMDBD1
+    495752 2021-09-20 09:05:21
+
+506,7980
+ACOMDBD1
+    495752 2021-09-20 09:17:10
+
+496,39495
+ACOMDBD1
+    495752 2021-09-20 09:32:08
+
+427,33030
+ACOMDBD1
+    495752 2021-09-20 09:22:11
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+420,51980
+ACOMDBD1
+    495752 2021-09-20 09:13:18
+
+404,17681
+ACOMDBD1
+    495752 2021-09-20 09:21:58
+
+325,45859
+ACOMDBD1
+    495752 2021-09-20 09:25:37
+
+321,57815
+ACOMDBD1
+    495752 2021-09-20 09:22:37
+
+251,3115
+ACOMDBD1
+    495752 2021-09-20 09:25:37
+
+244,32759
+ACOMDBD1
+    495752 2021-09-20 09:10:50
+
+195,41323
+ACOMDBD1
+    495752 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+    495752 2021-09-20 09:22:48
+
+109,41724
+ACOMDBD1
+    495752 2021-09-20 09:23:54
+
+40,57096
+ACOMDBD1
+    495752 2021-09-20 09:19:22
+
+24,40910
+ACOMDBD1
+    495752 2021-09-20 09:32:07
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+    495728 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+    364752 2021-08-19 10:45:25
+
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+    364752 2021-07-26 20:13:57
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+    364752 2021-07-26 20:13:57
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+    364752 2021-07-26 20:13:58
+
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+    364752 2021-07-26 20:13:57
+
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+    364752 2021-07-26 20:14:14
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+    364752 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+    364752 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+    364752 2021-07-26 20:13:56
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+    364752 2021-07-26 20:13:57
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+    364752 2021-07-26 20:13:56
+
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+    364752 2021-08-19 10:45:25
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+    364752 2021-07-26 20:14:10
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+    364752 2021-07-26 20:13:57
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+    364752 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+    364752 2021-07-26 20:13:56
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+    364752 2021-07-26 20:14:24
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+    364752 2021-07-26 20:14:10
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+    364752 2021-07-26 20:13:57
+
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+    364752 2021-07-26 20:13:55
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+    364752 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+    364752 2021-07-26 20:13:57
+
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+    364752 2021-07-26 20:13:55
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+    364752 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+    364752 2021-07-26 20:13:57
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+    364752 2021-07-26 20:13:55
+
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+    364752 2021-07-26 20:13:57
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+    364752 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+    364752 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+    364752 2021-07-26 20:13:57
+
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+    364752 2021-07-26 20:13:57
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+    364752 2021-07-26 20:13:57
+
+
+Worst possible total and average values of concurrent UGA memory usage:
+
+251550648 bytes (total) and ~2734246 bytes (average), for ~92 sessions.
+
+Current value of PGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+  48537472 2021-09-11 10:00:06
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+  45195136 2021-09-15 18:40:36
+
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+  39755648 2021-09-18 21:35:05
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+  35185184 2021-09-19 16:54:50
+
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+  32760352 2021-09-19 23:05:02
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+  29224416 2021-07-26 20:13:57
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+  21094944 2021-07-26 20:14:10
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+  13042496 2021-07-26 20:13:57
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+   8252896 2021-07-26 20:13:57
+
+757,34898
+ACOMDBD1
+   7660064 2021-09-20 09:00:44
+
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+   6611488 2021-07-26 20:14:49
+
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+   6138688 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+   5303776 2021-07-26 20:14:20
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   4824960 2021-07-26 20:24:19
+
+431,27448
+DBSNMP
+   4645408 2021-09-20 09:32:41
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   4443152 2021-07-26 20:13:57
+
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+   4320736 2021-07-26 20:13:57
+
+669,48931
+ACOMDBD1
+   4252192 2021-09-20 09:00:44
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   3662368 2021-07-26 20:24:28
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   3645312 2021-07-26 20:24:25
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   3579776 2021-07-26 20:24:46
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   3579776 2021-07-26 20:13:57
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   3579776 2021-07-26 20:24:37
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   3579776 2021-07-26 20:24:22
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+158,7777
+SYS
+   3534304 2021-07-26 20:13:57
+
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   3531296 2021-07-26 20:24:40
+
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   3531296 2021-07-26 20:24:34
+
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+   3531296 2021-07-26 20:14:25
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   3514240 2021-07-26 20:14:21
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   3514240 2021-07-26 20:24:58
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   3514240 2021-07-26 20:24:52
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   3514240 2021-07-26 20:24:31
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+   3468768 2021-07-26 20:13:57
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   3465760 2021-07-26 20:14:15
+
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   3465760 2021-07-26 20:13:57
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   3465760 2021-07-26 20:24:43
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+   3460112 2021-07-26 20:13:57
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   3448704 2021-07-26 20:24:49
+
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   3448704 2021-07-26 20:24:16
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   3448704 2021-07-26 20:24:55
+
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   3400224 2021-07-26 20:14:12
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+   3363120 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+   3337696 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+   3269152 2021-09-20 09:00:30
+
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+   3206624 2021-07-26 20:13:57
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+   3010016 2021-07-26 20:13:58
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+   3010016 2021-07-26 20:13:57
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+   2944488 2021-07-26 20:13:56
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+   2616800 2021-07-26 20:14:14
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+   2417184 2021-07-26 20:13:57
+
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+   2417184 2021-07-26 20:13:57
+
+753,29367
+ACOMDBD1
+   2155040 2021-09-20 09:16:16
+
+719,20169
+ACOMDBD1
+   2155040 2021-09-20 09:15:22
+
+712,6014
+ACOMDBD1
+   2155040 2021-09-20 09:32:16
+
+651,50966
+ACOMDBD1
+   2155040 2021-09-20 09:24:21
+
+601,34406
+ACOMDBD1
+   2155040 2021-09-20 09:23:41
+
+562,56844
+ACOMDBD1
+   2155040 2021-09-20 09:05:21
+
+506,7980
+ACOMDBD1
+   2155040 2021-09-20 09:17:10
+
+496,39495
+ACOMDBD1
+   2155040 2021-09-20 09:32:08
+
+427,33030
+ACOMDBD1
+   2155040 2021-09-20 09:22:11
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+420,51980
+ACOMDBD1
+   2155040 2021-09-20 09:13:18
+
+404,17681
+ACOMDBD1
+   2155040 2021-09-20 09:21:58
+
+325,45859
+ACOMDBD1
+   2155040 2021-09-20 09:25:37
+
+321,57815
+ACOMDBD1
+   2155040 2021-09-20 09:22:37
+
+251,3115
+ACOMDBD1
+   2155040 2021-09-20 09:25:37
+
+244,32759
+ACOMDBD1
+   2155040 2021-09-20 09:10:50
+
+195,41323
+ACOMDBD1
+   2155040 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+   2155040 2021-09-20 09:22:48
+
+109,41724
+ACOMDBD1
+   2155040 2021-09-20 09:23:54
+
+40,57096
+ACOMDBD1
+   2155040 2021-09-20 09:19:22
+
+24,40910
+ACOMDBD1
+   2155040 2021-09-20 09:32:07
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+   2023968 2021-07-26 20:14:24
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+   1895904 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+   1830368 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+   1830368 2021-07-26 20:13:57
+
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+   1781296 2021-07-26 20:13:55
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+   1781296 2021-07-26 20:13:55
+
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+   1764832 2021-07-26 20:13:57
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+   1764832 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+   1764832 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+   1764832 2021-07-26 20:13:56
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+   1764832 2021-07-26 20:13:57
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+   1764832 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+   1764832 2021-07-26 20:13:56
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+   1764832 2021-07-26 20:13:55
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+   1764832 2021-07-26 20:13:57
+
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+   1712752 2021-08-19 10:45:25
+
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+   1712752 2021-08-19 10:45:25
+
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+   1696288 2021-07-26 20:14:10
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+   1696288 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   1696288 2021-07-26 20:13:57
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+   1696288 2021-07-26 20:13:57
+
+
+Current total and average values of concurrent PGA memory usage:
+
+512063864 bytes (total) and ~5565911 bytes (average), for ~92 sessions.
+
+Current value of UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+10,25246
+oracle@dblxbusidesa07.ar.bsch (M002)
+   5242400 2021-09-18 21:35:05
+
+757,34898
+ACOMDBD1
+   5015432 2021-09-20 09:00:44
+
+238,8400
+oracle@dblxbusidesa07.ar.bsch (MMON)
+   4803816 2021-07-26 20:13:57
+
+257,889
+oracle@dblxbusidesa07.ar.bsch (M000)
+   4455824 2021-09-19 23:05:02
+
+635,43134
+oracle@dblxbusidesa07.ar.bsch (Q008)
+   4359616 2021-07-26 20:14:49
+
+182,28539
+oracle@dblxbusidesa07.ar.bsch (M003)
+   3145424 2021-09-19 16:54:50
+
+84,52072
+oracle@dblxbusidesa07.ar.bsch (CJQ0)
+   2390856 2021-07-26 20:14:20
+
+89,37415
+oracle@dblxbusidesa07.ar.bsch (M004)
+   2096960 2021-09-15 18:40:36
+
+669,48931
+ACOMDBD1
+   1805536 2021-09-20 09:00:44
+
+314,836
+oracle@dblxbusidesa07.ar.bsch (DBRM)
+   1740000 2021-07-26 20:13:57
+
+431,27448
+DBSNMP
+   1675400 2021-09-20 09:32:41
+
+319,16461
+oracle@dblxbusidesa07.ar.bsch (W00C)
+   1361488 2021-07-26 20:24:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+627,37701
+oracle@dblxbusidesa07.ar.bsch (W001)
+   1347144 2021-07-26 20:13:57
+
+553,57018
+oracle@dblxbusidesa07.ar.bsch (W00F)
+   1347144 2021-07-26 20:24:46
+
+549,27986
+oracle@dblxbusidesa07.ar.bsch (W000)
+   1347120 2021-07-26 20:13:57
+
+474,28834
+oracle@dblxbusidesa07.ar.bsch (W00E)
+   1347120 2021-07-26 20:24:43
+
+248,39716
+oracle@dblxbusidesa07.ar.bsch (W00B)
+   1347120 2021-07-26 20:24:34
+
+161,27583
+oracle@dblxbusidesa07.ar.bsch (W007)
+   1347120 2021-07-26 20:24:22
+
+169,36539
+oracle@dblxbusidesa07.ar.bsch (W009)
+   1347112 2021-07-26 20:24:28
+
+710,25589
+oracle@dblxbusidesa07.ar.bsch (W004)
+   1347096 2021-07-26 20:14:21
+
+395,21858
+oracle@dblxbusidesa07.ar.bsch (W00D)
+   1347096 2021-07-26 20:24:40
+
+13,48630
+oracle@dblxbusidesa07.ar.bsch (W00A)
+   1347096 2021-07-26 20:24:31
+
+240,5935
+oracle@dblxbusidesa07.ar.bsch (W008)
+   1347088 2021-07-26 20:24:25
+
+171,50473
+oracle@dblxbusidesa07.ar.bsch (W00J)
+   1347056 2021-07-26 20:24:58
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+630,65203
+oracle@dblxbusidesa07.ar.bsch (W005)
+   1281632 2021-07-26 20:24:16
+
+472,14353
+oracle@dblxbusidesa07.ar.bsch (W002)
+   1281632 2021-07-26 20:14:12
+
+5,31229
+oracle@dblxbusidesa07.ar.bsch (W006)
+   1281632 2021-07-26 20:24:19
+
+639,40591
+oracle@dblxbusidesa07.ar.bsch (W00G)
+   1281608 2021-07-26 20:24:49
+
+632,36529
+oracle@dblxbusidesa07.ar.bsch (W003)
+   1281608 2021-07-26 20:14:15
+
+556,19754
+oracle@dblxbusidesa07.ar.bsch (W00I)
+   1281608 2021-07-26 20:24:55
+
+85,61697
+oracle@dblxbusidesa07.ar.bsch (W00H)
+   1281608 2021-07-26 20:24:52
+
+87,1790
+oracle@dblxbusidesa07.ar.bsch (Q005)
+   1150632 2021-07-26 20:14:25
+
+115,36923
+oracle@dblxbusidesa07.ar.bsch (M001)
+   1048656 2021-09-11 10:00:06
+
+625,11417
+oracle@dblxbusidesa07.ar.bsch (LREG)
+    982936 2021-07-26 20:13:57
+
+237,50667
+oracle@dblxbusidesa07.ar.bsch (SMON)
+    968536 2021-07-26 20:13:57
+
+704,2453
+oracle@dblxbusidesa07.ar.bsch (GEN1)
+    888656 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+471,54711
+oracle@dblxbusidesa07.ar.bsch (RECO)
+    837560 2021-07-26 20:13:57
+
+158,7777
+SYS
+    823168 2021-07-26 20:13:57
+
+575,62687
+ACOMDBD1
+    561240 2021-09-20 09:00:30
+
+316,32357
+oracle@dblxbusidesa07.ar.bsch (MMNL)
+    495728 2021-07-26 20:13:57
+
+753,29367
+ACOMDBD1
+    495720 2021-09-20 09:16:16
+
+719,20169
+ACOMDBD1
+    495720 2021-09-20 09:15:22
+
+712,6014
+ACOMDBD1
+    495720 2021-09-20 09:32:16
+
+651,50966
+ACOMDBD1
+    495720 2021-09-20 09:24:21
+
+601,34406
+ACOMDBD1
+    495720 2021-09-20 09:23:41
+
+562,56844
+ACOMDBD1
+    495720 2021-09-20 09:05:21
+
+506,7980
+ACOMDBD1
+    495720 2021-09-20 09:17:10
+
+496,39495
+ACOMDBD1
+    495720 2021-09-20 09:32:08
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+427,33030
+ACOMDBD1
+    495720 2021-09-20 09:22:11
+
+420,51980
+ACOMDBD1
+    495720 2021-09-20 09:13:18
+
+404,17681
+ACOMDBD1
+    495720 2021-09-20 09:21:58
+
+325,45859
+ACOMDBD1
+    495720 2021-09-20 09:25:37
+
+321,57815
+ACOMDBD1
+    495720 2021-09-20 09:22:37
+
+251,3115
+ACOMDBD1
+    495720 2021-09-20 09:25:37
+
+244,32759
+ACOMDBD1
+    495720 2021-09-20 09:10:50
+
+195,41323
+ACOMDBD1
+    495720 2021-09-20 09:21:39
+
+126,37818
+ACOMDBD1
+    495720 2021-09-20 09:22:48
+
+109,41724
+ACOMDBD1
+    495720 2021-09-20 09:23:54
+
+40,57096
+ACOMDBD1
+    495720 2021-09-20 09:19:22
+
+24,40910
+ACOMDBD1
+    495720 2021-09-20 09:32:07
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+720,31772
+oracle@dblxbusidesa07.ar.bsch (CL00)
+    364752 2021-08-19 10:45:25
+
+706,59244
+oracle@dblxbusidesa07.ar.bsch (PXMN)
+    364752 2021-07-26 20:13:57
+
+705,8452
+oracle@dblxbusidesa07.ar.bsch (DBW0)
+    364752 2021-07-26 20:13:57
+
+703,15342
+oracle@dblxbusidesa07.ar.bsch (MARK)
+    364752 2021-07-26 20:13:58
+
+626,12316
+oracle@dblxbusidesa07.ar.bsch (DIA0)
+    364752 2021-07-26 20:13:57
+
+552,58928
+oracle@dblxbusidesa07.ar.bsch (AQPC)
+    364752 2021-07-26 20:14:14
+
+551,40659
+oracle@dblxbusidesa07.ar.bsch (TMON)
+    364752 2021-07-26 20:13:57
+
+548,30811
+oracle@dblxbusidesa07.ar.bsch (PMAN)
+    364752 2021-07-26 20:13:57
+
+547,54006
+oracle@dblxbusidesa07.ar.bsch (MMAN)
+    364752 2021-07-26 20:13:56
+
+470,30782
+oracle@dblxbusidesa07.ar.bsch (SVCB)
+    364752 2021-07-26 20:13:57
+
+469,62394
+oracle@dblxbusidesa07.ar.bsch (GEN0)
+    364752 2021-07-26 20:13:56
+
+430,6813
+oracle@dblxbusidesa07.ar.bsch (CL07)
+    364752 2021-08-19 10:45:25
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+394,24918
+oracle@dblxbusidesa07.ar.bsch (TT02)
+    364752 2021-07-26 20:14:10
+
+393,5479
+oracle@dblxbusidesa07.ar.bsch (SMCO)
+    364752 2021-07-26 20:13:57
+
+392,45606
+oracle@dblxbusidesa07.ar.bsch (VKRM)
+    364752 2021-07-26 20:13:57
+
+391,45515
+oracle@dblxbusidesa07.ar.bsch (VKTM)
+    364752 2021-07-26 20:13:56
+
+320,48578
+oracle@dblxbusidesa07.ar.bsch (QM02)
+    364752 2021-07-26 20:14:24
+
+317,12054
+oracle@dblxbusidesa07.ar.bsch (TT01)
+    364752 2021-07-26 20:14:10
+
+315,35401
+oracle@dblxbusidesa07.ar.bsch (LG01)
+    364752 2021-07-26 20:13:57
+
+313,12508
+oracle@dblxbusidesa07.ar.bsch (PSP0)
+    364752 2021-07-26 20:13:55
+
+241,53796
+oracle@dblxbusidesa07.ar.bsch (TT00)
+    364752 2021-07-26 20:14:10
+
+236,611
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+    364752 2021-07-26 20:13:57
+
+235,61481
+oracle@dblxbusidesa07.ar.bsch (CLMN)
+    364752 2021-07-26 20:13:55
+
+160,35543
+oracle@dblxbusidesa07.ar.bsch (FENC)
+    364752 2021-07-26 20:13:57
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+159,55929
+oracle@dblxbusidesa07.ar.bsch (LG00)
+    364752 2021-07-26 20:13:57
+
+157,40253
+oracle@dblxbusidesa07.ar.bsch (PMON)
+    364752 2021-07-26 20:13:55
+
+81,52267
+oracle@dblxbusidesa07.ar.bsch (ASMB)
+    364752 2021-07-26 20:13:57
+
+80,12996
+oracle@dblxbusidesa07.ar.bsch (CKPT)
+    364752 2021-07-26 20:13:57
+
+79,51260
+oracle@dblxbusidesa07.ar.bsch (DIAG)
+    364752 2021-07-26 20:13:57
+
+3,33806
+oracle@dblxbusidesa07.ar.bsch (RBAL)
+    364752 2021-07-26 20:13:57
+
+2,16516
+oracle@dblxbusidesa07.ar.bsch (LGWR)
+    364752 2021-07-26 20:13:57
+
+1,46341
+oracle@dblxbusidesa07.ar.bsch (SCMN)
+    364752 2021-07-26 20:13:57
+
+
+Current total and average values of concurrent UGA memory usage:
+
+92572968 bytes (total) and ~1006227 bytes (average), for ~92 sessions.
+
+Current SGA structure sizings:
+
+Total System Global Area 2449473488 bytes
+Fixed Size                  9138128 bytes
+Variable Size            1677721600 bytes
+Database Buffers          754974720 bytes
+Redo Buffers                7639040 bytes
+
+Some initialization parameter values at instance startup:
+
+large_pool_size=0
+pga_aggregate_target=805306368
+sga_target=0
+shared_pool_size=0
+sort_area_size=65536
+streams_pool_size=0
+
+Current Time: 2021.09.20-09:33:27

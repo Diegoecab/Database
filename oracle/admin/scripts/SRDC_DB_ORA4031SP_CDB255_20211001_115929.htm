@@ -1,0 +1,419 @@
+<pre>
+
++----------------------------------------------------+
+| Diagnostic-Name: DB_ORA4031SP
+| Timestamp:       2021-10-01 11:59:29 -03:00
+| Machine:         dblxorafront13.ar.bsch
+| Version:         12.2.0.1.0
+| DBName:          CDB255
+| Instance:        CDB255
++----------------------------------------------------+
+</pre>
+<pre>
+
+**************************************************************************************************************
+Database identification:
+**************************************************************************************************************
+</pre>
+<pre>
+
+NAME                                     PLATFORM_ID DATABASE_ROLE
+---------------------------------------- ----------- ----------------
+CDB255                                            13 PRIMARY
+</pre>
+<pre>
+
+BANNER                                                                               CON_ID
+-------------------------------------------------------------------------------- ----------
+Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production              0
+</pre>
+<pre>
+
+**************************************************************************************************************
+Current instance parameter values:
+**************************************************************************************************************
+</pre>
+<pre>
+FROM x$ksppi n, x$ksppsv v
+                *
+</pre>
+ERROR at line 2:
+<br>
+ORA-00942: table or view does not exist
+<br>
+
+
+<pre>
+
+**************************************************************************************************************
+Current instance parameter values:
+**************************************************************************************************************
+</pre>
+<pre>
+
+COMPONENT                                                            CURRENT_SIZE
+---------------------------------------------------------------- ----------------
+shared pool                                                            2113929216
+large pool                                                               33554432
+java pool                                                                16777216
+streams pool                                                             16777216
+DEFAULT buffer cache                                                   2885681152
+KEEP buffer cache                                                               0
+RECYCLE buffer cache                                                            0
+DEFAULT 2K buffer cache                                                         0
+DEFAULT 4K buffer cache                                                         0
+DEFAULT 8K buffer cache                                                         0
+DEFAULT 16K buffer cache                                                        0
+DEFAULT 32K buffer cache                                                        0
+Shared IO Pool                                                          285212672
+Data Transfer Cache                                                             0
+In-Memory Area                                                                  0
+In Memory RW Extension Area                                                     0
+In Memory RO Extension Area                                                     0
+ASM Buffer Cache                                                                0
+</pre>
+<pre>
+
+**************************************************************************************************************
+Memory resizing operations:
+**************************************************************************************************************
+</pre>
+<pre>
+
+START_TIME           END_TIME             COMPONENT                                                        OPER_TYPE     OPER_MODE INITIAL_SIZE TARGET_SIZE FINAL_SIZE STATUS
+-------------------- -------------------- ---------------------------------------------------------------- ------------- --------- ------------ ----------- ---------- ---------
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 shared pool                                                      STATIC                             0   872415232  872415232 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 ASM Buffer Cache                                                 STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 java pool                                                        STATIC                             0    16777216   16777216 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 streams pool                                                     STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT buffer cache                                             STATIC                             0  4043309056 4043309056 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT buffer cache                                             INITIALIZING              4043309056  4043309056 4043309056 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 KEEP buffer cache                                                STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 RECYCLE buffer cache                                             STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT 2K buffer cache                                          STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT 4K buffer cache                                          STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT 8K buffer cache                                          STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT 16K buffer cache                                         STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 DEFAULT 32K buffer cache                                         STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 Data Transfer Cache                                              STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 In-Memory Area                                                   STATIC                             0           0          0 COMPLETE
+01-OCT-2021 11:43:56 01-OCT-2021 11:43:56 large pool                                                       STATIC                             0   419430400  419430400 COMPLETE
+01-OCT-2021 11:44:07 01-OCT-2021 11:44:08 large pool                                                       SHRINK        DEFERRED     419430400    33554432   33554432 COMPLETE
+01-OCT-2021 11:44:07 01-OCT-2021 11:44:08 DEFAULT buffer cache                                             GROW          DEFERRED    4043309056  4429185024 4429185024 COMPLETE
+01-OCT-2021 11:44:09 01-OCT-2021 11:44:09 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4429185024  4412407808 4412407808 COMPLETE
+01-OCT-2021 11:44:09 01-OCT-2021 11:44:09 streams pool                                                     GROW          IMMEDIATE            0    16777216   16777216 COMPLETE
+01-OCT-2021 11:44:17 01-OCT-2021 11:44:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4412407808  4127195136 4127195136 COMPLETE
+01-OCT-2021 11:45:38 01-OCT-2021 11:45:38 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4127195136  4110417920 4110417920 COMPLETE
+01-OCT-2021 11:45:38 01-OCT-2021 11:45:38 shared pool                                                      GROW          IMMEDIATE    872415232   889192448  889192448 COMPLETE
+01-OCT-2021 11:45:38 01-OCT-2021 11:45:43 shared pool                                                      GROW          IMMEDIATE    872415232   889192448  889192448 COMPLETE
+01-OCT-2021 11:45:38 01-OCT-2021 11:45:43 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4127195136  4110417920 4110417920 COMPLETE
+01-OCT-2021 11:45:44 01-OCT-2021 11:45:44 shared pool                                                      GROW          IMMEDIATE    889192448   905969664  905969664 COMPLETE
+01-OCT-2021 11:45:44 01-OCT-2021 11:45:44 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4110417920  4093640704 4093640704 COMPLETE
+01-OCT-2021 11:45:44 01-OCT-2021 11:45:48 shared pool                                                      GROW          IMMEDIATE    889192448   905969664  905969664 COMPLETE
+01-OCT-2021 11:45:44 01-OCT-2021 11:45:48 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4110417920  4093640704 4093640704 COMPLETE
+01-OCT-2021 11:45:48 01-OCT-2021 11:45:48 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4093640704  4076863488 4076863488 COMPLETE
+01-OCT-2021 11:45:48 01-OCT-2021 11:45:48 shared pool                                                      GROW          IMMEDIATE    905969664   922746880  922746880 COMPLETE
+01-OCT-2021 11:45:48 01-OCT-2021 11:45:54 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4093640704  4076863488 4076863488 COMPLETE
+01-OCT-2021 11:45:48 01-OCT-2021 11:45:54 shared pool                                                      GROW          IMMEDIATE    905969664   922746880  922746880 COMPLETE
+01-OCT-2021 11:45:54 01-OCT-2021 11:45:54 shared pool                                                      GROW          IMMEDIATE    922746880   939524096  939524096 COMPLETE
+01-OCT-2021 11:45:54 01-OCT-2021 11:45:54 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4076863488  4060086272 4060086272 COMPLETE
+01-OCT-2021 11:45:54 01-OCT-2021 11:46:00 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4076863488  4060086272 4060086272 COMPLETE
+01-OCT-2021 11:45:54 01-OCT-2021 11:46:00 shared pool                                                      GROW          IMMEDIATE    922746880   939524096  939524096 COMPLETE
+01-OCT-2021 11:46:00 01-OCT-2021 11:46:00 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4060086272  4043309056 4043309056 COMPLETE
+01-OCT-2021 11:46:00 01-OCT-2021 11:46:00 shared pool                                                      GROW          IMMEDIATE    939524096   956301312  956301312 COMPLETE
+01-OCT-2021 11:46:06 01-OCT-2021 11:46:06 shared pool                                                      GROW          IMMEDIATE    956301312   973078528  973078528 COMPLETE
+01-OCT-2021 11:46:06 01-OCT-2021 11:46:06 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4043309056  4026531840 4026531840 COMPLETE
+01-OCT-2021 11:46:11 01-OCT-2021 11:46:11 shared pool                                                      GROW          IMMEDIATE    973078528   989855744  989855744 COMPLETE
+01-OCT-2021 11:46:11 01-OCT-2021 11:46:11 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4026531840  4009754624 4009754624 COMPLETE
+01-OCT-2021 11:46:17 01-OCT-2021 11:46:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4009754624  3992977408 3992977408 COMPLETE
+01-OCT-2021 11:46:17 01-OCT-2021 11:46:17 shared pool                                                      GROW          IMMEDIATE    989855744  1006632960 1006632960 COMPLETE
+01-OCT-2021 11:46:17 01-OCT-2021 11:46:32 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   4009754624  3992977408 3992977408 COMPLETE
+01-OCT-2021 11:46:17 01-OCT-2021 11:46:32 shared pool                                                      GROW          IMMEDIATE    989855744  1006632960 1006632960 COMPLETE
+01-OCT-2021 11:46:32 01-OCT-2021 11:46:32 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3992977408  3976200192 3976200192 COMPLETE
+01-OCT-2021 11:46:32 01-OCT-2021 11:46:32 shared pool                                                      GROW          IMMEDIATE   1006632960  1023410176 1023410176 COMPLETE
+01-OCT-2021 11:46:32 01-OCT-2021 11:46:36 shared pool                                                      GROW          IMMEDIATE   1006632960  1023410176 1023410176 COMPLETE
+01-OCT-2021 11:46:32 01-OCT-2021 11:46:36 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3992977408  3976200192 3976200192 COMPLETE
+01-OCT-2021 11:46:36 01-OCT-2021 11:46:36 shared pool                                                      GROW          IMMEDIATE   1023410176  1040187392 1040187392 COMPLETE
+01-OCT-2021 11:46:36 01-OCT-2021 11:46:36 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3976200192  3959422976 3959422976 COMPLETE
+01-OCT-2021 11:46:45 01-OCT-2021 11:46:45 shared pool                                                      GROW          IMMEDIATE   1040187392  1056964608 1056964608 COMPLETE
+01-OCT-2021 11:46:45 01-OCT-2021 11:46:45 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3959422976  3942645760 3942645760 COMPLETE
+01-OCT-2021 11:46:45 01-OCT-2021 11:46:57 shared pool                                                      GROW          IMMEDIATE   1040187392  1056964608 1056964608 COMPLETE
+01-OCT-2021 11:46:45 01-OCT-2021 11:46:57 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3959422976  3942645760 3942645760 COMPLETE
+01-OCT-2021 11:46:58 01-OCT-2021 11:46:58 shared pool                                                      GROW          IMMEDIATE   1056964608  1073741824 1073741824 COMPLETE
+01-OCT-2021 11:46:58 01-OCT-2021 11:46:58 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3942645760  3925868544 3925868544 COMPLETE
+01-OCT-2021 11:46:58 01-OCT-2021 11:47:12 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3942645760  3925868544 3925868544 COMPLETE
+01-OCT-2021 11:46:58 01-OCT-2021 11:47:12 shared pool                                                      GROW          IMMEDIATE   1056964608  1073741824 1073741824 COMPLETE
+01-OCT-2021 11:47:13 01-OCT-2021 11:47:13 shared pool                                                      GROW          IMMEDIATE   1073741824  1090519040 1090519040 COMPLETE
+01-OCT-2021 11:47:13 01-OCT-2021 11:47:13 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3925868544  3909091328 3909091328 COMPLETE
+01-OCT-2021 11:47:23 01-OCT-2021 11:47:23 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3909091328  3892314112 3892314112 COMPLETE
+01-OCT-2021 11:47:23 01-OCT-2021 11:47:23 shared pool                                                      GROW          IMMEDIATE   1090519040  1107296256 1107296256 COMPLETE
+01-OCT-2021 11:47:23 01-OCT-2021 11:47:34 shared pool                                                      GROW          IMMEDIATE   1090519040  1107296256 1107296256 COMPLETE
+01-OCT-2021 11:47:23 01-OCT-2021 11:47:34 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3909091328  3892314112 3892314112 COMPLETE
+01-OCT-2021 11:47:34 01-OCT-2021 11:47:34 shared pool                                                      GROW          IMMEDIATE   1107296256  1124073472 1124073472 COMPLETE
+01-OCT-2021 11:47:34 01-OCT-2021 11:47:34 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3892314112  3875536896 3875536896 COMPLETE
+01-OCT-2021 11:47:34 01-OCT-2021 11:47:41 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3892314112  3875536896 3875536896 COMPLETE
+01-OCT-2021 11:47:34 01-OCT-2021 11:47:41 shared pool                                                      GROW          IMMEDIATE   1107296256  1124073472 1124073472 COMPLETE
+01-OCT-2021 11:47:41 01-OCT-2021 11:47:41 shared pool                                                      GROW          IMMEDIATE   1124073472  1140850688 1140850688 COMPLETE
+01-OCT-2021 11:47:41 01-OCT-2021 11:47:41 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3875536896  3858759680 3858759680 COMPLETE
+01-OCT-2021 11:47:41 01-OCT-2021 11:47:45 shared pool                                                      GROW          IMMEDIATE   1124073472  1140850688 1140850688 COMPLETE
+01-OCT-2021 11:47:41 01-OCT-2021 11:47:45 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3875536896  3858759680 3858759680 COMPLETE
+01-OCT-2021 11:47:45 01-OCT-2021 11:47:45 shared pool                                                      GROW          IMMEDIATE   1140850688  1157627904 1157627904 COMPLETE
+01-OCT-2021 11:47:45 01-OCT-2021 11:47:45 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3858759680  3841982464 3841982464 COMPLETE
+01-OCT-2021 11:47:45 01-OCT-2021 11:47:58 shared pool                                                      GROW          IMMEDIATE   1140850688  1157627904 1157627904 COMPLETE
+01-OCT-2021 11:47:45 01-OCT-2021 11:47:58 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3858759680  3841982464 3841982464 COMPLETE
+01-OCT-2021 11:47:58 01-OCT-2021 11:47:58 shared pool                                                      GROW          IMMEDIATE   1157627904  1174405120 1174405120 COMPLETE
+01-OCT-2021 11:47:58 01-OCT-2021 11:47:58 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3841982464  3825205248 3825205248 COMPLETE
+01-OCT-2021 11:47:58 01-OCT-2021 11:48:03 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3841982464  3825205248 3825205248 COMPLETE
+01-OCT-2021 11:47:58 01-OCT-2021 11:48:03 shared pool                                                      GROW          IMMEDIATE   1157627904  1174405120 1174405120 COMPLETE
+01-OCT-2021 11:48:07 01-OCT-2021 11:48:07 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3825205248  3808428032 3808428032 COMPLETE
+01-OCT-2021 11:48:07 01-OCT-2021 11:48:07 shared pool                                                      GROW          IMMEDIATE   1174405120  1191182336 1191182336 COMPLETE
+01-OCT-2021 11:48:07 01-OCT-2021 11:48:12 shared pool                                                      GROW          IMMEDIATE   1174405120  1191182336 1191182336 COMPLETE
+01-OCT-2021 11:48:07 01-OCT-2021 11:48:12 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3825205248  3808428032 3808428032 COMPLETE
+01-OCT-2021 11:48:18 01-OCT-2021 11:48:18 shared pool                                                      GROW          IMMEDIATE   1191182336  1207959552 1207959552 COMPLETE
+01-OCT-2021 11:48:18 01-OCT-2021 11:48:18 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3808428032  3791650816 3791650816 COMPLETE
+01-OCT-2021 11:48:18 01-OCT-2021 11:48:26 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3808428032  3791650816 3791650816 COMPLETE
+01-OCT-2021 11:48:18 01-OCT-2021 11:48:26 shared pool                                                      GROW          IMMEDIATE   1191182336  1207959552 1207959552 COMPLETE
+01-OCT-2021 11:48:28 01-OCT-2021 11:48:28 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3791650816  3774873600 3774873600 COMPLETE
+01-OCT-2021 11:48:28 01-OCT-2021 11:48:28 shared pool                                                      GROW          IMMEDIATE   1207959552  1224736768 1224736768 COMPLETE
+01-OCT-2021 11:48:28 01-OCT-2021 11:48:32 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3791650816  3774873600 3774873600 COMPLETE
+01-OCT-2021 11:48:28 01-OCT-2021 11:48:32 shared pool                                                      GROW          IMMEDIATE   1207959552  1224736768 1224736768 COMPLETE
+01-OCT-2021 11:48:33 01-OCT-2021 11:48:33 shared pool                                                      GROW          IMMEDIATE   1224736768  1241513984 1241513984 COMPLETE
+01-OCT-2021 11:48:33 01-OCT-2021 11:48:33 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3774873600  3758096384 3758096384 COMPLETE
+01-OCT-2021 11:48:33 01-OCT-2021 11:48:41 shared pool                                                      GROW          IMMEDIATE   1224736768  1241513984 1241513984 COMPLETE
+01-OCT-2021 11:48:33 01-OCT-2021 11:48:41 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3774873600  3758096384 3758096384 COMPLETE
+01-OCT-2021 11:48:41 01-OCT-2021 11:48:41 shared pool                                                      GROW          IMMEDIATE   1241513984  1258291200 1258291200 COMPLETE
+01-OCT-2021 11:48:41 01-OCT-2021 11:48:41 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3758096384  3741319168 3741319168 COMPLETE
+01-OCT-2021 11:48:43 01-OCT-2021 11:48:43 shared pool                                                      GROW          IMMEDIATE   1258291200  1275068416 1275068416 COMPLETE
+01-OCT-2021 11:48:43 01-OCT-2021 11:48:43 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3741319168  3724541952 3724541952 COMPLETE
+01-OCT-2021 11:48:52 01-OCT-2021 11:48:52 shared pool                                                      GROW          IMMEDIATE   1275068416  1291845632 1291845632 COMPLETE
+01-OCT-2021 11:48:52 01-OCT-2021 11:48:52 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3724541952  3707764736 3707764736 COMPLETE
+01-OCT-2021 11:48:52 01-OCT-2021 11:49:06 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3724541952  3707764736 3707764736 COMPLETE
+01-OCT-2021 11:48:52 01-OCT-2021 11:49:06 shared pool                                                      GROW          IMMEDIATE   1275068416  1291845632 1291845632 COMPLETE
+01-OCT-2021 11:49:07 01-OCT-2021 11:49:07 shared pool                                                      GROW          IMMEDIATE   1291845632  1308622848 1308622848 COMPLETE
+01-OCT-2021 11:49:07 01-OCT-2021 11:49:07 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3707764736  3690987520 3690987520 COMPLETE
+01-OCT-2021 11:49:07 01-OCT-2021 11:49:20 shared pool                                                      GROW          IMMEDIATE   1291845632  1308622848 1308622848 COMPLETE
+01-OCT-2021 11:49:07 01-OCT-2021 11:49:20 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3707764736  3690987520 3690987520 COMPLETE
+01-OCT-2021 11:49:21 01-OCT-2021 11:49:21 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3690987520  3674210304 3674210304 COMPLETE
+01-OCT-2021 11:49:21 01-OCT-2021 11:49:21 shared pool                                                      GROW          IMMEDIATE   1308622848  1325400064 1325400064 COMPLETE
+01-OCT-2021 11:49:21 01-OCT-2021 11:49:32 shared pool                                                      GROW          IMMEDIATE   1308622848  1325400064 1325400064 COMPLETE
+01-OCT-2021 11:49:21 01-OCT-2021 11:49:32 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3690987520  3674210304 3674210304 COMPLETE
+01-OCT-2021 11:49:33 01-OCT-2021 11:49:33 shared pool                                                      GROW          IMMEDIATE   1325400064  1342177280 1342177280 COMPLETE
+01-OCT-2021 11:49:33 01-OCT-2021 11:49:33 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3674210304  3657433088 3657433088 COMPLETE
+01-OCT-2021 11:49:33 01-OCT-2021 11:49:43 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3674210304  3657433088 3657433088 COMPLETE
+01-OCT-2021 11:49:33 01-OCT-2021 11:49:43 shared pool                                                      GROW          IMMEDIATE   1325400064  1342177280 1342177280 COMPLETE
+01-OCT-2021 11:49:44 01-OCT-2021 11:49:44 shared pool                                                      GROW          IMMEDIATE   1342177280  1358954496 1358954496 COMPLETE
+01-OCT-2021 11:49:44 01-OCT-2021 11:49:44 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3657433088  3640655872 3640655872 COMPLETE
+01-OCT-2021 11:49:44 01-OCT-2021 11:49:52 shared pool                                                      GROW          IMMEDIATE   1342177280  1358954496 1358954496 COMPLETE
+01-OCT-2021 11:49:44 01-OCT-2021 11:49:52 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3657433088  3640655872 3640655872 COMPLETE
+01-OCT-2021 11:49:53 01-OCT-2021 11:49:53 shared pool                                                      GROW          IMMEDIATE   1358954496  1375731712 1375731712 COMPLETE
+01-OCT-2021 11:49:53 01-OCT-2021 11:49:53 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3640655872  3623878656 3623878656 COMPLETE
+01-OCT-2021 11:49:53 01-OCT-2021 11:49:57 shared pool                                                      GROW          IMMEDIATE   1358954496  1375731712 1375731712 COMPLETE
+01-OCT-2021 11:49:53 01-OCT-2021 11:49:57 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3640655872  3623878656 3623878656 COMPLETE
+01-OCT-2021 11:49:57 01-OCT-2021 11:49:57 shared pool                                                      GROW          IMMEDIATE   1375731712  1392508928 1392508928 COMPLETE
+01-OCT-2021 11:49:57 01-OCT-2021 11:49:57 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3623878656  3607101440 3607101440 COMPLETE
+01-OCT-2021 11:49:57 01-OCT-2021 11:50:01 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3623878656  3607101440 3607101440 COMPLETE
+01-OCT-2021 11:49:57 01-OCT-2021 11:50:01 shared pool                                                      GROW          IMMEDIATE   1375731712  1392508928 1392508928 COMPLETE
+01-OCT-2021 11:50:01 01-OCT-2021 11:50:01 shared pool                                                      GROW          IMMEDIATE   1392508928  1409286144 1409286144 COMPLETE
+01-OCT-2021 11:50:01 01-OCT-2021 11:50:01 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3607101440  3590324224 3590324224 COMPLETE
+01-OCT-2021 11:50:01 01-OCT-2021 11:50:06 shared pool                                                      GROW          IMMEDIATE   1392508928  1409286144 1409286144 COMPLETE
+01-OCT-2021 11:50:01 01-OCT-2021 11:50:06 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3607101440  3590324224 3590324224 COMPLETE
+01-OCT-2021 11:50:07 01-OCT-2021 11:50:07 shared pool                                                      GROW          IMMEDIATE   1409286144  1426063360 1426063360 COMPLETE
+01-OCT-2021 11:50:07 01-OCT-2021 11:50:07 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3590324224  3573547008 3573547008 COMPLETE
+01-OCT-2021 11:50:07 01-OCT-2021 11:50:17 shared pool                                                      GROW          IMMEDIATE   1409286144  1426063360 1426063360 COMPLETE
+01-OCT-2021 11:50:07 01-OCT-2021 11:50:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3590324224  3573547008 3573547008 COMPLETE
+01-OCT-2021 11:50:23 01-OCT-2021 11:50:23 shared pool                                                      GROW          IMMEDIATE   1426063360  1442840576 1442840576 COMPLETE
+01-OCT-2021 11:50:23 01-OCT-2021 11:50:23 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3573547008  3556769792 3556769792 COMPLETE
+01-OCT-2021 11:50:23 01-OCT-2021 11:50:29 shared pool                                                      GROW          IMMEDIATE   1426063360  1442840576 1442840576 COMPLETE
+01-OCT-2021 11:50:23 01-OCT-2021 11:50:29 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3573547008  3556769792 3556769792 COMPLETE
+01-OCT-2021 11:50:30 01-OCT-2021 11:50:30 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3556769792  3539992576 3539992576 COMPLETE
+01-OCT-2021 11:50:30 01-OCT-2021 11:50:30 shared pool                                                      GROW          IMMEDIATE   1442840576  1459617792 1459617792 COMPLETE
+01-OCT-2021 11:50:30 01-OCT-2021 11:50:39 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3556769792  3539992576 3539992576 COMPLETE
+01-OCT-2021 11:50:30 01-OCT-2021 11:50:39 shared pool                                                      GROW          IMMEDIATE   1442840576  1459617792 1459617792 COMPLETE
+01-OCT-2021 11:50:40 01-OCT-2021 11:50:40 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3539992576  3523215360 3523215360 COMPLETE
+01-OCT-2021 11:50:40 01-OCT-2021 11:50:40 shared pool                                                      GROW          IMMEDIATE   1459617792  1476395008 1476395008 COMPLETE
+01-OCT-2021 11:50:40 01-OCT-2021 11:50:46 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3539992576  3523215360 3523215360 COMPLETE
+01-OCT-2021 11:50:40 01-OCT-2021 11:50:46 shared pool                                                      GROW          IMMEDIATE   1459617792  1476395008 1476395008 COMPLETE
+01-OCT-2021 11:50:47 01-OCT-2021 11:50:47 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3523215360  3506438144 3506438144 COMPLETE
+01-OCT-2021 11:50:47 01-OCT-2021 11:50:47 shared pool                                                      GROW          IMMEDIATE   1476395008  1493172224 1493172224 COMPLETE
+01-OCT-2021 11:50:52 01-OCT-2021 11:50:52 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3506438144  3489660928 3489660928 COMPLETE
+01-OCT-2021 11:50:52 01-OCT-2021 11:50:52 shared pool                                                      GROW          IMMEDIATE   1493172224  1509949440 1509949440 COMPLETE
+01-OCT-2021 11:50:53 01-OCT-2021 11:50:53 shared pool                                                      GROW          IMMEDIATE   1509949440  1526726656 1526726656 COMPLETE
+01-OCT-2021 11:50:53 01-OCT-2021 11:50:53 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3489660928  3472883712 3472883712 COMPLETE
+01-OCT-2021 11:50:53 01-OCT-2021 11:50:54 shared pool                                                      GROW          IMMEDIATE   1509949440  1526726656 1526726656 COMPLETE
+01-OCT-2021 11:50:53 01-OCT-2021 11:50:54 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3489660928  3472883712 3472883712 COMPLETE
+01-OCT-2021 11:50:55 01-OCT-2021 11:50:55 shared pool                                                      GROW          IMMEDIATE   1526726656  1543503872 1543503872 COMPLETE
+01-OCT-2021 11:50:55 01-OCT-2021 11:50:55 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3472883712  3456106496 3456106496 COMPLETE
+01-OCT-2021 11:50:55 01-OCT-2021 11:50:58 shared pool                                                      GROW          IMMEDIATE   1526726656  1543503872 1543503872 COMPLETE
+01-OCT-2021 11:50:55 01-OCT-2021 11:50:58 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3472883712  3456106496 3456106496 COMPLETE
+01-OCT-2021 11:50:59 01-OCT-2021 11:50:59 shared pool                                                      GROW          IMMEDIATE   1543503872  1560281088 1560281088 COMPLETE
+01-OCT-2021 11:50:59 01-OCT-2021 11:50:59 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3456106496  3439329280 3439329280 COMPLETE
+01-OCT-2021 11:50:59 01-OCT-2021 11:51:03 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3456106496  3439329280 3439329280 COMPLETE
+01-OCT-2021 11:50:59 01-OCT-2021 11:51:03 shared pool                                                      GROW          IMMEDIATE   1543503872  1560281088 1560281088 COMPLETE
+01-OCT-2021 11:51:04 01-OCT-2021 11:51:04 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3439329280  3422552064 3422552064 COMPLETE
+01-OCT-2021 11:51:04 01-OCT-2021 11:51:04 shared pool                                                      GROW          IMMEDIATE   1560281088  1577058304 1577058304 COMPLETE
+01-OCT-2021 11:51:04 01-OCT-2021 11:51:07 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3439329280  3422552064 3422552064 COMPLETE
+01-OCT-2021 11:51:04 01-OCT-2021 11:51:07 shared pool                                                      GROW          IMMEDIATE   1560281088  1577058304 1577058304 COMPLETE
+01-OCT-2021 11:51:08 01-OCT-2021 11:51:08 shared pool                                                      GROW          IMMEDIATE   1577058304  1593835520 1593835520 COMPLETE
+01-OCT-2021 11:51:08 01-OCT-2021 11:51:08 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3422552064  3405774848 3405774848 COMPLETE
+01-OCT-2021 11:51:08 01-OCT-2021 11:51:13 shared pool                                                      GROW          IMMEDIATE   1577058304  1593835520 1593835520 COMPLETE
+01-OCT-2021 11:51:08 01-OCT-2021 11:51:13 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3422552064  3405774848 3405774848 COMPLETE
+01-OCT-2021 11:51:14 01-OCT-2021 11:51:14 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3405774848  3388997632 3388997632 COMPLETE
+01-OCT-2021 11:51:14 01-OCT-2021 11:51:14 shared pool                                                      GROW          IMMEDIATE   1593835520  1610612736 1610612736 COMPLETE
+01-OCT-2021 11:51:14 01-OCT-2021 11:51:21 shared pool                                                      GROW          IMMEDIATE   1593835520  1610612736 1610612736 COMPLETE
+01-OCT-2021 11:51:14 01-OCT-2021 11:51:21 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3405774848  3388997632 3388997632 COMPLETE
+01-OCT-2021 11:51:21 01-OCT-2021 11:51:21 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3388997632  3372220416 3372220416 COMPLETE
+01-OCT-2021 11:51:21 01-OCT-2021 11:51:21 shared pool                                                      GROW          IMMEDIATE   1610612736  1627389952 1627389952 COMPLETE
+01-OCT-2021 11:51:26 01-OCT-2021 11:51:26 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3372220416  3355443200 3355443200 COMPLETE
+01-OCT-2021 11:51:26 01-OCT-2021 11:51:26 shared pool                                                      GROW          IMMEDIATE   1627389952  1644167168 1644167168 COMPLETE
+01-OCT-2021 11:51:26 01-OCT-2021 11:51:29 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3372220416  3355443200 3355443200 COMPLETE
+01-OCT-2021 11:51:26 01-OCT-2021 11:51:29 shared pool                                                      GROW          IMMEDIATE   1627389952  1644167168 1644167168 COMPLETE
+01-OCT-2021 11:51:29 01-OCT-2021 11:51:29 shared pool                                                      GROW          IMMEDIATE   1644167168  1660944384 1660944384 COMPLETE
+01-OCT-2021 11:51:29 01-OCT-2021 11:51:29 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3355443200  3338665984 3338665984 COMPLETE
+01-OCT-2021 11:51:29 01-OCT-2021 11:51:34 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3355443200  3338665984 3338665984 COMPLETE
+01-OCT-2021 11:51:29 01-OCT-2021 11:51:34 shared pool                                                      GROW          IMMEDIATE   1644167168  1660944384 1660944384 COMPLETE
+01-OCT-2021 11:51:34 01-OCT-2021 11:51:34 shared pool                                                      GROW          IMMEDIATE   1660944384  1677721600 1677721600 COMPLETE
+01-OCT-2021 11:51:34 01-OCT-2021 11:51:34 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3338665984  3321888768 3321888768 COMPLETE
+01-OCT-2021 11:51:34 01-OCT-2021 11:51:42 shared pool                                                      GROW          IMMEDIATE   1660944384  1677721600 1677721600 COMPLETE
+01-OCT-2021 11:51:34 01-OCT-2021 11:51:42 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3338665984  3321888768 3321888768 COMPLETE
+01-OCT-2021 11:51:42 01-OCT-2021 11:51:42 shared pool                                                      GROW          IMMEDIATE   1677721600  1694498816 1694498816 COMPLETE
+01-OCT-2021 11:51:42 01-OCT-2021 11:51:42 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3321888768  3305111552 3305111552 COMPLETE
+01-OCT-2021 11:51:42 01-OCT-2021 11:51:49 shared pool                                                      GROW          IMMEDIATE   1677721600  1694498816 1694498816 COMPLETE
+01-OCT-2021 11:51:42 01-OCT-2021 11:51:49 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3321888768  3305111552 3305111552 COMPLETE
+01-OCT-2021 11:51:49 01-OCT-2021 11:51:49 shared pool                                                      GROW          IMMEDIATE   1694498816  1711276032 1711276032 COMPLETE
+01-OCT-2021 11:51:49 01-OCT-2021 11:51:49 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3305111552  3288334336 3288334336 COMPLETE
+01-OCT-2021 11:51:49 01-OCT-2021 11:51:55 shared pool                                                      GROW          IMMEDIATE   1694498816  1711276032 1711276032 COMPLETE
+01-OCT-2021 11:51:49 01-OCT-2021 11:51:55 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3305111552  3288334336 3288334336 COMPLETE
+01-OCT-2021 11:51:56 01-OCT-2021 11:51:56 shared pool                                                      GROW          IMMEDIATE   1711276032  1728053248 1728053248 COMPLETE
+01-OCT-2021 11:51:56 01-OCT-2021 11:51:56 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3288334336  3271557120 3271557120 COMPLETE
+01-OCT-2021 11:51:56 01-OCT-2021 11:52:08 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3288334336  3271557120 3271557120 COMPLETE
+01-OCT-2021 11:51:56 01-OCT-2021 11:52:08 shared pool                                                      GROW          IMMEDIATE   1711276032  1728053248 1728053248 COMPLETE
+01-OCT-2021 11:52:08 01-OCT-2021 11:52:08 shared pool                                                      GROW          IMMEDIATE   1728053248  1744830464 1744830464 COMPLETE
+01-OCT-2021 11:52:08 01-OCT-2021 11:52:08 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3271557120  3254779904 3254779904 COMPLETE
+01-OCT-2021 11:52:08 01-OCT-2021 11:52:20 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3271557120  3254779904 3254779904 COMPLETE
+01-OCT-2021 11:52:08 01-OCT-2021 11:52:20 shared pool                                                      GROW          IMMEDIATE   1728053248  1744830464 1744830464 COMPLETE
+01-OCT-2021 11:52:20 01-OCT-2021 11:52:20 shared pool                                                      GROW          IMMEDIATE   1744830464  1761607680 1761607680 COMPLETE
+01-OCT-2021 11:52:20 01-OCT-2021 11:52:20 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3254779904  3238002688 3238002688 COMPLETE
+01-OCT-2021 11:52:22 01-OCT-2021 11:52:22 shared pool                                                      GROW          IMMEDIATE   1761607680  1778384896 1778384896 COMPLETE
+01-OCT-2021 11:52:22 01-OCT-2021 11:52:22 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3238002688  3221225472 3221225472 COMPLETE
+01-OCT-2021 11:52:22 01-OCT-2021 11:52:25 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3238002688  3221225472 3221225472 COMPLETE
+01-OCT-2021 11:52:22 01-OCT-2021 11:52:25 shared pool                                                      GROW          IMMEDIATE   1761607680  1778384896 1778384896 COMPLETE
+01-OCT-2021 11:52:26 01-OCT-2021 11:52:26 shared pool                                                      GROW          IMMEDIATE   1778384896  1795162112 1795162112 COMPLETE
+01-OCT-2021 11:52:26 01-OCT-2021 11:52:26 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3221225472  3204448256 3204448256 COMPLETE
+01-OCT-2021 11:52:31 01-OCT-2021 11:52:31 shared pool                                                      GROW          IMMEDIATE   1795162112  1811939328 1811939328 COMPLETE
+01-OCT-2021 11:52:31 01-OCT-2021 11:52:31 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3204448256  3187671040 3187671040 COMPLETE
+01-OCT-2021 11:52:31 01-OCT-2021 11:52:45 shared pool                                                      GROW          IMMEDIATE   1795162112  1811939328 1811939328 COMPLETE
+01-OCT-2021 11:52:31 01-OCT-2021 11:52:45 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3204448256  3187671040 3187671040 COMPLETE
+01-OCT-2021 11:52:45 01-OCT-2021 11:52:45 shared pool                                                      GROW          IMMEDIATE   1811939328  1828716544 1828716544 COMPLETE
+01-OCT-2021 11:52:45 01-OCT-2021 11:52:45 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3187671040  3170893824 3170893824 COMPLETE
+01-OCT-2021 11:52:45 01-OCT-2021 11:52:55 shared pool                                                      GROW          IMMEDIATE   1811939328  1828716544 1828716544 COMPLETE
+01-OCT-2021 11:52:45 01-OCT-2021 11:52:55 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3187671040  3170893824 3170893824 COMPLETE
+01-OCT-2021 11:52:56 01-OCT-2021 11:52:56 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3170893824  3154116608 3154116608 COMPLETE
+01-OCT-2021 11:52:56 01-OCT-2021 11:52:56 shared pool                                                      GROW          IMMEDIATE   1828716544  1845493760 1845493760 COMPLETE
+01-OCT-2021 11:53:06 01-OCT-2021 11:53:06 shared pool                                                      GROW          IMMEDIATE   1845493760  1862270976 1862270976 COMPLETE
+01-OCT-2021 11:53:06 01-OCT-2021 11:53:06 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3154116608  3137339392 3137339392 COMPLETE
+01-OCT-2021 11:53:06 01-OCT-2021 11:53:16 shared pool                                                      GROW          IMMEDIATE   1845493760  1862270976 1862270976 COMPLETE
+01-OCT-2021 11:53:06 01-OCT-2021 11:53:16 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3154116608  3137339392 3137339392 COMPLETE
+01-OCT-2021 11:53:17 01-OCT-2021 11:53:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3137339392  3120562176 3120562176 COMPLETE
+01-OCT-2021 11:53:17 01-OCT-2021 11:53:17 shared pool                                                      GROW          IMMEDIATE   1862270976  1879048192 1879048192 COMPLETE
+01-OCT-2021 11:53:19 01-OCT-2021 11:53:19 shared pool                                                      GROW          IMMEDIATE   1879048192  1895825408 1895825408 COMPLETE
+01-OCT-2021 11:53:19 01-OCT-2021 11:53:19 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3120562176  3103784960 3103784960 COMPLETE
+01-OCT-2021 11:53:19 01-OCT-2021 11:53:23 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3120562176  3103784960 3103784960 COMPLETE
+01-OCT-2021 11:53:19 01-OCT-2021 11:53:23 shared pool                                                      GROW          IMMEDIATE   1879048192  1895825408 1895825408 COMPLETE
+01-OCT-2021 11:53:23 01-OCT-2021 11:53:23 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3103784960  3087007744 3087007744 COMPLETE
+01-OCT-2021 11:53:23 01-OCT-2021 11:53:23 shared pool                                                      GROW          IMMEDIATE   1895825408  1912602624 1912602624 COMPLETE
+01-OCT-2021 11:53:23 01-OCT-2021 11:53:29 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3103784960  3087007744 3087007744 COMPLETE
+01-OCT-2021 11:53:23 01-OCT-2021 11:53:29 shared pool                                                      GROW          IMMEDIATE   1895825408  1912602624 1912602624 COMPLETE
+01-OCT-2021 11:53:30 01-OCT-2021 11:53:30 shared pool                                                      GROW          IMMEDIATE   1912602624  1929379840 1929379840 COMPLETE
+01-OCT-2021 11:53:30 01-OCT-2021 11:53:30 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3087007744  3070230528 3070230528 COMPLETE
+01-OCT-2021 11:53:30 01-OCT-2021 11:53:38 shared pool                                                      GROW          IMMEDIATE   1912602624  1929379840 1929379840 COMPLETE
+01-OCT-2021 11:53:30 01-OCT-2021 11:53:38 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3087007744  3070230528 3070230528 COMPLETE
+01-OCT-2021 11:53:39 01-OCT-2021 11:53:39 shared pool                                                      GROW          IMMEDIATE   1929379840  1946157056 1946157056 COMPLETE
+01-OCT-2021 11:53:39 01-OCT-2021 11:53:39 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3070230528  3053453312 3053453312 COMPLETE
+01-OCT-2021 11:53:39 01-OCT-2021 11:53:50 shared pool                                                      GROW          IMMEDIATE   1929379840  1946157056 1946157056 COMPLETE
+01-OCT-2021 11:53:39 01-OCT-2021 11:53:50 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3070230528  3053453312 3053453312 COMPLETE
+01-OCT-2021 11:53:51 01-OCT-2021 11:53:51 shared pool                                                      GROW          IMMEDIATE   1946157056  1962934272 1962934272 COMPLETE
+01-OCT-2021 11:53:51 01-OCT-2021 11:53:51 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3053453312  3036676096 3036676096 COMPLETE
+01-OCT-2021 11:53:57 01-OCT-2021 11:53:57 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3036676096  3019898880 3019898880 COMPLETE
+01-OCT-2021 11:53:57 01-OCT-2021 11:53:57 shared pool                                                      GROW          IMMEDIATE   1962934272  1979711488 1979711488 COMPLETE
+01-OCT-2021 11:54:03 01-OCT-2021 11:54:03 shared pool                                                      GROW          IMMEDIATE   1979711488  1996488704 1996488704 COMPLETE
+01-OCT-2021 11:54:03 01-OCT-2021 11:54:03 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3019898880  3003121664 3003121664 COMPLETE
+01-OCT-2021 11:54:03 01-OCT-2021 11:54:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3019898880  3003121664 3003121664 COMPLETE
+01-OCT-2021 11:54:03 01-OCT-2021 11:54:17 shared pool                                                      GROW          IMMEDIATE   1979711488  1996488704 1996488704 COMPLETE
+01-OCT-2021 11:54:17 01-OCT-2021 11:54:17 shared pool                                                      GROW          IMMEDIATE   1996488704  2013265920 2013265920 COMPLETE
+01-OCT-2021 11:54:17 01-OCT-2021 11:54:17 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   3003121664  2986344448 2986344448 COMPLETE
+01-OCT-2021 11:54:19 01-OCT-2021 11:54:19 shared pool                                                      GROW          IMMEDIATE   2013265920  2030043136 2030043136 COMPLETE
+01-OCT-2021 11:54:19 01-OCT-2021 11:54:19 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2986344448  2969567232 2969567232 COMPLETE
+01-OCT-2021 11:54:19 01-OCT-2021 11:54:27 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2986344448  2969567232 2969567232 COMPLETE
+01-OCT-2021 11:54:19 01-OCT-2021 11:54:27 shared pool                                                      GROW          IMMEDIATE   2013265920  2030043136 2030043136 COMPLETE
+01-OCT-2021 11:54:28 01-OCT-2021 11:54:28 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2969567232  2952790016 2952790016 COMPLETE
+01-OCT-2021 11:54:28 01-OCT-2021 11:54:28 shared pool                                                      GROW          IMMEDIATE   2030043136  2046820352 2046820352 COMPLETE
+01-OCT-2021 11:54:42 01-OCT-2021 11:54:42 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2952790016  2936012800 2936012800 COMPLETE
+01-OCT-2021 11:54:42 01-OCT-2021 11:54:42 shared pool                                                      GROW          IMMEDIATE   2046820352  2063597568 2063597568 COMPLETE
+01-OCT-2021 11:56:42 01-OCT-2021 11:56:42 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2936012800  2919235584 2919235584 COMPLETE
+01-OCT-2021 11:56:42 01-OCT-2021 11:56:42 shared pool                                                      GROW          IMMEDIATE   2063597568  2080374784 2080374784 COMPLETE
+01-OCT-2021 11:58:02 01-OCT-2021 11:58:02 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2919235584  2902458368 2902458368 COMPLETE
+01-OCT-2021 11:58:02 01-OCT-2021 11:58:02 shared pool                                                      GROW          IMMEDIATE   2080374784  2097152000 2097152000 COMPLETE
+01-OCT-2021 11:59:24 01-OCT-2021 11:59:24 DEFAULT buffer cache                                             SHRINK        IMMEDIATE   2902458368  2885681152 2885681152 COMPLETE
+01-OCT-2021 11:59:24 01-OCT-2021 11:59:24 shared pool                                                      GROW          IMMEDIATE   2097152000  2113929216 2113929216 COMPLETE
+</pre>
+<pre>
+
+**************************************************************************************************************
+Historical memory resizing operations:
+**************************************************************************************************************
+</pre>
+<pre>
+
+**************************************************************************************************************
+Shared pool 4031 information:
+**************************************************************************************************************
+</pre>
+<pre>
+
+**************************************************************************************************************
+Shared pool reserved 4031 information:
+**************************************************************************************************************
+</pre>
+<pre>
+
+**************************************************************************************************************
+Shared pool memory allocations by size:
+**************************************************************************************************************
+</pre>
+<pre>
+
+NAME                                                BYTES
+---------------------------------------- ----------------
+SQLA                                           1302914816
+KGLH0                                           127825224
+free memory                                     107824176
+KGLHD                                            76779840
+KGLNA                                            40767560
+KKSSP                                            11868008
+KGLDA                                             9615232
+parameter table block                             8877936
+kcbi io desc slot                                 8113152
+KQR X SO                                          4869072
+KGLS                                              4439768
+ksu:stats_freelist                                3754400
+parameter handle                                  2268016
+KQR X PO                                          1437664
+</pre>
+<pre>
+
+**************************************************************************************************************
+Total shared pool usage:
+**************************************************************************************************************
+</pre>
+<pre>
+
+ Total Shared Pool Usage
+------------------------
+              1606184808
+</pre>
+<pre>
+
+**************************************************************************************************************
+Cursor sharability problems (this version is for &gt;= 10g; for &lt;= 9i substitute ss.kglhdpar for ss.address!!!!):
+**************************************************************************************************************
+</pre>

@@ -16,5 +16,6 @@ PROMPT Jobs:			dba_scheduler_jobs_x.sql
 PROMPT Job Run Details:	dba_scheduler_job_run_details.sql
 PROMPT Programs:		dba_scheduler_programs.sql
 prompt schedules:		dba_scheduler_schedules.sql
+Prompt  select client_name, status from dba_autotask_client;
 PROMPT *****************************************************
 PROMPT

@@ -1,0 +1,1 @@
+asmcmd volinfo --all

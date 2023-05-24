@@ -1,3 +1,4 @@
+--pga_target_advice.sql
 set pagesize 60
 set linesize 200
 

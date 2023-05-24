@@ -1,0 +1,32 @@
+C:\Users\dicabrer>docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: diegoecab
+Password:
+Login Succeeded
+
+C:\Users\dicabrer>docker pull store/oracle/database-enterprise:12.2.0.1
+
+
+docker run -d -p 8080:8080 -p 1521:1521 --name oracle-db store/oracle/database-enterprise:12.2.0.1
+
+docker logs oracle-db
+
+docker ps
+docker container ls --all
+
+docker start 2f90f2102b6d 
+
+Running SQL*Plus in a Docker container
+docker exec -it oracle-db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+
+
+sqlplus system/manager@//localhost:1521/ORCLCDB.localdomain @tbs
+
+
+
+
+docker cp foo.txt mycontainer:/foo.txt
+
+docker exec -it <mycontainer> bash
+
+docker exec -u 0 -it 2f90f2102b6d bash

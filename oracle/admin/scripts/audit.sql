@@ -1,7 +1,8 @@
 --
-set  linesize 250
+set  linesize 900
 col name format a30
 col value format a30
+set pages 1000
 COL PROXY_NAME FORMAT A10
 
 

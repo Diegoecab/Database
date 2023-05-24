@@ -1,0 +1,45 @@
+Oracle Database 11.2 on Linux silent installation (Enterprise Edition Software Only)
+cd /opt/oracle/stage/database
+./runInstaller -silent -debug -force \
+FROM_LOCATION=/opt/oracle/stage/database/stage/products.xml \
+oracle.install.option=INSTALL_DB_SWONLY \
+UNIX_GROUP_NAME=oinstall \
+INVENTORY_LOCATION=/opt/oracle/oraInventory \
+ORACLE_HOME=/opt/oracle/product/11.2.0/dbhome_1 \
+ORACLE_BASE=/opt/oracle \
+oracle.install.db.InstallEdition=EE \
+oracle.install.db.isCustomInstall=false \
+oracle.install.db.DBA_GROUP=dba \
+oracle.install.db.OPER_GROUP=oper \
+DECLINE_SECURITY_UPDATES=true
+
+Oracle Database 12.1 on Linux silent installation (Enterprise Edition Software Only)
+cd 
+./runInstaller -silent -debug -showProgress -debug -J-DTRACING.ENABLED=true -J-DTRACING.LEVEL=2 -J-DSRVM_TRACE_LEVEL=2 -J-DFULLTRACE \
+FROM_LOCATION=/u02/rman/patches_upgrade/RDBMS/database/stage/products.xml \
+oracle.install.option=INSTALL_DB_SWONLY \
+UNIX_GROUP_NAME=oinstall \
+INVENTORY_LOCATION=/opt/oracle/oraInventory \
+ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_2 \
+ORACLE_BASE=/u01/app/oracle \
+oracle.install.db.InstallEdition=EE \
+oracle.install.db.DBA_GROUP=dba \
+oracle.install.db.OPER_GROUP=oper \
+oracle.install.db.BACKUPDBA_GROUP=dba \
+oracle.install.db.DGDBA_GROUP=dba \
+oracle.install.db.KMDBA_GROUP=dba \
+DECLINE_SECURITY_UPDATES=true
+
+
+1) The following OUI options are not mandatory but can be used when required:
+– force : Allows silent mode installation into a non-empty ORACLE_HOME directory.
+– debug : Displays extra debug information from OUI. If you want less output just omit it.
+
+2) The following OUI variables are not mandatory but can be used when required:
+– ORACLE_HOME_NAME – if not used , OUI will assign the name automatically (OraClient11g_Home1, OraClient11g_Home2, .. OraClient12g_Home1, OraClient11g_Home2,..)
+
+3) Following are new groups introduced in Oracle 12.1:
+oracle.install.db.BACKUPDBA_GROUP=dba \
+oracle.install.db.DGDBA_GROUP=dba \
+oracle.install.db.KMDBA_GROUP=dba \
+

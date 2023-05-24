@@ -3,4 +3,4 @@ SELECT B.NAME, ROUND (A.VALUE / 1024 / 1024, 2) MB
  WHERE C.AUDSID = USERENV ('sessionid')
    AND A.SID = C.SID
    AND (A.STATISTIC# = B.STATISTIC#)
-   AND NAME IN ('session pga memory', 'session pga memory max');
+   AND NAME like '%pga%';
