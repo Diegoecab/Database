@@ -1,0 +1,1 @@
+crsctl replace votedisk +RECOC8

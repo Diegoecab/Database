@@ -1,5 +1,19 @@
---rman_catalog_report c:\temp\rman_catalog_report.html
---bckprdrman/zj2h7t@RMAN
+--------------------------------------------------------------------------------
+-- 
+-- File name:   rman_catalog_report.sql v1.2
+-- Purpose:     Genera reporte html de lo registrado en el catalogo de rman en los ultimos 8 dias
+--              incluyendo las bases que no hayan respaldado. Incluye log de errores
+--              
+-- Author:      Diego Cabrera
+--              
+-- Usage:       
+--     @rman_catalog_report <htmlfile>
+--
+-- Example:
+--     
+--     @rman_catalog_report c:\temp\rman_catalog_report.html
+--	  @rman_catalog_report /tmp/rman_catalog_report.html
+
 
 set echo         off
 set verify       off
@@ -22,7 +36,7 @@ variable  input_val varchar2(100);
 
 set termout off;
 column dflt_name new_value dflt_name noprint;
-select 'c:\temp\rman_catalog_report.html' dflt_name from dual;
+select 'rman_catalog_report.html' dflt_name from dual;
 set termout on;
 
 

@@ -1,0 +1,10 @@
+oakcli validate -c storagetopology
+
+oakcli show disk
+
+oakcli validate -c DiskCalibration
+
+
+Validating Hardware System and Network Components
+
+oakcli validate -c SystemComponents,NetworkComponents

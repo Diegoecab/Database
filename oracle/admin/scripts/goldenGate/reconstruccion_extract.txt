@@ -1,0 +1,236 @@
+
+Skip to end of metadata
+Created by Alejandro Cortazzo, last modified on May 26, 2020Go to start of metadata
+ Loguarse como el usuario Owner y conectarse a la base
+
+[ggatek2vCNIBSU@rgmadbu1914 OGG]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter for Oracle
+Version 12.2.0.1.1 OGGCORE_12.2.0.1.0_PLATFORMS_151211.1401_FBO
+Linux, x64, 64bit (optimized), Oracle 12c on Dec 12 2015 02:56:48
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2015, Oracle and/or its affiliates. All rights reserved.
+ 
+ 
+ 
+GGSCI (rgmadbu1914) 1> dblogin useridalias ggsource
+Successfully logged into database.
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 2>
+
+
+2. Eliminar el GG anterior
+
+
+
+stop XCCOL
+kill XCCOL
+UNREGISTER EXTRACT XCCOL DATABASE
+delete EXTRACT XCCOL
+ 
+ 
+ 
+ 
+ 
+Ejemplo:
+ 
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 8> info all
+ 
+Program     Status      Group       Lag at Chkpt  Time Since Chkpt
+ 
+MANAGER     RUNNING
+EXTRACT     RUNNING     XCECU       121:44:18     00:00:02
+ 
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 9> stop XCECU
+ 
+Sending STOP request to EXTRACT XCECU ...
+STOP request pending. Recovery is not complete.
+This normal stop will wait and checkpoint recovery's work when recovery has finished.
+To force Extract to stop now, use the SEND EXTRACT XCECU, FORCESTOP command..
+ 
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 10> kill XCECU
+ 
+Sending KILL request to MANAGER ...
+Killed process (39439) for EXTRACT XCECU
+ 
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 11> UNREGISTER EXTRACT XCECU database
+ 
+2020-05-26 10:11:05  INFO    OGG-01750  Successfully unregistered EXTRACT XCECU from database.
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 12> delete extract XCECU
+Deleted EXTRACT XCECU.
+
+
+3. Eliminar los replicat
+
+Loguarse con el usuario owner e ir al directorio OGGForBD
+ 
+ 
+GGSCI > stop rcaddres
+GGSCI > delete rcaddres
+ 
+ 
+Ejemplo:
+ 
+ 
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ pwd
+/u01/app/ggate_K2V_CN/OGGForBD
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter
+Version 12.2.0.1.160823 OGGCORE_OGGADP.12.2.0.1.0_PLATFORMS_161019.1437
+Linux, x64, 64bit (optimized), Generic on Oct 19 2016 16:01:40
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2016, Oracle and/or its affiliates. All rights reserved.
+ 
+ 
+ 
+GGSCI (rgmadbu1914) 1> stop replicat ECUWORO
+GGSCI (rgmadbu1914) 1> delete replicat ECUWORO
+ 
+ 
+-- REALIZAR ESTO CON TODOS LOS REPLICATS DEL PAIS QUE SE DESEA RECREAR
+
+
+4. Crear los extract
+
+[ggatek2vCNIBSU@rgmadbu1914 OGG]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter for Oracle
+Version 12.2.0.1.1 OGGCORE_12.2.0.1.0_PLATFORMS_151211.1401_FBO
+Linux, x64, 64bit (optimized), Oracle 12c on Dec 12 2015 02:56:48
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2015, Oracle and/or its affiliates. All rights reserved.
+ 
+ 
+ 
+GGSCI (rgmadbu1914) 1> dblogin useridalias ggsource
+Successfully logged into database.
+ 
+GGSCI (rgmadbu1914 as OGG_K2V@cnibsu1) 2>
+ 
+Add Extract XCCOL, INTEGRATED TRANLOG, Begin Now    
+ 
+ 
+Add ExtTrail dirdat/xc, Extract XCCOL
+ 
+register extract XCCOL database
+ 
+start extract XCCOL
+ 
+ 
+ 
+ 
+Add Extract XCECU, INTEGRATED TRANLOG, Begin Now    
+ 
+Add ExtTrail dirdat/xe, Extract XCECU
+ 
+register extract XCECU database
+ 
+start extract XCECU
+
+
+
+
+5. Crear replicats
+
+
+
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ pwd
+/u01/app/ggate_K2V_CN/OGGForBD
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter
+Version 12.2.0.1.160823 OGGCORE_OGGADP.12.2.0.1.0_PLATFORMS_161019.1437
+Linux, x64, 64bit (optimized), Generic on Oct 19 2016 16:01:40
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2016, Oracle and/or its affiliates. All rights reserved.
+ 
+ 
+ 
+GGSCI (rgmadbu1914) 1>
+ 
+ 
+add replicat coladdr, ExtTrail dirdat/xc
+ 
+ 
+start replicat coladdr
+ 
+ 
+ 
+ 
+ 
+ 
+Realizar lo mismo para todos los replicats.
+ 
+ 
+Ejemplo:
+add replicat coladdr, ExtTrail dirdat/xc
+add replicat colagrd, ExtTrail dirdat/xc
+add replicat colagre, ExtTrail dirdat/xc
+add replicat colcont, ExtTrail dirdat/xc
+add replicat colcrec, ExtTrail dirdat/xc
+add replicat colcusf, ExtTrail dirdat/xc
+add replicat colcust, ExtTrail dirdat/xc
+add replicat coldeva, ExtTrail dirdat/xc
+add replicat colfina, ExtTrail dirdat/xc
+add replicat colinvo, ExtTrail dirdat/xc
+add replicat colkeyw, ExtTrail dirdat/xc
+add replicat coloffe, ExtTrail dirdat/xc
+add replicat colorde, ExtTrail dirdat/xc
+add replicat colsuhi, ExtTrail dirdat/xc
+add replicat colworo, ExtTrail dirdat/xc
+add replicat colwose, ExtTrail dirdat/xc
+
+
+6. Comprobar status
+
+                ========= EXTRACT =========
+ 
+ 
+[ggatek2vCNIBSU@rgmadbu1914 OGG]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter for Oracle
+Version 12.2.0.1.1 OGGCORE_12.2.0.1.0_PLATFORMS_151211.1401_FBO
+Linux, x64, 64bit (optimized), Oracle 12c on Dec 12 2015 02:56:48
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2015, Oracle and/or its affiliates. All rights reserved.
+ 
+ 
+ 
+GGSCI (rgmadbu1914) 1> INFO ALL
+ 
+ 
+ 
+------- > Deberia estar todo en running y sin LAG.
+ 
+ 
+ 
+ 
+            ========= REPLICAT ================
+ 
+ 
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ pwd
+/u01/app/ggate_K2V_CN/OGGForBD
+[ggatek2vCNIBSU@rgmadbu1914 OGGForBD]$ ./ggsci
+ 
+Oracle GoldenGate Command Interpreter
+Version 12.2.0.1.160823 OGGCORE_OGGADP.12.2.0.1.0_PLATFORMS_161019.1437
+Linux, x64, 64bit (optimized), Generic on Oct 19 2016 16:01:40
+Operating system character set identified as UTF-8.
+ 
+Copyright (C) 1995, 2016, Oracle and/or its affiliates. All rights reserved.
+ 
+GGSCI (rgmadbu1914) 1> INFO ALL
+ 
+ 
+------- > Deberia estar todo en running y sin LAG.

@@ -1,0 +1,1 @@
+find . -name sqlnet.ora -exec grep -i _TIMEOUT {} \;

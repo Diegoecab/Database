@@ -1,0 +1,1 @@
+srvctl status asm -node rdp6adm02vm02 -detail

@@ -19,14 +19,21 @@ REM
 set pagesize 10000
 set linesize 900
 set verify off
+set lines 900
+
 
 clear col
-col machine  for a30
-col program for a50
-col username for a21
+col machine  for a30 truncate
+col program for a20 truncate
+col osuser for a15 truncate
+col status for a10 truncate
+col username for a20 truncate
 col sid for 9999
 col last_act for 99999
-col logon_time  for a25
+col logon_time  for a25 truncate
+col service_name for a20 truncate
+col cnt for 999
+col resource_consumer_group for a15 truncate
 --col spid heading 'OsPid'
 --col pq_status heading 'Parallel|Query'
 --col min_inac heading 'Min|Inact'
@@ -34,10 +41,10 @@ col sql_id for a13
 --col pdml_status heading 'Parallel|dml'
 --col pddl_status heading 'Parallel|ddl'
 col client_identifier for a30
-col kill_sess for a60
+col kill_sess for a100
 
 break on report
-
+@nls_date
 compute sum of num_user_sess active# inactive# on report
 
 PROMPT
@@ -56,34 +63,9 @@ order by 1;
 select sessions_current, sessions_highwater from v$license;
 
 
---
--- List all sessions for RAC.
---
- 
- 
- 
-SELECT NVL(s.username, '(oracle)') AS username,
-       s.inst_id,
-       s.sid,
-       s.serial#,
-       p.spid,
-       s.lockwait,
-       s.status,
-       s.module,
-       s.machine,
-       s.program,
-       TO_CHAR(s.logon_Time,'DD-MON-YYYY HH24:MI:SS') AS logon_time
-FROM   gv$session s,
-       gv$process p
-WHERE  s.paddr   = p.addr
-AND    s.inst_id = p.inst_id
-and s.username is not null
-ORDER BY s.username, s.osuser
-/
-
 
 SELECT NVL(s.username, '[bkgrnd]') AS username,
-       s.inst_id, count(*)
+       s.inst_id, count(*) cnt
 FROM   gv$session s,
        gv$process p
 WHERE  s.paddr   = p.addr
@@ -93,21 +75,98 @@ ORDER BY 1
 /
 
 
+
 prompt
 
 
-SELECT NVL(s.username, '(oracle)') AS username,status,
+SELECT NVL(s.username, '(oracle)') AS username,status,osuser,
        s.machine,
 service_name,
-       s.program
-, count(*)
+       s.program,
+	   logon_time,
+resource_consumer_group,
+count(*) cnt
 FROM   gv$session s,
        gv$process p
 WHERE  s.paddr   = p.addr
 AND    s.inst_id = p.inst_id
-and s.username is not null
-group by NVL(s.username, '(oracle)'), status,
+--and s.username ='EXT_USER1'
+group by NVL(s.username, '(oracle)'), status,osuser,
        s.machine,
 service_name,
-       s.program
+       s.program,
+	   logon_time,
+	   resource_consumer_group
+order by logon_time desc
 /
+
+prompt
+
+
+SELECT NVL(s.username, '(oracle)') AS username,status,osuser,
+service_name,
+count(*) cnt
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+--and s.username ='EXT_USER1'
+group by NVL(s.username, '(oracle)'), status,osuser,
+service_name
+order by 5 desc
+/
+
+prompt
+
+
+SELECT NVL(s.username, '(oracle)') AS username,MIN(LOGON_TIME),max(LOGON_TIME),status,osuser,machine,
+service_name,
+count(*) cnt
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+--and s.username ='EXT_USER1'
+group by NVL(s.username, '(oracle)'), status,osuser,machine,
+service_name
+order by 5 desc
+/
+
+/*
+
+SELECT NVL(s.username, '(oracle)') AS username,
+       s.machine,
+count(*) cnt
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+--and s.username ='EXT_USER1'
+group by NVL(s.username, '(oracle)'),s.machine
+order by 1,2
+/
+
+/
+
+*/
+prompt
+
+
+--
+-- List all sessions for RAC.
+--
+ /*
+ 
+ 
+SELECT to_char(s.logon_Time,'DD-MON-YYYY HH24') , count(*)
+FROM   gv$session s,
+       gv$process p
+WHERE  s.paddr   = p.addr
+AND    s.inst_id = p.inst_id
+and s.username ='MBANKING'
+group by to_char(s.logon_Time,'DD-MON-YYYY HH24') 
+ORDER BY 1
+/
+
+
+*/

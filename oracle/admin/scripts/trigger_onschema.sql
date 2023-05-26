@@ -1,19 +1,13 @@
-CREATE OR REPLACE TRIGGER trg_logon_dbo_ebalance_reg
-   AFTER LOGON ON dbo_ebalance_regional.schema
+CREATE OR REPLACE TRIGGER dbsnmp_tr
+   AFTER LOGON ON dbsnmp.schema
 BEGIN
-/*
-19-FEB-14: Por migracion desde SQL Server, todas las consultas seran case insensitive
-*/
-      EXECUTE IMMEDIATE ('alter session set NLS_SORT=BINARY_CI');
-      EXECUTE IMMEDIATE ('alter session set NLS_COMP=LINGUISTIC');
-EXCEPTION
-   WHEN OTHERS
-   THEN
-      raise_application_error
-                       (-20003,
-                        'Error al ejecutar trigger trg_logon_dbo_ebalance_reg'
+if (sys_context('USERENV','PROXY_USER') is null) then
+raise_application_error
+                       (-20001,
+                        'Login not allowed'
                        );
-END trg_logon_dbo_ebalance_reg;
+end if;
+END dbsnmp_tr;
 /
 
 

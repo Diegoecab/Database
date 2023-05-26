@@ -1,0 +1,1 @@
+asmcmd pwmove --asm +DATAC8/orapwASM +RECOC8/orapwASM -f

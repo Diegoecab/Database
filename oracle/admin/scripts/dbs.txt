@@ -1,0 +1,2533 @@
+DB: 1
+DB: 1
+DB: 1
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 2
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 3
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB3	      dblxorabcatel01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO3
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 12:36:35	     2021-01-18 13:36:34	      32	2.3	   7.2 OK
+
+
+no rows selected
+
+DB: 4
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 5
+
+																Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_TIME	   STATUS	Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- ------------------- ------------ -----------------
+*		1 ALLOWED    CDB5	      dblxorafront05		     12.1.0.2.0        08/12/2020-00:53:26 OPEN 	ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO5
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 12:42:15	     2021-01-18 13:31:50	      16	 .3	   1.9 OK
+
+
+no rows selected
+
+DB: 6
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 7
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 8
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 9
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 10
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 11
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB11	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO11
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 12:59:30	     2021-01-18 13:45:56	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 12
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 13
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 14
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 15
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 16
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 17
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 18
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 19
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 20
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB20	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO20
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:18:43	     2021-01-18 14:18:23	      14	 .1	    .7 OK
+
+
+no rows selected
+
+DB: 21
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 22
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 23
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 24
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 25
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 26
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB26	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO26
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:34:33	     2021-01-18 14:33:05	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 27
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB27	      dblxorafront02		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO27
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:34:08	     2021-01-18 14:33:49	      32	 .2	    .6 OK
+
+
+no rows selected
+
+DB: 28
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 29
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB29	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO29
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:37:11	     2021-01-18 14:37:10	      50	3.4	   6.8 OK
+
+
+no rows selected
+
+DB: 30
+
+																Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_TIME	   STATUS	Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- ------------------- ------------ -----------------
+*		1 ALLOWED    CDB30	      dblxorafront05		     12.1.0.2.0        08/12/2020-00:53:21 OPEN 	ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO30
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:37:13	     2021-01-18 14:37:12	      16	1.4	   8.8 OK
+
+
+no rows selected
+
+DB: 31
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 32
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB32	      dblxorabcatel01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO32
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:40:41	     2021-01-18 14:40:36	      32	  1	   3.1 OK
+
+
+no rows selected
+
+DB: 33
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 34
+
+																Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_TIME	   STATUS	Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- ------------------- ------------ -----------------
+*		1 ALLOWED    CDB34	      dblxorafront03		     12.1.0.2.0        07/12/2020-00:42:29 OPEN 	ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO34
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:49:31	     2021-01-18 14:42:54	      32	 .1	    .3 OK
+
+
+no rows selected
+
+DB: 35
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+		1 ALLOWED    CDB351	      dbexap01dbadm01.ar.bsch	     12.2.0.1.0        13-NOV-20 OPEN	      ACTIVE
+*		2 ALLOWED    CDB352	      dbexap01dbadm02.ar.bsch	     12.2.0.1.0        13-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO35
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:43:07	     2021-01-18 14:43:06	      72	9.8	  13.6 OK
+	 2 2021-01-18 13:43:07	     2021-01-18 14:43:06	      72	4.4	   6.1 OK
+
+
+																														      Avg
+																			Min											     Elap
+																 Log		       Logg											      Per
+			      Inst												 On			 ed	Min Bc										     Exec
+USERNAME       SID    SERIAL#	Id MACHINE		     PROGRAM		       MODULE	     OSUSER	   SQL_ID	 Time			 On  Active Pr SPID	  SQL_TEXT			 PREV_SQL_ID   PLAN_HASH_VALUE	   SQL(m)
+------------ ----- ---------- ---- ------------------------- ------------------------- ------------- ------------- ------------- ------------------ ------- ------- -- ---------- ------------------------------ ------------- --------------- ----------
+DW_01	      2757	20530	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  209505		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      2940	37432	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  209509		   update tmp_altas_masi		    3661712998	   447.00
+DW_01		18	31465	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  209516		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      5769	44341	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258603		   update tmp_altas_masi		    3661712998	   447.00
+DW_01		18	31465	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258642		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      5951	 2978	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258640		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      2940	37432	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258637		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      6128	 9766	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258644		   update tmp_altas_masi		    3661712998	   447.00
+DW_01	      2757	20530	 1 dbexap01dbadm01.ar.bsch   oracle@dbexap01dbadm01.ar DBMS_SCHEDULE oracle	   5sbqrp0nca335 16-01-21 10:36:26     3127    3126 N  258543		   update tmp_altas_masi		    3661712998	   447.00
+
+9 rows selected.
+
+DB: 36
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 37
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 38
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 39
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 40
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 41
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 42
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 43
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 44
+
+																Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_TIME	   STATUS	Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- ------------------- ------------ -----------------
+*		1 ALLOWED    CDB44	      dblxorabcatel01		     12.1.0.2.0        12/12/2020-23:08:01 OPEN 	ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO44
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:48:32	     2021-01-18 14:43:55	      32	 .1	    .3 OK
+
+
+no rows selected
+
+DB: 45
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 46
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 47
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 48
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 49
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 50
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 51
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 52
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 53
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 54
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB54	      dblxorafront03		     12.1.0.2.0        07-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO54
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:59:03	     2021-01-18 14:41:12	      32	  0	     0 OK
+
+
+no rows selected
+
+DB: 55
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 56
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 57
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 58
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB58	      dblxorazero03		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO58
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 13:46:47	     2021-01-18 14:46:45	      18	 .9	     5 OK
+
+
+no rows selected
+
+DB: 59
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 60
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 61
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 62
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 63
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 64
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 65
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 66
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 67
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 68
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 69
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 70
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 71
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 72
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 73
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 74
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB74	      dblxorazero01		     12.2.0.1.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO74
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:25:16	     2021-01-18 15:25:13	      12	2.1	  17.5 OK
+
+
+no rows selected
+
+DB: 75
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB75	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO75
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:25:18	     2021-01-18 15:25:16	      16	 .8	     5 OK
+
+
+no rows selected
+
+DB: 76
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 77
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 78
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB78	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO78
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:30:57	     2021-01-18 15:30:55	      40	1.3	   3.3 OK
+
+
+no rows selected
+
+DB: 79
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 80
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB80	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO80
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:36:14	     2021-01-18 15:29:12	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 81
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 82
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 83
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 84
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 85
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 86
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 87
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 88
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 89
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: 90
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB90	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO90
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:53:18	     2021-01-18 15:52:11	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 91
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 92
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB92	      dblxorafront03		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO92
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:53:57	     2021-01-18 15:53:25	      32	 .2	    .6 OK
+
+
+no rows selected
+
+DB: 93
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 94
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 95
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 96
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB96	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO96
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:54:30	     2021-01-18 15:54:26	      16	 .5	   3.1 OK
+
+
+no rows selected
+
+DB: 97
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 98
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 99
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 100
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 101
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 102
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB102	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO102
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:55:43	     2021-01-18 15:55:42	      16	2.9	  18.1 OK
+
+
+																														      Avg
+																			Min											     Elap
+																 Log		       Logg											      Per
+			      Inst												 On			 ed	Min Bc										     Exec
+USERNAME       SID    SERIAL#	Id MACHINE		     PROGRAM		       MODULE	     OSUSER	   SQL_ID	 Time			 On  Active Pr SPID	  SQL_TEXT			 PREV_SQL_ID   PLAN_HASH_VALUE	   SQL(m)
+------------ ----- ---------- ---- ------------------------- ------------------------- ------------- ------------- ------------- ------------------ ------- ------- -- ---------- ------------------------------ ------------- --------------- ----------
+OPS$STCCTM     954	37968	 1 dblxorafront05	     sqlplus@dblxorafront05 (T SQL*Plus      stcctm	   7btythj98rt6w 18-01-21 08:00:02	476	475 N  1154	  SELECT 'S' FROM AICC.VW_TMOVLI b95ydk61mxhfy		     0	      .00
+OPS$STCCTM     446	58900	 1 dblxorafront05	     sqlplus@dblxorafront05 (T SQL*Plus      stcctm	   br0f1f6wwrhmf 18-01-21 09:59:55	356	355 N  35430	  INSERT INTO PREM.PREM_NOVEDADE gvm45bmhd6van	    3332240587	    31.00
+
+DB: 103
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB103	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO103
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:05:40	     2021-01-18 15:41:29	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 104
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB104	      dblxorafront03		     12.1.0.2.0        07-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO104
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:55:46	     2021-01-18 15:55:45	      32	 .6	   1.9 OK
+
+
+no rows selected
+
+DB: 105
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB105	      dblxorafront03		     12.1.0.2.0        07-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO105
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:56:25	     2021-01-18 15:53:54	      32	 .1	    .3 OK
+
+
+no rows selected
+
+DB: 106
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB106	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO106
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:57:12	     2021-01-18 15:55:12	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 107
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB107	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO107
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:56:35	     2021-01-18 15:28:18	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 108
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB108	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO108
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:55:52	     2021-01-18 15:55:50	      12	 .7	   5.8 OK
+
+
+no rows selected
+
+DB: 109
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 110
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB110	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO110
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:55:56	     2021-01-18 15:55:55	      14	1.1	   7.9 OK
+
+
+																														      Avg
+																			Min											     Elap
+																 Log		       Logg											      Per
+			      Inst												 On			 ed	Min Bc										     Exec
+USERNAME       SID    SERIAL#	Id MACHINE		     PROGRAM		       MODULE	     OSUSER	   SQL_ID	 Time			 On  Active Pr SPID	  SQL_TEXT			 PREV_SQL_ID   PLAN_HASH_VALUE	   SQL(m)
+------------ ----- ---------- ---- ------------------------- ------------------------- ------------- ------------- ------------- ------------------ ------- ------- -- ---------- ------------------------------ ------------- --------------- ----------
+PRD_OIM        357	43168	 1 SISRV11		     JDBC Thin Client	       JDBC Thin Cli usrOIM	   br573m2ptmtcv 16-01-21 02:05:01     3711    1150 N  53089	  INSERT /*+ BYPASS_RECURSIVE_CH 9rkrupqs52mnh	    4187905874	  1151.00
+
+DB: 111
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 112
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB112	      dblxorafront03		     12.1.0.2.0        07-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO112
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:56:00	     2021-01-18 15:55:55	      32	 .9	   2.8 OK
+
+
+no rows selected
+
+DB: 113
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB113	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO113
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:59:37	     2021-01-18 15:55:39	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 114
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 115
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 116
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 117
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 118
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 119
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 120
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 121
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 122
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 123
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 124
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 125
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 126
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB126	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO126
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:57:43	     2021-01-18 15:57:42	      16	7.2	    45 OK
+
+
+no rows selected
+
+DB: 127
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 128
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 129
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 130
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 131
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 132
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 133
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 134
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 135
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 136
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 137
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 138
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB138	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO138
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:59:03	     2021-01-18 15:57:29	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 139
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 140
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 141
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 142
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 143
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 144
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 145
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 146
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 147
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB147	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO147
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 14:59:34	     2021-01-18 15:59:33	      80	  2	   2.5 OK
+
+
+no rows selected
+
+DB: 148
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 149
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 150
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 151
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 152
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 153
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 154
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 155
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 156
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB156	      dblxmissrv01		     12.1.0.2.0        23-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO156
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:02:06	     2021-01-18 16:00:07	     160	1.2	    .8 OK
+
+
+no rows selected
+
+DB: 157
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 158
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB158	      dblxmissrv01		     12.1.0.2.0        25-JUL-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO158
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:02:25	     2021-01-18 15:59:58	     160	  0	     0 OK
+
+
+no rows selected
+
+DB: 159
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB159	      dblxmissrv01		     12.1.0.2.0        25-JUL-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO159
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:08:45	     2021-01-18 15:59:07	     160	  0	     0 OK
+
+
+no rows selected
+
+DB: 160
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 161
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 162
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 163
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 164
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB164	      dblxorafront05		     12.1.0.2.0        08-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO164
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:01:30	     2021-01-18 16:00:25	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 165
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 166
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 167
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 168
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 169
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 170
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 171
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 172
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB172	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO172
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:08:34	     2021-01-18 15:58:41	      12	  0	     0 OK
+
+
+no rows selected
+
+DB: 173
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 174
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB174	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO174
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:06:47	     2021-01-18 16:00:17	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 175
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 176
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB176	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO176
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:01:49	     2021-01-18 16:01:33	      16	 .5	   3.1 OK
+
+
+no rows selected
+
+DB: 177
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 178
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB178	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO178
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:02:01	     2021-01-18 16:01:04	      12	 .3	   2.5 OK
+
+
+no rows selected
+
+DB: 179
+
+																Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_TIME	   STATUS	Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- ------------------- ------------ -----------------
+*		1 ALLOWED    CDB179	      dblxorainet01		     12.1.0.2.0        13/12/2020-01:11:03 OPEN 	ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO179
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:01:53	     2021-01-18 16:01:46	      16	 .1	    .6 OK
+
+
+no rows selected
+
+DB: 180
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 181
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 182
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB182	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO182
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:04:04	     2021-01-18 16:01:10	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 183
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 184
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 185
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 186
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 187
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB187	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO187
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:02:23	     2021-01-18 16:02:19	      16	1.8	  11.3 OK
+
+
+no rows selected
+
+DB: 188
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB188	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO188
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:02:22	     2021-01-18 16:02:21	      20	5.1	  25.5 OK
+
+
+no rows selected
+
+DB: 189
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB189	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO189
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:04:20	     2021-01-18 16:02:17	      16	  0	     0 OK
+
+
+no rows selected
+
+DB: 190
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 191
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB191	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO191
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:06:29	     2021-01-18 16:00:21	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 192
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 193
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 194
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 195
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB195	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO195
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:03:38	     2021-01-18 16:03:37	      12	1.8	    15 OK
+
+
+																														      Avg
+																			Min											     Elap
+																 Log		       Logg											      Per
+			      Inst												 On			 ed	Min Bc										     Exec
+USERNAME       SID    SERIAL#	Id MACHINE		     PROGRAM		       MODULE	     OSUSER	   SQL_ID	 Time			 On  Active Pr SPID	  SQL_TEXT			 PREV_SQL_ID   PLAN_HASH_VALUE	   SQL(m)
+------------ ----- ---------- ---- ------------------------- ------------------------- ------------- ------------- ------------- ------------------ ------- ------- -- ---------- ------------------------------ ------------- --------------- ----------
+NAV	       154	 1697	 1 lxcdhsrv01.ar.bsch	     JDBC Thin Client	       JDBC Thin Cli cloudera-scm  cckxusa3by5kx 14-01-21 09:08:37     6175	301 N  102736	  INSERT INTO NAV_PARENT_INFO_ST 8aawdzxsahxka	     391445069	   301.00
+
+DB: 196
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 197
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 198
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB198	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO198
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:06:38	     2021-01-18 16:00:48	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 199
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB199	      dblxorafront03		     12.1.0.2.0        07-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO199
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:03:43	     2021-01-18 16:03:28	      32	 .2	    .6 OK
+
+
+no rows selected
+
+DB: 200
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 201
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB201	      dblxoratech01		     12.1.0.2.0        22-NOV-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO201
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:06:05	     2021-01-18 15:58:30	      14	  0	     0 OK
+
+
+no rows selected
+
+DB: 202
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB202	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO202
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:04:13	     2021-01-18 16:04:00	      16	 .2	   1.3 OK
+
+
+no rows selected
+
+DB: 203
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 204
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB204	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO204
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:04:33	     2021-01-18 16:02:55	      12	  0	     0 OK
+
+
+no rows selected
+
+DB: 205
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB205	      dblxorainet01		     12.1.0.2.0        13-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO205
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:04:19	     2021-01-18 16:03:28	      16	 .5	   3.1 OK
+
+
+no rows selected
+
+DB: 206
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 207
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 208
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 209
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 210
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 211
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 212
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 213
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 214
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 215
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB215	      dblxorazero01		     12.1.0.2.0        12-DEC-20 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO215
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:08:47	     2021-01-18 15:58:50	      12	  0	     0 OK
+
+
+no rows selected
+
+DB: 216
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 217
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 218
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 219
+
+														      Database
+C INSTANCE_NUMBER LOGINS     INSTANCE_NAME    HOST_NAME 		     VERSION	       STARTUP_T STATUS       Status
+- --------------- ---------- ---------------- ------------------------------ ----------------- --------- ------------ -----------------
+*		1 ALLOWED    CDB219	      dblxorafront07		     12.1.0.2.0        17-JAN-21 OPEN	      ACTIVE
+
+
+CON_NAME
+------------------------------
+RIO219
+
+   INST_ID BEGIN_INTERVAL_TIME	     END_INTERVAL_TIME	       CPU_COUNT	AAS    AAS_PCT STATUS
+---------- ------------------------- ------------------------- --------- ---------- ---------- --------
+	 1 2021-01-18 15:07:52	     2021-01-18 16:06:23	      16	 .2	   1.3 OK
+
+
+no rows selected
+
+DB: 220
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 221
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 222
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 223
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 224
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 225
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 226
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 227
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 228
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 229
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 230
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 231
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 232
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 233
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 234
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 235
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 236
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 237
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 238
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 239
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 240
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 241
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 242
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 243
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 244
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 245
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 246
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 247
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 248
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 249
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 250
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 251
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 252
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+DB: 253
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 254
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 255
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 256
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 257
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 258
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 259
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 260
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 261
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 262
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 263
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 264
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 265
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 266
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 267
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 268
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 269
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 270
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 271
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 272
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 273
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 274
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 275
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 276
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 277
+ERROR:
+ORA-12545: Connect failed because target host or object does not exist
+
+
+DB: 278
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 279
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 280
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 281
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 282
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 283
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 284
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 285
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 286
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 287
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 288
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 289
+ERROR:
+ORA-12170: TNS:Connect timeout occurred
+
+
+DB: 290
+ERROR:
+ORA-12170: TNS:Connect timeout occurred
+
+
+DB: 291
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 292
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 293
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 294
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 295
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 296
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 297
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 298
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 299
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 300
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 301
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 302
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 303
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 304
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 305
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 306
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 307
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 308
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 309
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 310
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 311
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 312
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 313
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 314
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 315
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 316
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 317
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 318
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 319
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 320
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 321
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 322
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 323
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 324
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 325
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 326
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 327
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 328
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 329
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: 330
+ERROR:
+ORA-12541: TNS:no listener
+
+
+DB: conn dbsnmp/l_ellison2014@@rio:7365/RIO1
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+DB: conn dbsnmp/l_ellison2014@@rio:7365/RIO2

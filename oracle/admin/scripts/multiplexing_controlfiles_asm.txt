@@ -1,0 +1,18 @@
+shut immediate
+
+rman target /
+startup nomount;
+restore controlfile to '+FRAC3' from '+DATAC3/CNSATP/CONTROLFILE/current.357.1022576929';
+
+asmcmd ls +FRAC3/CNSATP/CONTROLFILE
+
+alter system set control_files='+DATAC3/CNSATP/CONTROLFILE/current.357.1022576929','+FRAC3/CNSATP/CONTROLFILE/current.357.1022576929' scope=spfile;
+
+startup force
+select name from v$controlfile;
+
+
+Instancia 2:
+shut immediate
+startup
+select name from v$controlfile;

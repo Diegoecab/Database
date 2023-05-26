@@ -1,0 +1,1 @@
+emcli relocate_targets -src_agent=dblxorafront02.ar.bsch:3872 -dest_agent=dblxorafront01.ar.bsch:3872 -target_name=CDB130 -target_type=oracle_database -copy_from_src -force=yes -ignoreTimeSkew=yes

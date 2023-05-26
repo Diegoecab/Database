@@ -1,0 +1,47 @@
+*** before flush ***
+
+     Ver                                                                                                                                                                                                
+Inst sio                                                                                                                                                                                                
+  Id  ns    Invs ADDRESS          HASH_VALUE                                                                                                                                                            
+---- --- ------- ---------------- ----------                                                                                                                                                            
+   1 1   0       0000000168FCC1B8 1978637836                                                                                                                                                            
+
+1 row selected.
+
+
+                  Plan           Is                                                                                                                                                                     
+Inst  Chi         Hash           Sh                                                                                                                                                                     
+  Id  ld#        Value     Execs ar                                                                                                                                                                     
+---- ---- ------------ --------- --                                                                                                                                                                     
+   1    0 0            0         Y                                                                                                                                                                      
+
+1 row selected.
+
+ SYS.DBMS_SHARED_POOL.PURGE(i.address||','||i.hash_value, 'C');
+ *
+ERROR at line 5:
+ORA-06550: line 5, column 2: 
+PLS-00201: identifier 'SYS.DBMS_SHARED_POOL' must be declared 
+ORA-06550: line 5, column 2: 
+PL/SQL: Statement ignored 
+
+
+*** after flush ***
+
+     Ver                                                                                                                                                                                                
+Inst sio                                                                                                                                                                                                
+  Id  ns    Invs ADDRESS          HASH_VALUE                                                                                                                                                            
+---- --- ------- ---------------- ----------                                                                                                                                                            
+   1 1   0       0000000168FCC1B8 1978637836                                                                                                                                                            
+
+1 row selected.
+
+
+                  Plan           Is                                                                                                                                                                     
+Inst  Chi         Hash           Sh                                                                                                                                                                     
+  Id  ld#        Value     Execs ar                                                                                                                                                                     
+---- ---- ------------ --------- --                                                                                                                                                                     
+   1    0 0            0         Y                                                                                                                                                                      
+
+1 row selected.
+

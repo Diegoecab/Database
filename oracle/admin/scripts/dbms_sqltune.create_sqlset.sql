@@ -50,6 +50,9 @@ accept petime prompt 'Elapsed Time (sec) (Eg >= 100) : '
 accept psql prompt 'SQL Text (Eg like 'Select * from dual&') : '
 
 
+DECLARE
+
+taskname varchar2(100);
 
 BEGIN
    DBMS_SCHEDULER.CREATE_JOB (
@@ -66,6 +69,7 @@ dbms_sqltune.load_sqlset( sqlset_name=>''&SqlSNAME'', populate_cursor=>sqlset_cu
 update_option => ''ACCUMULATE'', sqlset_owner=>''&Username''); END;',
       enabled      => TRUE
    );
+ taskname:= dbms_output.put_line(taskname);
 END;
 /
 

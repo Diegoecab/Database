@@ -1,0 +1,2551 @@
+
+Oracle Memory Usage Report: PGA And UGA Memory Usage Per Session
+
+Host........: dblxodssrv01.ar.bsch
+
+Name........: CDB233
+
+Version.....: 19.0.0.0.0
+
+Startup Time: 2021-12-05 14:10:13
+
+Current Time: 2021.12.09-17:57:33
+
+Worst possible value of concurrent PGA + UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+9399753328 2021-12-09 17:41:05
+
+1216,52650
+DBSNMP
+ 125669376 2021-12-05 14:12:37
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+  54806864 2021-12-05 14:10:15
+
+3932,5809
+DBSNMP
+  52596136 2021-12-09 17:55:47
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+  49280408 2021-12-09 00:45:13
+
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+  40892024 2021-12-07 20:42:38
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+  28573640 2021-12-05 14:10:15
+
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+  27311400 2021-12-05 14:10:15
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+  26590504 2021-12-05 14:10:15
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+  25214248 2021-12-05 14:10:15
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+  24502472 2021-12-05 14:10:15
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+  23792080 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+  22266056 2021-12-05 14:10:24
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+  19146512 2021-12-05 14:10:37
+
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+  15255480 2021-12-05 14:10:28
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   8758432 2021-12-05 14:20:36
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   8496696 2021-12-05 14:21:58
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+   8300136 2021-12-05 14:10:36
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+   8169064 2021-12-05 14:21:01
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+   8169016 2021-12-06 07:01:23
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+   8103336 2021-12-06 06:01:26
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   8103288 2021-12-05 14:20:40
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+   7972432 2021-12-05 14:10:30
+
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+   7710264 2021-12-06 07:01:20
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   7686176 2021-12-05 14:10:14
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+   7596296 2021-12-05 14:21:07
+
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+   7596296 2021-12-05 14:22:37
+
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+   7596296 2021-12-05 14:22:13
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+   7596296 2021-12-05 14:21:04
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+   7596296 2021-12-05 14:21:19
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+   7596248 2021-12-05 14:22:52
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+   7596248 2021-12-05 14:22:01
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+   7579240 2021-12-05 14:21:13
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+   7579240 2021-12-06 07:01:35
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+   7530760 2021-12-05 14:22:49
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   7530760 2021-12-05 14:20:30
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+   7530760 2021-12-05 14:21:22
+
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+   7530760 2021-12-05 14:20:49
+
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+   7513728 2021-12-05 14:22:04
+
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+   7513728 2021-12-05 14:10:15
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+   7513704 2021-12-05 14:20:33
+
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+   7513704 2021-12-05 14:10:15
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+   7513704 2021-12-05 14:22:10
+
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+   7513680 2021-12-05 14:20:46
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+   7465200 2021-12-05 14:21:40
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+   7448192 2021-12-05 14:10:27
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+   7382656 2021-12-05 14:21:46
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+   7135728 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+   6676976 2021-12-05 14:10:14
+
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+   6647752 2021-12-05 14:10:15
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+   6297592 2021-12-05 14:10:34
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+   6144896 2021-12-05 14:20:43
+
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+   6021664 2021-12-05 14:10:15
+
+3625,33045
+SYS
+   5720768 2021-12-05 14:10:14
+
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+   5262448 2021-12-05 14:10:15
+
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+   4672576 2021-12-05 14:10:15
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+   4148336 2021-12-05 14:10:16
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+   4124000 2021-12-05 14:10:14
+
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+   4082800 2021-12-05 14:10:14
+
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+   4017264 2021-12-05 14:10:26
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+   3588296 2021-12-05 14:10:15
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+   3588296 2021-12-05 14:10:15
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+   3129544 2021-12-05 14:10:37
+
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+   3129448 2021-12-05 14:10:37
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+   3034224 2021-12-05 14:10:15
+
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+   3034224 2021-12-05 14:10:14
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+   2977088 2021-12-05 14:10:15
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+   2919616 2021-12-05 14:10:13
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+   2919616 2021-12-05 14:10:13
+
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+   2903152 2021-12-05 14:10:15
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+   2903152 2021-12-05 14:10:15
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+   2903152 2021-12-05 14:10:16
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+   2903152 2021-12-05 14:10:14
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+   2903152 2021-12-05 14:10:14
+
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+   2903152 2021-12-05 14:10:14
+
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+   2903152 2021-12-05 14:10:15
+
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+   2903152 2021-12-05 14:10:13
+
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+   2903152 2021-12-05 14:10:14
+
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+   2818328 2021-12-05 14:11:28
+
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+   2818328 2021-12-05 14:11:28
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+   2818328 2021-12-05 14:11:28
+
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+   2818328 2021-12-05 14:11:28
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+   2818328 2021-12-05 14:11:28
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2801864 2021-12-05 14:10:14
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+   2801864 2021-12-05 14:10:24
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+   2801864 2021-12-05 14:10:24
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2801864 2021-12-05 14:10:14
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+         0 2021-12-08 00:12:47
+
+
+Worst possible total and average values of concurrent PGA + UGA memory usage:
+
+10333653776 bytes (total) and ~58054234 bytes (average), for ~89 sessions.
+
+Approximate value of current PGA + UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+5943645632 2021-12-09 17:41:05
+
+3932,5809
+DBSNMP
+  53513568 2021-12-09 17:55:47
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+  44769144 2021-12-05 14:10:34
+
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+  40881368 2021-12-07 20:42:38
+
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+  37538952 2021-12-08 00:12:47
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+  36228360 2021-12-09 00:45:13
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+  34038440 2021-12-05 14:10:15
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+  22677968 2021-12-05 14:10:15
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+  22265128 2021-12-05 14:10:15
+
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+  22192120 2021-12-05 14:10:24
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+  21478696 2021-12-05 14:10:15
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+  20447176 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+  19447080 2021-12-05 14:10:15
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+  11591880 2021-12-05 14:10:15
+
+1216,52650
+DBSNMP
+  11097392 2021-12-05 14:12:37
+
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+  11068288 2021-12-05 14:10:28
+
+1220,64018
+C##GRAFANA
+   8804144 2021-12-09 17:57:31
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+   7558880 2021-12-05 14:10:37
+
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   6817248 2021-12-05 14:10:14
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+   5652624 2021-12-05 14:10:15
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   5528296 2021-12-05 14:20:30
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   5462760 2021-12-05 14:20:36
+
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+   5179472 2021-12-05 14:10:14
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   5135208 2021-12-05 14:21:58
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+   5113888 2021-12-05 14:10:15
+
+3625,33045
+SYS
+   5065504 2021-12-05 14:10:14
+
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+   5065456 2021-12-05 14:10:15
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+   4938688 2021-12-06 06:01:26
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   4938640 2021-12-05 14:20:40
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+   4807616 2021-12-05 14:10:36
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+   4349080 2021-12-06 07:01:35
+
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+   4349080 2021-12-06 07:01:20
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+   4349080 2021-12-05 14:21:04
+
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+   4344896 2021-12-05 14:10:15
+
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+   4300624 2021-12-05 14:22:13
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+   4283568 2021-12-05 14:21:01
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+   4283568 2021-12-05 14:10:15
+
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+   4283568 2021-12-05 14:22:37
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+   4283568 2021-12-05 14:21:07
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+   4283568 2021-12-05 14:21:13
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+   4283544 2021-12-05 14:10:30
+
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+   4283544 2021-12-05 14:20:49
+
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+   4262352 2021-12-05 14:10:15
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+   4218032 2021-12-05 14:22:49
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+   4218032 2021-12-05 14:10:27
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+   4218032 2021-12-05 14:22:10
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+   4218032 2021-12-05 14:20:43
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+   4218032 2021-12-06 07:01:23
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+   4218032 2021-12-05 14:22:04
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+   4218008 2021-12-05 14:22:01
+
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+   4218008 2021-12-05 14:20:46
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+   4152544 2021-12-05 14:21:19
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+   4152496 2021-12-05 14:20:33
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+   4152496 2021-12-05 14:22:52
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+   4152496 2021-12-05 14:21:46
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+   4152472 2021-12-05 14:21:40
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+   4148336 2021-12-05 14:10:16
+
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+   4087008 2021-12-05 14:10:15
+
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+   4087008 2021-12-05 14:21:22
+
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+   4082800 2021-12-05 14:10:14
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+   3755120 2021-12-05 14:10:26
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+   3722384 2021-12-05 14:10:14
+
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+   3579896 2021-12-05 14:10:15
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+   3514360 2021-12-05 14:10:15
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+   3129544 2021-12-05 14:10:37
+
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+   3129448 2021-12-05 14:10:37
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+   3034224 2021-12-05 14:10:15
+
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+   3034224 2021-12-05 14:10:14
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+   2977088 2021-12-05 14:10:15
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+   2919616 2021-12-05 14:10:13
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+   2919616 2021-12-05 14:10:13
+
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+   2903152 2021-12-05 14:10:14
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+   2903152 2021-12-05 14:10:14
+
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+   2903152 2021-12-05 14:10:13
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+   2903152 2021-12-05 14:10:15
+
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+   2903152 2021-12-05 14:10:15
+
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+   2903152 2021-12-05 14:10:14
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+   2903152 2021-12-05 14:10:16
+
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+   2903152 2021-12-05 14:10:15
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+   2903152 2021-12-05 14:10:14
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+   2818328 2021-12-05 14:11:28
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+   2818328 2021-12-05 14:11:28
+
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+   2818328 2021-12-05 14:11:28
+
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+   2818328 2021-12-05 14:11:28
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+SUM(VALUE) SESSION START TIME
+---------- -------------------
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+   2818328 2021-12-05 14:11:28
+
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+   2801864 2021-12-05 14:10:24
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+   2801864 2021-12-05 14:10:24
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2801864 2021-12-05 14:10:14
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2801864 2021-12-05 14:10:14
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+
+Current total and average values of concurrent PGA + UGA memory usage:
+
+6646944504 bytes (total) and ~36927469 bytes (average), for ~90 sessions.
+
+Maximum value of PGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+5138026280 2021-12-09 17:41:05
+
+1216,52650
+DBSNMP
+ 108597032 2021-12-05 14:12:37
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+  32496752 2021-12-05 14:10:15
+
+3932,5809
+DBSNMP
+  28446504 2021-12-09 17:55:47
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+  28208888 2021-12-05 14:10:15
+
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+  26946648 2021-12-05 14:10:15
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+  26225752 2021-12-05 14:10:15
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+  24849496 2021-12-05 14:10:15
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+  24137720 2021-12-05 14:10:15
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+  23427328 2021-12-05 14:10:15
+
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+  21901304 2021-12-05 14:10:24
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+  16453416 2021-12-05 14:10:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+  10312840 2021-12-05 14:10:28
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   6212744 2021-12-05 14:21:58
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+   6081672 2021-12-05 14:10:36
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+   5950600 2021-12-05 14:21:01
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   5885064 2021-12-05 14:20:36
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+   5885064 2021-12-06 07:01:23
+
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   5815200 2021-12-05 14:10:14
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+   5753992 2021-12-05 14:10:30
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+   5684128 2021-12-05 14:10:15
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+   5622920 2021-12-06 06:01:26
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   5557384 2021-12-05 14:20:40
+
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+   5426312 2021-12-06 07:01:20
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+   5377832 2021-12-05 14:22:37
+
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+   5377832 2021-12-05 14:22:13
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+   5377832 2021-12-05 14:21:19
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+   5377832 2021-12-05 14:21:07
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+   5377832 2021-12-05 14:21:04
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+   5360776 2021-12-05 14:21:13
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+   5360776 2021-12-06 07:01:35
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+   5312296 2021-12-05 14:22:49
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   5312296 2021-12-05 14:20:30
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+   5312296 2021-12-05 14:22:52
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+   5312296 2021-12-05 14:22:01
+
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+   5312296 2021-12-05 14:21:22
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+   5312296 2021-12-05 14:20:49
+
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+   5295240 2021-12-05 14:20:46
+
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+   5295240 2021-12-05 14:10:15
+
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+   5295240 2021-12-05 14:22:04
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+   5295240 2021-12-05 14:20:33
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+   5295240 2021-12-05 14:22:10
+
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+   5295240 2021-12-05 14:10:15
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+   5246760 2021-12-05 14:21:40
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+   5229704 2021-12-05 14:10:27
+
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+   5225376 2021-12-05 14:10:14
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+   5164168 2021-12-05 14:21:46
+
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+   5077248 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+   4897696 2021-12-05 14:10:15
+
+3625,33045
+SYS
+   4766624 2021-12-05 14:10:14
+
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+   4635552 2021-12-05 14:10:15
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+   4574344 2021-12-05 14:20:43
+
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+   4242336 2021-12-05 14:10:15
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+   3783584 2021-12-05 14:10:16
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+   3759248 2021-12-05 14:10:14
+
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+   3718048 2021-12-05 14:10:14
+
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+   3652512 2021-12-05 14:10:26
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+   3223544 2021-12-05 14:10:15
+
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+   3223544 2021-12-05 14:10:15
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+   2764792 2021-12-05 14:10:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+   2669472 2021-12-05 14:10:14
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+   2669472 2021-12-05 14:10:15
+
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+   2633720 2021-12-05 14:10:37
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+   2612336 2021-12-05 14:10:15
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+   2554864 2021-12-05 14:10:13
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+   2554864 2021-12-05 14:10:13
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+   2538400 2021-12-05 14:10:15
+
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+   2538400 2021-12-05 14:10:14
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+   2538400 2021-12-05 14:10:16
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+   2538400 2021-12-05 14:10:14
+
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+   2538400 2021-12-05 14:10:14
+
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+   2538400 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+   2538400 2021-12-05 14:10:13
+
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+   2538400 2021-12-05 14:10:15
+
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+   2538400 2021-12-05 14:10:14
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+   2453576 2021-12-05 14:11:28
+
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+   2453576 2021-12-05 14:11:28
+
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+   2453576 2021-12-05 14:11:28
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+   2453576 2021-12-05 14:11:28
+
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+   2453576 2021-12-05 14:11:28
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2437112 2021-12-05 14:10:14
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2437112 2021-12-05 14:10:14
+
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+   2437112 2021-12-05 14:10:24
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+   2437112 2021-12-05 14:10:24
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+         0 2021-12-08 00:12:47
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+         0 2021-12-05 14:10:34
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+         0 2021-12-09 00:45:13
+
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+         0 2021-12-07 20:42:38
+
+
+Worst possible total and average values of concurrent PGA memory usage:
+
+5808902704 bytes (total) and ~65268569 bytes (average), for ~89 sessions.
+
+Maximum value of UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+4261727048 2021-12-09 17:41:05
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+  49280408 2021-12-09 00:45:13
+
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+  40892024 2021-12-07 20:42:38
+
+3932,5809
+DBSNMP
+  24149632 2021-12-09 17:55:47
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+  22310112 2021-12-05 14:10:15
+
+1216,52650
+DBSNMP
+  17072344 2021-12-05 14:12:37
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+   6297592 2021-12-05 14:10:34
+
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+   4942640 2021-12-05 14:10:28
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   2873368 2021-12-05 14:20:36
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+   2693096 2021-12-05 14:10:37
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   2545904 2021-12-05 14:20:40
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+   2480416 2021-12-06 06:01:26
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+   2283952 2021-12-06 07:01:20
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+   2283952 2021-12-05 14:22:52
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+   2283952 2021-12-05 14:22:01
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   2283952 2021-12-05 14:21:58
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+   2283952 2021-12-06 07:01:23
+
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+   2218488 2021-12-05 14:10:15
+
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+   2218488 2021-12-05 14:22:04
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+   2218488 2021-12-05 14:21:46
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+   2218488 2021-12-05 14:10:27
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+   2218464 2021-12-05 14:22:49
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   2218464 2021-12-05 14:20:30
+
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+   2218464 2021-12-05 14:22:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+   2218464 2021-12-05 14:22:13
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+   2218464 2021-12-05 14:20:33
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+   2218464 2021-12-05 14:21:01
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+   2218464 2021-12-05 14:22:10
+
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+   2218464 2021-12-05 14:21:22
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+   2218464 2021-12-05 14:21:19
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+   2218464 2021-12-05 14:21:13
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+   2218464 2021-12-06 07:01:35
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+   2218464 2021-12-05 14:21:07
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+   2218464 2021-12-05 14:10:36
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+   2218464 2021-12-05 14:21:04
+
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+   2218464 2021-12-05 14:20:49
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+   2218464 2021-12-05 14:10:15
+
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+   2218440 2021-12-05 14:20:46
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+   2218440 2021-12-05 14:21:40
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+   2218440 2021-12-05 14:10:30
+
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   1870976 2021-12-05 14:10:14
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+   1570552 2021-12-05 14:20:43
+
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+   1570504 2021-12-05 14:10:15
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+   1451600 2021-12-05 14:10:15
+
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+   1451600 2021-12-05 14:10:14
+
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+   1386112 2021-12-05 14:10:15
+
+3625,33045
+SYS
+    954144 2021-12-05 14:10:14
+
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+    495728 2021-12-05 14:10:37
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+    430240 2021-12-05 14:10:15
+
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+    364752 2021-12-05 14:10:14
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+    364752 2021-12-05 14:10:37
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+    364752 2021-12-05 14:10:14
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+    364752 2021-12-05 14:10:15
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+    364752 2021-12-05 14:10:15
+
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+    364752 2021-12-05 14:10:14
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+    364752 2021-12-05 14:10:16
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+    364752 2021-12-05 14:10:14
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+    364752 2021-12-05 14:11:28
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+    364752 2021-12-05 14:10:16
+
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+    364752 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+    364752 2021-12-05 14:11:28
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+    364752 2021-12-05 14:10:15
+
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+    364752 2021-12-05 14:11:28
+
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+    364752 2021-12-05 14:10:15
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+    364752 2021-12-05 14:10:14
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+    364752 2021-12-05 14:11:28
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+    364752 2021-12-05 14:10:15
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+    364752 2021-12-05 14:10:14
+
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+    364752 2021-12-05 14:11:28
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+    364752 2021-12-05 14:10:15
+
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+    364752 2021-12-05 14:10:14
+
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+    364752 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+    364752 2021-12-05 14:10:15
+
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+    364752 2021-12-05 14:10:13
+
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+    364752 2021-12-05 14:10:26
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+    364752 2021-12-05 14:10:15
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+    364752 2021-12-05 14:10:15
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+    364752 2021-12-05 14:10:13
+
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+    364752 2021-12-05 14:10:24
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+    364752 2021-12-05 14:10:15
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+    364752 2021-12-05 14:10:15
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+    364752 2021-12-05 14:10:13
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+    364752 2021-12-05 14:10:24
+
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+    364752 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+    364752 2021-12-05 14:10:14
+
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+    364752 2021-12-05 14:10:24
+
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+    364752 2021-12-05 14:10:14
+
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+         0 2021-12-08 00:12:47
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+
+Worst possible total and average values of concurrent UGA memory usage:
+
+4524751072 bytes (total) and ~50839899 bytes (average), for ~89 sessions.
+
+Current value of PGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+5138026280 2021-12-09 17:41:05
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+  43716392 2021-12-05 14:10:34
+
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+  39832712 2021-12-07 20:42:38
+
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+  37538952 2021-12-08 00:12:47
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+  35703944 2021-12-09 00:45:13
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+  29547632 2021-12-05 14:10:15
+
+3932,5809
+DBSNMP
+  28839720 2021-12-09 17:55:47
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+  22313216 2021-12-05 14:10:15
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+  21900376 2021-12-05 14:10:15
+
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+  21827368 2021-12-05 14:10:24
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+  21113944 2021-12-05 14:10:15
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+  20082424 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+  19082328 2021-12-05 14:10:15
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+  11227128 2021-12-05 14:10:15
+
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+   7363720 2021-12-05 14:10:28
+
+1216,52650
+DBSNMP
+   7195784 2021-12-05 14:12:37
+
+1220,64018
+C##GRAFANA
+   6557480 2021-12-09 17:57:31
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+   5705512 2021-12-05 14:10:37
+
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   5077248 2021-12-05 14:10:14
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+   4749568 2021-12-05 14:10:15
+
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+   4290816 2021-12-05 14:10:14
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   4246664 2021-12-05 14:20:30
+
+3625,33045
+SYS
+   4242336 2021-12-05 14:10:14
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   4181128 2021-12-05 14:20:36
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+   4176800 2021-12-05 14:10:15
+
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+   4159744 2021-12-05 14:10:15
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   4050056 2021-12-05 14:21:58
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+   3984520 2021-12-06 06:01:26
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   3918984 2021-12-05 14:20:40
+
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+   3914656 2021-12-05 14:10:15
+
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+   3897600 2021-12-05 14:10:15
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+   3853448 2021-12-05 14:10:36
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+   3783584 2021-12-05 14:10:16
+
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+   3722376 2021-12-06 07:01:20
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+   3722376 2021-12-06 07:01:35
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+   3722376 2021-12-05 14:21:04
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+   3718048 2021-12-05 14:10:14
+
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+   3673896 2021-12-05 14:22:13
+
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+   3656840 2021-12-05 14:10:15
+
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+   3656840 2021-12-05 14:22:37
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+   3656840 2021-12-05 14:21:01
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+   3656840 2021-12-05 14:10:30
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+   3656840 2021-12-05 14:21:13
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+   3656840 2021-12-05 14:21:07
+
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+   3656840 2021-12-05 14:20:49
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+   3591304 2021-12-05 14:22:49
+
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+   3591304 2021-12-05 14:20:46
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+   3591304 2021-12-05 14:20:43
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+   3591304 2021-12-05 14:22:04
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+   3591304 2021-12-05 14:22:10
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+   3591304 2021-12-05 14:22:01
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+   3591304 2021-12-05 14:21:19
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+   3591304 2021-12-05 14:10:27
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+   3591304 2021-12-06 07:01:23
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+   3525768 2021-12-05 14:22:52
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+   3525768 2021-12-05 14:20:33
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+   3525768 2021-12-05 14:21:46
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+   3525768 2021-12-05 14:21:40
+
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+   3525768 2021-12-05 14:21:22
+
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+   3525768 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+   3390368 2021-12-05 14:10:26
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+   3357632 2021-12-05 14:10:14
+
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+   3215144 2021-12-05 14:10:15
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+   3149608 2021-12-05 14:10:15
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+   2764792 2021-12-05 14:10:37
+
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+   2669472 2021-12-05 14:10:14
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+   2669472 2021-12-05 14:10:15
+
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+   2633720 2021-12-05 14:10:37
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+   2612336 2021-12-05 14:10:15
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+   2554864 2021-12-05 14:10:13
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+   2554864 2021-12-05 14:10:13
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+   2538400 2021-12-05 14:10:15
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+   2538400 2021-12-05 14:10:14
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+   2538400 2021-12-05 14:10:16
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+   2538400 2021-12-05 14:10:14
+
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+   2538400 2021-12-05 14:10:14
+
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+   2538400 2021-12-05 14:10:15
+
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+   2538400 2021-12-05 14:10:13
+
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+   2538400 2021-12-05 14:10:15
+
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+   2538400 2021-12-05 14:10:14
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+   2453576 2021-12-05 14:11:28
+
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+   2453576 2021-12-05 14:11:28
+
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+   2453576 2021-12-05 14:11:28
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+   2453576 2021-12-05 14:11:28
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+   2453576 2021-12-05 14:11:28
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2437112 2021-12-05 14:10:14
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+   2437112 2021-12-05 14:10:14
+
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+   2437112 2021-12-05 14:10:24
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+   2437112 2021-12-05 14:10:24
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+
+Current total and average values of concurrent PGA memory usage:
+
+5754169560 bytes (total) and ~63935217 bytes (average), for ~90 sessions.
+
+Current value of UGA memory usage per session:
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2424,21335
+STCCTM
+ 805619352 2021-12-09 17:41:05
+
+3932,5809
+DBSNMP
+  24673848 2021-12-09 17:55:47
+
+1513,59438
+oracle@dblxodssrv01.ar.bsch (MMON)
+   4490808 2021-12-05 14:10:15
+
+1216,52650
+DBSNMP
+   3901608 2021-12-05 14:12:37
+
+3930,58524
+oracle@dblxodssrv01.ar.bsch (CJQ0)
+   3704568 2021-12-05 14:10:28
+
+1220,64018
+C##GRAFANA
+   2246664 2021-12-09 17:57:31
+
+2725,61033
+oracle@dblxodssrv01.ar.bsch (Q002)
+   1853368 2021-12-05 14:10:37
+
+4229,9046
+oracle@dblxodssrv01.ar.bsch (DBRM)
+   1740000 2021-12-05 14:10:14
+
+4531,44620
+oracle@dblxodssrv01.ar.bsch (W005)
+   1281632 2021-12-05 14:20:30
+
+3632,13935
+oracle@dblxodssrv01.ar.bsch (W007)
+   1281632 2021-12-05 14:20:36
+
+2421,58029
+oracle@dblxodssrv01.ar.bsch (W00K)
+   1085152 2021-12-05 14:21:58
+
+3628,7805
+oracle@dblxodssrv01.ar.bsch (M003)
+   1052752 2021-12-05 14:10:34
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+917,14381
+oracle@dblxodssrv01.ar.bsch (M001)
+   1048656 2021-12-07 20:42:38
+
+3933,1471
+oracle@dblxodssrv01.ar.bsch (W008)
+   1019656 2021-12-05 14:20:40
+
+610,15032
+oracle@dblxodssrv01.ar.bsch (W004)
+    954168 2021-12-05 14:10:36
+
+8,54048
+oracle@dblxodssrv01.ar.bsch (W00S)
+    954168 2021-12-06 06:01:26
+
+3022,29553
+oracle@dblxodssrv01.ar.bsch (SMON)
+    954144 2021-12-05 14:10:15
+
+4533,18301
+oracle@dblxodssrv01.ar.bsch (LREG)
+    903056 2021-12-05 14:10:15
+
+3928,45035
+oracle@dblxodssrv01.ar.bsch (RECO)
+    888656 2021-12-05 14:10:15
+
+2719,21781
+oracle@dblxodssrv01.ar.bsch (GEN1)
+    888656 2021-12-05 14:10:14
+
+3625,33045
+SYS
+    823168 2021-12-05 14:10:14
+
+4539,33178
+oracle@dblxodssrv01.ar.bsch (W00Q)
+    626728 2021-12-05 14:22:49
+
+4239,34417
+oracle@dblxodssrv01.ar.bsch (W00R)
+    626728 2021-12-05 14:22:52
+
+4237,8085
+oracle@dblxodssrv01.ar.bsch (W009)
+    626728 2021-12-05 14:20:43
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+4230,2469
+oracle@dblxodssrv01.ar.bsch (W000)
+    626728 2021-12-05 14:10:15
+
+3935,9032
+oracle@dblxodssrv01.ar.bsch (W00P)
+    626728 2021-12-05 14:22:37
+
+3631,38095
+oracle@dblxodssrv01.ar.bsch (W00O)
+    626728 2021-12-05 14:22:13
+
+3331,19753
+oracle@dblxodssrv01.ar.bsch (W00M)
+    626728 2021-12-05 14:22:04
+
+3328,19148
+oracle@dblxodssrv01.ar.bsch (W006)
+    626728 2021-12-05 14:20:33
+
+3325,48207
+oracle@dblxodssrv01.ar.bsch (W00C)
+    626728 2021-12-05 14:21:01
+
+3025,46916
+oracle@dblxodssrv01.ar.bsch (W00N)
+    626728 2021-12-05 14:22:10
+
+2119,10029
+oracle@dblxodssrv01.ar.bsch (W00J)
+    626728 2021-12-05 14:21:46
+
+1212,4367
+oracle@dblxodssrv01.ar.bsch (W002)
+    626728 2021-12-05 14:10:27
+
+913,32339
+oracle@dblxodssrv01.ar.bsch (W00F)
+    626728 2021-12-05 14:21:13
+
+612,924
+oracle@dblxodssrv01.ar.bsch (W00E)
+    626728 2021-12-05 14:21:07
+
+309,35384
+oracle@dblxodssrv01.ar.bsch (W00U)
+    626728 2021-12-06 07:01:23
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+4537,40468
+oracle@dblxodssrv01.ar.bsch (W00A)
+    626704 2021-12-05 14:20:46
+
+4535,6368
+oracle@dblxodssrv01.ar.bsch (W00T)
+    626704 2021-12-06 07:01:20
+
+2727,27833
+oracle@dblxodssrv01.ar.bsch (W00L)
+    626704 2021-12-05 14:22:01
+
+1817,21464
+oracle@dblxodssrv01.ar.bsch (W00I)
+    626704 2021-12-05 14:21:40
+
+1214,2753
+oracle@dblxodssrv01.ar.bsch (W003)
+    626704 2021-12-05 14:10:30
+
+614,58085
+oracle@dblxodssrv01.ar.bsch (W00V)
+    626704 2021-12-06 07:01:35
+
+307,32859
+oracle@dblxodssrv01.ar.bsch (W00D)
+    626704 2021-12-05 14:21:04
+
+6,55130
+oracle@dblxodssrv01.ar.bsch (W00B)
+    626704 2021-12-05 14:20:49
+
+1516,210
+oracle@dblxodssrv01.ar.bsch (W00H)
+    561240 2021-12-05 14:21:22
+
+1217,1543
+oracle@dblxodssrv01.ar.bsch (W00G)
+    561240 2021-12-05 14:21:19
+
+2,9607
+oracle@dblxodssrv01.ar.bsch (W001)
+    561240 2021-12-05 14:10:15
+
+2123,59111
+oracle@dblxodssrv01.ar.bsch (M004)
+    524416 2021-12-09 00:45:13
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+3024,17660
+oracle@dblxodssrv01.ar.bsch (Q003)
+    495728 2021-12-05 14:10:37
+
+1815,53890
+oracle@dblxodssrv01.ar.bsch (MMNL)
+    430240 2021-12-05 14:10:15
+
+4532,13209
+oracle@dblxodssrv01.ar.bsch (VKRM)
+    364752 2021-12-05 14:10:14
+
+4235,19768
+oracle@dblxodssrv01.ar.bsch (QM02)
+    364752 2021-12-05 14:10:37
+
+3927,13848
+oracle@dblxodssrv01.ar.bsch (SCMN)
+    364752 2021-12-05 14:10:14
+
+3626,40610
+oracle@dblxodssrv01.ar.bsch (SMCO)
+    364752 2021-12-05 14:10:15
+
+3324,29907
+oracle@dblxodssrv01.ar.bsch (LG01)
+    364752 2021-12-05 14:10:15
+
+3323,56362
+oracle@dblxodssrv01.ar.bsch (DIAG)
+    364752 2021-12-05 14:10:14
+
+3023,43989
+oracle@dblxodssrv01.ar.bsch (TMON)
+    364752 2021-12-05 14:10:16
+
+3021,47477
+oracle@dblxodssrv01.ar.bsch (SCMN)
+    364752 2021-12-05 14:10:14
+
+2724,64819
+oracle@dblxodssrv01.ar.bsch (CL04)
+    364752 2021-12-05 14:11:28
+
+2721,58582
+oracle@dblxodssrv01.ar.bsch (MARK)
+    364752 2021-12-05 14:10:16
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+2720,44755
+oracle@dblxodssrv01.ar.bsch (LG00)
+    364752 2021-12-05 14:10:15
+
+2420,9281
+oracle@dblxodssrv01.ar.bsch (CL03)
+    364752 2021-12-05 14:11:28
+
+2418,48369
+oracle@dblxodssrv01.ar.bsch (CKPT)
+    364752 2021-12-05 14:10:15
+
+2117,41963
+oracle@dblxodssrv01.ar.bsch (CL02)
+    364752 2021-12-05 14:11:28
+
+2116,1378
+oracle@dblxodssrv01.ar.bsch (LGWR)
+    364752 2021-12-05 14:10:15
+
+2115,45698
+oracle@dblxodssrv01.ar.bsch (MMAN)
+    364752 2021-12-05 14:10:14
+
+1816,17658
+oracle@dblxodssrv01.ar.bsch (CL01)
+    364752 2021-12-05 14:11:28
+
+1814,14367
+oracle@dblxodssrv01.ar.bsch (DBW3)
+    364752 2021-12-05 14:10:15
+
+1813,39638
+oracle@dblxodssrv01.ar.bsch (GEN0)
+    364752 2021-12-05 14:10:14
+
+1515,4619
+oracle@dblxodssrv01.ar.bsch (CL00)
+    364752 2021-12-05 14:11:28
+
+1512,10923
+oracle@dblxodssrv01.ar.bsch (DBW2)
+    364752 2021-12-05 14:10:15
+
+1511,40541
+oracle@dblxodssrv01.ar.bsch (VKTM)
+    364752 2021-12-05 14:10:14
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+1211,38558
+oracle@dblxodssrv01.ar.bsch (FENC)
+    364752 2021-12-05 14:10:15
+
+1210,28039
+oracle@dblxodssrv01.ar.bsch (DBW1)
+    364752 2021-12-05 14:10:15
+
+1209,28769
+oracle@dblxodssrv01.ar.bsch (PSP0)
+    364752 2021-12-05 14:10:13
+
+910,59590
+oracle@dblxodssrv01.ar.bsch (AQPC)
+    364752 2021-12-05 14:10:26
+
+909,51981
+oracle@dblxodssrv01.ar.bsch (ASMB)
+    364752 2021-12-05 14:10:15
+
+908,17576
+oracle@dblxodssrv01.ar.bsch (DBW0)
+    364752 2021-12-05 14:10:15
+
+907,31568
+oracle@dblxodssrv01.ar.bsch (CLMN)
+    364752 2021-12-05 14:10:13
+
+608,64609
+oracle@dblxodssrv01.ar.bsch (TT02)
+    364752 2021-12-05 14:10:24
+
+607,24205
+oracle@dblxodssrv01.ar.bsch (RBAL)
+    364752 2021-12-05 14:10:15
+
+606,12307
+oracle@dblxodssrv01.ar.bsch (DIA0)
+    364752 2021-12-05 14:10:15
+
+605,57106
+oracle@dblxodssrv01.ar.bsch (PMON)
+    364752 2021-12-05 14:10:13
+
+305,17740
+oracle@dblxodssrv01.ar.bsch (TT01)
+    364752 2021-12-05 14:10:24
+
+
+SID AND SERIAL#
+-------------------
+USERNAME OR PROGRAM
+--------------------------------------------------------------------------------------------------------------------------------
+     VALUE SESSION START TIME
+---------- -------------------
+304,58130
+oracle@dblxodssrv01.ar.bsch (PXMN)
+    364752 2021-12-05 14:10:15
+
+303,29830
+oracle@dblxodssrv01.ar.bsch (PMAN)
+    364752 2021-12-05 14:10:14
+
+4,43840
+oracle@dblxodssrv01.ar.bsch (TT00)
+    364752 2021-12-05 14:10:24
+
+1,2769
+oracle@dblxodssrv01.ar.bsch (SVCB)
+    364752 2021-12-05 14:10:14
+
+4242,13844
+oracle@dblxodssrv01.ar.bsch (M002)
+         0 2021-12-08 00:12:47
+
+2124,20506
+DBSNMP
+         0 2021-12-09 13:06:18
+
+
+Current total and average values of concurrent UGA memory usage:
+
+892774944 bytes (total) and ~9919721 bytes (average), for ~90 sessions.
+
+Current SGA structure sizings:
+
+Total System Global Area 1.0737E+10 bytes
+Fixed Size                 12690848 bytes
+Variable Size            2785017856 bytes
+Database Buffers         7918845952 bytes
+Redo Buffers               20860928 bytes
+
+Some initialization parameter values at instance startup:
+
+large_pool_size=0
+pga_aggregate_target=5368709120
+sga_target=0
+shared_pool_size=0
+sort_area_size=65536
+streams_pool_size=0
+
+Current Time: 2021.12.09-17:57:35

@@ -1,0 +1,1 @@
+select name, con_id from cdb_services;

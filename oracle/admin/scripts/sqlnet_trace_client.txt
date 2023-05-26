@@ -1,0 +1,15 @@
+trace_level_client = SUPPORT
+trace_level = 16
+trace_file_client = cli
+trace_directory_client = C:\Users\dcabrer2\Oracle\tns
+trace_directory = C:\Users\dcabrer2\Oracle\tns
+trace_unique_client = on
+trace_timestamp_client = on
+trace_filelen_client = 100
+trace_fileno_client = 2
+log_file_client = cli
+log_directory_client = C:\Users\dcabrer2\Oracle\tns
+log_directory = C:\Users\dcabrer2\Oracle\tns
+tnsping.trace_directory = C:\Users\dcabrer2\Oracle\tns
+tnsping.trace_level = admin
+DIAG_ADR_ENABLED=OFF
