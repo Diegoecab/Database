@@ -1,0 +1,9 @@
+
+                                     Max                                                  
+Init Parameter                 Limit Usage                                                
+------------------------------ ----- -----                                                
+session_cached_cursors            50  100%                                                
+open_cursors                     300    6%                                                
+
+2 rows selected.
+

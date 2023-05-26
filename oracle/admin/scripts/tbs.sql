@@ -10,11 +10,11 @@ ttitle 'Tablespaces'
 
 col dummy noprint
 
-col  pct_used format 99999
+col  pct_used format 999
 col  name    format a30
-col  alloc   format 9999999 heading "ALLOC_MB"
-col  used    format 9999999 heading "USED_MB"
-col  free    format 9999999 heading "FREE_MB"
+col  alloc   format 999999999 heading "ALLOC_MB"
+col  used    format 999999999 heading "USED_MB"
+col  free    format 999999999 heading "FREE_MB"
 col  " DFs / Aut" format a10
 col  max_size format 9999999
 col  max_size_file format 9999999
@@ -31,8 +31,29 @@ compute sum of alloc on report
 compute sum of free  on report
 compute sum of used  on report
 
-set lines 400
+set termout off
+SET SERVEROUTPUT off;
+
+
+-- < 1 prevents sqlplus from prompting for a value when it's not provided
+column 1 new_value 1
+SELECT '' "1" FROM dual WHERE ROWNUM = 0;
+
+-- </ 1
+
+
+variable tbs_usage number
+ --Default  tbs_usage
+execute :tbs_usage := nvl('&1', -1);
+
+
+
+set termout on
+
+set lines 900
 set pages 10000
+
+
 
 SELECT   a.name,
          ROUND (alloc) alloc,
@@ -115,9 +136,7 @@ SELECT   a.name,
          INNER JOIN
             dba_tablespaces b
          ON b.tablespace_name = a.name
-		 and b.tablespace_name like upper('%&tablespace_name%')
-		 and b.def_tab_compression like upper('%&compression%')
-		 and 100 - round ( (max - (alloc - free)) / max * 100) > to_number(nvl('&pctfree','-1'))
+		 and 100 - round ( (max - (alloc - free)) / max * 100) > to_number(nvl(:tbs_usage,'-1'))
 		 ORDER BY 3;
 
 

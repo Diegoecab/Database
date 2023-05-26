@@ -1,4 +1,19 @@
 --dbms_sqltune.create_tuning_task.sql 0t7jhnhsu10hh
+/*
+--
+dbms_sqltune.create_tuning_task.sql
+
+USAGE:
+@dbms_sqltune.create_tuning_task.sql <sqlid> 
+
+E.g.
+
+@dbms_sqltune.create_tuning_task.sql 0t7jhnhsu10hh
+
+Author: Diego Cabrera
+
+*/
+
 set verify off
 set long 100000
 set serveroutput on

@@ -1,0 +1,1 @@
+[root@sarp1ae1zonl-zonda0-022 ~]# java -jar jdbc-tester-1.1.jar srvcengineerlake PASSWORD jdbc:oracle:thin:@DBEXAP01-scan.ar.bsch:7365/RIO35_APPS

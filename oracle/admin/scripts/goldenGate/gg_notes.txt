@@ -1,3 +1,21 @@
 enable supplemental logging - Revisar overload
 GG Veridata (licencia a parte)
 
+
+
+
+
+View logs:
+
+
+tail -100f /u01/app/ggate_ve/OGG/dirrpt/VEEXTA.rpt
+
+info EXTRACT VEEXTA detail
+
+
+ SEND EXTRACT VEEXTA, trace
+ 
+  SEND EXTRACT VEEXTA, trace off
+
+
+ SEND EXTRACT VEEXTA, trace /tmp/trace_me2.trc

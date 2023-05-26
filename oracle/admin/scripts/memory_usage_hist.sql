@@ -17,7 +17,7 @@ REM Precauciones:
 REM	
 REM ======================================================================
 REM
-set heading off
+set heading on
 
 select nvl(pool,'buffer pool') pool,to_date(to_char(
 trunc(begin_interval_time,'dd'),'dd/mm/yyyy'),'dd/mm/yyyy')

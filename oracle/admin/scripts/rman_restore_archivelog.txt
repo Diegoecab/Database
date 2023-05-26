@@ -1,0 +1,230 @@
+
+
+
+
+run {
+allocate channel d1 type DISK;
+allocate channel d2 type DISK;
+set archivelog destination to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/';
+restore archivelog from sequence 16347 thread 2;
+}
+
+
+
+source:
+
+
+run {
+allocate channel d1 type DISK;
+allocate channel d2 type DISK;
+allocate channel d3 type DISK;
+allocate channel d4 type DISK;
+set archivelog destination to '/export/archivelogs';
+restore archivelog from sequence 16350 until sequence 16360 thread 2;
+}
+
+
+Starting restore at 04-AUG-20
+
+
+
+
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16130.584.1047538893' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_1_seq_16130.584.1047538893';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16131.913.1047541529' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_1_seq_16131.913.1047541529' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16132.3421.1047542403' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16132.3421.1047542403';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16133.1461.1047542407' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16133.1461.1047542407';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16134.673.1047545557' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_1_seq_16134.673.1047545557' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16135.4260.1047546003' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16135.4260.1047546003';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16136.6838.1047546007' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16136.6838.1047546007';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16137.3095.1047549605' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16137.3095.1047549605';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16138.699.1047553111' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_1_seq_16138.699.1047553111' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16139.3440.1047553203' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16139.3440.1047553203';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16140.2356.1047555867' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16140.2356.1047555867';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16141.6599.1047556907' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16141.6599.1047556907';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16142.3919.1047559499' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16142.3919.1047559499';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16143.3686.1047560441' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16143.3686.1047560441';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16144.6829.1047563031' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16144.6829.1047563031';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16145.3345.1047564005' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16145.3345.1047564005';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16146.6002.1047565877' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16146.6002.1047565877';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16147.3245.1047567621' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16147.3245.1047567621';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16148.3020.1047570949' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16148.3020.1047570949';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16149.509.1047571205' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_1_seq_16149.509.1047571205' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16150.6678.1047574387' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16150.6678.1047574387';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16151.7017.1047574815' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16151.7017.1047574815';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16152.7929.1047577953' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16152.7929.1047577953';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16153.4615.1047578683' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16153.4615.1047578683';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16154.1961.1047585729' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16154.1961.1047585729';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16155.5387.1047581403' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16155.5387.1047581403';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16156.6710.1047582467' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16156.6710.1047582467';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_1_seq_16157.3467.1047584431' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archivesthread_1_seq_16157.3467.1047584431';
+
+
+
+run {
+allocate channel d1 type DISK;
+allocate channel d2 type DISK;
+allocate channel d3 type DISK;
+allocate channel d4 type DISK;
+allocate channel d5 type DISK;
+allocate channel d6 type DISK;
+allocate channel d7 type DISK;
+allocate channel d8 type DISK;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16344.2385.1047540387' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16344.2385.1047540387'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16345.2918.1047541713' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16345.2918.1047541713'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16346.7813.1047541827' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16346.7813.1047541827'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16347.6437.1047542429' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16347.6437.1047542429'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16348.729.1047543759' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16348.729.1047543759'         ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16349.1157.1047545371' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16349.1157.1047545371'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16350.1770.1047546605' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16350.1770.1047546605'        ;
+copy archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16351.33227.1047538803' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16351.33227.1047538803';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16352.2748.1047547779' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16352.2748.1047547779'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16353.2609.1047549363' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16353.2609.1047549363'        ;
+copy archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16354.39312.1047542401' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16354.39312.1047542401';
+copy archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16355.33799.1047543433' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16355.33799.1047543433';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16356.6118.1047552947' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16356.6118.1047552947'        ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16357.3843.1047555839' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16357.3843.1047555839'        ;
+copy archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16359.33415.1047547177' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16359.33415.1047547177';
+copy archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16359.33415.1047547177' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16359.33415.1047547177';
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16360.7802.1047557377' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16360.7802.1047557377' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16361.4713.1047560157' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16361.4713.1047560157' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16362.5553.1047560441' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16362.5553.1047560441' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16363.2539.1047585729' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16363.2539.1047585729' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16364.2859.1047563425' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16364.2859.1047563425' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16365.7814.1047564001' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16365.7814.1047564001' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16366.4557.1047564009' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16366.4557.1047564009' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16367.781.1047565907' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16367.781.1047565907'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16368.2571.1047585855' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16368.2571.1047585855' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16369.1250.1047567603' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16369.1250.1047567603' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16370.7457.1047571201' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16370.7457.1047571201' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16371.2606.1047571207' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16371.2606.1047571207' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16372.6663.1047574605' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16372.6663.1047574605' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16373.3561.1047574803' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16373.3561.1047574803' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16374.3207.1047577771' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16374.3207.1047577771' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16375.1590.1047578403' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16375.1590.1047578403' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16376.6638.1047578417' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16376.6638.1047578417' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16377.5323.1047581081' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16377.5323.1047581081' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16378.4464.1047582855' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16378.4464.1047582855' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16379.2129.1047584923' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16379.2129.1047584923' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16380.7341.1047619305' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16380.7341.1047619305' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16381.2146.1047587595' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16381.2146.1047587595' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16382.3547.1047619395' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16382.3547.1047619395' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16383.462.1047590007' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16383.462.1047590007'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16384.689.1047619399' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16384.689.1047619399'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16385.2854.1047591687' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16385.2854.1047591687' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16386.6358.1047620425' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16386.6358.1047620425' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16387.2143.1047594109' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16387.2143.1047594109' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16388.3196.1047620465' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16388.3196.1047620465' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_04/thread_2_seq_16389.2471.1047596535' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16389.2471.1047596535' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16390.658.1047621293' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16390.658.1047621293'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16391.4660.1047600003' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16391.4660.1047600003' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16392.353.1047603603' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16392.353.1047603603'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16393.7362.1047607143' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16393.7362.1047607143' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16394.5810.1047607203' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16394.5810.1047607203' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16395.2608.1047608787' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16395.2608.1047608787' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16396.4540.1047610805' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16396.4540.1047610805' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16397.3623.1047621355' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16397.3623.1047621355' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16398.4304.1047621887' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16398.4304.1047621887' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16399.3382.1047614403' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16399.3382.1047614403' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16400.5260.1047615821' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16400.5260.1047615821' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16401.2669.1047617071' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16401.2669.1047617071' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16402.2816.1047618535' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16402.2816.1047618535' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16403.7382.1047620937' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16403.7382.1047620937' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16404.5800.1047621601' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16404.5800.1047621601' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16405.3472.1047624541' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16405.3472.1047624541' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16406.6336.1047625243' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16406.6336.1047625243' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16407.2910.1047628803' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16407.2910.1047628803' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16408.4757.1047628807' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16408.4757.1047628807' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16409.4690.1047632403' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16409.4690.1047632403' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16410.5831.1047636003' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16410.5831.1047636003' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16411.3859.1047636709' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16411.3859.1047636709' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16412.4283.1047639603' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16412.4283.1047639603' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16413.4221.1047643393' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16413.4221.1047643393' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16415.6318.1047646821' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16415.6318.1047646821' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16416.4878.1047650099' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16416.4878.1047650099' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16417.487.1047650421' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16417.487.1047650421'  ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16419.6618.1047652309' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/thread_2_seq_16419.6618.1047652309' ;
+copy archivelog '+FRAC4/CNIBSR/ARCHIVELOG/2020_08_05/thread_2_seq_16420.270.1047654343' to '/zfssa/exadata_rdp4-cl4/csibsp_backup1/archives/ thread_2_seq_16420.270.1047654343'  ;
+}
+
+
+restore not done; all files read only, offline, or already restored
+Finished restore at 04-AUG-20
+released channel: d1
+released channel: d2
+released channel: d3
+released channel: d4
+
+
+
+run {
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16350.33097.1047538357' to '/export/archivelogs/thread_2_seq_16350.33097.1047538357';
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16351.33227.1047538803' to '/export/archivelogs/thread_2_seq_16351.33227.1047538803';
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16354.39312.1047542401' to '/export/archivelogs/thread_2_seq_16354.39312.1047542401';
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16355.33799.1047543433' to '/export/archivelogs/thread_2_seq_16355.33799.1047543433';
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16358.32984.1047546003' to '/export/archivelogs/thread_2_seq_16358.32984.1047546003';
+copy archivelog '+FRAC2/CNIBSP/ARCHIVELOG/2020_08_04/thread_2_seq_16359.33415.1047547177' to '/export/archivelogs/thread_2_seq_16359.33415.1047547177';
+}
+
+
+configurar public keys entre el user source y destino
+
+
+
+for f in thread_2_seq_1635*; do 
+nohup gzip $f &
+done
+
+
+for f in thread_2_seq_1635*; do 
+nohup scp $f rdp4adm01vm04:/zfssa/exadata_lcdata/tools/SR1538362/tmp/ &
+done
+
+
+
+
+target;
+
+run {
+allocate channel d1 type DISK;
+catalog archivelog '/u03/tmp/thread_1_seq_16106.40251.1047526431';
+catalog archivelog '/u03/tmp/thread_1_seq_16107.42649.1047527209';
+catalog archivelog '/u03/tmp/thread_1_seq_16108.34080.1047528003';
+catalog archivelog '/u03/tmp/thread_1_seq_16109.37750.1047528301';
+
+catalog archivelog '/export/archivelogs/thread_1_seq_16110.40102.1047528451';
+catalog archivelog '/export/archivelogs/thread_1_seq_16111.33774.1047528595';
+catalog archivelog '/export/archivelogs/thread_1_seq_16112.20884.1047528727';
+catalog archivelog '/export/archivelogs/thread_1_seq_16113.33344.1047528849';
+catalog archivelog '/export/archivelogs/thread_1_seq_16114.33760.1047528973';
+catalog archivelog '/export/archivelogs/thread_1_seq_16115.40482.1047529093';
+catalog archivelog '/export/archivelogs/thread_1_seq_16116.25720.1047529213';
+catalog archivelog '/export/archivelogs/thread_1_seq_16117.37304.1047529335';
+catalog archivelog '/export/archivelogs/thread_1_seq_16118.25866.1047529479';
+catalog archivelog '/export/archivelogs/thread_1_seq_16119.34722.1047529623';
+catalog archivelog '/export/archivelogs/thread_1_seq_16120.33360.1047529767';
+catalog archivelog '/export/archivelogs/thread_1_seq_16121.33828.1047529909';
+catalog archivelog '/export/archivelogs/thread_1_seq_16122.33640.1047530029';
+catalog archivelog '/export/archivelogs/thread_1_seq_16123.33742.1047530145';
+catalog archivelog '/export/archivelogs/thread_1_seq_16124.33721.1047530269';
+catalog archivelog '/export/archivelogs/thread_1_seq_16125.18949.1047530389';
+catalog archivelog '/export/archivelogs/thread_1_seq_16126.35411.1047530511';
+catalog archivelog '/export/archivelogs/thread_1_seq_16127.39983.1047530625';
+catalog archivelog '/export/archivelogs/thread_1_seq_16128.37904.1047530739';
+catalog archivelog '/export/archivelogs/thread_1_seq_16129.33770.1047530941';
+catalog archivelog '/export/archivelogs/thread_1_seq_16130.42479.1047531603';
+}
+
+
+run {
+allocate channel d1 type DISK;
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16350.33097.1047538357';
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16351.33227.1047538803';
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16354.39312.1047542401';
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16355.33799.1047543433';
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16358.32984.1047546003';
+catalog archivelog '/zfssa/exadata_lcdata/tools/SR1538362/tmp/thread_2_seq_16359.33415.1047547177';
+}
+
+
+
+

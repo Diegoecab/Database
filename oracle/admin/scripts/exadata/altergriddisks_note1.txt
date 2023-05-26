@@ -1,0 +1,1783 @@
+PROD
+csibsp1
+root@rdp4adm01vm04 / 53&Gm#vfqa2Uw!H
+
+rdp4adm02vm03 53&Gm#vfqa2Uw!H
+
+DRP
+csibsr_standby
+(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.20.127.22)(PORT = 1575)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = csibsr.dtvpan.com)))
+root@rdp6adm01vm02.dtvpan.com / H4rC0r3#.%
+Fisico
+rdp6dbadm02 9M%YC&^`BAT2%\3 luego rdp6dbadm01
+
+Celda
+rdp6celadm01
+i%]rGgQskBq@'LH
+
+
+
+Fisico
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size where name like 'DATA_HP2.*' "
+
+dcli -g $HOME/cell_group -l root "cellcli -e list celldisk attributes name,freespace"
+
+cell_group
+
+
+
+rdp6celadm01 rdp6celadm02 rdp6celadm03 rdp6celadm04 rdp6celadm05 rdp6celadm06
+
+172.20.115.54
+172.20.115.55
+172.20.115.56
+172.20.115.57
+172.20.115.58
+172.20.115.59
+
+rdp6celadm07 rdp6celadm08 rdp6celadm09
+172.20.115.60
+172.20.115.78
+172.20.115.80
+
+
+dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list griddisk attributes name, size"
+dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list griddisk attributes name, size where name like \'DATA_HP2.*\'"
+dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list celldisk attributes name,freespace"
+
+207Gb * 12 (x celda) * 6 (/2 por NORMAL)
+
+
+
+172.20.115.54:	DATA_HP2_CD_00_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_01_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_02_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_03_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_04_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_05_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_06_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_07_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_08_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_09_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_10_rdp6celadm01	207G
+172.20.115.54:	DATA_HP2_CD_11_rdp6celadm01	207G
+172.20.115.55:	DATA_HP2_CD_00_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_01_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_02_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_03_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_04_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_05_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_06_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_07_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_08_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_09_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_10_rdp6celadm02	207G
+172.20.115.55:	DATA_HP2_CD_11_rdp6celadm02	207G
+172.20.115.56:	DATA_HP2_CD_00_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_01_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_02_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_03_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_04_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_05_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_06_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_07_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_08_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_09_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_10_rdp6celadm03	207G
+172.20.115.56:	DATA_HP2_CD_11_rdp6celadm03	207G
+172.20.115.57:	DATA_HP2_CD_00_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_01_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_02_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_03_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_04_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_05_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_06_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_07_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_08_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_09_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_10_rdp6celadm04	207G
+172.20.115.57:	DATA_HP2_CD_11_rdp6celadm04	207G
+172.20.115.58:	DATA_HP2_CD_00_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_01_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_02_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_03_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_04_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_05_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_06_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_07_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_08_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_09_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_10_rdp6celadm05	207G
+172.20.115.58:	DATA_HP2_CD_11_rdp6celadm05	207G
+172.20.115.59:	DATA_HP2_CD_00_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_01_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_02_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_03_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_04_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_05_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_06_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_07_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_08_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_09_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_10_rdp6celadm06	207G
+172.20.115.59:	DATA_HP2_CD_11_rdp6celadm06	207G
+
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_10_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_06_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_02_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_03_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_04_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_00_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_11_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_07_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_05_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_08_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_01_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM01                   o/192.168.10.5/DATA_HP2_CD_09_rdp6celadm01
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_04_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_02_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_01_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_05_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_07_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_10_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_09_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_11_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_00_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_03_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_08_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM02                   o/192.168.10.6/DATA_HP2_CD_06_rdp6celadm02
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_03_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_00_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_06_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_09_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_07_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_05_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_11_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_02_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_10_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_01_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_08_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM03                   o/192.168.10.7/DATA_HP2_CD_04_rdp6celadm03
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_09_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_11_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_06_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_08_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_00_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_02_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_03_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_05_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_01_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_10_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_07_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM04                   o/192.168.10.8/DATA_HP2_CD_04_rdp6celadm04
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_03_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_05_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_00_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_09_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_07_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_04_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_08_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_06_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_02_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_01_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_11_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM05                   o/192.168.10.9/DATA_HP2_CD_10_rdp6celadm05
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_02_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_06_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_04_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_05_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_11_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_09_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_03_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_08_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_07_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_10_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_00_rdp6celadm06
+DATA_HP2                       NORMAL   RDP6CELADM06                   o/192.168.10.10/DATA_HP2_CD_01_rdp6celadm06
+
+
+
+
+
+
+Los discos 00 y 01 son mas chicos:
+
+172.20.115.54: CD_00_rdp6celadm01        6.6875G         528.734375G
+172.20.115.54: CD_01_rdp6celadm01        6.6875G         528.734375G
+172.20.115.54: CD_02_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_03_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_04_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_05_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_06_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_07_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_08_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_09_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_10_rdp6celadm01        35.8125G        557.859375G
+172.20.115.54: CD_11_rdp6celadm01        35.8125G        557.859375G
+
+
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list celldisk attributes name,freespace"
+172.20.115.54: CD_00_rdp6celadm01        6.6875G
+172.20.115.54: CD_01_rdp6celadm01        6.6875G
+172.20.115.54: CD_02_rdp6celadm01        35.8125G
+172.20.115.54: CD_03_rdp6celadm01        35.8125G
+172.20.115.54: CD_04_rdp6celadm01        35.8125G
+172.20.115.54: CD_05_rdp6celadm01        35.8125G
+172.20.115.54: CD_06_rdp6celadm01        35.8125G
+172.20.115.54: CD_07_rdp6celadm01        35.8125G
+172.20.115.54: CD_08_rdp6celadm01        35.8125G
+172.20.115.54: CD_09_rdp6celadm01        35.8125G
+172.20.115.54: CD_10_rdp6celadm01        35.8125G
+172.20.115.54: CD_11_rdp6celadm01        35.8125G
+
+
+6.5 * 12 (discos) = 78 * 3: 234Gb
+
+
+207G * 12 = 2484Gb * 3 = 7452G = 7.27T (pesa el DG)
+
+
+207 + 6,5= 213.5
+
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list celldisk attributes name,freespace where name like \'CD_.*\'"
+172.20.115.54: CD_00_rdp6celadm01        6.6875G
+172.20.115.54: CD_01_rdp6celadm01        6.6875G
+172.20.115.54: CD_02_rdp6celadm01        35.8125G
+172.20.115.54: CD_03_rdp6celadm01        35.8125G
+172.20.115.54: CD_04_rdp6celadm01        35.8125G
+172.20.115.54: CD_05_rdp6celadm01        35.8125G
+172.20.115.54: CD_06_rdp6celadm01        35.8125G
+172.20.115.54: CD_07_rdp6celadm01        35.8125G
+172.20.115.54: CD_08_rdp6celadm01        35.8125G
+172.20.115.54: CD_09_rdp6celadm01        35.8125G
+172.20.115.54: CD_10_rdp6celadm01        35.8125G
+172.20.115.54: CD_11_rdp6celadm01        35.8125G
+172.20.115.55: CD_00_rdp6celadm02        6.6875G
+172.20.115.55: CD_01_rdp6celadm02        6.6875G
+172.20.115.55: CD_02_rdp6celadm02        35.8125G
+172.20.115.55: CD_03_rdp6celadm02        35.8125G
+172.20.115.55: CD_04_rdp6celadm02        35.8125G
+172.20.115.55: CD_05_rdp6celadm02        35.8125G
+172.20.115.55: CD_06_rdp6celadm02        35.8125G
+172.20.115.55: CD_07_rdp6celadm02        35.8125G
+172.20.115.55: CD_08_rdp6celadm02        35.8125G
+172.20.115.55: CD_09_rdp6celadm02        35.8125G
+172.20.115.55: CD_10_rdp6celadm02        35.8125G
+172.20.115.55: CD_11_rdp6celadm02        35.8125G
+172.20.115.56: CD_00_rdp6celadm03        6.6875G
+172.20.115.56: CD_01_rdp6celadm03        6.6875G
+172.20.115.56: CD_02_rdp6celadm03        35.8125G
+172.20.115.56: CD_03_rdp6celadm03        35.8125G
+172.20.115.56: CD_04_rdp6celadm03        35.8125G
+172.20.115.56: CD_05_rdp6celadm03        35.8125G
+172.20.115.56: CD_06_rdp6celadm03        35.8125G
+172.20.115.56: CD_07_rdp6celadm03        35.8125G
+172.20.115.56: CD_08_rdp6celadm03        35.8125G
+172.20.115.56: CD_09_rdp6celadm03        35.8125G
+172.20.115.56: CD_10_rdp6celadm03        35.8125G
+172.20.115.56: CD_11_rdp6celadm03        35.8125G
+172.20.115.57: CD_00_rdp6celadm04        6.6875G
+172.20.115.57: CD_01_rdp6celadm04        6.6875G
+172.20.115.57: CD_02_rdp6celadm04        35.8125G
+172.20.115.57: CD_03_rdp6celadm04        35.8125G
+172.20.115.57: CD_04_rdp6celadm04        35.8125G
+172.20.115.57: CD_05_rdp6celadm04        35.8125G
+172.20.115.57: CD_06_rdp6celadm04        35.8125G
+172.20.115.57: CD_07_rdp6celadm04        35.8125G
+172.20.115.57: CD_08_rdp6celadm04        35.8125G
+172.20.115.57: CD_09_rdp6celadm04        35.8125G
+172.20.115.57: CD_10_rdp6celadm04        35.8125G
+172.20.115.57: CD_11_rdp6celadm04        35.8125G
+172.20.115.58: CD_00_rdp6celadm05        6.6875G
+172.20.115.58: CD_01_rdp6celadm05        6.6875G
+172.20.115.58: CD_02_rdp6celadm05        35.8125G
+172.20.115.58: CD_03_rdp6celadm05        35.8125G
+172.20.115.58: CD_04_rdp6celadm05        35.8125G
+172.20.115.58: CD_05_rdp6celadm05        35.8125G
+172.20.115.58: CD_06_rdp6celadm05        35.8125G
+172.20.115.58: CD_07_rdp6celadm05        35.8125G
+172.20.115.58: CD_08_rdp6celadm05        35.8125G
+172.20.115.58: CD_09_rdp6celadm05        35.8125G
+172.20.115.58: CD_10_rdp6celadm05        35.8125G
+172.20.115.58: CD_11_rdp6celadm05        35.8125G
+172.20.115.59: CD_00_rdp6celadm06        6.6875G
+172.20.115.59: CD_01_rdp6celadm06        6.6875G
+172.20.115.59: CD_02_rdp6celadm06        35.8125G
+172.20.115.59: CD_03_rdp6celadm06        35.8125G
+172.20.115.59: CD_04_rdp6celadm06        35.8125G
+172.20.115.59: CD_05_rdp6celadm06        35.8125G
+172.20.115.59: CD_06_rdp6celadm06        35.8125G
+172.20.115.59: CD_07_rdp6celadm06        35.8125G
+172.20.115.59: CD_08_rdp6celadm06        35.8125G
+172.20.115.59: CD_09_rdp6celadm06        35.8125G
+172.20.115.59: CD_10_rdp6celadm06        35.8125G
+172.20.115.59: CD_11_rdp6celadm06        35.8125G
+
+
+
+
+
+
+Cell1
+cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm01 \
+,DATA_HP2_CD_01_rdp6celadm01 \
+,DATA_HP2_CD_02_rdp6celadm01 \
+,DATA_HP2_CD_03_rdp6celadm01 \
+,DATA_HP2_CD_04_rdp6celadm01 \
+,DATA_HP2_CD_05_rdp6celadm01 \
+,DATA_HP2_CD_06_rdp6celadm01 \
+,DATA_HP2_CD_07_rdp6celadm01 \
+,DATA_HP2_CD_08_rdp6celadm01 \
+,DATA_HP2_CD_09_rdp6celadm01 \
+,DATA_HP2_CD_10_rdp6celadm01 \
+,DATA_HP2_CD_11_rdp6celadm01 \
+size=213.5G;
+
+list griddisk attributes name,size where name like 'DATA_HP2.*'
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm01     213.5G
+         DATA_HP2_CD_01_rdp6celadm01     213.5G
+         DATA_HP2_CD_02_rdp6celadm01     213.5G
+         DATA_HP2_CD_03_rdp6celadm01     213.5G
+         DATA_HP2_CD_04_rdp6celadm01     213.5G
+         DATA_HP2_CD_05_rdp6celadm01     213.5G
+         DATA_HP2_CD_06_rdp6celadm01     213.5G
+         DATA_HP2_CD_07_rdp6celadm01     213.5G
+         DATA_HP2_CD_08_rdp6celadm01     213.5G
+         DATA_HP2_CD_09_rdp6celadm01     213.5G
+         DATA_HP2_CD_10_rdp6celadm01     213.5G
+         DATA_HP2_CD_11_rdp6celadm01     213.5G
+
+CellCLI>
+
+
+
+
+
+Cell2
+cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm02 \
+,DATA_HP2_CD_01_rdp6celadm02 \
+,DATA_HP2_CD_02_rdp6celadm02 \
+,DATA_HP2_CD_03_rdp6celadm02 \
+,DATA_HP2_CD_04_rdp6celadm02 \
+,DATA_HP2_CD_05_rdp6celadm02 \
+,DATA_HP2_CD_06_rdp6celadm02 \
+,DATA_HP2_CD_07_rdp6celadm02 \
+,DATA_HP2_CD_08_rdp6celadm02 \
+,DATA_HP2_CD_09_rdp6celadm02 \
+,DATA_HP2_CD_10_rdp6celadm02 \
+,DATA_HP2_CD_11_rdp6celadm02 \
+size=213.5G;
+
+
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm02     213.5G
+         DATA_HP2_CD_01_rdp6celadm02     213.5G
+         DATA_HP2_CD_02_rdp6celadm02     213.5G
+         DATA_HP2_CD_03_rdp6celadm02     213.5G
+         DATA_HP2_CD_04_rdp6celadm02     213.5G
+         DATA_HP2_CD_05_rdp6celadm02     213.5G
+         DATA_HP2_CD_06_rdp6celadm02     213.5G
+         DATA_HP2_CD_07_rdp6celadm02     213.5G
+         DATA_HP2_CD_08_rdp6celadm02     213.5G
+         DATA_HP2_CD_09_rdp6celadm02     213.5G
+         DATA_HP2_CD_10_rdp6celadm02     213.5G
+         DATA_HP2_CD_11_rdp6celadm02     213.5G
+
+CellCLI>
+
+
+
+Cell3
+cellcli -e alter griddisk \
+DATA_HP2_CD_00_rdp6celadm03 \
+, DATA_HP2_CD_01_rdp6celadm03 \
+, DATA_HP2_CD_02_rdp6celadm03 \
+, DATA_HP2_CD_03_rdp6celadm03 \
+, DATA_HP2_CD_04_rdp6celadm03 \
+, DATA_HP2_CD_05_rdp6celadm03 \
+, DATA_HP2_CD_06_rdp6celadm03 \
+, DATA_HP2_CD_07_rdp6celadm03 \
+, DATA_HP2_CD_08_rdp6celadm03 \
+, DATA_HP2_CD_09_rdp6celadm03 \
+, DATA_HP2_CD_10_rdp6celadm03 \
+, DATA_HP2_CD_11_rdp6celadm03 \
+size=213.5G;
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm03     213.5G
+         DATA_HP2_CD_01_rdp6celadm03     213.5G
+         DATA_HP2_CD_02_rdp6celadm03     213.5G
+         DATA_HP2_CD_03_rdp6celadm03     213.5G
+         DATA_HP2_CD_04_rdp6celadm03     213.5G
+         DATA_HP2_CD_05_rdp6celadm03     213.5G
+         DATA_HP2_CD_06_rdp6celadm03     213.5G
+         DATA_HP2_CD_07_rdp6celadm03     213.5G
+         DATA_HP2_CD_08_rdp6celadm03     213.5G
+         DATA_HP2_CD_09_rdp6celadm03     213.5G
+         DATA_HP2_CD_10_rdp6celadm03     213.5G
+         DATA_HP2_CD_11_rdp6celadm03     213.5G
+
+CellCLI>
+
+
+
+
+
+
+Cell 4
+cellcli -e alter griddisk \
+DATA_HP2_CD_00_rdp6celadm04 \
+,DATA_HP2_CD_01_rdp6celadm04 \
+,DATA_HP2_CD_02_rdp6celadm04 \
+,DATA_HP2_CD_03_rdp6celadm04 \
+,DATA_HP2_CD_04_rdp6celadm04 \
+,DATA_HP2_CD_05_rdp6celadm04 \
+,DATA_HP2_CD_06_rdp6celadm04 \
+,DATA_HP2_CD_07_rdp6celadm04 \
+,DATA_HP2_CD_08_rdp6celadm04 \
+,DATA_HP2_CD_09_rdp6celadm04 \
+,DATA_HP2_CD_10_rdp6celadm04 \
+,DATA_HP2_CD_11_rdp6celadm04 \
+size=213.5G;
+
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm04     213.5G
+         DATA_HP2_CD_01_rdp6celadm04     213.5G
+         DATA_HP2_CD_02_rdp6celadm04     213.5G
+         DATA_HP2_CD_03_rdp6celadm04     213.5G
+         DATA_HP2_CD_04_rdp6celadm04     213.5G
+         DATA_HP2_CD_05_rdp6celadm04     213.5G
+         DATA_HP2_CD_06_rdp6celadm04     213.5G
+         DATA_HP2_CD_07_rdp6celadm04     213.5G
+         DATA_HP2_CD_08_rdp6celadm04     213.5G
+         DATA_HP2_CD_09_rdp6celadm04     213.5G
+         DATA_HP2_CD_10_rdp6celadm04     213.5G
+         DATA_HP2_CD_11_rdp6celadm04     213.5G
+
+CellCLI>
+
+
+
+
+Cell 5
+cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm05 \
+,DATA_HP2_CD_01_rdp6celadm05 \
+,DATA_HP2_CD_02_rdp6celadm05 \
+,DATA_HP2_CD_03_rdp6celadm05 \
+,DATA_HP2_CD_04_rdp6celadm05 \
+,DATA_HP2_CD_05_rdp6celadm05 \
+,DATA_HP2_CD_06_rdp6celadm05 \
+,DATA_HP2_CD_07_rdp6celadm05 \
+,DATA_HP2_CD_08_rdp6celadm05 \
+,DATA_HP2_CD_09_rdp6celadm05 \
+,DATA_HP2_CD_10_rdp6celadm05 \
+,DATA_HP2_CD_11_rdp6celadm05 \
+size=213.5G;
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm05     213.5G
+         DATA_HP2_CD_01_rdp6celadm05     213.5G
+         DATA_HP2_CD_02_rdp6celadm05     213.5G
+         DATA_HP2_CD_03_rdp6celadm05     213.5G
+         DATA_HP2_CD_04_rdp6celadm05     213.5G
+         DATA_HP2_CD_05_rdp6celadm05     213.5G
+         DATA_HP2_CD_06_rdp6celadm05     213.5G
+         DATA_HP2_CD_07_rdp6celadm05     213.5G
+         DATA_HP2_CD_08_rdp6celadm05     213.5G
+         DATA_HP2_CD_09_rdp6celadm05     213.5G
+         DATA_HP2_CD_10_rdp6celadm05     213.5G
+         DATA_HP2_CD_11_rdp6celadm05     213.5G
+
+CellCLI>
+
+
+Cell 6
+
+cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm06 \
+,DATA_HP2_CD_01_rdp6celadm06  \
+,DATA_HP2_CD_02_rdp6celadm06  \
+,DATA_HP2_CD_03_rdp6celadm06  \
+,DATA_HP2_CD_04_rdp6celadm06  \
+,DATA_HP2_CD_05_rdp6celadm06  \
+,DATA_HP2_CD_06_rdp6celadm06  \
+,DATA_HP2_CD_07_rdp6celadm06  \
+,DATA_HP2_CD_08_rdp6celadm06  \
+,DATA_HP2_CD_09_rdp6celadm06  \
+,DATA_HP2_CD_10_rdp6celadm06  \
+,DATA_HP2_CD_11_rdp6celadm06  \
+size=213.5G;
+
+CellCLI> list griddisk attributes name,size where name like 'DATA_HP2.*'
+         DATA_HP2_CD_00_rdp6celadm06     213.5G
+         DATA_HP2_CD_01_rdp6celadm06     213.5G
+         DATA_HP2_CD_02_rdp6celadm06     213.5G
+         DATA_HP2_CD_03_rdp6celadm06     213.5G
+         DATA_HP2_CD_04_rdp6celadm06     213.5G
+         DATA_HP2_CD_05_rdp6celadm06     213.5G
+         DATA_HP2_CD_06_rdp6celadm06     213.5G
+         DATA_HP2_CD_07_rdp6celadm06     213.5G
+         DATA_HP2_CD_08_rdp6celadm06     213.5G
+         DATA_HP2_CD_09_rdp6celadm06     213.5G
+         DATA_HP2_CD_10_rdp6celadm06     213.5G
+         DATA_HP2_CD_11_rdp6celadm06     213.5G
+
+CellCLI>
+
+
+
+
+
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group_data_hp2 -l root "cellcli -e list griddisk attributes name, size where name like \'DATA_HP2.*\'"
+172.20.115.54: DATA_HP2_CD_00_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_01_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_02_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_03_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_04_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_05_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_06_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_07_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_08_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_09_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_10_rdp6celadm01       207G
+172.20.115.54: DATA_HP2_CD_11_rdp6celadm01       207G
+
+172.20.115.55: DATA_HP2_CD_00_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_01_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_02_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_03_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_04_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_05_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_06_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_07_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_08_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_09_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_10_rdp6celadm02       207G
+172.20.115.55: DATA_HP2_CD_11_rdp6celadm02       207G
+
+172.20.115.56: DATA_HP2_CD_00_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_01_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_02_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_03_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_04_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_05_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_06_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_07_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_08_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_09_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_10_rdp6celadm03       207G
+172.20.115.56: DATA_HP2_CD_11_rdp6celadm03       207G
+
+172.20.115.57: DATA_HP2_CD_00_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_01_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_02_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_03_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_04_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_05_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_06_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_07_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_08_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_09_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_10_rdp6celadm04       207G
+172.20.115.57: DATA_HP2_CD_11_rdp6celadm04       207G
+
+172.20.115.58: DATA_HP2_CD_00_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_01_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_02_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_03_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_04_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_05_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_06_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_07_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_08_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_09_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_10_rdp6celadm05       207G
+172.20.115.58: DATA_HP2_CD_11_rdp6celadm05       207G
+
+172.20.115.59: DATA_HP2_CD_00_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_01_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_02_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_03_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_04_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_05_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_06_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_07_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_08_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_09_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_10_rdp6celadm06       207G
+172.20.115.59: DATA_HP2_CD_11_rdp6celadm06       207G
+[root@rdp6dbadm01 ~]#
+
+
+
+
+
+[grid@rdp6adm01vm02 ~]$ ./asmdu2.sh
+
+Instances running on rdp6adm01vm02 : +ASM1, csibsr1, rgsbpr11, shengr11, SHESBP11, shhspr1, shitxr11, shsmsr11
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+            ACFS_VMS_DATA          NORMAL           22.86           12.23          53
+                 DATA_HC2          NORMAL            9.53            0.78           8
+                 DATA_HP2          NORMAL            7.28           -0.08          -1
+                 DBFS_HP2          NORMAL            0.49            0.48          97
+                 RECO_HC2          NORMAL            4.00            1.26          31
+                 RECO_HP2          NORMAL            0.11            0.03          27
+
+[grid@rdp6adm01vm02 ~]$
+
+
+
+alter diskgroup DATA_HP2 resize all REBALANCE POWER 64;
+
+
+[grid@rdp6adm01vm02 ~]$ ./asmdu2.sh
+
+Instances running on rdp6adm01vm02 : +ASM1, csibsr1, rgsbpr11, shengr11, SHESBP11, shhspr1, shitxr11, shsmsr11
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+            ACFS_VMS_DATA          NORMAL           22.86           12.23          53
+                 DATA_HC2          NORMAL            9.53            0.78           8
+                 DATA_HP2          NORMAL            7.51            0.14           1
+                 DBFS_HP2          NORMAL            0.49            0.48          97
+
+
+
+
+
+Ahora veo asignar discos de otro griddisk
+
+
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group -l root "cellcli -e list celldisk attributes name,size, freespace where name like \'CD_.*\'"
+172.20.115.54: CD_00_rdp6celadm01        528.734375G     192M
+172.20.115.54: CD_01_rdp6celadm01        528.734375G     192M
+172.20.115.54: CD_02_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_03_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_04_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_05_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_06_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_07_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_08_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_09_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_10_rdp6celadm01        557.859375G     29.3125G
+172.20.115.54: CD_11_rdp6celadm01        557.859375G     29.3125G
+172.20.115.55: CD_00_rdp6celadm02        528.734375G     192M
+172.20.115.55: CD_01_rdp6celadm02        528.734375G     192M
+172.20.115.55: CD_02_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_03_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_04_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_05_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_06_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_07_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_08_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_09_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_10_rdp6celadm02        557.859375G     29.3125G
+172.20.115.55: CD_11_rdp6celadm02        557.859375G     29.3125G
+172.20.115.56: CD_00_rdp6celadm03        528.734375G     192M
+172.20.115.56: CD_01_rdp6celadm03        528.734375G     192M
+172.20.115.56: CD_02_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_03_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_04_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_05_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_06_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_07_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_08_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_09_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_10_rdp6celadm03        557.859375G     29.3125G
+172.20.115.56: CD_11_rdp6celadm03        557.859375G     29.3125G
+172.20.115.57: CD_00_rdp6celadm04        528.734375G     192M
+172.20.115.57: CD_01_rdp6celadm04        528.734375G     192M
+172.20.115.57: CD_02_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_03_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_04_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_05_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_06_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_07_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_08_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_09_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_10_rdp6celadm04        557.859375G     29.3125G
+172.20.115.57: CD_11_rdp6celadm04        557.859375G     29.3125G
+172.20.115.58: CD_00_rdp6celadm05        528.734375G     192M
+172.20.115.58: CD_01_rdp6celadm05        528.734375G     192M
+172.20.115.58: CD_02_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_03_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_04_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_05_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_06_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_07_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_08_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_09_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_10_rdp6celadm05        557.859375G     29.3125G
+172.20.115.58: CD_11_rdp6celadm05        557.859375G     29.3125G
+172.20.115.59: CD_00_rdp6celadm06        528.734375G     192M
+172.20.115.59: CD_01_rdp6celadm06        528.734375G     192M
+172.20.115.59: CD_02_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_03_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_04_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_05_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_06_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_07_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_08_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_09_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_10_rdp6celadm06        557.859375G     29.3125G
+172.20.115.59: CD_11_rdp6celadm06        557.859375G     29.3125G
+172.20.115.60: CD_00_rdp6celadm07        3.6052093505859375T     24G
+172.20.115.60: CD_01_rdp6celadm07        3.6052093505859375T     24G
+172.20.115.60: CD_02_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_03_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_04_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_05_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_06_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_07_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_08_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_09_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_10_rdp6celadm07        3.637969970703125T      24G
+172.20.115.60: CD_11_rdp6celadm07        3.637969970703125T      24G
+172.20.115.78: CD_00_rdp6celadm08        3.6052093505859375T     24G
+172.20.115.78: CD_01_rdp6celadm08        3.6052093505859375T     24G
+172.20.115.78: CD_02_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_03_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_04_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_05_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_06_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_07_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_08_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_09_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_10_rdp6celadm08        3.637969970703125T      24G
+172.20.115.78: CD_11_rdp6celadm08        3.637969970703125T      24G
+172.20.115.80: CD_00_rdp6celadm09        3.6052093505859375T     24G
+172.20.115.80: CD_01_rdp6celadm09        3.6052093505859375T     24G
+172.20.115.80: CD_02_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_03_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_04_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_05_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_06_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_07_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_08_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_09_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_10_rdp6celadm09        3.637969970703125T      24G
+172.20.115.80: CD_11_rdp6celadm09        3.637969970703125T      24G
+[root@rdp6dbadm01 ~]# ssh
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DATA_HC3.*\'"
+172.20.115.60: DATA_HC3_CD_00_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_01_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_02_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_03_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_04_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_05_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_06_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_07_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_08_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_09_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_10_rdp6celadm07       300G
+172.20.115.60: DATA_HC3_CD_11_rdp6celadm07       300G
+172.20.115.78: DATA_HC3_CD_00_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_01_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_02_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_03_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_04_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_05_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_06_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_07_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_08_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_09_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_10_rdp6celadm08       300G
+172.20.115.78: DATA_HC3_CD_11_rdp6celadm08       300G
+172.20.115.80: DATA_HC3_CD_00_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_01_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_02_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_03_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_04_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_05_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_06_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_07_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_08_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_09_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_10_rdp6celadm09       300G
+172.20.115.80: DATA_HC3_CD_11_rdp6celadm09       300G
+[root@rdp6dbadm01 ~]#
+
+SQL> l
+  1  select dg.name, d.state, d.failgroup,  round(d.total_mb/1024) total_gb, d.label, d.path
+  2  from v$asm_disk d, v$asm_diskgroup dg
+  3  where d.group_number = dg.group_number
+  4  and dg.name like upper ('%DATA_HP2%')
+  5* order by 1,2,3
+SQL>
+
+
+NAME                 STATE    FAILGROUP                      TOTAL_GB LABEL                                    PATH
+-------------------- -------- ------------------------------ -------- ---------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_00_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_00_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_01_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_01_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_02_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_02_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_03_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_03_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_04_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_04_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_11_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_11_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_06_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_06_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_07_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_07_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_08_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_08_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_09_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_09_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_10_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_10_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM01                        214 DATA_HP2_CD_05_RDP6CELADM01              o/192.168.10.5/DATA_HP2_CD_05_rdp6celadm01
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_04_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_04_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_05_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_05_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_06_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_06_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_07_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_07_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_08_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_08_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_09_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_09_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_10_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_10_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_11_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_11_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_00_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_00_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_01_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_01_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_02_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_02_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM02                        214 DATA_HP2_CD_03_RDP6CELADM02              o/192.168.10.6/DATA_HP2_CD_03_rdp6celadm02
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_10_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_10_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_09_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_09_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_08_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_08_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_07_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_07_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_06_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_06_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_11_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_11_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_04_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_04_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_03_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_03_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_02_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_02_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_01_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_01_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_00_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_00_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM03                        214 DATA_HP2_CD_05_RDP6CELADM03              o/192.168.10.7/DATA_HP2_CD_05_rdp6celadm03
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_10_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_10_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_09_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_09_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_08_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_08_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_07_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_07_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_06_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_06_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_05_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_05_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_04_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_04_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_03_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_03_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_02_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_02_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_01_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_01_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_00_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_00_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM04                        214 DATA_HP2_CD_11_RDP6CELADM04              o/192.168.10.8/DATA_HP2_CD_11_rdp6celadm04
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_00_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_00_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_01_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_01_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_11_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_11_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_10_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_10_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_09_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_09_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_08_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_08_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_07_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_07_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_06_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_06_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_05_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_05_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_04_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_04_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_03_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_03_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM05                        214 DATA_HP2_CD_02_RDP6CELADM05              o/192.168.10.9/DATA_HP2_CD_02_rdp6celadm05
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_00_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_00_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_10_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_10_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_09_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_09_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_08_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_08_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_07_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_07_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_11_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_11_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_05_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_05_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_04_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_04_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_03_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_03_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_02_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_02_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_01_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_01_rdp6celadm06
+DATA_HP2             NORMAL   RDP6CELADM06                        214 DATA_HP2_CD_06_RDP6CELADM06              o/192.168.10.10/DATA_HP2_CD_06_rdp6celadm06
+
+
+
+Reduzco espacio DATA_HC3
+alter diskgroup DATA_HC3 resize all size 230G rebalance power 64;
+
+ select dg.name, d.state, d.failgroup,  round(d.total_mb/1024) total_gb, d.label, d.path
+from v$asm_disk d, v$asm_diskgroup dg
+where d.group_number = dg.group_number
+and dg.name like upper ('%DATA_HC3%')
+order by 1,2,3
+
+
+Instances running on rdp6adm01vm03 : +ASM1, ibsecco1, shesbu1
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+                 DATA_HC3          NORMAL            4.04            0.68          16
+                 RECO_HC3          NORMAL            1.76            0.96          54
+
+
+
+
+tengo que reasignarlo a DATA_HP2
+
+en rdp6celadm07 rdp6celadm08 y rdp6celadm09
+CREATE GRIDDISK ALL PREFIX=DATA_HP2 size=214G;
+
+
+
+DATA_HP3
+RECO_HP3
+parecen no usarse
+
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DATA_HP3.*\'"
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'RECO_HP3.*\'"
+
+
+
+Instances running on rdp6adm01vm02 : +ASM1, csibsr1, rgsbpr11, shengr11, SHESBP11, shhspr1, shitxr11, shsmsr11
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+            ACFS_VMS_DATA          NORMAL           22.86           12.23          53
+                 DATA_HC2          NORMAL            9.53            0.77           8
+                 DATA_HP2          NORMAL            7.51            0.05           0
+                 DBFS_HP2          NORMAL            0.49            0.48          97
+                 RECO_HC2          NORMAL            4.00            1.85          46
+                 RECO_HP2          NORMAL            0.11            0.03          27
+
+
+
+
+
+172.20.115.54: DBFS_HP2_CD_00_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_01_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_02_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_03_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_04_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_05_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_06_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_07_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_08_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_09_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_10_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_11_rdp6celadm01       14G             ONLINE
+
+172.20.115.55: DBFS_HP2_CD_00_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_01_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_02_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_03_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_04_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_05_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_06_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_07_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_08_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_09_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_10_rdp6celadm02       14G             ONLINE
+172.20.115.55: DBFS_HP2_CD_11_rdp6celadm02       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_00_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_01_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_02_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_03_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_04_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_05_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_06_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_07_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_08_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_09_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_10_rdp6celadm03       14G             ONLINE
+172.20.115.56: DBFS_HP2_CD_11_rdp6celadm03       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_00_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_01_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_02_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_03_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_04_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_05_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_06_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_07_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_08_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_09_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_10_rdp6celadm04       14G             ONLINE
+172.20.115.57: DBFS_HP2_CD_11_rdp6celadm04       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_00_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_01_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_02_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_03_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_04_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_05_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_06_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_07_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_08_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_09_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_10_rdp6celadm05       14G             ONLINE
+172.20.115.58: DBFS_HP2_CD_11_rdp6celadm05       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_00_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_01_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_02_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_03_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_04_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_05_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_06_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_07_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_08_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_09_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_10_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_11_rdp6celadm06       14G             ONLINE
+
+
+
+cellcli -e alter griddisk \
+ DBFS_HP2_CD_00_rdp6celadm01 \
+,DBFS_HP2_CD_01_rdp6celadm01 \
+,DBFS_HP2_CD_02_rdp6celadm01 \
+,DBFS_HP2_CD_03_rdp6celadm01 \
+,DBFS_HP2_CD_04_rdp6celadm01 \
+,DBFS_HP2_CD_05_rdp6celadm01 \
+,DBFS_HP2_CD_06_rdp6celadm01 \
+,DBFS_HP2_CD_07_rdp6celadm01 \
+,DBFS_HP2_CD_08_rdp6celadm01 \
+,DBFS_HP2_CD_09_rdp6celadm01 \
+,DBFS_HP2_CD_10_rdp6celadm01 \
+,DBFS_HP2_CD_11_rdp6celadm01 \
+size=4G;
+
+
+
+
+
+
+
+
+[root@rdp6dbadm01 ~]# dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, status, size, availableTo, asmmodestatus where asmmodestatus like \'UNUSED\'"
+172.20.115.54: DATA_HP3_CD_00_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_01_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_02_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_03_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_04_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_05_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_06_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_07_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_08_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_09_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_10_rdp6celadm01       12G             UNUSED
+172.20.115.54: DATA_HP3_CD_11_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_00_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_01_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_02_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_03_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_04_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_05_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_06_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_07_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_08_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_09_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_10_rdp6celadm01       12G             UNUSED
+172.20.115.54: RECO_HP3_CD_11_rdp6celadm01       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_00_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_01_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_02_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_03_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_04_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_05_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_06_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_07_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_08_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_09_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_10_rdp6celadm02       12G             UNUSED
+172.20.115.55: DATA_HP3_CD_11_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_00_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_01_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_02_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_03_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_04_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_05_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_06_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_07_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_08_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_09_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_10_rdp6celadm02       12G             UNUSED
+172.20.115.55: RECO_HP3_CD_11_rdp6celadm02       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_00_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_01_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_02_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_03_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_04_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_05_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_06_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_07_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_08_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_09_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_10_rdp6celadm03       12G             UNUSED
+172.20.115.56: DATA_HP3_CD_11_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_00_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_01_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_02_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_03_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_04_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_05_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_06_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_07_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_08_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_09_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_10_rdp6celadm03       12G             UNUSED
+172.20.115.56: RECO_HP3_CD_11_rdp6celadm03       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_00_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_01_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_02_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_03_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_04_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_05_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_06_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_07_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_08_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_09_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_10_rdp6celadm04       12G             UNUSED
+172.20.115.57: DATA_HP3_CD_11_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_00_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_01_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_02_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_03_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_04_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_05_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_06_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_07_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_08_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_09_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_10_rdp6celadm04       12G             UNUSED
+172.20.115.57: RECO_HP3_CD_11_rdp6celadm04       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_00_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_01_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_02_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_03_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_04_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_05_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_06_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_07_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_08_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_09_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_10_rdp6celadm05       12G             UNUSED
+172.20.115.58: DATA_HP3_CD_11_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_00_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_01_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_02_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_03_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_04_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_05_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_06_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_07_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_08_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_09_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_10_rdp6celadm05       12G             UNUSED
+172.20.115.58: RECO_HP3_CD_11_rdp6celadm05       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_00_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_01_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_02_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_03_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_04_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_05_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_06_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_07_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_08_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_09_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_10_rdp6celadm06       12G             UNUSED
+172.20.115.59: DATA_HP3_CD_11_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_00_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_01_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_02_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_03_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_04_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_05_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_06_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_07_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_08_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_09_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_10_rdp6celadm06       12G             UNUSED
+172.20.115.59: RECO_HP3_CD_11_rdp6celadm06       12G             UNUSED
+[root@rdp6dbadm01 ~]#
+
+
+
+col path format a150
+col label for a40
+col total_gb for 99999
+set lines 1200
+
+select dg.name, d.state, d.failgroup,  round(d.total_mb/1024) total_gb, d.label, d.path
+from v$asm_disk d, v$asm_diskgroup dg
+where 
+d.group_number = dg.group_number
+and dg.name like upper ('%ACFS_VMS_DATA%') 
+order by 1,2,3;
+
+DISKGROUP                                          PATH                                                                                                 NAME   HEADER_STATU   TOTAL_MB           FREE_MB MOUNT_DAT CREATE_DA
+-------------------------------------------------- ---------------------------------------------------------------------------------------------------- -------------------------------------------------- ------------ ----------------- ----------------- --------- ---------
+ACFS_VMS_DATA                                      o/192.168.10.7/DATA_HP3_CD_06_rdp6celadm03                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.20;192.168.10.21/ACFS_VMS_CD_03_rdp6celadm07                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_02_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/RECO_HP3_CD_05_rdp6celadm05                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.20;192.168.10.21/ACFS_VMS_CD_00_rdp6celadm07                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_06_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/DATA_HP3_CD_06_rdp6celadm06                                                                 FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_11_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_01_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.5/RECO_HP3_CD_08_rdp6celadm01                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_02_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_04_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.8/DATA_HP3_CD_07_rdp6celadm04                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.7/DATA_HP3_CD_09_rdp6celadm03                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_01_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_00_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/DATA_HP3_CD_07_rdp6celadm06                                                                 FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_04_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.10/RECO_HP3_CD_05_rdp6celadm06                                                                 CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_07_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.10/RECO_HP3_CD_03_rdp6celadm06                                                                 CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_10_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_01_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_02_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_03_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.8/DATA_HP3_CD_05_rdp6celadm04                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_09_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.7/DATA_HP3_CD_05_rdp6celadm03                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_02_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_03_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.22;192.168.10.23/ACFS_VMS_CD_06_rdp6celadm08                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_08_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/RECO_HP3_CD_09_rdp6celadm06                                                                 CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_11_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/RECO_HP3_CD_03_rdp6celadm05                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_01_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_09_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.22;192.168.10.23/ACFS_VMS_CD_08_rdp6celadm08                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_10_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_04_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_07_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/RECO_HP3_CD_07_rdp6celadm05                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.5/RECO_HP3_CD_04_rdp6celadm01                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.7/DATA_HP3_CD_10_rdp6celadm03                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_02_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_03_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_08_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_00_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_06_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/RECO_HP3_CD_11_rdp6celadm05                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_08_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_09_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_10_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_01_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_11_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_06_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.20;192.168.10.21/ACFS_VMS_CD_06_rdp6celadm07                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_10_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_05_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.20;192.168.10.21/ACFS_VMS_CD_02_rdp6celadm07                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.8/DATA_HP3_CD_09_rdp6celadm04                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/DATA_HP3_CD_02_rdp6celadm06                                                                 FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/RECO_HP3_CD_00_rdp6celadm06                                                                 CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_03_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_06_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_01_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_00_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/DATA_HP3_CD_04_rdp6celadm05                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_03_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.9/RECO_HP3_CD_01_rdp6celadm05                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_06_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/RECO_HP3_CD_03_rdp6celadm02                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_00_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.10/RECO_HP3_CD_01_rdp6celadm06                                                                 CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.8/RECO_HP3_CD_08_rdp6celadm04                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.24;192.168.10.25/ACFS_VMS_CD_09_rdp6celadm09                                                   MEMBER                        0                 0 06-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.6/DATA_HP3_CD_08_rdp6celadm02                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.22;192.168.10.23/ACFS_VMS_CD_00_rdp6celadm08                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.7/RECO_HP3_CD_02_rdp6celadm03                                                                  CANDIDATE                     0                 0
+ACFS_VMS_DATA                                      o/192.168.10.22;192.168.10.23/ACFS_VMS_CD_07_rdp6celadm08                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.5/DATA_HP3_CD_00_rdp6celadm01                                                                  FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.10/DATA_HP3_CD_01_rdp6celadm06                                                                 FORMER                        0                 0 05-AUG-19 19-SEP-18
+ACFS_VMS_DATA                                      o/192.168.10.22;192.168.10.23/ACFS_VMS_CD_02_rdp6celadm08                                                   MEMBER                        0                 0 05-NOV-19 17-SEP-18
+
+180 rows selected.
+
+
+alter griddisk prefix DATA_HP3 inactive;
+
+--------------
+
+
+Le saco 400 Gb a DBFS_HP2. Actualmente tiene 504 Gb
+
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DBFS_HP2.*\'"
+
+172.20.115.59: DBFS_HP2_CD_08_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_09_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_10_rdp6celadm06       14G             ONLINE
+172.20.115.59: DBFS_HP2_CD_11_rdp6celadm06       14G             ONLINE
+
+
+14*12=168 * 3 = 504Gb
+-> 2*12*3= 72Gb
+
+alter diskgroup DBFS_HP2 resize all size 2G rebalance power 64;
+
+
+cellcli -e alter griddisk \
+DBFS_HP2_CD_00_rdp6celadm06 \
+,DBFS_HP2_CD_01_rdp6celadm06 \
+,DBFS_HP2_CD_02_rdp6celadm06 \
+,DBFS_HP2_CD_03_rdp6celadm06 \
+,DBFS_HP2_CD_04_rdp6celadm06 \
+,DBFS_HP2_CD_05_rdp6celadm06 \
+,DBFS_HP2_CD_06_rdp6celadm06 \
+,DBFS_HP2_CD_07_rdp6celadm06 \
+,DBFS_HP2_CD_08_rdp6celadm06 \
+,DBFS_HP2_CD_09_rdp6celadm06 \
+,DBFS_HP2_CD_10_rdp6celadm06 \
+,DBFS_HP2_CD_11_rdp6celadm06 \
+size=14G;
+
+
+172.20.115.54: DBFS_HP2_CD_00_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_01_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_02_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_03_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_04_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_05_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_06_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_07_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_08_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_09_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_10_rdp6celadm01       14G             ONLINE
+172.20.115.54: DBFS_HP2_CD_11_rdp6celadm01       14G             ONLINE
+
+
+
+dcli -g $HOME/cell_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DATA_HP2.*\'"
+--asigno el espacio a DATA_HP2 (+12G)
+
+cellcli -e alter griddisk \
+DATA_HP2_CD_00_rdp6celadm06 \
+,DATA_HP2_CD_01_rdp6celadm06 \
+,DATA_HP2_CD_02_rdp6celadm06 \
+,DATA_HP2_CD_03_rdp6celadm06 \
+,DATA_HP2_CD_04_rdp6celadm06 \
+,DATA_HP2_CD_05_rdp6celadm06 \
+,DATA_HP2_CD_06_rdp6celadm06 \
+,DATA_HP2_CD_07_rdp6celadm06 \
+,DATA_HP2_CD_08_rdp6celadm06 \
+,DATA_HP2_CD_09_rdp6celadm06 \
+,DATA_HP2_CD_10_rdp6celadm06 \
+,DATA_HP2_CD_11_rdp6celadm06 \
+size=213.5G;
+
+
+213.5
+
+225.5
+
+alter diskgroup DBFS_HP2 resize all rebalance power 64;
+
+ALTER DISKGROUP DATA_HP2 RESIZE ALL SIZE 218624M rebalance power 64;
+
+
+
+
+--Vuelvo a darle el espacio a la vm3
+alter diskgroup DATA_HC3 resize all rebalance power 64;
+
+
+
+
+set lines 1200
+set pages 100
+col diskgroup for a50
+col name for a5
+col path for a100
+col free_mb for 9999999999999999
+col total_mb for 9999999999999999
+col new_aloc_mb for 9999999999999999
+col add_mb for 9999999999999999
+
+select
+dk.path
+,dk.header_status
+,dk.total_mb
+,dk.free_mb
+,dk.MOUNT_DATE
+,dk.create_DATE
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name ='DBFS_HP2'
+and (path like '%CD_00_%' or path like '%CD_01_%')
+order by dk.name
+;
+
+
+select dk.name,
+dk.path
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name ='DBFS_HP2'
+and (path like '%CD_00_%' or path like '%CD_01_%')
+order by dk.name
+;
+
+
+
+
+a ) borrar griddisk dbfs de discos 0 y 1
+ 1 . desde asm
+ 2 . rebalance
+ 3 . unused en griddisk
+ 4 . borrar griddisk
+
+
+ 5 . agrandar GD DBFS a 15,125Gb (el dbfs2)
+
+
+-borrar los UNUSED
+-validar 6 celdas tengas mismo freespace
+
+b) quitar griddisks RECO_HP3 y DATA_HP3 del DG ACFS_VMS_DATA en VM3 y reasignarlos a DATA_HP2
+
+
+1. --Eliminar discos 0 y 1 del DG. Hacer esto en las VMs 1 y 2 (3 no tiene DBFS DG montado):
+
+select 'alter diskgroup '||dG.name||' drop disk '|| dk.name||';'
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name like 'DBFS_%'
+and (path like '%CD_00_%' or path like '%CD_01_%')
+order by dk.name
+;
+
+
+
+
+
+SQL>
+select dg.name, dg.state, round(sum(d.total_mb)/1024) total_gb, count(*)
+from v$asm_disk d, v$asm_diskgroup dg
+where d.group_number = dg.group_number
+group by dg.name, dg.state;SQL>   2    3    4
+
+NAME                           STATE         TOTAL_GB   COUNT(*)
+------------------------------ ----------- ---------- ----------
+DATA_HC1                       MOUNTED          34920         36
+DATA_HP1                       MOUNTED          18504         72
+DBFS_HC1                       MOUNTED           1006         30
+DBFS_HP1                       MOUNTED           1008         72
+RECO_HC1                       MOUNTED           8192         36
+RECO_HP1                       MOUNTED            216         72
+
+6 rows selected.
+
+SQL>
+
+
+
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM01;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM02;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM03;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM04;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM05;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_00_RDP6CELADM06;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM01;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM02;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM03;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM04;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM05;
+alter diskgroup DBFS_HP1 drop disk DBFS_HP1_CD_01_RDP6CELADM06;
+
+2. alter diskgroup DBFS_HP2 resize all rebalance power 64;
+
+3. descde rdp6dbadm01 
+ver los griddisks en estado UNUSED:
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DBFS.*\'" | grep UNUSED
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DBFS.*\'" | grep UNUSED | awk '{print $2}'
+
+ver el espacio en los discos:
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list celldisk attributes name, size, freespace" | grep CD_
+
+4. borrar griddisks
+
+ALTER GRIDDISK  INACTIVE
+
+DROP GRIDDISK 
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm01"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm02"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm03"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm04"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm05"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP1_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP1_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP2_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DBFS_HP2_CD_01_rdp6celadm06"
+
+
+5. quitar griddisks RECO_HP3 y DATA_HP3 del DG ACFS_VMS_DATA en VM3 (todos deben estar en former o candidate)
+
+select 'alter diskgroup '||dG.name||' drop disk '|| dk.name||';'
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where dg.group_number =dk.group_number (+)
+and dG.name = 'ACFS_VMS_DATA'
+and (path like '%RECO_HP3%' or path like '%DATA_HP3%')
+order by dk.name
+;
+
+select path, dg.name
+from v$asm_diskgroup dg
+, v$asm_disk dk
+where  dg.group_number =dk.group_number (+)
+AND
+path like '%ACFS%'
+;
+
+
+6. Eliminar griddisks unused. Ver punto 4
+
+
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm01"
+dcli -c rdp6celadm01 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm01"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm02"
+dcli -c rdp6celadm02 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm02"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm03"
+dcli -c rdp6celadm03 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm03"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm04"
+dcli -c rdp6celadm04 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm04"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm05"
+dcli -c rdp6celadm05 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm05"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_02_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_03_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_04_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_05_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_06_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_07_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_08_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_09_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_10_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk DATA_HP3_CD_11_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_00_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_01_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_02_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_03_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_04_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_05_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_06_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_07_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_08_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_09_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_10_rdp6celadm06"
+dcli -c rdp6celadm06 -l root "cellcli -e drop griddisk RECO_HP3_CD_11_rdp6celadm06"
+
+
+
+7. aumentar espacio en GD de DATA_HP2
+
+
+dcli -c rdp6celadm01 -l root "cellcli -e alter griddisk DATA_HP2_CD_00_rdp6celadm01 \
+    ,DATA_HP2_CD_01_rdp6celadm01 \
+    ,DATA_HP2_CD_02_rdp6celadm01 \
+    ,DATA_HP2_CD_03_rdp6celadm01 \
+    ,DATA_HP2_CD_04_rdp6celadm01 \
+    ,DATA_HP2_CD_05_rdp6celadm01 \
+    ,DATA_HP2_CD_06_rdp6celadm01 \
+    ,DATA_HP2_CD_07_rdp6celadm01 \
+    ,DATA_HP2_CD_08_rdp6celadm01 \
+    ,DATA_HP2_CD_09_rdp6celadm01 \
+    ,DATA_HP2_CD_10_rdp6celadm01 \
+    ,DATA_HP2_CD_11_rdp6celadm01 \
+    size=XXXG"
+	
+
+
+
+alter diskgroup DBFS_HP2 resize all rebalance power 64;
+
+
+
+--- Alter griddisks DBFS_HP2
+
+cellcli -e alter griddisk \
+ DBFS_HP2_CD_02_rdp6celadm01 \
+,DBFS_HP2_CD_03_rdp6celadm01 \
+,DBFS_HP2_CD_04_rdp6celadm01 \
+,DBFS_HP2_CD_05_rdp6celadm01 \
+,DBFS_HP2_CD_06_rdp6celadm01 \
+,DBFS_HP2_CD_07_rdp6celadm01 \
+,DBFS_HP2_CD_08_rdp6celadm01 \
+,DBFS_HP2_CD_09_rdp6celadm01 \
+,DBFS_HP2_CD_10_rdp6celadm01 \
+,DBFS_HP2_CD_11_rdp6celadm01 \
+size=15.125G;
+
+
+--Finalmente resizear GD de DATA_HP2
+dcli -g $HOME/cell_hp_group -l root "cellcli -e list griddisk attributes name, size, availableTo, asmmodestatus where name like \'DATA_HP2.*\'"
+213.5G
+245.687G
+
+52.187Gb libres
+
++32.187
+
+
+cellcli -e alter griddisk \
+DATA_HP2_CD_00_rdp6celadm06 \
+,DATA_HP2_CD_01_rdp6celadm06 \
+,DATA_HP2_CD_02_rdp6celadm06 \
+,DATA_HP2_CD_03_rdp6celadm06 \
+,DATA_HP2_CD_04_rdp6celadm06 \
+,DATA_HP2_CD_05_rdp6celadm06 \
+,DATA_HP2_CD_06_rdp6celadm06 \
+,DATA_HP2_CD_07_rdp6celadm06 \
+,DATA_HP2_CD_08_rdp6celadm06 \
+,DATA_HP2_CD_09_rdp6celadm06 \
+,DATA_HP2_CD_10_rdp6celadm06 \
+,DATA_HP2_CD_11_rdp6celadm06 \
+size=245.687G;
+
+
+alter diskgroup DATA_HP2 resize all rebalance power 64;
+
+
+Instances running on rdp6adm01vm02 : +ASM1, csibsr1, rgsbpr11, shengr11, SHESBP11, shhspr1, shitxr11, shsmsr11
+
+                DiskGroup      Redundancy        Total TB       Usable TB        % Free
+                ---------     -----------        --------       ---------        ------
+            ACFS_VMS_DATA          NORMAL           22.86           12.23          53
+                 DATA_HC2          NORMAL            9.53            0.76           7
+                 DATA_HP2          NORMAL            8.64            1.02          11
+                 DBFS_HP2          NORMAL            0.44            0.43          97
+                 RECO_HC2          NORMAL            4.00            2.37          59
+                 RECO_HP2          NORMAL            0.11            0.03          27
+

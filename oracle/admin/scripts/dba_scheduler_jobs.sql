@@ -32,7 +32,6 @@ stop_on_window_close,source,comments
 from
 dba_scheduler_jobs 
 where upper(job_name) like upper('%&job_name%')
-and upper(schedule_name) like upper('%&schedule_name%')
 /
 
 PROMPT

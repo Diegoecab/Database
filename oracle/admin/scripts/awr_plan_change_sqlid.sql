@@ -1,5 +1,5 @@
 --awr_plan_change_sqlid.sql
-set lines 300
+set lines 900
 set verify off
 col execs for 999999
 col avg_etime for 999999
@@ -7,6 +7,7 @@ col avg_lio for 9999999999
 col begin_interval_time for a30
 col node for 999999
 col sql_profile for a40
+col username for a30
 --break on plan_hash_value on startup_time skip 1
 PROMPT
 PROMPT
