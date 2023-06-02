@@ -1,0 +1,7 @@
+begin
+for r in 1..10000 loop
+insert into test values (x);
+end loop;
+commit;
+end
+/

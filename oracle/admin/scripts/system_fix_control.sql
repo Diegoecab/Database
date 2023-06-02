@@ -1,0 +1,2 @@
+set lines 900
+SELECT * FROM V$SYSTEM_FIX_CONTROL;

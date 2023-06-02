@@ -1,4 +1,9 @@
 ## S3
+
+aws s3api create-bucket \
+	    --bucket diegoec \
+	        --region us-east-1
+
  aws s3 ls diegoec-nht-bucket-1
  
 aws s3api list-object-versions --bucket diegoec-nht-bucket-1 --prefix test.txt.txt
