@@ -1,12 +1,5 @@
-DECLARE
-   vID   NUMBER;
-BEGIN
-   FOR i IN (SELECT     ROWNUM ID , 'Cod' || LPAD (ROWNUM, 9, 0) com, SYSDATE fecha
-         FROM DUAL
-   CONNECT BY LEVEL <= 2000000)
-   LOOP
-      insert into prb4 (ID,COM,FECHA) values (i.ID,i.COM,i.FECHA);
-       COMMIT;
-   END LOOP;
-END;
+insert into bigtable_4
+SELECT level id, 'nom_'||level nom
+from dual
+CONNECT BY level between 100000001 and 20001000
 /
