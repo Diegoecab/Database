@@ -1,0 +1,7 @@
+ view the certificate details 
+openssl s_client -connect google.com:443
+
+convert the downloaded certificate into pem format
+
+ openssl x509 -inform der -in AmazonRootCA1.cer -outform pem -out AmazonRootCA1.pem
+ openssl x509 -inform der -in SFSRootCAG2.cer -outform pem -out SFSRootCAG2.pem

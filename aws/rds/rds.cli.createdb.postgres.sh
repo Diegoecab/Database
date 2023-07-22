@@ -1,4 +1,4 @@
-read -s -p "Enter a Password: " MASTER_USER_PASSWORD
+read -p "Enter a Password: " MASTER_USER_PASSWORD
 
 AWSREGION=`aws configure get region`
 
@@ -39,10 +39,10 @@ RDSKMSKEY=$(aws kms list-aliases \
 # Create the DB instance
 
 aws rds create-db-instance \
-	--db-instance-identifier rds-pg-labs \
+	--db-instance-identifier pg1211 \
 	--db-name pglab \
 	--engine postgres \
-	--engine-version 13.3 \
+	--engine-version 12.11 \
 	--master-username masteruser \
 	--master-user-password $MASTER_USER_PASSWORD \
 	--db-instance-class db.t3.medium \
@@ -56,7 +56,7 @@ aws rds create-db-instance \
 	--enable-iam-database-authentication \
 	--backup-retention-period 1 \
 	--copy-tags-to-snapshot \
-	--auto-minor-version-upgrade \
+	--no-auto-minor-version-upgrade \
 	--storage-encrypted \
 	--kms-key-id $RDSKMSKEY \
 	--monitoring-interval 1 \
