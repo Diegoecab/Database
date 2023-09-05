@@ -24,6 +24,8 @@ SELECT version();	Retrieve the current version of PostgreSQL server
 \a	Switch from aligned to non-aligned column output	 
 \H	Switch the output to HTML format	 
 \q	Exit psql shell
+\dx 	List of extentions
+\dx <extention> Description of extention
 
 
 create database newdb template template0;
