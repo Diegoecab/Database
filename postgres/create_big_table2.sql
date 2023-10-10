@@ -1,8 +1,5 @@
-drop table articles3;
 create table articles3 (code int primary key, article varchar, name varchar, department varchar);
-
 set work_mem=3145728;
-
 insert into articles3 (
     code, article, name, department
 )

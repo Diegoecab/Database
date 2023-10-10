@@ -8,6 +8,6 @@ select pid as process_id,
        state_change,
        wait_event,
        wait_event_type,
-       left(query, 60) 
+       left(query, 100) 
      --  query
-from pg_stat_activity;
+from pg_stat_activity where state='active' order by state_change;
