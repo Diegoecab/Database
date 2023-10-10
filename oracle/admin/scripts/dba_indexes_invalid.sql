@@ -17,7 +17,6 @@ select a.owner,a.index_name,a.index_type,a.table_name,a.uniqueness,a.tablespace_
 round((a.clustering_factor*100)/b.num_rows,1) per_clust_fact_x_t_num_rows,a.last_analyzed
 from dba_indexes a, dba_tables b
 where b.owner = a.owner
-and b.num_rows <> 0
 and b.table_name = a.table_name
 and a.owner like upper('%&index_owner%')
 and a.table_name like upper('%&table_name%')

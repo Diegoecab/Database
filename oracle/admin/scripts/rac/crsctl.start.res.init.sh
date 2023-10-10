@@ -1,0 +1,1 @@
+$GRID_HOME/bin/crsctl start res ora.mdnsd -init

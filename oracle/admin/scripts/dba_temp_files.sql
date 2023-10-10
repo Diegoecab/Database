@@ -32,12 +32,12 @@ clear breaks
 
 select df.tablespace_name
 ,      df.file_name
-,      df.bytes/1024/1024                        total_size
-,      nvl(fr.bytes/1024/1024,0)                 free_space
+,       nvl(df.bytes/1024/1024/1024,0)                   total_size_gb
+,      nvl(fr.bytes/1024/1024/1024,0)                 free_space_gb
 ,	   df.increment_by
 ,      ((df.bytes-nvl(fr.bytes,0))/df.bytes)*100 pct_used,
 df.autoextensible auto,
-df.maxbytes/1024/1024 maxsize
+df.maxbytes/1024/1024/1024 maxsize_gb
 from   (select sum(bytes) bytes
         ,      file_id
         from   dba_free_space

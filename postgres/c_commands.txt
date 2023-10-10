@@ -1,0 +1,31 @@
+pg_ctl init -D $PGDATA
+pg_ctl status
+
+SHOW config_file;
+
+psql -U postgres
+
+\c dbname	Switch connection to a new database
+\l	List available databases	 
+\dt	List available tables	 
+\d table_name	Describe a table such as a column, type, modifiers of columns, etc.	 
+\dn	List all schemes of the currently connected database
+\df	List available functions in the current database	 
+\dv	List available views in the current database	 
+\du	List all users and their assign roles	 
+SELECT version();	Retrieve the current version of PostgreSQL server	 
+\g	Execute the last command again	 
+\s	Display command history	 
+\s filename	Save the command history to a file	
+\i filename	Execute psql commands from a file	 
+\?	Know all available psql commands	 
+\h	Get help
+\e	Edit command in your own editor	 
+\a	Switch from aligned to non-aligned column output	 
+\H	Switch the output to HTML format	 
+\q	Exit psql shell
+\dx 	List of extentions
+\dx <extention> Description of extention
+
+
+create database newdb template template0;

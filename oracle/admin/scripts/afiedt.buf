@@ -1,5 +1,5 @@
-select owner,round(sum(bytes/1024/1024/1024),1) GB from dba_Segments
-where owner like upper('%_DW%')
-and segment_name like '%_H'
-group by owner order by 2,1
+insert into bigtable_4
+SELECT level id, 'nom_'||level nom
+from dual
+CONNECT BY level between 100000001 and 20001000
 /

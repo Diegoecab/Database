@@ -1,7 +1,7 @@
 --v$session_wait_history.sql
 select sid, seq#, event, wait_time, p1, p2, p3
   from v$session_wait_history
- where sid = &sid
+ where upper(event) like upper('%&event%')
  /
  
 prompt

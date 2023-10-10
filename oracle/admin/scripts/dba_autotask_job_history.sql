@@ -1,3 +1,4 @@
+--@dba_autotask_job_history
 col job_Start_time for a60
 col job_duration for a60
 set lines 400

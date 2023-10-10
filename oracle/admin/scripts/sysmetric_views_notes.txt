@@ -1,0 +1,4 @@
+V$SYSMETRIC – last 15 and 60 seconds
+V$SYSMETRIC_SUMMARY – values  last hour (last snapshot)  like avg, max, min etc
+V$SYSMETRIC_HISTORY – last hour for 1 minute, last 3 mintes for 15 second deltas
+DBA_HIST_SYSMETRIC_SUMMARY – hour summaries for last week.

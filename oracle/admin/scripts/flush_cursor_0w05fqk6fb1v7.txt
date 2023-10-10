@@ -1,0 +1,36 @@
+*** before flush ***
+
+     Ver
+Inst sio
+   #  ns    Invs ADDRESS          HASH_VALUE
+---- --- ------- ---------------- ----------
+   1 3   5       00000001C0348BD8 2363852647
+
+1 row selected.
+
+Elapsed: 00:00:00.03
+
+                  Plan           Is
+Inst  Chi         Hash           Sh
+   #  ld#        Value     Execs ar
+---- ---- ------------ --------- --
+   1    0 1797089144   1         N
+   1    1 2184509395   1         N
+   1    3 1779703697   1         Y
+
+3 rows selected.
+
+Elapsed: 00:00:00.03
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.03
+*** after flush ***
+
+no rows selected
+
+Elapsed: 00:00:00.03
+
+no rows selected
+
+Elapsed: 00:00:00.03

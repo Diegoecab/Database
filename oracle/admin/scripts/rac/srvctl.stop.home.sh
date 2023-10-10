@@ -1,0 +1,1 @@
+srvctl stop home -oraclehome $ORACLE_HOME -statefile ~/state.txt -node rdp5adm02vm02

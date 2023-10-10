@@ -2,12 +2,13 @@
 set lines 400
 
 clear col
-col owner for a30
-col column_name for a30
-col data_type for a30
-col table_name for a30
-col low_value for a30
-col high_value for a30
+col owner for a15 truncate 
+col column_name for a30 truncate
+col data_type for a10 truncate
+col table_name for a20 truncate
+col low_value for a20 truncate
+col high_value for a20 truncate
+col notes for a20 truncate
 
 select a.*, b.data_type  from
 dba_tab_col_statistics a, dba_tab_columns b

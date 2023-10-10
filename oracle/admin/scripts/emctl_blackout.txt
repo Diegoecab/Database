@@ -1,0 +1,26 @@
+	EM13c : Steps to Create Blackouts / Notification Blackouts from Console UI / emctl / emcli (Doc ID 1386134.1)
+	EM 13c: Creation of Enterprise Manager 13c Cloud Control emctl Blackout on PDB Fails: Command-line blackouts on targets spanning multiple agents are not supported (Doc ID 2531648.1)
+	
+To start an immediate blackout called "bk3" for database "db1" for 30 minutes:
+emctl start blackout bk3 db1 -d 30
+
+To start an immediate blackout called "bk3" for database "db2" for five hours:
+emctl start blackout bk db2 -d 5:00
+
+
+
+emctl stop blackout <Blackoutname>
+
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl start blackout orapathc_BO_CDBTCH1 CDBTCH1_sys
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl stop blackout orapathc_BO_CDBTCH1
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl start blackout orapathc_BO_CDBTCH12 RIOTCH1:RIOTCH1
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl start blackout orapatch -nodelevel
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl start blackout orapathc_BO_CDBTCH12 -nodelevel
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl status blackout
+
+/oracle/app/oracle/product/agentoms/agent_inst/bin/emctl start blackout orapathc_BO_CDBTCH12 CDBTCH1_RIOTCH1:oracle_pdb

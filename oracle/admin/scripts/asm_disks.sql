@@ -1,21 +1,18 @@
-set lines 185
+set lines 300
 set pages 50
 col diskgroup for a20
-col name for a20
-col path for a30
-col free_mb for 999,999,999.99
-col total_mb for 999,999,999.99
-col new_aloc_mb for 999,999,999.99
-col add_mb for 999,999,999.99
+col name for a30
+col path for a50
+col free_mb for 999999999999
+col total_mb for 999999999999
+col new_aloc_mb for 999999999999
+col add_mb for 999999999999
 
-
-select dg.name diskgroup,
-dg.block_size,
-dg.compatibility,
-dg.database_compatibility,
-dg.allocation_unit_size
-,dk.path
-,dk.name
+select
+dg.name,
+FAILGROUP,
+label,
+dk.path
 ,dk.header_status
 ,dk.total_mb
 ,dk.free_mb
@@ -23,6 +20,18 @@ dg.allocation_unit_size
 ,dk.create_DATE
 from v$asm_diskgroup dg
 , v$asm_disk dk
-where dg.group_number (+) =dk.group_number
-order by dg.name, dk.disk_number, dk.path
+where dg.group_number =dk.group_number (+)
+--and dk.path like upper('%HDD_E0_S00_1612431856%')
+and dg.name like UPPER('%&dg%')
+order by dk.name
 ;
+
+
+
+
+select GROUP_NUMBER, label, path, name,header_status
+,total_mb
+,free_mb
+,MOUNT_DATE
+,create_DATE
+from v$asm_disk;

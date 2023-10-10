@@ -1,0 +1,125 @@
+---
+## Amazon RDS PostgreSQL Labs
+## Infrastructure template without an RDS PostgreSQL instance for lab exercises
+##
+## Changelog:
+##
+## Dependencies:
+## none
+##
+## This sample code is made available under the MIT-0 license. See the LICENSE file.
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: Amazon RDS PostgreSQL Labs Stackset
+
+### Consider UI groupping for Parameters: 
+# Metadata:
+#   'AWS::CloudFormation::Interface':
+#     ParameterGroups:
+#     - Label:
+#         default: 'Parent Stacks'
+#       Parameters:
+#       - ParentKmsKeyStack
+#       - ParentS3VirusScanStack
+#       - ParentVpcEndpointStack
+#     - Label:
+#         default: 'S3 Parameters'
+#       Parameters:
+#       - BucketName
+#       - Access
+#       - Versioning
+#       - NoncurrentVersionExpirationInDays
+#       - ExpirationInDays
+#       - ExpirationPrefix
+#     - Label:
+#         default: 'Lambda Parameters'
+#       Parameters:
+#       - LambdaFunctionArn
+#       - LambdaFunctionEvent 
+
+## Parameters
+Parameters:
+  EnvType:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - prod
+      - dev
+  CreateInstance:
+    Type: String
+    Default: "false"
+    AllowedValues:
+      - "true"
+      - "false"
+    Description: Determines if the database instance needs to be created.
+  TemplateName:
+    Type: String
+    Default: rds-pg-labs
+    Description: Name used for different elements created.
+  
+## Conditions
+Conditions:
+  isInEE:
+    !Equals [ !Ref EnvType, "prod" ]
+  isNotInEE:
+    !Equals [ !Ref EnvType, "dev" ]
+
+## Resources
+Resources:
+  rdslabsVPCStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://solution-references-us-east-1.s3.amazonaws.com/rdspg/rds-pg-labs-vpc.yml
+      #Parameters:
+        #InstanceType: t2.micro
+        #KeyName: mykey
+      Parameters:
+        TemplateName: !Ref TemplateName
+  rdslabsC9Stack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://solution-references-us-east-1.s3.amazonaws.com/rdspg/rds-pg-labs-bastion-c9.yml
+      Parameters:
+          PubSubnetId: !GetAtt 'rdslabsVPCStack.Outputs.PublicSubnetA'
+          TemplateName: !Ref TemplateName
+          EnvType: !Ref EnvType
+          # C9_EC2InstanceType : String
+          # C9_AutoHibernateTimeout : String
+  rdslabsRDSStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://solution-references-us-east-1.s3.amazonaws.com/rdspg/rds-pg-labs-rds.yml
+      Parameters:
+          TemplateName: !Ref TemplateName
+          CreateInstance: !Ref CreateInstance
+          DBMasterUserPassword: 'Masteruser123!'
+          MainVPC: !GetAtt rdslabsVPCStack.Outputs.MainVPC
+          PrivateSubnets: !GetAtt 'rdslabsVPCStack.Outputs.PrivateSubnets'
+  # rdslabspgadminStack:
+  #   Type: AWS::CloudFormation::Stack
+  #   Properties:
+  #     TemplateURL: https://solution-references-us-east-1.s3.amazonaws.com/rdspg/rds-pg-labs-pgadmin.yml
+  #     Parameters:
+  #         TemplateName: !Ref TemplateName
+  #         MainVPC: !GetAtt rdslabsVPCStack.Outputs.MainVPC
+  #         PubSubnetId: !GetAtt 'rdslabsVPCStack.Outputs.PublicSubnetA'
+          #BastionSecurityGroupId: !GetAtt 'rdslabsC9Stack.Outputs.bastionSecGroup.GroupId'
+          ## Todo: c9Stack needs to define bastionSecGroup and allow port 80 traffic
+          ## Todo: RDSstack needs to allow bastionSecGroup to connect to 5432
+          ## Todo: RDSstack needs to add Cloud9 security group to connect to 5432.  
+          ## Cloud9 will create a security group called aws-cloud9-[Cloud9Instance.name]-[Cloud9Instance]-InstanceSecurityGroup-1V75C6V9VNF9C.  The challenge is how do we get last ID (1V75C6V9VNF9C)?
+          ## alternately, we know the IP range of cloud9 right, since we created/picked the subnet for cloud9.  So we could setup the RDS security group to allow the cloud9 subnet IP range to 5432.        
+## Outputs
+Outputs:
+  LabVPC:
+    Description: RDS PostgreSQL Lab VPC
+    Value: !GetAtt rdslabsVPCStack.Outputs.MainVPC
+  Cloud9URL:
+    Description: Cloud9 URL
+    Value: !GetAtt rdslabsC9Stack.Outputs.Cloud9URL
+  DBSecGroup:
+    Description: Database Security Group
+    Value: !GetAtt rdslabsRDSStack.Outputs.dbSecGroupCluster
+  # OutputFromNestedStack:
+  #   Description: PG Web
+  #   Value: !GetAtt rdslabspgadminStack.Outputs.pgadminFargate

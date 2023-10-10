@@ -11,9 +11,6 @@ REM Dependencias:
 REM	
 REM
 REM Notas:
-REM 	Ejecutar con usuario dba
-REM	Para Oracle version 7.3, 8.0, 8.1, 9.0, 9.2, 10.1 y 10.2 solamente
-REM
 REM Precauciones:
 REM	
 REM ======================================================================
@@ -25,7 +22,7 @@ set trims on
 set verify off
 
 col tablespace_name format a20            
-col file_name       format a60            
+col file_name       format a100            truncate
 col total_size      format 99999999
 col free_space      format 99999999
 col pct_used        format 999       
@@ -43,7 +40,7 @@ select df.file_id
 ,   round(((df.bytes-nvl((select sum(bytes) from dba_free_space a where a.file_id = df.file_id group by a.file_id),0))/replace(df.maxbytes,0,1))*100) pct_used_max
 ,	df.autoextensible auto
 ,increment_by
-,	df.maxbytes/1024/1024 maxsize,
+,	df.maxbytes/1024/1024/1024 maxsize,
 vdf.status,
 vdf.creation_time
 from   dba_data_files        df

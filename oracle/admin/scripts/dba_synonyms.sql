@@ -3,6 +3,11 @@ set verify off
 col db_link for a40
 undefine all
 set lines 400
+col synonym_name for a30 truncate
+col table_owner for a20 truncate
+col owner for a20 truncate
+col table_name for a30 truncate
+col db_link for a30 truncate
 
 select owner,synonym_name,table_owner,table_name,db_link 
 from dba_synonyms 

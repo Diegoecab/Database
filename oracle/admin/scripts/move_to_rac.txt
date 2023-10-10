@@ -1,0 +1,49 @@
+SYS@ORADB> alter database add logfile thread 2 group 3 ('+DATA’,'+FLASH’) size 50m reuse;
+ 
+Database altered.
+SYS@ORADB> alter database add logfile thread 2 group 4 ('+DATA’,'+FLASH’) size 50m reuse;
+ 
+Database altered.
+ 
+SYS@ORADB>  alter database enable public thread 2;
+ 
+Database altered.
+
+
+SYS@ORADB> create undo tablespace UNDOTBS2 datafile  '+DATA' size 500M
+
+
+*.cluster_database_instances=2
+*.cluster_database=true
+*.remote_listener='LISTENERS_ORADB’
+ORADB1.instance_number=1
+ORADB2.instance_number=2
+ORADB1.thread=1
+ORADB2.thread=2
+ORADB1.undo_tablespace='UNDOTBS1'
+ORADB2.undo_tablespace='UNDOTBS2'
+#update the actual controlfile path
+*.control_files='+DATA/ORADB/controlfile/current.256.666342941','+FLASH/ORADB/controlfile/current.256.662312941'
+
+
+[oracle@orarac1]$ mv initORADB.ora initORADB1.ora
+[oracle@orarac2]$ mv initORADB.ora initORADB2.ora
+
+
+
+Shutdown the database
+SYS@ORADB> > shutdown immediate
+
+
+
+
+[oracle@orarac1]$ srvctl add database -d ORADB -o /home/oracle/product/v10204
+[oracle@orarac1]$ srvctl add instance -d ORADB -i ORADB1 -n orarac1
+[oracle@orarac1]$ srvctl add instance -d ORADB -i ORADB2 -n orarac2
+
+
+[oracle@orarac1]$ srvctl stop database -d ORADB
+
+
+
+[oracle@orarac1]$ srvctl start database -d ORADB
