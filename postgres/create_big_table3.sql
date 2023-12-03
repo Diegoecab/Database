@@ -1,9 +1,9 @@
-drop table articles1;
-create table articles1 (code int primary key, article varchar, name varchar, department varchar);
+drop table articles2;
+create table articles2 (code int primary key, article varchar, name varchar, department varchar);
 
 set work_mem=3145728;
 
-insert into articles1 (
+insert into articles2 (
     code, article, name, department
 )
 select
@@ -13,7 +13,7 @@ select
     left((random()::text), 4)
 from generate_series(1, 100000000) s(i);
 
-insert into articles1 (
+insert into articles2 (
     code, article, name, department
 )
 select
@@ -23,7 +23,7 @@ select
     left((random()::text), 4)
 from generate_series(100000001, 1000000000) s(i);
 
-insert into articles1 (
+insert into articles2 (
     code, article, name, department
 )
 select
@@ -36,5 +36,5 @@ from generate_series(1000000001, 10000000000) s(i);
 
 EXPLAIN 
 SELECT * 
-FROM articles1
+FROM articles2
 ORDER BY 1;

@@ -1,0 +1,3177 @@
+{
+    "OrderableDBInstanceOptions": [
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.m5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async"
+            ],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.2xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 32768,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 32768,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 32768,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.small",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 32768,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.small",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 32768,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.small",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 32768,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.small",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp2",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 65536,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "gp3",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 20,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 3000,
+            "MaxIopsPerDbInstance": 40000,
+            "MaxIopsPerGib": 500.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": true,
+            "MinStorageThroughputPerDbInstance": 125,
+            "MaxStorageThroughputPerDbInstance": 4000
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "io1",
+            "SupportsIops": true,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 100,
+            "MaxStorageSize": 65536,
+            "MinIopsPerDbInstance": 1000,
+            "MaxIopsPerDbInstance": 40000,
+            "MinIopsPerGib": 0.5,
+            "MaxIopsPerGib": 50.0,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": true,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "oracle-se2",
+            "EngineVersion": "19.0.0.0.ru-2023-07.rur-2023-07.r1",
+            "DBInstanceClass": "db.t3.xlarge",
+            "LicenseModel": "license-included",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-west-2a"
+                },
+                {
+                    "Name": "us-west-2b"
+                },
+                {
+                    "Name": "us-west-2c"
+                },
+                {
+                    "Name": "us-west-2d"
+                }
+            ],
+            "MultiAZCapable": true,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "standard",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": false,
+            "SupportsPerformanceInsights": true,
+            "MinStorageSize": 10,
+            "MaxStorageSize": 3072,
+            "AvailableProcessorFeatures": [],
+            "SupportsStorageAutoscaling": false,
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": false,
+            "SupportedNetworkTypes": [
+                "DUAL",
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        }
+    ]
+}
