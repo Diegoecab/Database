@@ -1,0 +1,1 @@
+select application_name,usename,backend_type,query,state,wait_event_type,age(now(),backend_start) as backend_start_age,age(now(),query_start) as query_start_age,age(now(),state_change) state_change_age from pg_stat_activity where backend_type = 'pg_cron launcher';

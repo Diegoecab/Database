@@ -6,8 +6,17 @@
 ALTER TABLE &tablename add constraint &tablename_pk PRIMARY KEY (ID);
 
 begin
-for r in (2000001..5000000) loop
-	execute immediate ('insert into BIGTABLE_7 values ('||r||',''TEST'',''test'')')
+for r in 2000001..5000000 loop
+insert into BIGTABLE values (r,'TEST');
 end loop;
+commit;
+end;
+/
+
+begin
+for r in 2000001..3000001 loop
+update BIGTABLE set nom='TEST2' where id=r;
+end loop;
+commit;
 end;
 /

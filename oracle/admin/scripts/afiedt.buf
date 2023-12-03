@@ -1,5 +1,17 @@
-insert into bigtable_4
-SELECT level id, 'nom_'||level nom
-from dual
-CONNECT BY level between 100000001 and 20001000
+select --sql_id,
+inst_id,
+parsing_schema_name, plan_hash_value,
+round((elapsed_time/1000000)/(case when end_of_fetch_count = 0 then (case when users_executing = 0 then 1 else users_executing end) else end_of_fetch_count end),2) elapsed_per_exec,
+ executions,
+end_of_fetch_count, fetches,USERS_OPENING,users_executing,disk_reads,
+CPU_TIME,
+ to_char(last_active_time,'dd-mm hh24:mi') last_active_time,
+rows_processed,
+(rows_processed/(case when end_of_fetch_count = 0 then (case when users_executing = 0 then 1 else users_executing end) else end_of_fetch_count end)) avg_rows_processed_x_ex,
+(rows_processed/(elapsed_time/1000000)) avg_rows_processed_x_sec,
+loaded_versions,loads,invalidations,parse_calls,
+px_servers_executions,CHILD_NUMBER, is_shareable
+ from gv$sql
+where sql_id like '%&sql_id%' and sql_text like '%sql_text%' --and parsing_schema_name like upper('%parsing_schema_name%')
+order by last_active_time
 /
