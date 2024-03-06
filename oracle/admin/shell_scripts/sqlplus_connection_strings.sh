@@ -1,0 +1,2 @@
+sqlplus "oraadmin@(DESCRIPTION = (ADDRESS = (PROTOCOL = TCPS)(HOST = diegoec.ckyx0wdxr13x.us-east-1.rds.amazonaws.com) (PORT = 2484))(CONNECT_DATA = (SID = ORCL)))"
+sqlplus "oraadmin@"(DESCRIPTION=(ADDRESS=(PROTOCOL=TCPS)(Host=diegoec.ckyx0wdxr13x.us-east-1.rds.amazonaws.com)(Port=2484))(CONNECT_DATA=(SERVICE_NAME=ORCL))(security=(my_wallet_directory=C:\app\client\diegoec\product\19.0.0\client_1\network\admin\wallet)))"

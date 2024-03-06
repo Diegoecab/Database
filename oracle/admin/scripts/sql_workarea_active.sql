@@ -1,16 +1,15 @@
---SQL_WORKAREA_ACTIVE
-col OPERATION_TYPE for a20
-set lines 180
-set pages 200
-SELECT 
-	inst_id,
-	sid
-	, operation_type operation_type
-	, trunc(expected_size/1024/1024) expected_size_mb
-	, trunc(actual_mem_used/1024/1024) actual_mem_used_mb
-	, trunc(max_mem_used/1024/1024) max_mem_used_mb
-	, number_passes
-	, trunc(tempseg_size/1024/1024) tempseg_size_mb
-FROM gV$sql_workarea_active
-ORDER BY 1,2
-/
+/*
+- V$SQL_WORKAREA_ACTIVE
+
+This view can be used to display the work areas that are active (or executing) 
+in the instance. Small active sorts (under 64 KB) are excluded from the view. 
+Use this view to precisely monitor the size of all active work areas and to 
+determine if these active work areas spill to a temporary segment.
+*/
+
+SELECT to_number(decode(SID, 65535, NULL, SID)) sid,
+       operation_type OPERATION,trunc(EXPECTED_SIZE/1024) ESIZE,
+       trunc(ACTUAL_MEM_USED/1024) MEM, trunc(MAX_MEM_USED/1024) "MAX MEM",
+       NUMBER_PASSES PASS, trunc(TEMPSEG_SIZE/1024) TSIZE
+FROM V$SQL_WORKAREA_ACTIVE
+ORDER BY 1,2;

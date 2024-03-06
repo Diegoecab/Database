@@ -20,6 +20,7 @@ col start_date for a20
 col last_start_date for a35
 col next_start_date for a35
 col stop_on_window_close for a10
+col owner for a10
 
 
 

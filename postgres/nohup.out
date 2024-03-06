@@ -1,0 +1,5 @@
+SET
+ pid | state | usename | query | usename | query | query_start | age 
+-----+-------+---------+-------+---------+-------+-------------+-----
+(0 rows)
+

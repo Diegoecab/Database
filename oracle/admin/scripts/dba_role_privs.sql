@@ -3,6 +3,12 @@
 set verify off
 undefine all
 set define on
+col stmt for a90
+col granted_role for a30
+col grantee for a20
+col admin_option for a10
+col default_role for a10
+
 
 select grantee,granted_role,admin_option,default_role, case
 when admin_option = 'NO' then

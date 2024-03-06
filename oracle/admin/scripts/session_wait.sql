@@ -5,13 +5,13 @@ col program heading "Programa" for a40
 col osuser heading "Usuario|SO" for a13
 col min heading "Tiempo|en|Minutos" for 999
 col command_type heading "Tipo|de|Comando" for a13
-col username heading "Usuario" for a30
+col username heading "Usuario" for a15
 col event heading "Event" for a30
 col total_waits heading "Total|Waits"
 col min_act heading "Sess|Act|Min"
 col sid for 999999
 col module for a10
-set linesize 900
+set linesize 180
 set feedback off
 SELECT DISTINCT DECODE (command_type,
                         3, 'SELECT',
@@ -27,9 +27,9 @@ SELECT DISTINCT DECODE (command_type,
                         47, 'BEGIN/DECLARE',
 						189, 'MERGE'
                        ) command_type, c.state, c.seconds_in_wait,
-                c.SID, serial#, b.username, b.inst_id, c.wait_class, c.event, h.sql_id,
+                c.SID, b.username, c.wait_class, c.event, h.sql_id,
                 c.seconds_in_wait / 60 MIN, ROUND (last_call_et / 60) min_act
-           FROM gv$session b, SYS.v_$session_wait c, SYS.v_$sql h
+           FROM SYS.v_$session b, SYS.v_$session_wait c, SYS.v_$sql h
           WHERE c.SID = b.SID
             AND b.username IS NOT NULL
             AND c.wait_class != 'Idle'

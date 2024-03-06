@@ -1,0 +1,4852 @@
+{
+    "OrderableDBInstanceOptions": [
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r5.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6gd.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.32xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.32xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6id.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6id.24xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6id.32xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6id.32xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r6i.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.r7g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.serverless",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.serverless",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t3.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t3.medium",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1e"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t4g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t4g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t4g.medium",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.t4g.medium",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [],
+            "SupportsGlobalDatabases": false,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.12xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.16xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.2xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.4xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.8xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.large",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        },
+        {
+            "Engine": "aurora-postgresql",
+            "EngineVersion": "14.9",
+            "DBInstanceClass": "db.x2g.xlarge",
+            "LicenseModel": "postgresql-license",
+            "AvailabilityZones": [
+                {
+                    "Name": "us-east-1a"
+                },
+                {
+                    "Name": "us-east-1b"
+                },
+                {
+                    "Name": "us-east-1c"
+                },
+                {
+                    "Name": "us-east-1d"
+                },
+                {
+                    "Name": "us-east-1f"
+                }
+            ],
+            "MultiAZCapable": false,
+            "ReadReplicaCapable": false,
+            "Vpc": true,
+            "SupportsStorageEncryption": true,
+            "StorageType": "aurora-iopt1",
+            "SupportsIops": false,
+            "SupportsEnhancedMonitoring": true,
+            "SupportsIAMDatabaseAuthentication": true,
+            "SupportsPerformanceInsights": true,
+            "AvailableProcessorFeatures": [],
+            "SupportedEngineModes": [
+                "provisioned"
+            ],
+            "SupportsKerberosAuthentication": true,
+            "OutpostCapable": false,
+            "SupportedActivityStreamModes": [
+                "async",
+                "sync"
+            ],
+            "SupportsGlobalDatabases": true,
+            "SupportsClusters": true,
+            "SupportedNetworkTypes": [
+                "IPV4",
+                "DUAL"
+            ],
+            "SupportsStorageThroughput": false
+        }
+    ]
+}

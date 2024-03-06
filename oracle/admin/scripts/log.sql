@@ -1,6 +1,5 @@
 --v$log.sql
 
-set lines 400
 col status for a10
 
 SELECT group#, thread#, sequence#, ROUND (BYTES / 1024 / 1024) mb, members,

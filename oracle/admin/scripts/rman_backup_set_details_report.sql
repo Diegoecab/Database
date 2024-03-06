@@ -12,7 +12,7 @@
 -- | VERSION  : This script was designed for Oracle10g.                         |
 -- | USAGE    :                                                                 |
 -- |                                                                            |
--- |sqlplus -s <dba>/<password> @rman_backup_set_details_report.sql 			|
+-- |sqlplus -s <dba>/<password> @v$rman_backup_set_details_report.sql 			|
 -- |                                                                            |
 -- | NOTE     : As with any code, ensure to test this script in a development   |
 -- |            environment before attempting to run it in production.          |
@@ -107,7 +107,7 @@ table  'WIDTH="120%" BORDER="1"'
 
 ------
 
-spool &DIR_SPOOL\rman_backup_set_details_report.html
+spool &DIR_SPOOL.\v$rman_backup_set_details_report.html
 
 set markup html on entmap off
 prompt &repHeader
