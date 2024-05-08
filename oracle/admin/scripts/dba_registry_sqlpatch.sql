@@ -6,3 +6,4 @@ col logfile for a120 truncate
 col action_time for a30 truncate
 col status for a15 truncate
 select install_id, patch_id,  action, status, action_time,logfile,source_version,target_version from dba_registry_sqlpatch order by action_time;
+--select install_id, patch_id,  action, status, action_time,description,source_version,target_version from dba_registry_sqlpatch where action_time > '<YourDBCreationDate>' and patch_type = 'RU' order by action_time;
