@@ -1,0 +1,2060 @@
+{
+  "_id": {
+    "$oid": "6557cea6228ac0784051236c"
+  },
+  "id": "f2ff46dd-d99e-4caf-8471-fb4d5a4d534b",
+  "customerFacingId": "1XY9K7XDAN",
+  "type": "Group",
+  "lifeCycle": {
+    "status": "Open",
+    "state": "Updated",
+    "inExceptionState": false,
+    "modifiedAt": "2023-03-29T15:03:56"
+  },
+  "ownership": {
+    "owner": {
+      "customerId": "",
+      "contact": {
+        "confidentialContact": false,
+        "emailAddresses": [
+          {
+            "type": "primary",
+            "email": "Elyssa.Blanda-Schaden@hotmail.com"
+          }
+        ]
+      },
+      "profile": {
+        "firstName": "Dee",
+        "lastName": "Stroman"
+      },
+      "salesAccount": {
+        "id": "0011T00002ht4UGQAY",
+        "name": "D'Amore - Harber"
+      },
+      "externalReference": {
+        "system": "OPTIMO",
+        "customerId": "4548",
+        "alternateCustomerId": "0031T00004QzUheQAF",
+        "type": "B2B",
+        "category": "Corporate B2B Premium"
+      }
+    },
+    "delegates": []
+  },
+  "purchases": [
+    {
+      "id": "783dba45-4878-44a5-9ee1-3561f8ccfdae",
+      "customerFacingId": "BP562",
+      "type": "Group",
+      "lifeCycle": {
+        "status": "Confirmed",
+        "state": "Updated",
+        "inExceptionState": false,
+        "modifiedAt": "2023-03-29T15:03:56"
+      },
+      "salesPerson": {
+        "id": "1121",
+        "profile": {
+          "firstName": "Elody",
+          "lastName": "Kassulke-Parker"
+        },
+        "contact": {
+          "emailAddresses": [
+            {
+              "email": "Justine.Gorczany@gmail.com",
+              "type": "primary"
+            }
+          ]
+        }
+      },
+      "opportunity": {
+        "id": "0061T000012maB5QAI"
+      },
+      "purchaser": {
+        "customerId": "",
+        "contact": {
+          "confidentialContact": false,
+          "emailAddresses": [
+            {
+              "type": "primary",
+              "email": "Elyssa.Blanda-Schaden@hotmail.com"
+            }
+          ]
+        },
+        "profile": {
+          "firstName": "Dee",
+          "lastName": "Stroman"
+        },
+        "salesAccount": {
+          "id": "0011T00002ht4UGQAY",
+          "name": "D'Amore - Harber"
+        },
+        "externalReference": {
+          "system": "OPTIMO",
+          "customerId": "4548",
+          "alternateCustomerId": "0031T00004QzUheQAF",
+          "type": "B2B",
+          "category": "Corporate B2B Premium"
+        }
+      },
+      "items": [
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:57:29.607",
+            "createdBy": "Layla.Medhurst98",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "13b786ba-8592-45b2-95f9-c0274fd0c2ce",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 748.32,
+            "actualCost": 0,
+            "margin": 64.37,
+            "priceExcludingTaxes": 525,
+            "priceIncludingTaxes": 612.13,
+            "originalPrice": 2100,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 0,
+                "amount": 348.53
+              }
+            ],
+            "totalTaxes": 348.53,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 2448.53
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "ATH03-B-BRO",
+            "name": "Athletics ATH03 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 748.32,
+              "actualCost": 0,
+              "margin": 64.37,
+              "priceExcludingTaxes": 525,
+              "priceIncludingTaxes": 612.13,
+              "originalPrice": 2100,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 0,
+                  "amount": 348.53
+                }
+              ],
+              "totalTaxes": 348.53,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 2448.53
+            },
+            "startAt": "2024-08-03T10:00:00",
+            "endAt": "2024-08-03T16:00:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7037",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:57:29.607",
+              "createdBy": "Hazle.Kohler",
+              "packageId": "113"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "ATH03B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "ATH03B_BRO",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 159.44,
+                  "margin": 90,
+                  "priceExcludingTaxes": 381.19,
+                  "priceIncludingTaxes": 457.43,
+                  "originalPrice": 1524.76,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 304.95
+                    }
+                  ],
+                  "totalTaxes": 304.95,
+                  "finalPrice": 1829.71
+                },
+                "startAt": "2024-08-03T10:00:00",
+                "endAt": "2024-08-03T16:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH03B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20007",
+                  "assetId": "2319",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:57:29.69",
+                  "createdBy": "Kristoffer73",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH03B",
+                "type": "Ticket",
+                "name": "ATH03B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 492.88,
+                  "margin": 0,
+                  "priceExcludingTaxes": 123.22,
+                  "priceIncludingTaxes": 130,
+                  "originalPrice": 492.88,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 27.11
+                    }
+                  ],
+                  "totalTaxes": 27.11,
+                  "finalPrice": 519.99
+                },
+                "startAt": "2024-08-03T10:00:00",
+                "endAt": "2024-08-03T16:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH03B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20008",
+                  "assetId": "2851",
+                  "type": "Ticket",
+                  "shortDescription": "\"M/W - Preliminary Round, Round 1, Repechages\"",
+                  "longDescription": "\"Scheduled events (subject to change): \nMen's 100m Preliminary Round\nMen's 100m Round 1\nWomen's 800m Repechages\nMen's Decathlon 110m Hurdles \nMen's Decathlon Discus Throw \nMen's Decathlon Pole Vault\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T08:57:29.723",
+                  "createdBy": "Nathanial54",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH03B_BRO_alc",
+                "type": "Other",
+                "name": "ATH03B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 96,
+                  "margin": -17,
+                  "priceExcludingTaxes": 20.59,
+                  "priceIncludingTaxes": 24.71,
+                  "originalPrice": 82.36,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 16.47
+                    }
+                  ],
+                  "totalTaxes": 16.47,
+                  "finalPrice": 98.83
+                },
+                "startAt": "2024-08-03T10:00:00",
+                "endAt": "2024-08-03T16:00:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "ATH03B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20009",
+                  "assetId": "7344",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:57:29.743",
+                  "createdBy": "Toy62",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "Electronic Delivery",
+                "type": "Unknown",
+                "quantity": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 0,
+                  "margin": 0,
+                  "priceExcludingTaxes": 0,
+                  "priceIncludingTaxes": 0,
+                  "originalPrice": 0,
+                  "taxes": [
+                    {
+                      "id": "0",
+                      "rate": 0,
+                      "amount": 0
+                    }
+                  ],
+                  "totalTaxes": 0,
+                  "finalPrice": 0
+                },
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "Electronic Delivery",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20010",
+                  "createdAt": "2023-03-14T08:57:29.753",
+                  "createdBy": "Jarred.McGlynn12",
+                  "contractTypeDetails": {}
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:58:26.67",
+            "createdBy": "Destiney.Shields84",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "6c20acd3-f2b6-4b70-94ae-fda38b642a1f",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 584.68,
+            "actualCost": 0,
+            "margin": 67.52,
+            "priceExcludingTaxes": 450,
+            "priceIncludingTaxes": 527.63,
+            "originalPrice": 1800,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 310.52
+              }
+            ],
+            "totalTaxes": 310.52,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 2110.52
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "ATH05-B-BRO",
+            "name": "Athletics ATH05 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 584.68,
+              "actualCost": 0,
+              "margin": 67.52,
+              "priceExcludingTaxes": 450,
+              "priceIncludingTaxes": 527.63,
+              "originalPrice": 1800,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 310.52
+                }
+              ],
+              "totalTaxes": 310.52,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 2110.52
+            },
+            "startAt": "2024-08-04T10:00:00",
+            "endAt": "2024-08-04T13:15:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7038",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:58:26.67",
+              "createdBy": "Claire.Kemmer",
+              "packageId": "124"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "ATH05B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "ATH05B_BRO",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 195.44,
+                  "margin": 86,
+                  "priceExcludingTaxes": 354.26,
+                  "priceIncludingTaxes": 425.11,
+                  "originalPrice": 1417.04,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 283.41
+                    }
+                  ],
+                  "totalTaxes": 283.41,
+                  "finalPrice": 1700.45
+                },
+                "startAt": "2024-08-04T10:00:00",
+                "endAt": "2024-08-04T13:15:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH05B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20011",
+                  "assetId": "2326",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:58:26.68",
+                  "createdBy": "Cydney_Reilly78",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH05B",
+                "type": "Ticket",
+                "name": "ATH05B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 341.24,
+                  "margin": 0,
+                  "priceExcludingTaxes": 85.31,
+                  "priceIncludingTaxes": 90,
+                  "originalPrice": 341.24,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 18.77
+                    }
+                  ],
+                  "totalTaxes": 18.77,
+                  "finalPrice": 360.01
+                },
+                "startAt": "2024-08-04T10:00:00",
+                "endAt": "2024-08-04T13:15:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH05B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20012",
+                  "assetId": "2859",
+                  "type": "Ticket",
+                  "shortDescription": "\"M/W - Round 1, Qualifications\"",
+                  "longDescription": "\"Scheduled events (subject to change): \nWomen's 200m Round 1\nWomen's 1500m Round 1\nWomen's 400m Hurdles Round 1\nMen's 110m Hurdles Round 1\nWomen's Hammer Throw Qualification\nMen's Long Jump Qualification\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T08:58:26.697",
+                  "createdBy": "Serena.Olson",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH05B_BRO_alc",
+                "type": "Other",
+                "name": "ATH05B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 48,
+                  "margin": -15,
+                  "priceExcludingTaxes": 10.43,
+                  "priceIncludingTaxes": 12.52,
+                  "originalPrice": 41.72,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 8.34
+                    }
+                  ],
+                  "totalTaxes": 8.34,
+                  "finalPrice": 50.06
+                },
+                "startAt": "2024-08-04T10:00:00",
+                "endAt": "2024-08-04T13:15:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "ATH05B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20013",
+                  "assetId": "7377",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:58:26.71",
+                  "createdBy": "Ali.McCullough",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:58:45.983",
+            "createdBy": "Wilhelmine.Dibbert42",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "f869fd68-fb03-4fb8-8c8c-37026e55b8fd",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 2370.6,
+            "actualCost": 0,
+            "margin": 67.96,
+            "priceExcludingTaxes": 1850,
+            "priceIncludingTaxes": 2151.28,
+            "originalPrice": 7400,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 1205.12
+              }
+            ],
+            "totalTaxes": 1205.12,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 8605.12
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "ATH06-B-BRO",
+            "name": "Athletics ATH06 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 2370.6,
+              "actualCost": 0,
+              "margin": 67.96,
+              "priceExcludingTaxes": 1850,
+              "priceIncludingTaxes": 2151.28,
+              "originalPrice": 7400,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 1205.12
+                }
+              ],
+              "totalTaxes": 1205.12,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 8605.12
+            },
+            "startAt": "2024-08-04T18:30:00",
+            "endAt": "2024-08-04T22:00:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7039",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:58:45.983",
+              "createdBy": "Johnnie.Reinger",
+              "packageId": "129"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "ATH06B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "ATH06B_BRO",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 426.88,
+                  "margin": 92,
+                  "priceExcludingTaxes": 1366.31,
+                  "priceIncludingTaxes": 1639.57,
+                  "originalPrice": 5465.24,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 1093.05
+                    }
+                  ],
+                  "totalTaxes": 1093.05,
+                  "finalPrice": 6558.29
+                },
+                "startAt": "2024-08-04T18:30:00",
+                "endAt": "2024-08-04T22:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH06B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20014",
+                  "assetId": "2329",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:58:45.997",
+                  "createdBy": "Lue_Veum44",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH06B",
+                "type": "Ticket",
+                "name": "ATH06B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 1895.72,
+                  "margin": 0,
+                  "priceExcludingTaxes": 473.93,
+                  "priceIncludingTaxes": 500,
+                  "originalPrice": 1895.72,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 104.26
+                    }
+                  ],
+                  "totalTaxes": 104.26,
+                  "finalPrice": 1999.98
+                },
+                "startAt": "2024-08-04T18:30:00",
+                "endAt": "2024-08-04T22:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "ATH06B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20015",
+                  "assetId": "2863",
+                  "type": "Ticket",
+                  "shortDescription": "\"M/W - Round 1, Semi-finals, Finals\"",
+                  "longDescription": "\"Scheduled events (subject to change): \nMen's 400m Round 1\nWomen's 800m Semi-Finals\nMen's 100m Semi-Finals\nMen's 1500m Semi-Finals\nWomen's High Jump Final\nMen's 100m Final\nMen's Hammer Throw Final\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T08:58:46.013",
+                  "createdBy": "Kassandra.Hettinger",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "ATH06B_BRO_alc",
+                "type": "Other",
+                "name": "ATH06B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 48,
+                  "margin": -23,
+                  "priceExcludingTaxes": 9.76,
+                  "priceIncludingTaxes": 11.71,
+                  "originalPrice": 39.04,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 7.81
+                    }
+                  ],
+                  "totalTaxes": 7.81,
+                  "finalPrice": 46.85
+                },
+                "startAt": "2024-08-04T18:30:00",
+                "endAt": "2024-08-04T22:00:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "ATH06B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20016",
+                  "assetId": "7393",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:58:46.03",
+                  "createdBy": "Vilma_Bailey",
+                  "contractTypeDetails": {
+                    "venue": "Stade de France"
+                  }
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T09:00:13.71",
+            "createdBy": "Willa_OHara",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "847ed5c8-1e2a-4b65-b3ea-6c09653256bb",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 520.16,
+            "actualCost": 0,
+            "margin": 65.32,
+            "priceExcludingTaxes": 375,
+            "priceIncludingTaxes": 439,
+            "originalPrice": 1500,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 256.01
+              }
+            ],
+            "totalTaxes": 256.01,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 1756.01
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "VBV23-B-BRO",
+            "name": "Beach Volleyball VBV23 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 520.16,
+              "actualCost": 0,
+              "margin": 65.32,
+              "priceExcludingTaxes": 375,
+              "priceIncludingTaxes": 439,
+              "originalPrice": 1500,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 256.01
+                }
+              ],
+              "totalTaxes": 256.01,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 1756.01
+            },
+            "startAt": "2024-08-03T16:00:00",
+            "endAt": "2024-08-03T19:00:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7044",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T09:00:13.71",
+              "createdBy": "Scarlett.Quigley94",
+              "packageId": "1492"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "VBV23B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "VBV23B_BRO",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 168.84,
+                  "margin": 85,
+                  "priceExcludingTaxes": 288.63,
+                  "priceIncludingTaxes": 346.36,
+                  "originalPrice": 1154.52,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 230.9
+                    }
+                  ],
+                  "totalTaxes": 230.9,
+                  "finalPrice": 1385.42
+                },
+                "startAt": "2024-08-03T16:00:00",
+                "endAt": "2024-08-03T19:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "VBV23B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20029",
+                  "assetId": "4461",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T09:00:13.72",
+                  "createdBy": "Margarett_Graham",
+                  "contractTypeDetails": {
+                    "venue": "Eiffel Tower Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "VBV23B",
+                "type": "Ticket",
+                "name": "VBV23B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 303.32,
+                  "margin": 0,
+                  "priceExcludingTaxes": 75.83,
+                  "priceIncludingTaxes": 80,
+                  "originalPrice": 303.32,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 16.68
+                    }
+                  ],
+                  "totalTaxes": 16.68,
+                  "finalPrice": 320
+                },
+                "startAt": "2024-08-03T16:00:00",
+                "endAt": "2024-08-03T19:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "VBV23B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20030",
+                  "assetId": "4773",
+                  "type": "Ticket",
+                  "shortDescription": "Preliminary Phase: M/W / Lucky Loser: M or W",
+                  "longDescription": "\"Scheduled events (subject to change): \nWomen and Men Preliminary Phase (2 matches)\nWomen or Men Lucky Loser (1 match)\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T09:00:13.737",
+                  "createdBy": "Lisette_Pouros72",
+                  "contractTypeDetails": {
+                    "venue": "Eiffel Tower Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "VBV23B_BRO_alc",
+                "type": "Other",
+                "name": "VBV23B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 48,
+                  "margin": -14,
+                  "priceExcludingTaxes": 10.54,
+                  "priceIncludingTaxes": 12.65,
+                  "originalPrice": 42.16,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 8.43
+                    }
+                  ],
+                  "totalTaxes": 8.43,
+                  "finalPrice": 50.59
+                },
+                "startAt": "2024-08-03T16:00:00",
+                "endAt": "2024-08-03T19:00:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "VBV23B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20031",
+                  "assetId": "9720",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T09:00:13.75",
+                  "createdBy": "Arnoldo23",
+                  "contractTypeDetails": {
+                    "venue": "Eiffel Tower Stadium"
+                  }
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:59:00.973",
+            "createdBy": "Jaden95",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "c4593718-9235-4382-bae9-1140256703bf",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 289.58,
+            "actualCost": 0,
+            "margin": 70.75,
+            "priceExcludingTaxes": 495,
+            "priceIncludingTaxes": 580.26,
+            "originalPrice": 990,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 170.52
+              }
+            ],
+            "totalTaxes": 170.52,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 1160.52
+          },
+          "quantity": 2,
+          "distributedQuantity": 0,
+          "controlledQuantity": 2,
+          "totalAttendees": 2,
+          "unit": {
+            "productType": "Package",
+            "id": "FBL46-1-BRO",
+            "name": "Football FBL46 - Cat First - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 289.58,
+              "actualCost": 0,
+              "margin": 70.75,
+              "priceExcludingTaxes": 495,
+              "priceIncludingTaxes": 580.26,
+              "originalPrice": 990,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 170.52
+                }
+              ],
+              "totalTaxes": 170.52,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 1160.52
+            },
+            "startAt": "2024-08-02T21:00:00",
+            "endAt": "2024-08-02T23:59:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7040",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:59:00.973",
+              "createdBy": "Melyna_McCullough",
+              "packageId": "647"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "FBL461_BRO",
+                "type": "Hospitality-IVH",
+                "name": "FBL461_BRO",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 82,
+                  "margin": 89,
+                  "priceExcludingTaxes": 390.09,
+                  "priceIncludingTaxes": 468.11,
+                  "originalPrice": 780.18,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 156.04
+                    }
+                  ],
+                  "totalTaxes": 156.04,
+                  "finalPrice": 936.22
+                },
+                "startAt": "2024-08-02T21:00:00",
+                "endAt": "2024-08-02T23:59:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "FBL461_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20017",
+                  "assetId": "5090",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:00.987",
+                  "createdBy": "Warren.Hamill34",
+                  "contractTypeDetails": {
+                    "venue": "Bordeaux Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "FBL461",
+                "type": "Ticket",
+                "name": "FBL461",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 189.58,
+                  "margin": 0,
+                  "priceExcludingTaxes": 94.79,
+                  "priceIncludingTaxes": 100,
+                  "originalPrice": 189.58,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 10.43
+                    }
+                  ],
+                  "totalTaxes": 10.43,
+                  "finalPrice": 200.01
+                },
+                "startAt": "2024-08-02T21:00:00",
+                "endAt": "2024-08-02T23:59:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "FBL461",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20018",
+                  "assetId": "3071",
+                  "type": "Ticket",
+                  "shortDescription": "M - 1/4 Final 1A vs 2B",
+                  "longDescription": "\"Scheduled events (subject to change): \nMen's Quarter-final - (1Avs2B)\n\n[Type of admission: Reserved seating for all categories]\n[Category First: High quality seats with exclusive access to a private area]\"",
+                  "createdAt": "2023-03-14T08:59:01",
+                  "createdBy": "Dayne.Stroman",
+                  "contractTypeDetails": {
+                    "venue": "Bordeaux Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "FBL461_BRO_alc",
+                "type": "Other",
+                "name": "FBL461_BRO_alc",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 18,
+                  "margin": 11,
+                  "priceExcludingTaxes": 10.12,
+                  "priceIncludingTaxes": 12.14,
+                  "originalPrice": 20.24,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 4.05
+                    }
+                  ],
+                  "totalTaxes": 4.05,
+                  "finalPrice": 24.29
+                },
+                "startAt": "2024-08-02T21:00:00",
+                "endAt": "2024-08-02T23:59:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "FBL461_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20019",
+                  "assetId": "8222",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:01.013",
+                  "createdBy": "Skylar21",
+                  "contractTypeDetails": {
+                    "venue": "Bordeaux Stadium"
+                  }
+                }
+              }
+            ],
+            "attendees": 2
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:59:16.083",
+            "createdBy": "Vincenzo_Weimann",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "660bdad3-d410-4d47-a372-ccdc83fdf868",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 529.14,
+            "actualCost": 0,
+            "margin": 61.93,
+            "priceExcludingTaxes": 695,
+            "priceIncludingTaxes": 806.52,
+            "originalPrice": 1390,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 223.03
+              }
+            ],
+            "totalTaxes": 223.03,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 1613.03
+          },
+          "quantity": 2,
+          "distributedQuantity": 0,
+          "controlledQuantity": 2,
+          "totalAttendees": 2,
+          "unit": {
+            "productType": "Package",
+            "id": "FBL51-1-BRO",
+            "name": "Football FBL51 - Cat First - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 529.14,
+              "actualCost": 0,
+              "margin": 61.93,
+              "priceExcludingTaxes": 695,
+              "priceIncludingTaxes": 806.52,
+              "originalPrice": 1390,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 223.03
+                }
+              ],
+              "totalTaxes": 223.03,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 1613.03
+            },
+            "startAt": "2024-08-05T18:00:00",
+            "endAt": "2024-08-05T21:00:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7041",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:59:16.083",
+              "createdBy": "Moshe80",
+              "packageId": "653"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "FBL511_BRO",
+                "type": "Hospitality-IVH",
+                "name": "FBL511_BRO",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 132,
+                  "margin": 87,
+                  "priceExcludingTaxes": 495.09,
+                  "priceIncludingTaxes": 594.11,
+                  "originalPrice": 990.18,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 198.04
+                    }
+                  ],
+                  "totalTaxes": 198.04,
+                  "finalPrice": 1188.22
+                },
+                "startAt": "2024-08-05T18:00:00",
+                "endAt": "2024-08-05T21:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "FBL511_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20020",
+                  "assetId": "5095",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:16.097",
+                  "createdBy": "Selena_Rau3",
+                  "contractTypeDetails": {
+                    "venue": "Marseille Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "FBL511",
+                "type": "Ticket",
+                "name": "FBL511",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 379.14,
+                  "margin": 0,
+                  "priceExcludingTaxes": 189.57,
+                  "priceIncludingTaxes": 200,
+                  "originalPrice": 379.14,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 20.85
+                    }
+                  ],
+                  "totalTaxes": 20.85,
+                  "finalPrice": 399.99
+                },
+                "startAt": "2024-08-05T18:00:00",
+                "endAt": "2024-08-05T21:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "FBL511",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20021",
+                  "assetId": "3091",
+                  "type": "Ticket",
+                  "shortDescription": "M - Semi-final V26 vs V28",
+                  "longDescription": "\"Scheduled events (subject to change): \nMen's Semi-final - (V26vsV28)\n\n[Type of admission: Reserved seating for all categories]\n[Category First: High quality seats with exclusive access to a private area]\"",
+                  "createdAt": "2023-03-14T08:59:16.11",
+                  "createdBy": "Willis.Abshire97",
+                  "contractTypeDetails": {
+                    "venue": "Marseille Stadium"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "FBL511_BRO_alc",
+                "type": "Other",
+                "name": "FBL511_BRO_alc",
+                "description": "",
+                "quantity": 2,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 18,
+                  "margin": 13,
+                  "priceExcludingTaxes": 10.34,
+                  "priceIncludingTaxes": 12.41,
+                  "originalPrice": 20.68,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 4.14
+                    }
+                  ],
+                  "totalTaxes": 4.14,
+                  "finalPrice": 24.82
+                },
+                "startAt": "2024-08-05T18:00:00",
+                "endAt": "2024-08-05T21:00:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "FBL511_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20022",
+                  "assetId": "8228",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:16.123",
+                  "createdBy": "Hillary_Haley27",
+                  "contractTypeDetails": {
+                    "venue": "Marseille Stadium"
+                  }
+                }
+              }
+            ],
+            "attendees": 2
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:59:31.897",
+            "createdBy": "Esperanza56",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "aa32075d-181e-49b2-b1ad-eedf8a70ac6d",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 868.04,
+            "actualCost": 0,
+            "margin": 56.16,
+            "priceExcludingTaxes": 495,
+            "priceIncludingTaxes": 576.13,
+            "originalPrice": 1980,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 324.53
+              }
+            ],
+            "totalTaxes": 324.53,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 2304.53
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "SWM15-B-BRO",
+            "name": "Swimming SWM15 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 868.04,
+              "actualCost": 0,
+              "margin": 56.16,
+              "priceExcludingTaxes": 495,
+              "priceIncludingTaxes": 576.13,
+              "originalPrice": 1980,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 324.53
+                }
+              ],
+              "totalTaxes": 324.53,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 2304.53
+            },
+            "startAt": "2024-08-03T11:00:00",
+            "endAt": "2024-08-03T13:00:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7042",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:59:31.897",
+              "createdBy": "Marina49",
+              "packageId": "1170"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "SWM15B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "SWM15B_BRO",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 343.16,
+                  "margin": 76,
+                  "priceExcludingTaxes": 364.3,
+                  "priceIncludingTaxes": 437.16,
+                  "originalPrice": 1457.2,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 291.44
+                    }
+                  ],
+                  "totalTaxes": 291.44,
+                  "finalPrice": 1748.64
+                },
+                "startAt": "2024-08-03T11:00:00",
+                "endAt": "2024-08-03T13:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "SWM15B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20023",
+                  "assetId": "5903",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:31.91",
+                  "createdBy": "Leanne.Pollich",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "SWM15B",
+                "type": "Ticket",
+                "name": "SWM15B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 492.88,
+                  "margin": 0,
+                  "priceExcludingTaxes": 123.22,
+                  "priceIncludingTaxes": 130,
+                  "originalPrice": 492.88,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 27.11
+                    }
+                  ],
+                  "totalTaxes": 27.11,
+                  "finalPrice": 519.99
+                },
+                "startAt": "2024-08-03T11:00:00",
+                "endAt": "2024-08-03T13:00:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "SWM15B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20024",
+                  "assetId": "6208",
+                  "type": "Ticket",
+                  "shortDescription": "M/W - Heats",
+                  "longDescription": "\"Scheduled events (subject to change): \nWomen's 50m Freestyle - Heats\nMen's 1500m Freestyle - Heats\nMen's 4x100m Medley Relay - Heats\nWomen's 4x100m Medley Relay - Heats\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T08:59:31.923",
+                  "createdBy": "Neal.Bednar-Swaniawski",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "SWM15B_BRO_alc",
+                "type": "Other",
+                "name": "SWM15B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 32,
+                  "margin": -7,
+                  "priceExcludingTaxes": 7.48,
+                  "priceIncludingTaxes": 8.98,
+                  "originalPrice": 29.92,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 5.98
+                    }
+                  ],
+                  "totalTaxes": 5.98,
+                  "finalPrice": 35.9
+                },
+                "startAt": "2024-08-03T11:00:00",
+                "endAt": "2024-08-03T13:00:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "SWM15B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20025",
+                  "assetId": "9180",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:31.937",
+                  "createdBy": "Allen22",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        },
+        {
+          "_metadata": {
+            "createdAt": "2023-03-14T08:59:51.253",
+            "createdBy": "Maxie99",
+            "modifiedAt": "2024-01-24T00:01:37.943Z",
+            "modifiedBy": "Eveline.Kirlin55",
+            "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+          },
+          "id": "43c6b12d-d956-48fa-b0dd-1a81def88957",
+          "status": "Open",
+          "type": "Package",
+          "pricing": {
+            "currency": {
+              "symbol": "€",
+              "name": "Euro"
+            },
+            "priceSettingMethodId": 1,
+            "estimatedCost": 1862.48,
+            "actualCost": 0,
+            "margin": 62.75,
+            "priceExcludingTaxes": 1250,
+            "priceIncludingTaxes": 1450.52,
+            "originalPrice": 5000,
+            "taxes": [
+              {
+                "id": "1003",
+                "code": "VAT:R-FR",
+                "rate": 20,
+                "amount": 802.09
+              }
+            ],
+            "totalTaxes": 802.09,
+            "discountAmountExcludingTaxes": 0,
+            "finalPrice": 5802.09
+          },
+          "quantity": 4,
+          "distributedQuantity": 0,
+          "controlledQuantity": 4,
+          "totalAttendees": 4,
+          "unit": {
+            "productType": "Package",
+            "id": "SWM16-B-BRO",
+            "name": "Swimming SWM16 - Cat B - Bronze",
+            "pricing": {
+              "currency": {
+                "symbol": "€",
+                "name": "Euro"
+              },
+              "priceSettingMethodId": 1,
+              "estimatedCost": 1862.48,
+              "actualCost": 0,
+              "margin": 62.75,
+              "priceExcludingTaxes": 1250,
+              "priceIncludingTaxes": 1450.52,
+              "originalPrice": 5000,
+              "taxes": [
+                {
+                  "id": "1003",
+                  "code": "VAT:R-FR",
+                  "rate": 20,
+                  "amount": 802.09
+                }
+              ],
+              "totalTaxes": 802.09,
+              "discountAmountExcludingTaxes": 0,
+              "finalPrice": 5802.09
+            },
+            "startAt": "2024-08-03T20:30:00",
+            "endAt": "2024-08-03T22:30:00",
+            "externalReference": {
+              "system": "OPTIMO",
+              "id": "7043",
+              "type": "Olympics - Shared IVH",
+              "createdAt": "2023-03-14T08:59:51.253",
+              "createdBy": "Madie14",
+              "packageId": "1175"
+            },
+            "assets": [
+              {
+                "productType": "Asset",
+                "id": "SWM16B_BRO",
+                "type": "Hospitality-IVH",
+                "name": "SWM16B_BRO",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 465.56,
+                  "margin": 87,
+                  "priceExcludingTaxes": 901.96,
+                  "priceIncludingTaxes": 1082.35,
+                  "originalPrice": 3607.84,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 721.57
+                    }
+                  ],
+                  "totalTaxes": 721.57,
+                  "finalPrice": 4329.41
+                },
+                "startAt": "2024-08-03T20:30:00",
+                "endAt": "2024-08-03T22:30:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "SWM16B_BRO",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20026",
+                  "assetId": "5906",
+                  "type": "Bronze",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:51.263",
+                  "createdBy": "Trevion92",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "SWM16B",
+                "type": "Ticket",
+                "name": "SWM16B",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 1364.92,
+                  "margin": 0,
+                  "priceExcludingTaxes": 341.23,
+                  "priceIncludingTaxes": 360,
+                  "originalPrice": 1364.92,
+                  "taxes": [
+                    {
+                      "id": "1003",
+                      "code": "VAT:R-FR",
+                      "rate": 5.5,
+                      "amount": 75.07
+                    }
+                  ],
+                  "totalTaxes": 75.07,
+                  "finalPrice": 1439.99
+                },
+                "startAt": "2024-08-03T20:30:00",
+                "endAt": "2024-08-03T22:30:00",
+                "needsFulfillment": true,
+                "isAddOn": false,
+                "sessionId": "SWM16B",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20027",
+                  "assetId": "6212",
+                  "type": "Ticket",
+                  "shortDescription": "\"M/W/Mixed - Semi-finals, Finals\"",
+                  "longDescription": "\"Scheduled events (subject to change): \nMen's 100m Butterfly - Final\nWomen's 50m Freestyle - Semi-finals\nWomen's 200m Medley - Final\nWomen's 800m Freestyle - Final\n4x100m Mixed Medley - Final\n\n[Type of admission: Reserved seating for all categories]\"",
+                  "createdAt": "2023-03-14T08:59:51.28",
+                  "createdBy": "Marjorie.Green",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              },
+              {
+                "productType": "Asset",
+                "id": "SWM16B_BRO_alc",
+                "type": "Other",
+                "name": "SWM16B_BRO_alc",
+                "description": "",
+                "quantity": 4,
+                "quantityPerPackage": 1,
+                "pricing": {
+                  "currency": {
+                    "symbol": "€",
+                    "name": "Euro"
+                  },
+                  "estimatedCost": 32,
+                  "margin": -17,
+                  "priceExcludingTaxes": 6.81,
+                  "priceIncludingTaxes": 8.17,
+                  "originalPrice": 27.24,
+                  "taxes": [
+                    {
+                      "id": "1",
+                      "code": "VAT:S-FR",
+                      "rate": 20,
+                      "amount": 5.45
+                    }
+                  ],
+                  "totalTaxes": 5.45,
+                  "finalPrice": 32.69
+                },
+                "startAt": "2024-08-03T20:30:00",
+                "endAt": "2024-08-03T22:30:00",
+                "needsFulfillment": false,
+                "isAddOn": false,
+                "sessionId": "SWM16B_BRO_alc",
+                "externalReference": {
+                  "system": "OPTIMO",
+                  "id": "20028",
+                  "assetId": "9206",
+                  "type": "Catering",
+                  "shortDescription": "",
+                  "longDescription": "",
+                  "createdAt": "2023-03-14T08:59:51.293",
+                  "createdBy": "Newton63",
+                  "contractTypeDetails": {
+                    "venue": "Paris La Défense Arena"
+                  }
+                }
+              }
+            ],
+            "attendees": 4
+          },
+          "isAddOn": false,
+          "hasAddOns": false
+        }
+      ],
+      "pricing": {
+        "currency": {
+          "symbol": "€",
+          "name": "Euro"
+        },
+        "originalPrice": 22160,
+        "totalTaxes": 3640.35,
+        "discountAmountExcludingTaxes": 0,
+        "discountAmountIncludingTaxes": 0,
+        "finalPrice": 25800.35
+      },
+      "payments": [
+        {
+          "id": "d8c6dc5c-0380-4172-a79c-252263075610",
+          "method": "WIRE",
+          "billingAddresses": [
+            {
+              "address1": "12490 Kohler Lights",
+              "city": "Sawaynside",
+              "county": "County Tyrone",
+              "state": "NH",
+              "countryNumericCode": 216,
+              "country": "Libyan Arab Jamahiriya",
+              "postalCode": "93854"
+            }
+          ],
+          "amountPaid": 0,
+          "currency": {
+            "symbol": "€",
+            "name": "Euro"
+          }
+        }
+      ],
+      "paymentSummary": {
+        "currency": {
+          "symbol": "€",
+          "name": "Euro"
+        },
+        "totalAmountDue": 22160,
+        "amountPaid": 0,
+        "amountRemaining": 0
+      },
+      "channel": {
+        "id": "1",
+        "type": "B2B",
+        "name": "B2B",
+        "externalReference": {
+          "system": "OPTIMO",
+          "name": "B2B"
+        }
+      },
+      "externalReference": {
+        "system": "OPTIMO",
+        "id": "562",
+        "customerFacingId": "BP562",
+        "createdAt": "2023-03-14T08:57:29.567",
+        "createdBy": "Eveline.Kirlin55",
+        "modifiedAt": "2023-03-29T15:03:56",
+        "modifiedBy": "Raegan_McDermott"
+      }
+    }
+  ],
+  "tenant": {
+    "id": "91063f15-d537-4783-9884-7f266348ad60",
+    "name": "Paris 2024 Olympic Games",
+    "externalReference": {
+      "system": "OPTIMO",
+      "id": "1"
+    }
+  },
+  "paymentSummary": {
+    "currency": {
+      "symbol": "€",
+      "name": "Euro"
+    },
+    "totalAmountDue": 0,
+    "amountPaid": 0,
+    "amountRemaining": 0
+  },
+  "fulfillment": {
+    "guests": []
+  },
+  "externalReference": {
+    "system": "OPTIMO",
+    "id": "562",
+    "customerFacingId": "BP562",
+    "status": "78",
+    "createdAt": "2023-03-14T08:57:29.567",
+    "createdBy": "Eveline.Kirlin55",
+    "modifiedAt": "2023-03-29T15:03:56",
+    "modifiedBy": "Raegan_McDermott"
+  },
+  "_metadata": {
+    "createdAt": "2023-03-14T08:57:29.567",
+    "createdBy": "Mathew_Bosco",
+    "modifiedAt": "2024-01-24T00:01:37.943Z",
+    "modifiedBy": "Eveline.Kirlin55",
+    "traceId": "Root=1-65b05362-0e7248eb0e2290a1f541d10a;Parent=e7684d0ee9a97024"
+  },
+  "_schemaversion": 2
+}
