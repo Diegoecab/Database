@@ -1,0 +1,12 @@
+aws rds create-db-instance \
+--db-instance-identifier diegoec-cdb \
+--db-name pdb1 \
+--engine oracle-ee-cdb \
+--db-instance-class db.t3.medium \
+--engine-version 19.0.0.0.ru-2024-01.rur-2024-01.r1 \
+--multi-tenant \
+--storage-type gp3 \
+--allocated-storage 20 \
+--master-username oraadmin \
+--master-user-password oraadmin1 \
+--vpc-security-group-ids "sg-0aae60f95c2830148"
