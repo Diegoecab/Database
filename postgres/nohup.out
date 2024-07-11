@@ -3,3 +3,5 @@ SET
 -----+-------+---------+-------+---------+-------+-------------+-----
 (0 rows)
 
+pg_dump: error: too many command-line arguments (first is "chart_component")
+pg_dump: hint: Try "pg_dump --help" for more information.

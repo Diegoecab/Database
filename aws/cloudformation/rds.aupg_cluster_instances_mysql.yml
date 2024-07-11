@@ -1,0 +1,57 @@
+Parameters:
+  Username:
+    NoEcho: 'true'
+    Description: Username for Aurora MySQL database access
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    Default: "bevelvoerder"
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+  Password:
+    NoEcho: 'true'
+    Description: Password for Aurora MySQL database access
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    Default: "Passw0rd"
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+Resources:
+  RDSCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      MasterUsername:
+        Ref: Username
+      MasterUserPassword:
+        Ref: Password
+      Engine: aurora-mysql
+      DBClusterParameterGroupName:
+        Ref: RDSDBClusterParameterGroup
+  RDSDBInstance1:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBParameterGroupName:
+        Ref: RDSDBParameterGroup
+      Engine: aurora-mysql
+      DBClusterIdentifier:
+        Ref: RDSCluster
+      PubliclyAccessible: 'true'
+      DBInstanceClass: db.r3.xlarge
+      CACertificateIdentifier: "rds-ca-rsa2048-g1"
+  RDSDBClusterParameterGroup:
+    Type: 'AWS::RDS::DBClusterParameterGroup'
+    Properties:
+      Description: CloudFormation Sample Aurora Cluster Parameter Group
+      Family: aurora5.6
+      Parameters:
+        time_zone: US/Eastern
+  RDSDBParameterGroup:
+    Type: 'AWS::RDS::DBParameterGroup'
+    Properties:
+      Description: CloudFormation Sample Aurora Parameter Group
+      Family: aurora5.6
+      Parameters:
+        sql_mode: IGNORE_SPACE
+        max_allowed_packet: 1024
+        innodb_buffer_pool_size: '{DBInstanceClassMemory*3/4}'
