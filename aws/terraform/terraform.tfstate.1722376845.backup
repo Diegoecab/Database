@@ -1,10 +1,76 @@
 {
   "version": 4,
   "terraform_version": "1.6.4",
-  "serial": 44,
+  "serial": 41,
   "lineage": "0d2ceef8-2169-f4b4-4d6e-fa08e42bfa8b",
   "outputs": {},
   "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_rds_cluster",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "apply_immediately": null,
+            "arn": "arn:aws:rds:us-east-1:274146641877:cluster:aurora-cluster-demo2",
+            "availability_zones": [
+              "us-east-1a",
+              "us-east-1c",
+              "us-east-1d"
+            ],
+            "backtrack_window": 0,
+            "backup_retention_period": 1,
+            "cluster_identifier": "aurora-cluster-demo2",
+            "cluster_identifier_prefix": null,
+            "cluster_members": [
+              "aurora-cluster-demo2-0"
+            ],
+            "cluster_resource_id": "cluster-C4BPQTKBRCZB6OIGTUIVXEUMXQ",
+            "copy_tags_to_snapshot": false,
+            "database_name": "mydb",
+            "db_cluster_parameter_group_name": "aurorclusterpostgres14custom",
+            "db_subnet_group_name": "default",
+            "deletion_protection": false,
+            "enable_http_endpoint": false,
+            "enabled_cloudwatch_logs_exports": [],
+            "endpoint": "aurora-cluster-demo2.cluster-cdus3jhjlk3a.us-east-1.rds.amazonaws.com",
+            "engine": "aurora-postgresql",
+            "engine_mode": "provisioned",
+            "engine_version": "14.6",
+            "final_snapshot_identifier": null,
+            "global_cluster_identifier": "",
+            "hosted_zone_id": "Z2R2ITUGPM61AM",
+            "iam_database_authentication_enabled": false,
+            "iam_roles": [],
+            "id": "aurora-cluster-demo2",
+            "kms_key_id": "",
+            "master_password": "barbut8chars2",
+            "master_username": "foo",
+            "port": 5432,
+            "preferred_backup_window": "08:32-09:02",
+            "preferred_maintenance_window": "tue:07:23-tue:07:53",
+            "reader_endpoint": "aurora-cluster-demo2.cluster-ro-cdus3jhjlk3a.us-east-1.rds.amazonaws.com",
+            "replication_source_identifier": "",
+            "s3_import": [],
+            "scaling_configuration": [],
+            "skip_final_snapshot": true,
+            "snapshot_identifier": null,
+            "source_region": null,
+            "storage_encrypted": false,
+            "tags": {},
+            "timeouts": null,
+            "vpc_security_group_ids": [
+              "sg-0fa9a4fe44623d644"
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
     {
       "mode": "managed",
       "type": "aws_rds_cluster",
@@ -47,7 +113,7 @@
             "iam_roles": [],
             "id": "aurora-cluster-demo2",
             "kms_key_id": "",
-            "master_password": "test12456",
+            "master_password": null,
             "master_username": "foo",
             "port": 5432,
             "preferred_backup_window": "08:32-09:02",
@@ -71,7 +137,7 @@
             ]
           },
           "sensitive_attributes": [],
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH19"
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9"
         }
       ]
     },

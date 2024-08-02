@@ -1,0 +1,5 @@
+import {
+  to = aws_rds_cluster_instance.cluster_instances
+  id = "aurora-cluster-demo2-0"
+}
+

@@ -6,4 +6,3 @@ resource "aws_rds_cluster_endpoint" "massdriver_readonly" {
 
 
 
-

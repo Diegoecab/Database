@@ -1,14 +1,14 @@
 {
   "version": 4,
   "terraform_version": "1.6.4",
-  "serial": 44,
-  "lineage": "0d2ceef8-2169-f4b4-4d6e-fa08e42bfa8b",
+  "serial": 54,
+  "lineage": "ea014635-b207-1388-fc3a-bc96ec8fc957",
   "outputs": {},
   "resources": [
     {
       "mode": "managed",
       "type": "aws_rds_cluster",
-      "name": "mdefault",
+      "name": "default",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
@@ -47,7 +47,7 @@
             "iam_roles": [],
             "id": "aurora-cluster-demo2",
             "kms_key_id": "",
-            "master_password": "test12456",
+            "master_password": "barbut8chars2",
             "master_username": "foo",
             "port": 5432,
             "preferred_backup_window": "08:32-09:02",
@@ -61,11 +61,7 @@
             "source_region": null,
             "storage_encrypted": false,
             "tags": {},
-            "timeouts": {
-              "create": null,
-              "delete": null,
-              "update": null
-            },
+            "timeouts": null,
             "vpc_security_group_ids": [
               "sg-0fa9a4fe44623d644"
             ]
@@ -77,11 +73,36 @@
     },
     {
       "mode": "managed",
+      "type": "aws_rds_cluster_endpoint",
+      "name": "massdriver_readonly",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:rds:us-east-1:274146641877:cluster-endpoint:aupg149-custom-reader3",
+            "cluster_endpoint_identifier": "aupg149-custom-reader3",
+            "cluster_identifier": "aupg149",
+            "custom_endpoint_type": "READER",
+            "endpoint": "aupg149-custom-reader3.cluster-custom-cdus3jhjlk3a.us-east-1.rds.amazonaws.com",
+            "excluded_members": [],
+            "id": "aupg149-custom-reader3",
+            "static_members": [],
+            "tags": {}
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
       "type": "aws_rds_cluster_instance",
       "name": "cluster_instances",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
+          "index_key": 0,
           "schema_version": 0,
           "attributes": {
             "apply_immediately": null,
@@ -113,15 +134,14 @@
             "publicly_accessible": false,
             "storage_encrypted": false,
             "tags": {},
-            "timeouts": {
-              "create": null,
-              "delete": null,
-              "update": null
-            },
+            "timeouts": null,
             "writer": true
           },
           "sensitive_attributes": [],
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInVwZGF0ZSI6NTQwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9"
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInVwZGF0ZSI6NTQwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_rds_cluster.default"
+          ]
         }
       ]
     }

@@ -1,0 +1,1 @@
+SELECT sum(bytes)/1024/1024/1024 "Total_size_w_TSTZ_columns_GB" FROM dba_segments WHERE owner not in ('SYS','CTXSYS','DBSNMP','GSMADMIN_INTERNAL') and segment_name IN (SELECT table_name FROM dba_tab_columns WHERE data_type LIKE 'TIMESTAMP%TIME ZONE');

@@ -1,0 +1,42 @@
+import boto3
+from prettytable import PrettyTable
+
+client = boto3.client("rds")
+
+RdsDbs = PrettyTable()
+RdsDbs.field_names = ['DB identifier', 'Status', 'Role', 'Engine', 'Engine Version', 'Region & AZ', 'Size']
+
+def instances ():
+    MyDBInstances = client.describe_db_instances()
+    return MyDBInstances
+
+def clusters ():
+    MyDBClusters = client.describe_db_clusters()
+    return MyDBClusters
+
+def printDBInstances ():
+    for c in MyDBClusters["DBClusters"]:
+        if len( c["DBClusterMembers"]) > 1: 
+            InstanceMembers=(str(len( c["DBClusterMembers"])) + " instances") 
+        else:
+            InstanceMembers=("1 instance")
+        RdsDbs.add_row([c["DBClusterIdentifier"], c["Status"],"Regional Cluster", c["Engine"],  c["EngineVersion"], "Region",  InstanceMembers])
+        for member in c["DBClusterMembers"]:
+            IsWriterInstance="Writer instance" if member["IsClusterWriter"] else "Reader instance"
+            for i in MyDBInstances["DBInstances"]:
+                if  i["DBInstanceIdentifier"] == member["DBInstanceIdentifier"]:
+                    RdsDbs.add_row(["|__"+i["DBInstanceIdentifier"], i["DBInstanceStatus"], IsWriterInstance, i["Engine"],  i["EngineVersion"], "Region",   i["DBInstanceClass"]])
+    for i in MyDBInstances["DBInstances"]:
+        try:
+            if  i["DBClusterIdentifier"]:
+                continue
+        except KeyError:
+            RdsDbs.add_row([i["DBInstanceIdentifier"], i["DBInstanceStatus"], "Writer Instance", i["Engine"], i["EngineVersion"] ,"Region",i["DBInstanceClass"]])
+
+
+MyDBClusters = clusters()
+MyDBInstances = instances()
+
+printDBInstances ()
+RdsDbs.align = "l"
+print(RdsDbs)

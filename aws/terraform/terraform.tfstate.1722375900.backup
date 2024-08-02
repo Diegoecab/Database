@@ -1,14 +1,14 @@
 {
   "version": 4,
   "terraform_version": "1.6.4",
-  "serial": 44,
+  "serial": 33,
   "lineage": "0d2ceef8-2169-f4b4-4d6e-fa08e42bfa8b",
   "outputs": {},
   "resources": [
     {
       "mode": "managed",
       "type": "aws_rds_cluster",
-      "name": "mdefault",
+      "name": "default",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
@@ -47,7 +47,7 @@
             "iam_roles": [],
             "id": "aurora-cluster-demo2",
             "kms_key_id": "",
-            "master_password": "test12456",
+            "master_password": "barbut8chars2",
             "master_username": "foo",
             "port": 5432,
             "preferred_backup_window": "08:32-09:02",
@@ -61,11 +61,7 @@
             "source_region": null,
             "storage_encrypted": false,
             "tags": {},
-            "timeouts": {
-              "create": null,
-              "delete": null,
-              "update": null
-            },
+            "timeouts": null,
             "vpc_security_group_ids": [
               "sg-0fa9a4fe44623d644"
             ]
@@ -82,6 +78,7 @@
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
+          "index_key": 0,
           "schema_version": 0,
           "attributes": {
             "apply_immediately": null,
@@ -121,7 +118,10 @@
             "writer": true
           },
           "sensitive_attributes": [],
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInVwZGF0ZSI6NTQwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9"
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInVwZGF0ZSI6NTQwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9",
+          "dependencies": [
+            "aws_rds_cluster.default"
+          ]
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "version": 4,
   "terraform_version": "1.6.4",
-  "serial": 44,
+  "serial": 25,
   "lineage": "0d2ceef8-2169-f4b4-4d6e-fa08e42bfa8b",
   "outputs": {},
   "resources": [
     {
       "mode": "managed",
       "type": "aws_rds_cluster",
-      "name": "mdefault",
+      "name": "default",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
@@ -31,7 +31,7 @@
             "cluster_resource_id": "cluster-C4BPQTKBRCZB6OIGTUIVXEUMXQ",
             "copy_tags_to_snapshot": false,
             "database_name": "mydb",
-            "db_cluster_parameter_group_name": "aurorclusterpostgres14custom",
+            "db_cluster_parameter_group_name": "default.aurora-postgresql14",
             "db_subnet_group_name": "default",
             "deletion_protection": false,
             "enable_http_endpoint": false,
@@ -47,7 +47,7 @@
             "iam_roles": [],
             "id": "aurora-cluster-demo2",
             "kms_key_id": "",
-            "master_password": "test12456",
+            "master_password": null,
             "master_username": "foo",
             "port": 5432,
             "preferred_backup_window": "08:32-09:02",
@@ -71,7 +71,7 @@
             ]
           },
           "sensitive_attributes": [],
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH19"
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo3MjAwMDAwMDAwMDAwLCJkZWxldGUiOjcyMDAwMDAwMDAwMDAsInVwZGF0ZSI6NzIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMCJ9"
         }
       ]
     },
