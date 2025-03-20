@@ -4,9 +4,11 @@ Filename: gen_embeddings.py
 Author: Diego Cabrera
 Date: 2025-03-04
 Version: 1.0
+https://grpsrbscw1b1.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grpsrbscw1b1/b/diegoecab-pub/o/gen_embeddings.py
 Description: Gieven a CSV ot TSV file, this script generates vector embeddings using sentence transformers model. Then, a new file will be created with the new vector column called "embedding"
+Dependencies: sentence_transformers, pandas
 Usage: python gen_embeddings.py <filename> <colum_name_to_encode>
-    E.g.: python gen_embeddings.py "title.principals.tsv" "characters"
+    E.g.: python3 gen_embeddings.py "title.akas.tsv.gz" "title"
 """
 # Import statements
 
@@ -15,6 +17,8 @@ import time
 import datetime
 import pandas as pd
 import sys
+import gzip
+import urllib.request
 
 # Declare variables
 
@@ -22,16 +26,25 @@ import sys
 file_name = sys.argv[1]
 column_to_encode = sys.argv[2]
 file_sep = "\t"
+bucket_source = "https://idi1o0a010nx.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/idi1o0a010nx/b/im31-vector/o/"
 sentence_transformer_model = "sentence-transformers/distiluse-base-multilingual-cased-v2"
 timeformat = "%y-%m-%d %H:%M:%S"
 
+# Downloading file
+file = bucket_source + file_name
+print(datetime.datetime.now().strftime(timeformat));
+print ('Downloading file ' + file)
+urllib.request.urlretrieve(file, file_name)
+print(datetime.datetime.now().strftime(timeformat));
+print ('File download has finished')
 
 model = SentenceTransformer(sentence_transformer_model)
 
 print(datetime.datetime.now().strftime(timeformat));
 print ("\nEmbeddings generation started")
 print ("\nWorking with filename", file_name);
-df = pd.read_csv(file_name, sep=file_sep)
+with gzip.open(file_name) as f:
+    df = pd.read_csv(file_name, sep=file_sep)
 
 # Check the existing header row
 print ("\nExisting columns: ",df.columns,sep='\n\n');
@@ -46,7 +59,7 @@ for value in df[column_to_encode]:
     t += 1
     if t % 1000000 == 0:
         print(datetime.datetime.now().strftime(timeformat));
-        print(t + "rows encoded")
+        print(str(t) + " rows encoded")
 
 
 print(datetime.datetime.now().strftime(timeformat));
