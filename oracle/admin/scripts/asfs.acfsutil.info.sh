@@ -1,1 +1,0 @@
-acfsutil info fs -h

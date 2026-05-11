@@ -1,1 +1,0 @@
-ocrcheck -local

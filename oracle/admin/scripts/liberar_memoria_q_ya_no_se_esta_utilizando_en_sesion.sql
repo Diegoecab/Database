@@ -1,1 +1,0 @@
-exec dbms_session.FREE_UNUSED_USER_MEMORY ;

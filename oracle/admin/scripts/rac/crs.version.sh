@@ -1,1 +1,0 @@
- crsctl query crs activeversion

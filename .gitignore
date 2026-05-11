@@ -1,1 +1,21 @@
 aws/terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/2.70.4/linux_amd64/terraform-provider-aws_v2.70.4_x4
+
+# Editor, SQL*Plus and runtime noise
+*.swp
+afiedt.buf
+sqlnet.log
+~$*
+nohup.out
+*.log
+*.out
+*.LST
+*.lst
+*.trc
+
+# Generated archives and Terraform state
+*.zip
+*.tfstate
+*.tfstate.*
+*.backup
+*.backup*
+.terraform/

@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : cdb_tablespaces.sql
+-- Purpose    : Oracle storage, ASM, ACFS or tablespace helper: cdb tablespaces(1).
+-- Category   : storage
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @cdb_tablespaces(1).sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : REVIEW
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+ SELECT TABLESPACE_NAME, PLUGGED_In,CON_ID FROM cdb_tablespaces;

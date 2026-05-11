@@ -1,1 +1,0 @@
-/var/opt/oracle/bkup_api/bkup_api list jobs --dbname crgbitdp  | grep -i create  | tail -10

@@ -1,1 +1,0 @@
-srvctl config service -db crgbirp_iad37p -service rgbirp.dtvpan.com

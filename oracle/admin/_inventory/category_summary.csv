@@ -1,0 +1,16 @@
+suggested_category,total,scripts,missing_headers
+backup_recovery/dataguard,34,32,0
+backup_recovery/rman,132,99,0
+cloud/aws,15,15,0
+cloud/oci,11,2,0
+diagnostics/ash,74,74,0
+diagnostics/awr,20,20,0
+diagnostics/sessions_waits,97,97,0
+maintenance/scheduler,46,45,0
+maintenance/stats,6,5,0
+performance/sql_tuning,134,132,0
+platform/exadata,60,49,0
+platform/rac,95,78,0
+security,82,81,0
+storage,63,59,0
+utilities,958,884,0

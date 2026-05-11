@@ -1,1 +1,0 @@
-SHOW config_file;

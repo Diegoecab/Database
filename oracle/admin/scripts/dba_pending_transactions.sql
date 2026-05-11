@@ -1,1 +1,0 @@
-select * from DBA_PENDING_TRANSACTIONS;

@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : rc_backup_set_details.sql
+-- Purpose    : Oracle administration helper: rc backup set details.
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @rc_backup_set_details.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : READ ONLY
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select * from rc_backup_set_details where db_key=2300449244 and start_time > trunc(sysdate-1) order by start_time;

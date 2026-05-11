@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : open_cursor_cnt.sql
+-- Purpose    : Oracle administration helper: open cursor cnt.
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @open_cursor_cnt.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : READ ONLY
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select * from (select count(*),sql_id from gv$open_cursor group by sql_id,sid,inst_id order by 1 desc) where rownum <= 10;

@@ -1,1 +1,0 @@
-crsctl get cluster mode status

@@ -1,1 +1,0 @@
-find . -type f -printf '%TY-%Tm-%Td\n' | sort | uniq -c

@@ -1,1 +1,0 @@
-select POLICY_NAME FROM audit_unified_enabled_policies;

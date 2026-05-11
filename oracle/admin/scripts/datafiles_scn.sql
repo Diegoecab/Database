@@ -1,1 +1,0 @@
-select fhscn, count(*) from x$kcvfh group by fhscn ;

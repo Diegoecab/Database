@@ -1,1 +1,0 @@
-select name,  BLOCKED from V$ACTIVE_SERVICES;

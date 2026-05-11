@@ -1,1 +1,0 @@
-select * from dba_roles where role like upper ('%&role%');

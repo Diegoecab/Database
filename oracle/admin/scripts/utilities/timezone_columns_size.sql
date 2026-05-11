@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : timezone_columns_size.sql
+-- Purpose    : Oracle administration helper: timezone columns size.
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @timezone_columns_size.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : READ ONLY
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+SELECT sum(bytes)/1024/1024/1024 "Total_size_w_TSTZ_columns_GB" FROM dba_segments WHERE owner not in ('SYS','CTXSYS','DBSNMP','GSMADMIN_INTERNAL') and segment_name IN (SELECT table_name FROM dba_tab_columns WHERE data_type LIKE 'TIMESTAMP%TIME ZONE');

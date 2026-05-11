@@ -1,2 +1,0 @@
-ocrconfig -showbackuploc
-ocrconfig -manualbackup

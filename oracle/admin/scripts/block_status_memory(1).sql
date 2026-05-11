@@ -1,1 +1,0 @@
-select inst_id, file#, block#, status, dirty from gv$bh where file#=&FILE and block#=&BLOCK and status != 'free' order by 1,2,3;

@@ -1,1 +1,0 @@
-srvctl add instance -db cdb1 -instance cdb12 -node exaadm02vm01

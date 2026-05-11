@@ -1,0 +1,29 @@
+# ------------------------------------------------------------------------------
+# File       : CopyDatRMAN.rman
+# Purpose    : Oracle RMAN backup, restore or recovery helper: CopyDatRMAN.
+# Category   : backup_recovery/rman
+# Author     : Diego Cabrera
+# Created    : Unknown
+# Version    : 1.0
+# Usage      : rman target / cmdfile=CopyDatRMAN.rman
+# Parameters : Review RMAN target/catalog connection and channels before running.
+# Requires   : RMAN, Oracle environment, and required backup/recovery privileges.
+# Oracle Ver.: Review compatibility before production use.
+# Risk       : REVIEW
+# Output     : RMAN console or log output.
+# Notes      : Validate in a non-production session before operational use.
+# Source     : internal
+# Change Log : 
+# 2026-05-11 : Diego Cabrera - Header normalization.
+# ------------------------------------------------------------------------------
+#
+copy datafile 'G:\CM\SYSTEM\SYSTEM01.ORA' to 'G:\CMCopy\SYSTEM01.ORA';
+copy datafile 'G:\CM\UNDO\UNDOTBS01.ORA' to 'G:\CMCopy\UNDOTBS01.ORA';
+copy datafile 'G:\CM\SYSAUX\SYSAUX01.DBF' to 'G:\CMCopy\SYSAUX01.DBF';
+copy datafile 'G:\CM\DADOS\DADOS01.ORA' to 'G:\CMCopy\DADOS01.ORA';
+copy datafile 'G:\CM\SYSAUX\STATSPACK02.ORA' to 'G:\CMCopy\STATSPACK02.ORA';
+copy datafile 'G:\CM\DADOS\DADOS02.ORA' to 'G:\CMCopy\DADOS02.ORA';
+copy datafile 'G:\CM\SYSAUX\STATSPACK01.ORA' to 'G:\CMCopy\STATSPACK01.ORA';
+copy datafile 'G:\CM\INDICES\INDX1601.ORA' to 'G:\CMCopy\INDX1601.ORA';
+copy datafile 'G:\CM\INDICES\INDX1602.ORA' to 'G:\CMCopy\INDX1602.ORA';
+exit
