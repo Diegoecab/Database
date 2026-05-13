@@ -1,0 +1,19 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Testing CACertificateIdentifier.",
+  "Resources" : {
+    "OracleDB" : {
+      "Type" : "AWS::RDS::DBInstance",
+      "Properties" : {
+        "AllocatedStorage" : "10",
+        "DBInstanceClass" : "db.t3.medium",
+        "Engine" : "oracle-ee",
+        "LicenseModel" : "bring-your-own-license",
+        "MasterUsername" : "MyName",
+        "MasterUserPassword" : "MyPassword",
+		"CACertificateIdentifier" : "rds-ca-rsa4096-g1"
+      }
+    }
+  }
+}
+

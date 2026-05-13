@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : create_extention_with_schema.sql
+-- Purpose    : postgres utilities helper: create extention with schema.
+-- Engine     : postgres
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: create_extention_with_schema.sql
+-- Parameters : Review script body before running.
+-- Risk       : CHANGES
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+create extension orafce with schema pg_catalog;

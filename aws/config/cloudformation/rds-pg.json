@@ -1,0 +1,40 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "598f3c4b-281f-4de4-90fb-534cde35996a": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 284.2460386171905,
+                    "y": 91.28119274367286
+                },
+                "z": 0
+            }
+        }
+    },
+    "Resources": {
+        "MyRDSInstance": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "DBInstanceClass": "db.t3.small",
+                "Engine": "postgres",
+                "EngineVersion": "15.5",
+                "DBInstanceIdentifier": "PGCloudFormation",
+                "AllocatedStorage": "10",
+                "MasterUsername" : "postgres",
+                "MasterUserPassword" : "postgres",
+                "AutoMinorVersionUpgrade": "true",
+                "BackupRetentionPeriod": "0",
+                "MaxAllocatedStorage": "20"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "77e3dca3-adf2-42d5-a5c4-00ec7856e656"
+                }
+            }
+        }
+    }
+}

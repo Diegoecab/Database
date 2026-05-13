@@ -1,0 +1,69 @@
+[
+  {
+    "bytes": 1203,
+    "category": "replication",
+    "description": "mysql replication helper: slavestatus.",
+    "engine": "mysql",
+    "extension": ".sh",
+    "has_header": true,
+    "id": "mysql:scripts/replication/slavestatus.sh",
+    "kind": "script",
+    "parameters": [
+      "SBM",
+      "arg2"
+    ],
+    "path": "scripts/replication/slavestatus.sh",
+    "risk": "READ_ONLY",
+    "secret_flags": false,
+    "sha256": "39759aa74282b501c37b6a01c0f3b18aaf956ab8f5d8c9dc0c6a96e7ade8d076",
+    "target": "scripts/replication/slavestatus.sh"
+  },
+  {
+    "bytes": 789,
+    "category": "utilities",
+    "description": "mysql utilities helper: max connections.",
+    "engine": "mysql",
+    "extension": ".sql",
+    "has_header": true,
+    "id": "mysql:scripts/utilities/max_connections.sql",
+    "kind": "script",
+    "parameters": [],
+    "path": "scripts/utilities/max_connections.sql",
+    "risk": "READ_ONLY",
+    "secret_flags": false,
+    "sha256": "79c1f4340ffe2bdcc6f008921925ea50b81980cd46a46589434b289fa5626f4e",
+    "target": "scripts/utilities/max_connections.sql"
+  },
+  {
+    "bytes": 729,
+    "category": "utilities",
+    "description": "mysql utilities helper: port.",
+    "engine": "mysql",
+    "extension": ".sh",
+    "has_header": true,
+    "id": "mysql:scripts/utilities/port.sh",
+    "kind": "script",
+    "parameters": [],
+    "path": "scripts/utilities/port.sh",
+    "risk": "REVIEW",
+    "secret_flags": false,
+    "sha256": "58ba253a40338062058e2ffd2c263e07638e31d603b25a08bef4329872af9fd2",
+    "target": "scripts/utilities/port.sh"
+  },
+  {
+    "bytes": 916,
+    "category": "utilities",
+    "description": "mysql utilities helper: set params.",
+    "engine": "mysql",
+    "extension": ".sql",
+    "has_header": true,
+    "id": "mysql:scripts/utilities/set_params.sql",
+    "kind": "script",
+    "parameters": [],
+    "path": "scripts/utilities/set_params.sql",
+    "risk": "READ_ONLY",
+    "secret_flags": false,
+    "sha256": "17635cbfb45a2e94744036d8dc9200a643d58c014e1617a6f2dbbc9118f1932a",
+    "target": "scripts/utilities/set_params.sql"
+  }
+]

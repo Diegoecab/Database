@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : Crear_tabla_as_select_sin_registros.sql
+-- Purpose    : Oracle administration helper: Crear tabla as select sin registros.
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @Crear_tabla_as_select_sin_registros.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : READ ONLY
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+CREATE TABLE TEST2 AS SELECT * FROM TEST WHERE 1=2;

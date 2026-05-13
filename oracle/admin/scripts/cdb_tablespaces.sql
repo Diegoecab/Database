@@ -1,1 +1,0 @@
- SELECT TABLESPACE_NAME, PLUGGED_In,CON_ID FROM cdb_tablespaces;

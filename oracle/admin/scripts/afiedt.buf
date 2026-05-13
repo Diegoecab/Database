@@ -1,5 +1,0 @@
-insert into bigtable_4
-SELECT level id, 'nom_'||level nom
-from dual
-CONNECT BY level between 100000001 and 20001000
-/

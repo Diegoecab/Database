@@ -1,0 +1,2 @@
+mysql --host=<host> --user=<user> --password=<password> <database>
+mysql -h <host> -u <user> -p<password> <database>

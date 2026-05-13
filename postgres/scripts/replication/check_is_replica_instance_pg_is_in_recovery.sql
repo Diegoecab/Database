@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : check_is_replica_instance_pg_is_in_recovery.sql
+-- Purpose    : postgres replication helper: check is replica instance pg is in recovery.
+-- Engine     : postgres
+-- Category   : replication
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: check_is_replica_instance_pg_is_in_recovery.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+SELECT pg_is_in_recovery();

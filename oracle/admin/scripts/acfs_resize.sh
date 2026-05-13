@@ -1,1 +1,0 @@
-/sbin/acfsutil size 2560G /export

@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : current_query_pid.sql
+-- Purpose    : postgres diagnostics/sessions helper: current query pid.
+-- Engine     : postgres
+-- Category   : diagnostics/sessions
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: current_query_pid.sql
+-- Parameters : pid
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select query from pg_stat_activity where pid=:pid;

@@ -1,0 +1,21 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyRDSInstance": {
+						  "Type" : "AWS::RDS::DBInstance",
+						  "DeletionPolicy": "Retain",
+						  "Properties" : {
+							  "DBInstanceClass": "db.t3.small",
+							  "Engine": "postgres",
+							  "EngineVersion": "15.5",
+							  "DBInstanceIdentifier": "PGCloudFormation",
+							  "AllocatedStorage": "10",
+							  "MasterUsername" : "postgres",
+							  "MasterUserPassword" : "postgres",
+							  "AutoMinorVersionUpgrade": "false",
+							  "BackupRetentionPeriod": "0",
+							  "MaxAllocatedStorage": "20"
+							}
+						}
+  }
+}

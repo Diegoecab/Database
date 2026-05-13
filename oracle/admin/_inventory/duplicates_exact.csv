@@ -1,0 +1,5 @@
+sha256,bytes,path
+e9eb1ae4757f89ac466847f35eb17721843885044834f3d04cdd455c1ab8fd82,133,config/shell/acs_exp_oci/par/dev/exp.par
+e9eb1ae4757f89ac466847f35eb17721843885044834f3d04cdd455c1ab8fd82,133,config/shell/acs_exp_oci/par/exp_full.par
+e9eb1ae4757f89ac466847f35eb17721843885044834f3d04cdd455c1ab8fd82,133,config/shell/acs_exp_oci/par/prod/exp.par
+e9eb1ae4757f89ac466847f35eb17721843885044834f3d04cdd455c1ab8fd82,133,config/shell/acs_exp_oci/par/qa/exp.par

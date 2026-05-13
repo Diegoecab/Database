@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : pg_cron_launcher.sql
+-- Purpose    : postgres maintenance helper: pg cron launcher.
+-- Engine     : postgres
+-- Category   : maintenance
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: pg_cron_launcher.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select application_name,usename,backend_type,query,state,wait_event_type,age(now(),backend_start) as backend_start_age,age(now(),query_start) as query_start_age,age(now(),state_change) state_change_age from pg_stat_activity where backend_type = 'pg_cron launcher';

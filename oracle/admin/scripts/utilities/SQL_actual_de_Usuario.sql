@@ -1,0 +1,21 @@
+-- ------------------------------------------------------------------------------
+-- File       : SQL_actual_de_Usuario.sql
+-- Purpose    : Oracle administration helper: SQL actual de Usuario.
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @SQL_actual_de_Usuario.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : READ ONLY
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select a.sql_text "Sql_Actual", b.username "Usuario_Oracle",b.osuser "Usuario_Sistema_Operativo" from V$sqltext a, v$session b
+where a.address = b.sql_address AND B.USERNAME='GEM_ADM';

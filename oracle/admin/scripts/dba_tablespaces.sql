@@ -1,1 +1,0 @@
-select tablespace_name, contents, logging, bigfile from dba_Tablespaces order by 1,2;

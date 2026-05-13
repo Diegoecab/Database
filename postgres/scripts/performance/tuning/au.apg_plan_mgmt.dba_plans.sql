@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : au.apg_plan_mgmt.dba_plans.sql
+-- Purpose    : postgres performance/tuning helper: au.apg plan mgmt.dba plans.
+-- Engine     : postgres
+-- Category   : performance/tuning
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: au.apg_plan_mgmt.dba_plans.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+SELECT sql_hash, plan_hash, status, enabled, stmt_name FROM apg_plan_mgmt.dba_plans; 

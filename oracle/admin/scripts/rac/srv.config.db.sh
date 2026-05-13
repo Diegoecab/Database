@@ -1,1 +1,0 @@
-srvctl config database -db dbm02 -a

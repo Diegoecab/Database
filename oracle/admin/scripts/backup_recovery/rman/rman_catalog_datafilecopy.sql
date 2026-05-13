@@ -1,0 +1,21 @@
+-- ------------------------------------------------------------------------------
+-- File       : rman_catalog_datafilecopy.sql
+-- Purpose    : Oracle RMAN backup, restore or recovery helper: rman catalog datafilecopy.
+-- Category   : backup_recovery/rman
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @rman_catalog_datafilecopy.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : RMAN, Oracle environment, and required backup/recovery privileges.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : REVIEW
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+catalog datafilecopy '+DATA_HP2/CSIBSR/DATAFILE/DATALRG.311.1014291995';
+switch database to copy;

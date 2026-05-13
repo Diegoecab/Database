@@ -1,0 +1,39 @@
+# ------------------------------------------------------------------------------
+# File       : full.rman
+# Purpose    : Oracle RMAN backup, restore or recovery helper: full.
+# Category   : backup_recovery/rman
+# Author     : Diego Cabrera
+# Created    : Unknown
+# Version    : 1.0
+# Usage      : rman target / cmdfile=full.rman
+# Parameters : Review RMAN target/catalog connection and channels before running.
+# Requires   : RMAN, Oracle environment, and required backup/recovery privileges.
+# Oracle Ver.: Review compatibility before production use.
+# Risk       : REVIEW
+# Output     : RMAN console or log output.
+# Notes      : Validate in a non-production session before operational use.
+# Source     : internal
+# Change Log : 
+# 2026-05-11 : Diego Cabrera - Header normalization.
+# ------------------------------------------------------------------------------
+#
+run {	
+     # Validando los logs archivados ...	
+     change archivelog all validate;	
+     crosscheck backup;	
+     # Elimino backups expirados / obsoletos	
+     delete noprompt expired backup;	
+     report obsolete;
+     delete noprompt obsolete;	
+     sql 'alter system archive log current';	
+     #Backup de Archives
+     backup archivelog all TAG=archivelogs format 'C:\oracle\backup\RMAN\PROD%u_%d_%s_%t_ARCHIVES.rman';
+     delete noprompt archivelog until time 'sysdate-3';	
+     # Archivos que necesitan Backup:	
+     report need backup;	
+    }	
+run {
+     CONFIGURE CONTROLFILE AUTOBACKUP ON; 
+CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE TYPE DISK TO 'C:\oracle\backup\RMAN\PRODControlFile%F';
+     backup as compressed backupset incremental level=0 database format 'C:\oracle\backup\RMAN\PROD%u_%d_%s_%t_full.rman';}
+exit	

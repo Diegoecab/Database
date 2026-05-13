@@ -1,0 +1,21 @@
+-- ------------------------------------------------------------------------------
+-- File       : pg_walfile_name_lsn.sql
+-- Purpose    : postgres replication helper: pg walfile name lsn.
+-- Engine     : postgres
+-- Category   : replication
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: pg_walfile_name_lsn.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+--A function for returning the WAL file name for an LSN
+select pg_walfile_name('C/48030620');
+SELECT pg_walfile_name(pg_current_wal_lsn());

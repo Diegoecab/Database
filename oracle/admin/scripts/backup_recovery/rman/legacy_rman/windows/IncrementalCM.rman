@@ -1,0 +1,32 @@
+# ------------------------------------------------------------------------------
+# File       : IncrementalCM.rman
+# Purpose    : Oracle RMAN backup, restore or recovery helper: IncrementalCM.
+# Category   : backup_recovery/rman
+# Author     : Diego Cabrera
+# Created    : Unknown
+# Version    : 1.0
+# Usage      : rman target / cmdfile=IncrementalCM.rman
+# Parameters : Review RMAN target/catalog connection and channels before running.
+# Requires   : RMAN, Oracle environment, and required backup/recovery privileges.
+# Oracle Ver.: Review compatibility before production use.
+# Risk       : REVIEW
+# Output     : RMAN console or log output.
+# Notes      : Validate in a non-production session before operational use.
+# Source     : internal
+# Change Log : 
+# 2026-05-11 : Diego Cabrera - Header normalization.
+# ------------------------------------------------------------------------------
+#
+run {	
+     backup incremental level = 1 database format 'D:\oracle\DBA\RMAN\CM%u_%d_%s_%t_incremental.rman';}
+run {	
+     # Validando los logs archivados ...	
+     change archivelog all validate;	
+     crosscheck backup;	
+     report obsolete;
+     delete noprompt obsolete;	
+     sql 'alter system archive log current';	
+     # Archivos que necesitan Backup:	
+     report need backup;	
+    }	
+exit	

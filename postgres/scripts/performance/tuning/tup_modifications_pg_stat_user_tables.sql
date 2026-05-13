@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : tup_modifications_pg_stat_user_tables.sql
+-- Purpose    : postgres performance/tuning helper: tup modifications pg stat user tables.
+-- Engine     : postgres
+-- Category   : performance/tuning
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: tup_modifications_pg_stat_user_tables.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select n_tup_upd + n_tup_ins + n_tup_del as n_changes from pg_stat_user_tables  where relname = 'YOUR_TABLE';

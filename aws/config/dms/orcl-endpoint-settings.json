@@ -1,0 +1,7 @@
+{
+  "DatabaseName": "ORCL",
+  "Password": "oraadmin1",
+  "Port": 1521,
+  "ServerName": "testing",
+  "Username": "string"
+}

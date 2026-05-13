@@ -1,1 +1,0 @@
-alter session set optimizer_use_pending_statistics = true;

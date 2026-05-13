@@ -1,1 +1,0 @@
-srvctl status database -db dbm02

@@ -1,1 +1,0 @@
-exec dbms_stats.publish_pending_stats(null, null)

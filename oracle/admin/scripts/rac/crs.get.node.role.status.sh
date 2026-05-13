@@ -1,1 +1,0 @@
-crsctl get node role status -node exaadm01vm02

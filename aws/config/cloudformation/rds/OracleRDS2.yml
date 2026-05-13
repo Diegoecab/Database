@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Metadata: 
+  License: Apache-2.0
+Description: 'AWS CloudFormation Template for Oracle RDS'
+  
+
+Resources:
+  OracleDB:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Snapshot
+    Properties:
+      DBName: "myorcldb"
+      AllocatedStorage: "10"
+      DBInstanceClass: "db.t3.medium"
+      Engine: "oracle-ee"
+      LicenseModel: "bring-your-own-license"
+      MasterUsername: "MyName"
+      MasterUserPassword: "MyPassword"
+      CACertificateIdentifier: "rds-ca-rsa2048-g1"
+

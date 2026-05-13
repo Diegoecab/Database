@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : uptime_server.sql
+-- Purpose    : postgres utilities helper: uptime server.
+-- Engine     : postgres
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: uptime_server.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+SELECT date_trunc('second', current_timestamp - pg_postmaster_start_time()) as uptime;

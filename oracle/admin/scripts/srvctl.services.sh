@@ -1,1 +1,0 @@
-srvctl status service -db db_unique_name

@@ -1,0 +1,71 @@
+canonical,winner,winner_number,base_existed,removed,header_updated
+docs/utilities/pendientesd.txt,docs/utilities/pendientesd (1).txt,1,yes,docs/utilities/pendientesd.txt,no
+scripts/backup_recovery/dataguard/archive_dest_status.sql,scripts/backup_recovery/dataguard/archive_dest_status(1).sql,1,yes,scripts/backup_recovery/dataguard/archive_dest_status.sql,yes
+scripts/backup_recovery/dataguard/archivelog_cascade.sql,scripts/backup_recovery/dataguard/archivelog_cascade(1).sql,1,yes,scripts/backup_recovery/dataguard/archivelog_cascade.sql,yes
+scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.1.sh,scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.1(1).sh,1,yes,scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.1.sh,yes
+scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.2.sh,scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.2(1).sh,1,yes,scripts/backup_recovery/dataguard/reco_log_standby_past_gap.12.2.sh,yes
+scripts/diagnostics/sessions_waits/sessions.sql,scripts/diagnostics/sessions_waits/sessions (2).sql,2,yes,scripts/diagnostics/sessions_waits/sessions.sql,yes
+scripts/diagnostics/sessions_waits/top_sessions.sql,scripts/diagnostics/sessions_waits/top_sessions (1).sql,1,yes,scripts/diagnostics/sessions_waits/top_sessions.sql,yes
+scripts/maintenance/scheduler/dba_jobs.sql,scripts/maintenance/scheduler/dba_jobs (1).sql,1,yes,scripts/maintenance/scheduler/dba_jobs.sql,yes
+scripts/maintenance/scheduler/dbms_jobs.remove.sql,scripts/maintenance/scheduler/dbms_jobs.remove (1).sql,1,yes,scripts/maintenance/scheduler/dbms_jobs.remove.sql,yes
+scripts/performance/sql_tuning/Check_stale_stats.sql,scripts/performance/sql_tuning/Check_stale_stats (2).sql,2,yes,scripts/performance/sql_tuning/Check_stale_stats.sql,no
+scripts/performance/sql_tuning/explain_plan.sql,scripts/performance/sql_tuning/explain_plan (1).sql,1,yes,scripts/performance/sql_tuning/explain_plan.sql,yes
+scripts/security/audit.sql,scripts/security/audit(1).sql,1,yes,scripts/security/audit.sql,yes
+scripts/security/audit_cp_files.sh,scripts/security/audit_cp_files(1).sh,1,yes,scripts/security/audit_cp_files.sh,yes
+scripts/security/cdb_users.sql,scripts/security/cdb_users(1).sql,1,yes,scripts/security/cdb_users.sql,yes
+scripts/security/dba_role_privs_x.sql,scripts/security/dba_role_privs_x (1).sql,1,yes,scripts/security/dba_role_privs_x.sql,yes
+scripts/storage/asfs.acfsutil.info.sh,scripts/storage/asfs.acfsutil.info(1).sh,1,yes,scripts/storage/asfs.acfsutil.info.sh,yes
+scripts/storage/asm.pwmove.sh,scripts/storage/asm.pwmove(1).sh,1,yes,scripts/storage/asm.pwmove.sh,yes
+scripts/storage/asm_adddisk_asmlib.sh,scripts/storage/asm_adddisk_asmlib(1).sh,1,yes,scripts/storage/asm_adddisk_asmlib.sh,yes
+scripts/storage/asm_cp.sh,scripts/storage/asm_cp(1).sh,1,yes,scripts/storage/asm_cp.sh,yes
+scripts/storage/asm_disk_iostat.sql,scripts/storage/asm_disk_iostat(1).sql,1,yes,scripts/storage/asm_disk_iostat.sql,yes
+scripts/storage/asm_get_formatted_metadata.sql,scripts/storage/asm_get_formatted_metadata(1).sql,1,yes,scripts/storage/asm_get_formatted_metadata.sql,yes
+scripts/storage/asm_healthcheck.sql,scripts/storage/asm_healthcheck(1).sql,1,yes,scripts/storage/asm_healthcheck.sql,yes
+scripts/storage/asmcmd_script.sh,scripts/storage/asmcmd_script(1).sh,1,yes,scripts/storage/asmcmd_script.sh,yes
+scripts/storage/asmdu.sh,scripts/storage/asmdu(1).sh,1,yes,scripts/storage/asmdu.sh,yes
+scripts/storage/asmdu2.sh,scripts/storage/asmdu2(1).sh,1,yes,scripts/storage/asmdu2.sh,no
+scripts/storage/asmlib.sh,scripts/storage/asmlib(1).sh,1,yes,scripts/storage/asmlib.sh,yes
+scripts/storage/cdb_tablespaces.sql,scripts/storage/cdb_tablespaces(1).sql,1,yes,scripts/storage/cdb_tablespaces.sql,yes
+scripts/storage/get_ddl_tablespaces.sql,scripts/storage/get_ddl_tablespaces (1).sql,1,yes,scripts/storage/get_ddl_tablespaces.sql,yes
+scripts/storage/tbs.sql,scripts/storage/tbs (2).sql,2,yes,scripts/storage/tbs.sql;scripts/storage/tbs (1).sql,yes
+scripts/storage/tbs_temp.sql,scripts/storage/tbs_temp (1).sql,1,yes,scripts/storage/tbs_temp.sql,yes
+scripts/storage/tbsx.sql,scripts/storage/tbsx (2).sql,2,yes,scripts/storage/tbsx.sql,yes
+scripts/utilities/Cache_Hits.sql,scripts/utilities/Cache_Hits(1).sql,1,yes,scripts/utilities/Cache_Hits.sql,yes
+scripts/utilities/Ver_posicion_indices_FK.sql,scripts/utilities/Ver_posicion_indices_FK (2).sql,2,yes,scripts/utilities/Ver_posicion_indices_FK.sql,yes
+scripts/utilities/banner.sql,scripts/utilities/banner(1).sql,1,yes,scripts/utilities/banner.sql,yes
+scripts/utilities/bind_variables_sqlplus_sql.sql,scripts/utilities/bind_variables_sqlplus_sql(1).sql,1,yes,scripts/utilities/bind_variables_sqlplus_sql.sql,yes
+scripts/utilities/block_status_memory.sql,scripts/utilities/block_status_memory(1).sql,1,yes,scripts/utilities/block_status_memory.sql,yes
+scripts/utilities/borrar_crear_logs_online.sql,scripts/utilities/borrar_crear_logs_online (2).sql,2,yes,scripts/utilities/borrar_crear_logs_online.sql,yes
+scripts/utilities/buffer_cache_.sql,scripts/utilities/buffer_cache_(1).sql,1,yes,scripts/utilities/buffer_cache_.sql,yes
+scripts/utilities/cdb_create.sql,scripts/utilities/cdb_create(1).sql,1,yes,scripts/utilities/cdb_create.sql,yes
+scripts/utilities/cdb_services.sql,scripts/utilities/cdb_services(1).sql,1,yes,scripts/utilities/cdb_services.sql,yes
+scripts/utilities/chained.sql,scripts/utilities/chained(1).sql,1,yes,scripts/utilities/chained.sql,yes
+scripts/utilities/current_sql.sql,scripts/utilities/current_sql (1).sql,1,yes,scripts/utilities/current_sql.sql,yes
+scripts/utilities/current_sql_sid.sql,scripts/utilities/current_sql_sid (1).sql,1,yes,scripts/utilities/current_sql_sid.sql,yes
+scripts/utilities/dba_indexes_owner.sql,scripts/utilities/dba_indexes_owner (1).sql,1,yes,scripts/utilities/dba_indexes_owner.sql,yes
+scripts/utilities/dba_segments.sql,scripts/utilities/dba_segments (1).sql,1,yes,scripts/utilities/dba_segments.sql,yes
+scripts/utilities/dba_segments_gowner.sql,scripts/utilities/dba_segments_gowner (1).sql,1,yes,scripts/utilities/dba_segments_gowner.sql,yes
+scripts/utilities/dba_segments_tbs.sql,scripts/utilities/dba_segments_tbs (1).sql,1,yes,scripts/utilities/dba_segments_tbs.sql,yes
+scripts/utilities/dba_segments_x.sql,scripts/utilities/dba_segments_x (1).sql,1,yes,scripts/utilities/dba_segments_x.sql,yes
+scripts/utilities/dba_tables_owner.sql,scripts/utilities/dba_tables_owner (1).sql,1,yes,scripts/utilities/dba_tables_owner.sql,yes
+scripts/utilities/dba_tables_owner_tbs.sql,scripts/utilities/dba_tables_owner_tbs (1).sql,1,yes,scripts/utilities/dba_tables_owner_tbs.sql,yes
+scripts/utilities/dba_tables_porcent_estad.sql,scripts/utilities/dba_tables_porcent_estad (1).sql,1,yes,scripts/utilities/dba_tables_porcent_estad.sql,yes
+scripts/utilities/dba_tables_tbs.sql,scripts/utilities/dba_tables_tbs (1).sql,1,yes,scripts/utilities/dba_tables_tbs.sql,yes
+scripts/utilities/dba_triggers_owner.sql,scripts/utilities/dba_triggers_owner (1).sql,1,yes,scripts/utilities/dba_triggers_owner.sql,yes
+scripts/utilities/dba_triggers_x.sql,scripts/utilities/dba_triggers_x (1).sql,1,yes,scripts/utilities/dba_triggers_x.sql,yes
+scripts/utilities/dbms_space_cost.sql,scripts/utilities/dbms_space_cost (1).sql,1,yes,scripts/utilities/dbms_space_cost.sql,yes
+scripts/utilities/dbms_space_recommendations.sql,scripts/utilities/dbms_space_recommendations (1).sql,1,yes,scripts/utilities/dbms_space_recommendations.sql,yes
+scripts/utilities/drop_context_queue_tables.sql,scripts/utilities/drop_context_queue_tables (1).sql,1,yes,scripts/utilities/drop_context_queue_tables.sql,yes
+scripts/utilities/drop_tbs_temp.sql,scripts/utilities/drop_tbs_temp (1).sql,1,yes,scripts/utilities/drop_tbs_temp.sql,yes
+scripts/utilities/events.sql,scripts/utilities/events (1).sql,1,yes,scripts/utilities/events.sql,yes
+scripts/utilities/full.sh,scripts/utilities/full (1).sh,1,yes,scripts/utilities/full.sh,yes
+scripts/utilities/full.sql,scripts/utilities/full (1).sql,1,yes,scripts/utilities/full.sql,yes
+scripts/utilities/get_ddl.sql,scripts/utilities/get_ddl (1).sql,1,yes,scripts/utilities/get_ddl.sql,yes
+scripts/utilities/get_ddl_rol.sql,scripts/utilities/get_ddl_rol (1).sql,1,yes,scripts/utilities/get_ddl_rol.sql,yes
+scripts/utilities/keep_procedure.sql,scripts/utilities/keep_procedure (1).sql,1,yes,scripts/utilities/keep_procedure.sql,yes
+scripts/utilities/random.sh,scripts/utilities/random (1).sh,1,yes,scripts/utilities/random.sh,yes
+scripts/utilities/random.sql,scripts/utilities/random (1).sql,1,yes,scripts/utilities/random.sql,yes
+scripts/utilities/relaciones_entre_tablas.sql,scripts/utilities/relaciones_entre_tablas (2).sql,2,yes,scripts/utilities/relaciones_entre_tablas.sql,yes
+scripts/utilities/tablas_segmentos_menos10_libre.sql,scripts/utilities/tablas_segmentos_menos10_libre(1).sql,1,yes,scripts/utilities/tablas_segmentos_menos10_libre.sql,yes
+scripts/utilities/undo.sql,scripts/utilities/undo (2).sql,2,no,,yes
+scripts/utilities/unix.sql,scripts/utilities/unix (2).sql,2,yes,scripts/utilities/unix.sql,yes

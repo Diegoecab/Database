@@ -1,0 +1,20 @@
+-- ------------------------------------------------------------------------------
+-- File       : dba_tablespaces.sql
+-- Purpose    : Oracle storage, ASM, ACFS or tablespace helper: dba tablespaces.
+-- Category   : storage
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : @dba_tablespaces.sql
+-- Parameters : Review ACCEPT variables and substitution variables before running.
+-- Requires   : SQL*Plus or SQLcl and privileges required by referenced dictionary views.
+-- Oracle Ver.: Review compatibility before production use.
+-- Risk       : REVIEW
+-- Output     : SQL*Plus/SQLcl console or spool output.
+-- Notes      : Validate in a non-production session before operational use.
+-- Source     : internal
+-- Change Log : 
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+select tablespace_name, contents, logging, bigfile from dba_Tablespaces order by 1,2;

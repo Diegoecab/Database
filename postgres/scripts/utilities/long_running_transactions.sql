@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : long_running_transactions.sql
+-- Purpose    : postgres utilities helper: long running transactions.
+-- Engine     : postgres
+-- Category   : utilities
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: long_running_transactions.sql
+-- Parameters : Review script body before running.
+-- Risk       : READ_ONLY
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+SELECT now()-query_start as Running_Since, pid, datname, usename, application_name, client_addr , left(query,60) FROM pg_stat_activity WHERE state in ('active','idle in transaction') AND (now() - query_start) > interval '5 minutes';

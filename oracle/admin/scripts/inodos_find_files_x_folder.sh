@@ -1,1 +1,0 @@
-find . -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n;

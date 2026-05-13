@@ -1,1 +1,0 @@
-ocrconfig -add +RECOC8

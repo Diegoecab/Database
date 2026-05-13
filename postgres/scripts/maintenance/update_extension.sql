@@ -1,0 +1,19 @@
+-- ------------------------------------------------------------------------------
+-- File       : update_extension.sql
+-- Purpose    : postgres maintenance helper: update extension.
+-- Engine     : postgres
+-- Category   : maintenance
+-- Author     : Diego Cabrera
+-- Created    : Unknown
+-- Version    : 1.0
+-- Usage      : Run with the target database client: update_extension.sql
+-- Parameters : Review script body before running.
+-- Risk       : CHANGES
+-- Output     : Client, shell or script-defined output.
+-- Notes      : Validate in a non-production environment before operational use.
+-- Source     : internal
+-- Change Log :
+-- 2026-05-11 : Diego Cabrera - Header normalization.
+-- ------------------------------------------------------------------------------
+--
+alter extension pg_stat_statements update to '1.9';
